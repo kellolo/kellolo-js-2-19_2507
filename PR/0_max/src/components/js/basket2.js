@@ -179,4 +179,4 @@ var basket = {
     }
 }
 
-basket.init();
+export default basket
