@@ -93,9 +93,7 @@ const catalog = {
     }
 };
 
-
 // end Product catalog
-
 
 // openCart
 function openCart() {
@@ -111,7 +109,5 @@ function openCart() {
 //end openCart
 
 let open = openCart()
-
-
 
 export default catalog;
