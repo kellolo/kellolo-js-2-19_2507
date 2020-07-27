@@ -1,0 +1,115 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+details {
+
+  & :focus {
+    outline: 0;
+  }
+
+  .checkoutSummary {
+    border-bottom: none;
+    padding-left: 1rem;
+    
+    @media (max-width: 991px) {
+      padding-left: 0;
+    }
+  }
+
+  summary {
+    color: $colorText;
+    font-size: $titlesFontSize;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    span {
+      padding-left: 5px;
+    }
+  }
+}
+
+.detailsTitle {
+  color: $colorText;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.detailsTitleBottom {
+  color: #b3b2b2;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.detailsRadio {
+  line-height: 1rem;
+
+  label {
+    color: $colorText;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .form-check-label {
+    padding-top: 0.2rem;
+  }
+}
+
+.detailsButton {
+  div {
+    color: $colorText;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  button {
+    color: #4a4a4a;
+    font-size: $mainFontSize;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-color: #eaeaea;
+  }
+}
+
+.form-group {
+  label {
+    color: $colorText;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    span {
+      color: #ff0d0d;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+  }
+
+  input {
+    border-color: #eaeaea;
+  }
+}
+
+.requiredText {
+  color: #ff0d0d;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+
+
+
