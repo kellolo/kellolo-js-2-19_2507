@@ -1,0 +1,384 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+
+main {
+  z-index: 1;
+}
+
+details {
+
+  div {
+
+    a {
+      text-decoration: none;
+      color: #6f6e6e;
+      font-size: $mainFontSize;
+      font-weight: 400;
+      line-height: 33px;
+      padding-left: calc(1rem - 5px);
+
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
+
+      &:first-child {
+        padding-top: 1rem;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: $mainColor;
+      }
+    }
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  summary {
+    font-size: $mainFontSize;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-left: 5px solid $mainColor;
+    border-bottom: 1px solid #ebebeb;;
+    color: #6f6e6e;
+    line-height: 20px;
+
+    @media (max-width: 768px) {
+      font-size: $titlesFontSize;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    i:last-child {
+      display: none;
+    }
+  }
+}
+
+details[open] summary {
+  color: #ef5b70;
+}
+
+details[open] summary .fa-caret-down {
+  display: none;
+}
+
+details[open] summary .fa-caret-up {
+  display: block;
+}
+
+.productFeatures {
+  a, input, label, div {
+    text-decoration: none;
+    color: #6f6e6e;
+    font-size: $mainFontSize;
+    font-weight: 400;
+    line-height: 26px;
+
+    @media (max-width: 768px) {
+      font-size: $titlesFontSize;
+    }
+  }
+
+  a:hover {
+    color: $mainColor;
+  }
+}
+
+.productFeaturesTitle {
+  color: #6f6e6e;
+  font-size: $mainFontSize;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-size: $titlesFontSize;
+  }
+}
+
+.productSizes {
+  div {
+
+    label {
+      color: #6f6e6e;
+      font-size: $mainFontSize;
+      font-weight: 400;
+      line-height: 20px;
+      text-transform: uppercase;
+      margin-bottom: 0;
+
+      @media (max-width: 768px) {
+        font-size: $titlesFontSize;
+      }
+    }
+  }
+}
+
+.sortBy {
+  background-color: #f3f3f3;
+
+  form {
+    color: #6f6e6e;
+    font-size: $mainFontSize;
+    font-weight: 400;
+    line-height: 26px;
+
+    @media (max-width: 768px) {
+      font-size: $titlesFontSize;
+    }
+
+    label {
+      background-color: #ffffff;
+
+      @media (max-width: 355px) {
+        padding: 0 1.2rem !important;
+      }
+    }
+
+    select {
+      outline: none;
+      border: 1px solid #ebebeb;
+      -webkit-appearance: none;
+      background: url("../../assets/imgs/caret.jpg") no-repeat;
+      background-position: 90% 50%;
+      padding-left: 0.8rem;
+      padding-right: 2rem;
+      color: #6f6e6e;
+      background-color: #ffffff;
+
+      @media (max-width: 355px) {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+.feturedItems {
+  padding-top: 2rem;
+
+  @media (max-width: 450px) {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding-top: 0;
+  }
+
+  @media (min-width: 767.98px) {
+    padding-top: 0;
+  }
+}
+
+.feturedItem {
+  @media (min-width: 1199.98px) {
+    margin-top: 2rem;
+  }
+
+  &:hover {
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+  }
+
+  .feturedImgWrap {
+    height: 280px;
+    position: relative;
+
+    img {
+      width: 100%;
+      display: block;
+      height: inherit;
+      object-fit: contain;
+      object-position: center center;
+
+      @media (max-width: 450px) {
+        object-fit: contain;
+        margin-top: 2rem;
+      }
+    }
+
+    .feturedBuy {
+      height: inherit;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      position: absolute;
+
+      button {
+        padding: 15px;
+        border: 1px solid $btnIconsTextAndBgColor;
+        background: none;
+        color: white;
+        font-size: 13px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        div {
+          margin-right: 10px;
+        }
+
+        i {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+
+  .feturedItemName {
+    color: #222222;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    overflow: hidden;
+    padding-top: 0.8rem;
+    padding-left: 0.8rem;
+
+    @media (max-width: 768px) {
+      font-size: $titlesFontSize;
+      padding-top: 0.4rem;
+    }
+
+    @media (min-width: 768px) and (max-width: 1199.98px) {
+      padding-top: 0;
+    }
+  }
+
+  .feturedItemPrice {
+    color: $mainColor;
+    font-size: $titlesFontSize;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.4rem 0 0.5rem 0.8rem;
+
+    @media (max-width: 768px) {
+      font-size: $titlesFontSize;
+      padding-left: 0;
+      padding-top: 0.4rem;
+    }
+
+    @media (min-width: 768px) and (max-width: 1199.98px) {
+      padding-top: 0.2rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .feturedItem:hover .feturedBuy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.feturedBuySm {
+  button {
+    border-radius: 3px;
+    border: 1px solid #ef5b70;
+    background-color: #ffffff;
+    color: #ef5b70;
+    font-size: $titlesFontSize;
+    font-weight: bold;
+    line-height: 26px;
+    padding: 0.5rem;
+
+    &:hover {
+      background-color: $mainColor;
+      color: #ffffff;
+    }
+  }
+
+}
+
+.pagination {
+  border-radius: 3px;
+  border: 1px solid #ebebeb;
+  background-color: #ffffff;
+  margin: 0 !important;
+
+  .page-link {
+    color: #c4c4c4;
+    font-size: $titlesFontSize;
+    font-weight: bold;
+    line-height: 26px;;
+    border: none;
+    padding: .545rem .489rem;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+
+    &:hover {
+      color: $mainColor;
+      background-color: #ffffff;
+    }
+  }
+}
+
+.productsButton, .productsButtonIndex {
+  border-radius: 3px;
+  border: 1px solid #ef5b70;
+  background-color: #ffffff;
+  color: #ef5b70;
+  font-size: $titlesFontSize;
+  font-weight: bold;
+  line-height: 26px;
+  padding: 0.5rem 3rem;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+
+  &:hover {
+    @include button($mainColor, $btnIconsTextAndBgColor);
+  }
+}
+
+.productsFeaturesBg {
+  background-color: #222224;
+
+  .productsFeaturesText {
+    color: #fbfbfb;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    div {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+
+      &:last-child {
+        font-size: $mainFontSize;
+        font-weight: 300;
+        line-height: 23.95px;
+        margin: 0 1.5rem 0 1.5rem;
+
+        @media (max-width: 768px) {
+          font-size: $titlesFontSize;
+        }
+
+        @media (max-width: 1199.98px) {
+          margin: 0;
+        }
+
+        @media (max-width: 991.98px) {
+          padding: 0 1rem 0 1rem;
+        }
+      }
+    }
+  }
+}
+
+
