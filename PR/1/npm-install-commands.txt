@@ -1,0 +1,7 @@
+npm i -D webpack webpack-cli
+
+//for css
+npm i -D css-loader mini-css-extract-plugin
+
+//for html
+npm i -D html-webpack-plugin
