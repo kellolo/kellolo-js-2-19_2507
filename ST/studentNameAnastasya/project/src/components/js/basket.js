@@ -1,5 +1,5 @@
 
-var basket = {
+export default {
     items: [],
     container: null,
     basket: basket,
@@ -60,7 +60,7 @@ var basket = {
             this.total = this.total + Number(item.price);
         } else {
             find.amount++;
-            this.total = this.total + Number(find.price);            
+            this.total = this.total + Number(find.price);
         }
         this._render();
     },
@@ -79,5 +79,4 @@ var basket = {
     }
 }
 
-basket.init();
-export default basket
+// basket.init();

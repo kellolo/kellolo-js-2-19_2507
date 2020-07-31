@@ -18,11 +18,12 @@ function initCatalog(qty) {
     let imgs = [];
     let prices = [];
 
-    for (let i = 0; i <= qty - 1; i++) {
+    for (let i = 1; i <= qty - 1; i++) {
         ids.push(i);
         names.push("MANGO PEOPLE T-SHIRT");
         prices.push("1" + String(i) + ".00");
-        imgs.push("../src/assets/imgs/Product" + String(i + 1) + ".jpg");
+
+        imgs.push(`https://raw.githubusercontent.com/AnastasyaChe/static/master/Fetured${i}.jpg`);
     }
 
     return names.map((names, index) => createItem(ids[index], names, prices[index], imgs[index]));
@@ -33,7 +34,7 @@ const catalog = {
     container: null,
     basket: basket,
     comp: basket,
-    
+
 
 
     init(qty) {
@@ -85,5 +86,6 @@ const catalog = {
         this.container.innerHTML = str;
     }
 }
+
 export default catalog;
 
