@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="ol">
+
+</div>
+
+<script>
+
+  function newUser(name, age, pr) {
+  //let cont2 = document.querySelector('#ol');
+
+    return {
+        cont2: document.querySelector(pr),
+        name: name,
+        age: age,
+        sayHi() {
+            this.cont2.innerHTML = this.name + " поздравляю! Вам " + this.age;
+        }
+    }
+
+}
+
+// let olga = newUser('Olga Tuz', 25, '#ol');
+// olga.sayHi();
+
+ newUser('Olga Tuz', 25, '#ol').sayHi();
+
+
+</script>
+
+</body>
+</html>
