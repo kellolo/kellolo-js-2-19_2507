@@ -10,20 +10,20 @@ function initCatalog() {
         'MANGO PEOPLE T-SHIRT','MANGO PEOPLE T-SHIRT','MANGO PEOPLE T-SHIRT','MANGO PEOPLE T-SHIRT','MANGO PEOPLE T-SHIRT',];
     let prices = [52, 52, 52, 52, 52, 52, 52, 52, 52,];
     let images = [
-        '../src/assets/images/man1.jpeg',
-        '../src/assets/images/Image@1X.jpeg',
-        '../src/assets/images/Layer%204@1X.jpeg',
-        '../src/assets/images/Layer%205@1X.jpeg',
-        '../src/assets/images/woman1.jpeg',
-        '../src/assets/images/Layer%207@1X.jpeg',
-        '../src/assets/images/Image@1.jpeg',
-        '../src/assets/images/Image@xxx.jpeg',
-        '../src/assets/images/Image@xxx.jpeg',
+        'https://raw.githubusercontent.com/IKolyas/verstka/master/src/assets/images/man1.jpeg',
+        'https://raw.githubusercontent.com/IKolyas/verstka/master/src/assets/images/Image@1X.jpeg',
+        'https://raw.githubusercontent.com/IKolyas/verstka/master/src/assets/images/Layer%204@1X.jpeg',
+        'https://raw.githubusercontent.com/IKolyas/verstka/master/src/assets/images/Layer%205@1X.jpeg',
+        'https://raw.githubusercontent.com/IKolyas/verstka/master/src/assets/images/woman1.jpeg',
+        'https://raw.githubusercontent.com/IKolyas/verstka/master/src/assets/images/Layer%207@1X.jpeg',
+        'https://raw.githubusercontent.com/IKolyas/verstka/master/src/assets/images/Image@1.jpeg',
+        'https://raw.githubusercontent.com/IKolyas/verstka/master/src/assets/images/Image@xxx.jpeg',
+        'https://raw.githubusercontent.com/IKolyas/verstka/master/src/assets/images/Image@xxx.jpeg',
     ]
     return names.map((name, index) => createItem(ids[index], name, prices[index], images[index]));
 }
 
-const catalog = {
+export default {
     items: [],
     container: null,
     slBegin: undefined,
@@ -90,13 +90,9 @@ const catalog = {
             this.container.innerHTML = str;
         }
 
-    }
-};
+    },
 
-// end Product catalog
-
-// openCart
-function openCart() {
+openCart() {
     let dropdownOn = document.querySelector('.basket__Product');
     document.addEventListener('click', evt => {
         if (evt.target.classList.contains('my__cart')) {
@@ -106,8 +102,5 @@ function openCart() {
     })
 }
 
-//end openCart
+};
 
-let open = openCart()
-
-export default catalog;
