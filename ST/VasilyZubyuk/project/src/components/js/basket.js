@@ -1,5 +1,5 @@
 
-var basket = {
+let basket = {
     items: [],
     container: null,
     basket: basket,

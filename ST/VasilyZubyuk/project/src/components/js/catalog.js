@@ -17,11 +17,12 @@ function initCatalog(qty) {
     let imgs = [];
     let prices = [];
 
-    for (let i=0; i<=qty-1; i++) {
+    for (let i = 1; i <= qty; i++) {
         ids.push(i);
         names.push("MANGO PEOPLE T-SHIRT");
-        prices.push("1" + String(i)+".00");
-        imgs.push("../src/assets/imgs/Product"+String(i+1)+ ".jpg");
+        prices.push("1" + String(i) + ".00");
+        // imgs.push("../src/assets/imgs/Product"+String(i + 1)+ ".jpg");
+        imgs.push(`https://raw.githubusercontent.com/O2xy/stattic/master/img/JS1_shop/Fetured${i}.jpg`)
     } 
 
     return names.map((names, index) => createItem(ids[index], names, prices[index], imgs[index]));
