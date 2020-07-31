@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+.slideBlockBg {
+  background-color: #f7f7f7;
+  border: 1px solid #eaeaea;
+  position: relative;
+  z-index: -1; }
+
+.carouselControlIcon {
+  background-color: #2a2a2a;
+  width: 47px;
+  height: 47px; }
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  background-size: 50%; }
+
+.carousel-inner {
+  display: flex;
+  justify-content: space-around; }
+
+.carousel-control-prev {
+  justify-content: flex-start; }
+
+.carousel-control-next {
+  justify-content: flex-end; }
+
+/*-------------------------------SLIDER END-----------------------------*/
+.productCart {
+  border: 1px solid #eaeaea;
+  margin-top: -50px;
+  background-color: #ffffff; }
+
+.womenCollection {
+  color: #f16d7f;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase; }
+
+.womenCollectionBorder div {
+  height: 3px;
+  background-color: #ef5b70; }
+  .womenCollectionBorder div:first-child, .womenCollectionBorder div:last-child {
+    height: 1px;
+    background-color: #eaeaea;
+    margin-top: 1px; }
+
+.womenCollectionTitle {
+  color: #4d4d4d;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase; }
+
+.womenCollectionTitleText {
+  color: #5e5e5e;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px; }
+
+.womenCollectionMaterialAndDesign {
+  color: #b9b9b9;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px; }
+  .womenCollectionMaterialAndDesign span {
+    color: #2f2f2f; }
+
+.womenCollectionPrice {
+  color: #ef5b70;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px; }
+
+.chooseFeatures {
+  border-top: 1px solid #eaeaea; }
+  .chooseFeatures div:first-child {
+    color: #2f2f2f;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase; }
+  .chooseFeatures div select {
+    color: #bcbcbc;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-left: 25px; }
+
+.chooseFeaturesInput {
+  height: 35px;
+  border: 1px solid #eaeaea;
+  background-color: #ffffff; }
+
+.productCartButton button {
+  border-color: #ef5b70;
+  color: #ef5b70; }
+  .productCartButton button:hover {
+    background-color: #ef5b70;
+    color: #ffffff; }
+
+/*-------------------------------ALSO ST-----------------------------*/
+.alsoTitle {
+  color: #4d4d4d;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase; }
+
+.alsoTitleProduct {
+  color: #6f6e6e;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase; }
+
+.alsoProductPrice {
+  color: #f16d7f;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.alsoProducts:hover {
+  text-decoration: none; }
+
+/*-------------------------------ALSO END-----------------------------*/
+
+/*# sourceMappingURL=stylesSinglePage.css.map */

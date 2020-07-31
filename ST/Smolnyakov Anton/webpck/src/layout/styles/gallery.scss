@@ -1,0 +1,69 @@
+
+.mainImgBG {
+  display: flex;
+  align-items: center;
+  background: rgb(1, 1, 40);
+  background: linear-gradient(270deg, rgba(1, 1, 40, 1) 0%, rgba(42, 41, 41, 1) 35%, rgba(42, 41, 41, 1) 65%, rgba(1, 1, 40, 1) 100%);
+
+  button {
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    background: darkgrey;
+    border-radius: 3px;
+    box-shadow: 0 1px 5px 0px darkgrey;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    border: none;
+
+    i {
+      padding: 5px;
+      color: #1b1b4f;
+    }
+  }
+
+  .wrapper {
+    margin: 20px auto;
+    height: 500px;
+    width: 750px;
+    background: rgb(27, 27, 79);
+    background: linear-gradient(270deg, rgba(27, 27, 79, 0.3984944319524685) 0%, rgba(139, 137, 137, 0.5973739837731968) 25%, rgba(139, 137, 137, 0.6) 75%, rgba(27, 27, 79, 0.4) 100%);
+
+    div {
+      height: inherit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      outline: 3px solid darkgrey;
+
+      #main-pic {
+        width: 98%;
+        height: 98%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.roulett {
+  padding: 10px 0;
+  background: rgb(1, 1, 40);
+  background: linear-gradient(270deg, rgba(1, 1, 40, 0.75) 0%, rgba(1, 1, 40, 0.75) 100%);
+  border-top: 3px solid darkgrey;
+  border-bottom: 3px solid darkgrey;
+
+  .roulettImgs {
+    display: flex;
+    justify-content: space-evenly;
+
+    img:hover {
+      outline: 2px solid darkgrey;
+      cursor: pointer;
+    }
+  }
+
+}
+
+
+
