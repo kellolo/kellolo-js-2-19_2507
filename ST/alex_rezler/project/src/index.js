@@ -1,6 +1,9 @@
-import { basket } from "./components/js/basket";
-import { catalog } from "./components/js/product";
+import app from './components/js/index.js'
+import './layout/styles/styles.css'
+import bootstrap from 'bootstrap'
+import 'jquery'
+import 'popper.js'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
-basket.init();
-catalog.init(8);
-document.querySelectorAll(".feturedItems").forEach(e => e.classList.add("col-lg-3"));
+
+app();
