@@ -1,1 +1,0 @@
-import catalog from "./components/product";
