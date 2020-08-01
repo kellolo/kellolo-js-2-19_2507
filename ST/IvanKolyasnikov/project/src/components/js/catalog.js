@@ -28,14 +28,16 @@ export default {
     container: null,
     slBegin: undefined,
     slEnd: undefined,
-    basket: basket,
+    basket: null,
     init(tagID, slBegin, slEnd) {
         this.slBegin = slBegin;
         this.slEnd = slEnd;
         this.container = document.querySelector(tagID);
         this.items = initCatalog();
+        this.basket = basket;
         this._render();
         this._handleActions();
+
     },
     _handleActions() {
         if (this.container){

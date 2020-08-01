@@ -22,11 +22,10 @@ function initCatalog(qty) {
 export default {
     items: [],
     container: null,
-    basket: null,
+    basket: basket,
 
 
-    init(qty, bask) {
-        this.basket = bask;
+    init(qty) {
         this.items = initCatalog(qty);
         this.container = document.querySelector("#catalog");
         this._render(qty);
