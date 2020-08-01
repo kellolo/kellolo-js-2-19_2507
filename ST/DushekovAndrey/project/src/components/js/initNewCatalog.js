@@ -1,10 +1,8 @@
-import component from './Basket.js'
-
 function createItem(id, name, price, img) {
             return { id, name, price, img }
         }
 
-function initNewCatalog(settings) {
+export default (settings) => {
 	const element = {
 		items: [],
 

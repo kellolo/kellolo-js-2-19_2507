@@ -1,6 +1,4 @@
-import component from './initNewCatalog.js'
-
-let catalog = {
+export default {
         ids: [1, 2, 3, 4, 5, 6, 7, 8],
         names: ['Mango People T-shirt', 'Orange People T-shirt', 'Apple People T-shirt', 'Mango Men Jacket', 'Mango Women Jacket', 'Mango People Coat', 'Grape People T-shirt', 'Mango People Jeans'],
         prices: ['52.00', '32.00', '12.00', '48.00', '34.00', '27.00', '52.00', '54.00'],
@@ -46,7 +44,3 @@ let catalog = {
           `
         }
       }
-
-      let newGallery = initNewCatalog(catalog);
-
-      export default newGallery
