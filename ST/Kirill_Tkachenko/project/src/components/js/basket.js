@@ -1,7 +1,6 @@
-let basket = {
+export default {
     items: [],
     container: null,
-    basket: basket,
     total: 0,
 
     init() {
@@ -77,5 +76,3 @@ let basket = {
         this._render();
     }
 }
-
-export default basket;
