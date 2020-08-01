@@ -1,0 +1,18 @@
+//for webpack
+npm i -D webpack waebpack-cli
+
+//for CSS
+npm i -D css-loader mini-css-extract-plugin
+
+//for HTML
+npm i -D html-webpack-plugin 
+
+//for imgs & etc 
+npm install copy-webpack-plugin --save-dev
+
+//for bootstrap
+npm i bootstrap jquery popper.js
+
+//for liveserver
+npm i -D webpack-dev-server 
+в "package.json" в раздел "scripts" добавить скрипт: ""dev": "webpack-dev-server""
