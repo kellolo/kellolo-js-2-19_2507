@@ -23,7 +23,7 @@ module.exports = {
     plugins: [
         // настройки плагина
         new MiniCssExtractPlugin({
-            filename: 'css/[name].css',
+            filename: 'layout/[name].css',
             chunkFilename: '[id].css',
         }),
         new CopyPlugin({

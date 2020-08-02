@@ -1,0 +1,27 @@
+.cart-button {
+    background-color: green;
+}
+
+.goods-item {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.goods-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
