@@ -1,9 +1,8 @@
-import {GoodsItem} from '../GoodsItem/GoodsItem'
-import {GoodsItemConfiguration} from "../GoodsItem/GoodsItemConfiguration";
+import {Menu} from '../Menu/Menu.js'
 
 export class Catalog {
     constructor(list) {
-        this.list = this._serialize(list);
+        this.list = list;
     }
 
     summaryPrice() {
@@ -19,20 +18,6 @@ export class Catalog {
     }
 
     render() {
-        const goodsListElement = document.querySelector('.goods-list')
-        const goodsList = [];
-        this.list.forEach(item => {
-            const goodsItemConfiguration = new GoodsItemConfiguration(item.title, item.price, item.cc, item.supplements);
-            const goodsItem = new GoodsItem(GoodsItemConfiguration);
-            goodsList.push(goodsItem);
-        });
 
-        goodsList.forEach(goodsItem => {
-            goodsListElement.appendChild(goodsItem.render());
-        });
     };
-
-    _serialize(list) {
-        return list
-    }
 }

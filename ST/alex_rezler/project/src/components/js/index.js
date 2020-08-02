@@ -1,6 +1,7 @@
 import {Basket} from './Basket/Basket.js'
 import {Catalog} from './Catalog/Catalog.js'
-import {SupplementsList} from './SupplementsList/SupplementsList'
+import {Menu} from './Menu/Menu.js'
+import {Supplements} from './Supplements/Supplements.js'
 
 export default () => {
     const supplements = [
@@ -11,13 +12,15 @@ export default () => {
         {title: 'mayonnaise', price: 20, cc: 5},
     ]
 
-    const supplementsList = new SupplementsList(supplements)
-
     const goods = [
         {title: 'Hamburger', price: 50, size: 'small', cc: 20, supplements: supplementsList},
         {title: 'Hamburger', price: 100, size: 'big', cc: 40, supplements: supplementsList},
     ];
 
-    const catalog = new Catalog(goods)
+    const supplementsInstance = new Supplements()
+    supplementsInstance.init(supplements)
+    const menuInstance = new Menu()
+    menuInstance.init(goods)
+    const catalog = new Catalog(menuInstance.menuList)
     catalog.render()
 }
