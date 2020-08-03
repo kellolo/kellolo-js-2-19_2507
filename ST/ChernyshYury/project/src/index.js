@@ -1,5 +1,8 @@
-import app from './components/product'
+import app from './components'
+import bootstrap from 'bootstrap'
+import './layout/styles/styles.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
-app.init()
-app._render()
-app._handleActions()
+
+app();
+

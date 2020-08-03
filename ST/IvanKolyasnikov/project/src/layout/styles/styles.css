@@ -82,7 +82,7 @@ header {
   background-color: #FFFFFF; }
 
 .logo {
-  background: url("../../assets/images/logo.png") no-repeat;
+  background: url("https://raw.githubusercontent.com/IKolyas/verstka/master/src/assets/images/logo.png") no-repeat;
   text-transform: uppercase;
   font-size: 27px;
   font-weight: 300;
@@ -371,7 +371,7 @@ header {
       display: flex; } }
 .futFon {
   min-height: 438px;
-  background: url(../../assets/images/Layer41@1X.jpeg) no-repeat center 28%, #ccc;
+  background: url('https://raw.githubusercontent.com/IKolyas/verstka/master/src/assets/images/Layer41%401X.jpeg') no-repeat center 28%, #ccc;
   background-blend-mode: overlay;
   background-size: cover; }
   .futFon .futFonInfo {
@@ -562,7 +562,7 @@ header {
   .topBanner .topBannerContent {
     height: inherit;
     background-size: 48%;
-    background: url(../../assets/images/topHeaderBack.png) no-repeat right 8% top, #e8e8e8; }
+    background: url('https://raw.githubusercontent.com/IKolyas/verstka/master/src/assets/images/topHeaderBack.png') no-repeat right 8% top, #e8e8e8; }
     .topBanner .topBannerContent .menLabel {
       border-left: 14px solid #f15068;
       height: 94px;
@@ -707,7 +707,7 @@ header {
 
 .buttBanBG {
   background-color: #222224;
-  background-image: url(../../assets/images/banner.jpeg);
+  background-image: url('https://raw.githubusercontent.com/IKolyas/verstka/master/src/assets/images/banner.jpeg');
   background-repeat: no-repeat; }
   .buttBanBG .buttonBannerOffer {
     font-size: 53.7px;
