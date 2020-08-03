@@ -1,0 +1,25 @@
+
+//for install all -D
+npm i -D webpack webpack-cli css-loader mini-css-extract-plugin html-webpack-plugin webpack-dev-server
+
+//for install all without -D
+npm i copy-webpack-plugin --save-dev bootstrap jquery popper.js
+
+//for webpack
+npm i -D webpack webpack-cli
+
+//for css
+npm i -D css-loader mini-css-extract-plugin
+
+//for html
+npm i -D html-webpack-plugin
+
+//for dev-server
+npm i -D webpack-dev-server
+
+// for static
+npm install copy-webpack-plugin --save-dev
+
+//for bootstrap, jquery, popper.js
+npm i bootstrap jquery popper.js
+

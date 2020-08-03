@@ -2,7 +2,6 @@
 var basket = {
     items: [],
     container: null,
-    basket: basket,
     total: 0,
 
     init() {
@@ -81,3 +80,4 @@ var basket = {
 
 basket.init();
 
+export default basket;

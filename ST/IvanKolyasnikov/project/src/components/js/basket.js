@@ -1,7 +1,6 @@
-var basket = {
+export default {
     items: [],
     container: null,
-    basket: basket,
     sum: null,
 
     init() {
@@ -12,7 +11,7 @@ var basket = {
     },
     _handleActions() {
         this.container.addEventListener('click', evt => {
-            if (evt.target.name == 'remove') {
+            if (evt.target.name === 'remove') {
                 this.remove(evt.target.dataset.id);
             }
         })
@@ -42,7 +41,7 @@ var basket = {
         this._sumBasket();
     },
     add(item) {
-        let find = this.items.find(el => el.id == item.id);
+        let find = this.items.find(el => el.id === item.id);
 
         if (!find) {
             this.items.push(item);
@@ -52,7 +51,7 @@ var basket = {
         this._render();
     },
     remove(itemId) {
-        let find = this.items.find(el => el.id == itemId);
+        let find = this.items.find(el => el.id === itemId);
 
         if (find.amount > 1) {
             find.amount--;
@@ -69,5 +68,3 @@ var basket = {
 
     }
 };
-
-export default basket;
