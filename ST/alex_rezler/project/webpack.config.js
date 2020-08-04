@@ -5,9 +5,9 @@ const CopyPlugin = require('copy-webpack-plugin');
 console.log('entried');
 
 module.exports = {
-    // entry: {
-    //     // точка входа (если нужно использовать путь отличный от "src/index.js")
-    // },
+    entry: {
+        main: './src/index.js'
+    },
     // output: {
     //     // изменения собранного js-файла
     // },
