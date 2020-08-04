@@ -28,9 +28,10 @@ function initCatalog() {
 export default {
     items: [],
     container: null,
-    cart: cart,
+    cart: null,
 
-    init() {
+    init(cart) {
+        this.cart = cart;
         this.items = initCatalog();
         this.container = document.querySelector("#catalog");
         this._render();

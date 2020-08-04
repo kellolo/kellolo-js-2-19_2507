@@ -5,5 +5,5 @@ import header from "./js/header"
 export default () => {
     cart.init();
     header.handleEvents();
-    catalog.init();
+    catalog.init(cart);
 }
