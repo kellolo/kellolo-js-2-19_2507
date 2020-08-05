@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/1bbbc1ee96.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="../src/layout/styles/style.css">
+	<title>Single-page</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__header container">
+				<div class="logo">Bran<span>d</span></div>
+				<div class="header__search">
+					<form class="header__searchform">
+						<button type="button" class="header__search-browse btn dropdown-toggle" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">
+							Browse
+						</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item disabled text-uppercase" href="#">women</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Dresses</a>
+							<a class="dropdown-item" href="#">Tops</a>
+							<a class="dropdown-item" href="#">Sweaters/Knits</a>
+							<a class="dropdown-item" href="#">Jackets/Coats</a>
+							<a class="dropdown-item" href="#">Blazers</a>
+							<a class="dropdown-item" href="#">Denim</a>
+							<a class="dropdown-item" href="#">Skirts/Shorts</a>
+							<a class="dropdown-item" href="#">Accessories </a>
+							<a class="dropdown-item disabled text-uppercase" href="#">men</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Tees/Tank tops</a>
+							<a class="dropdown-item" href="#">Shirts/Polos</a>
+							<a class="dropdown-item" href="#">Sweaters</a>
+							<a class="dropdown-item" href="#">Sweatshirts/Hoodies</a>
+							<a class="dropdown-item" href="#">Blazers</a>
+							<a class="dropdown-item" href="#">Jackets/vests</a>
+							<input class="header__search-input" name="search" type="text" placeholder="Search for Item...">
+							<button class="header__search-buton"><i class="fas fa-search"></i></button>
+						</div>
+						<input class="header__search-input" name="search" type="text" placeholder="Search for Item...">
+						<button class="header__search-buton"><i class="fas fa-search"></i></button>
+					</form>
+				</div>
+				<div class="header__cart">
+					<a href="#" class="header__cart-a"><img id="hide" class="header__cart-img"
+							src="../src/assets/imgs/headerCart.png" alt="headerCart"></a>
+					<div class="headerCart" id="cart">
+						<div id="basket" class="headerCart__main">
+							<div class="headerCart__item">
+								<div class="headerCart__product">
+									<img src="https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product1.jpg" alt="">
+									<div class="headerCart__description">
+										<div class="headerCart__name">
+											Rebox Zane
+										</div>
+										<div class="headerCart__price">
+											1 <span>x</span> $250
+										</div>
+									</div>
+								</div>
+								<button name="remove" data-id="${item.id}"><i class="fas fa-times-circle"></i></button>
+							</div>
+						</div>
+						<div class="headerCart__totalPrice">
+							<div>total</div>
+							<div>
+								$<div id="sum">500.00</div>
+							</div>
+						</div>
+						<button class="headerCart__button"><a href="checkout.html">Checkout</a></button>
+						<button class="headerCart__button"><a href="cart.html">Go to cart</a></button>
+					</div>
+				</div>
+				<div class="header__account">
+					<button class="header__btn">My Account <i class="fas fa-caret-down"></i></button>
+				</div>
+			</div>
+			<div class="header__line"></div>
+			<div class="header__footer">
+				<nav class="header__burger navbar navbar-expand-lg navbar-light bg-light text-uppercase">
+					<div class="container">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+							aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+							<div class="navbar-nav">
+								<a class="nav-item nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
+								<a class="nav-item nav-link" href="#">Man</a>
+								<a class="nav-item nav-link" href="#">Women</a>
+								<a class="nav-item nav-link" href="#">Kids</a>
+								<a class="nav-item nav-link" href="#">Accoseriese</a>
+								<a class="nav-item nav-link" href="#">Featured</a>
+								<a class="nav-item nav-link" href="#">Hot Deals</a>
+							</div>
+						</div>
+					</div>
+				</nav>
+				<nav class="header__nav">
+					<a href="index.html">Home</a>
+					<a href="#">Man</a>
+					<a href="#">Women</a>
+					<a href="#">Kids</a>
+					<a href="#">Accoseriese</a>
+					<a href="#">Featured</a>
+					<a href="#">Hot Deals</a>
+				</nav>
+			</div>
+		</header>
+		<div class="content">
+			<div class="new-arrivals-wrapper">
+				<div class="new-arrivals container">
+					<h1>New Arrivals</h1>
+					<nav class="new-arrivals__nav">
+						<a href="index.html" class="new-arrivals__a">home</a>
+						/
+						<a href="#" class="new-arrivals__a">men</a>
+						/
+						<a href="#" class="new-arrivals__a new-arrivals__a-active">new arrivals</a>
+					</nav>
+				</div>
+			</div>
+			<div class="container-fluid container-fluid--grey">
+				<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+					<div class="container row d-flex justify-content-center">
+						<div class="carousel-inner col-7">
+							<div class="carousel-item active" data-interval="10000">
+								<img src="https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/Slide1.jpg" class="d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item" data-interval="2000">
+								<img src="https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/Slide1.jpg" class="d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/Slide1.jpg" class="d-block w-100" alt="...">
+							</div>
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"><i class="fas fa-angle-left"></i></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"><i class="fas fa-angle-right"></i></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+			<div class="product-description-wrapper">
+				<div class="product-description container">
+					<div class="row">
+						<div class="col-md-9 col-lg-6  mx-auto p-0">
+							<div class="product-description__head mx-auto">
+								<div
+									class="product-description__text product-description__text--pink mx-auto text-center text-uppercase">
+									WOMEN COLLECTION
+								</div>
+								<h2 class="mt-3 mx-auto text-center text-uppercase">
+									Moschino Cheap And Chic
+								</h2>
+								<p class="text-center">Compellingly actualize fully researched processes before proactive
+									outsourcing. Progressively syndicate collaborative architectures before cutting-edge
+									services. Completely visualize parallel core competencies rather than exceptional portals.
+								</p>
+								<div class="d-flex justify-content-center text-uppercase row">
+									<div class="product-description__text">
+										<span>material:</span>cotton
+									</div>
+									<div class="ml-5 product-description__text">
+										<span>designer:</span>binburhan
+									</div>
+								</div>
+								<div class="product-description__price text-center">
+									$561
+								</div>
+							</div>
+							<form action="" class="product-description__form pr-5 pl-5 mx-auto">
+								<div class="form-row d-flex justify-content-between">
+									<div class="div">
+										<label class="product-description__text text-uppercase" for="color">CHOOSE COLOR</label>
+										<select class="form-control text-muted" id="color">
+											<option>Red</option>
+											<option>Red</option>
+											<option>Red</option>
+										</select>
+									</div>
+									<div class="div">
+										<label class="product-description__text text-uppercase" for="size">CHOOSE SIZE</label>
+										<select class="form-control text-muted" id="size">
+											<option>S</option>
+											<option>M</option>
+											<option>L</option>
+											<option>XL</option>
+										</select>
+									</div>
+									<div class="div">
+										<label class="product-description__text text-uppercase" for="quantity">QUANTITY</label>
+										<input type="text" class="form-control text-muted" placeholder="2" id="quantity">
+									</div>
+								</div>
+								<button type="button" class="btn-block btn btn-outline-primary"><img src="../src/assets/imgs/cart-pink.png"
+										alt="">Add to Cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<aside class="container aside-products">
+				<div class="head-text text-center text-uppercase">
+					<h2>you may like also</h2>
+				</div>
+				<div id="catalog" class="products row">
+					<div class="products__item col-sm-6 col-lg-3">
+						<div class="products__wrap-img">
+							<div class="products__buy">
+								<button
+									name="add"
+									data-name="${item.name}"
+									data-img="${item.img}"
+									data-price="${item.price}"
+									data-id="${item.id}"
+								>
+									<img src="../src/assets/imgs/addToCart.png" alt="">
+									Add to Cart
+								</button>
+							</div>
+							<img class="products__img mx-auto" src="${item.img}" alt="product1">
+						</div>
+						<div class="products__bottom">
+							<div class="products__name">${item.name}</div>
+							<div class="products__price">${item.price}</div>
+						</div>
+					</div>
+					<div class="products__item col-sm-6 col-lg-3">
+						<div class="products__wrap-img">
+							<div class="products__buy">
+								<button>
+									<img src="../src/assets/imgs/addToCart.png" alt="">
+									Add to Cart
+								</button>
+							</div>
+							<img class="products__img mx-auto" src="https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/alexa-sweater.png" alt="product2">
+						</div>
+						<div class="products__bottom">
+							<div class="products__name">ALEXA SWEATER</div>
+							<div class="products__price">$52.00</div>
+						</div>
+					</div>
+					<div class="products__item col-sm-6 col-lg-3">
+						<div class="products__wrap-img">
+							<div class="products__buy">
+								<button>
+									<img src="../src/assets/imgs/addToCart.png" alt="">
+									Add to Cart
+								</button>
+							</div>
+							<img class="products__img mx-auto" src="https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/agnes-top.png" alt="product3">
+						</div>
+						<div class="products__bottom">
+							<div class="products__name">AGNES TOP</div>
+							<div class="products__price">$52.00</div>
+						</div>
+					</div>
+					<div class="products__item col-sm-6 col-lg-3">
+						<div class="products__wrap-img">
+							<div class="products__buy">
+								<button>
+									<img src="../src/assets/imgs/addToCart.png" alt="">
+									Add to Cart
+								</button>
+							</div>
+							<img class="products__img mx-auto" src="https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/sylwa-sweater.png" alt="product3">
+						</div>
+						<div class="products__bottom">
+							<div class="products__name">SYLVA SWEATER</div>
+							<div class="products__price">$52.00</div>
+						</div>
+					</div>
+				</div>
+			</aside>
+		</div>
+		<div class="subscribe-wrap">
+			<div class="subscribe container">
+				<div class="subscribe__left">
+					<div class="subscribe__review">
+						<div class="subscribe__photo">
+							<img src="https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/reviewPerson.png" alt="photo">
+						</div>
+						<div class="subscribe__text">
+							<blockquote>
+								“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a.
+								Aliquam condimentum mattis neque sed pretium”
+							</blockquote>
+							<div class="subscribe__name">Bin Burhan</div>
+							<div class="subscribe__adress">Dhaka, Bd</div>
+							<div class="subscribe__switch">
+								<div class="subscribe__switch-inactive"></div>
+								<div class="subscribe__switch-inactive subscribe__switch-active"></div>
+								<div class="subscribe__switch-inactive"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="subscribe__switch-1-wrap">
+					<div class="subscribe__switch-1">
+						<div class="subscribe__switch-1-inactive"></div>
+						<div class="subscribe__switch-1-inactive subscribe__switch-1-active"></div>
+						<div class="subscribe__switch-1-inactive"></div>
+					</div>
+				</div>
+				<div class="subscribe__delimiter"></div>
+				<div class="subscribe__right">
+					<div class="subscribe__header">Subscribe</div>
+					<div class="subscribe__right-text">FOR OUR NEWLETTER AND PROMOTION</div>
+					<form action="" class="subscribe__form">
+						<input type="email" placeholder="Enter Your Email">
+						<button>Subscribe</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<footer class="footer container">
+			<div class="footer__brand">
+				<div class="logo">Bran<span>d</span></div>
+				<div class="footer__text-1">Objectively transition extensive data rather than cross functional solutions.
+					Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an
+					expanded array of processes and cross-unit partnerships. </div>
+				<div class="footer__text-2">Efficiently plagiarize 24/365 action items and focused infomediaries.
+					Distinctively seize superior initiatives for wireless technologies. Dynamically optimize</div>
+			</div>
+			<div class="footer__column">
+				<h2>COMPANY</h2>
+				<a href="#">Home</a>
+				<a href="#">Shop</a>
+				<a href="#">About</a>
+				<a href="#">How It Works</a>
+				<a href="#">Contact</a>
+			</div>
+			<div class="footer__column">
+				<h2>INFORMATION</h2>
+				<a href="#">Tearms & Condition</a>
+				<a href="#">Privacy Policy</a>
+				<a href="#">How to Buy</a>
+				<a href="#">How to Sell</a>
+				<a href="#">Promotion</a>
+			</div>
+			<div class="footer__column">
+				<h2>SHOP CATEGORY</h2>
+				<a href="#">Men</a>
+				<a href="#">Women</a>
+				<a href="#">Child</a>
+				<a href="#">Apparel</a>
+				<a href="#">Brows All</a>
+			</div>
+
+		</footer>
+		<div class="copyright">
+			<div class="copyright__wrap container">
+				<div class="copyright__copyright">
+					&copy; 2017 Brand All Rights Reserved.
+				</div>
+				<div class="copyright__link">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+					<a href="#"><i class="fab fa-twitter"></i></a>
+					<a href="#"><i class="fab fa-linkedin-in"></i></a>
+					<a href="#"><i class="fab fa-pinterest-p"></i></a>
+					<a href="#"><i class="fab fa-google-plus-g"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+		crossorigin="anonymous"></script>
+	<script src="../src/components/js/basket.js"></script>
+	<script src="../src/components/js/single-page.js"></script>
+</body>
+
+</html>
