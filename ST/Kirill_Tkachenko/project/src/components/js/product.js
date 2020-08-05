@@ -1,5 +1,3 @@
-import basket from "./basket";
-
 function createItem(id, name, price, img) {
     return {id, name, price, img};
 };
@@ -23,12 +21,13 @@ function initCatalog(qty) {
 export default {
     items: [],
     container: null,
-    basket: basket,
+    basket: null,
 
 
-    init(qty) {
+    init(qty, basket) {
         this.items = initCatalog(qty);
         this.container = document.querySelector("#catalog");
+        this.basket = basket;
         this._render(qty);
         this._handleActions();
     },

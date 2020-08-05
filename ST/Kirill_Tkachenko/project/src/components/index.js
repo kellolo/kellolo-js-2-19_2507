@@ -3,5 +3,5 @@ import catalog from "./js/product";
 
 export default () => {
     basket.init();
-    catalog.init(9);
+    catalog.init(9, basket);
 }
