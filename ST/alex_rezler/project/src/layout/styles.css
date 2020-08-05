@@ -2,7 +2,7 @@
     background-color: green;
 }
 
-.goods-item {
+.basket-item {
     display: flex;
     flex-direction: column;
     height: 200px;

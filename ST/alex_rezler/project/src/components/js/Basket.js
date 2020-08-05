@@ -6,12 +6,11 @@ export class Basket {
     render() {
         const goodsList = document.querySelector('.goods-list');
         let resHTML = '';
-        console.log(this.basketList);
         this.basketList.forEach((item) => {
             resHTML += `
             <div class="basket-item">
-                <p>${item.calculatePrice()}</p>
-                <p>${item.calculateCalories()}</p>
+                <p>Price: ${item.calculatePrice()}</p>
+                <p>Calories: ${item.calculateCalories()}</p>
             </div>
             `
         });

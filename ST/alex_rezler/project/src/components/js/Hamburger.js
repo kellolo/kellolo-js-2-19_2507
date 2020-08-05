@@ -13,13 +13,14 @@ export class Hamburger {
             supplements.forEach((name) => {
                 const elemToPush = this.supplementsList.filter((item) => {
                     return name === item.title
-                })
+                })[0]
+                console.log(elemToPush)
                 this.currentSupplements.push(elemToPush)
             })
         } else {
             const elemToPush = this.supplementsList.filter((item) => {
                 return name === item.title
-            })
+            })[0]
             this.currentSupplements.push(elemToPush)
         }
     }
@@ -43,13 +44,13 @@ export class Hamburger {
             stuffing.forEach((name) => {
                 const elemToPush = this.stuffingList.filter((item) => {
                     return name === item.title
-                })
+                })[0]
                 this.currentStuffing.push(elemToPush)
             })
         } else {
             const elemToPush = this.stuffingList.filter((item) => {
                 return name === item.title
-            })
+            })[0]
             this.currentStuffing.push(elemToPush)
         }
     }
@@ -69,6 +70,7 @@ export class Hamburger {
         let suppPrice = 0
         let dishPrice = this.configObject.price
 
+        console.log('currentStuffing', this.currentStuffing, 'currentSupplements', this.currentSupplements)
         this.currentStuffing.forEach(item => {
             stufPrice += item.price;
         })

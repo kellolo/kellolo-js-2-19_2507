@@ -26,7 +26,6 @@ export default () => {
         return hamburger
     })
 
-    console.log(basketList)
     const basket = new Basket(basketList)
     basket.render()
 }
