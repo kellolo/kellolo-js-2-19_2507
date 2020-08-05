@@ -19,6 +19,20 @@ export class GoodsList {
         })
     }
 
+    addProduct(goodsItem) {
+        return this.goods.push(goodsItem)
+    }
+
+    removeProduct(goodsItem) {
+        return this.goods.filter((item) => {
+            return item.title !== goodsItem
+        })
+    }
+
+    getProducts() {
+        return this.goods
+    }
+
     calculatePrice() {
         let sumPrice = 0;
         this.goods.forEach((item) => {
