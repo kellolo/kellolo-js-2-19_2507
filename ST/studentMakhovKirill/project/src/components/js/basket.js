@@ -1,44 +1,47 @@
-export default {
-	items: [],
-	container: null,
-	basket: basket,
-	sum: 0,
+import Catalog from './catalog';
 
-	init() {
-		this.container = document.querySelector("#basket");
+export default class Basket extends Catalog {
+	
+	_init() {
 		this._render();
 		this._handleActions();
-	},
+		document.getElementById("sum").innerHTML = this.sum;
+	}
+
 	_handleActions() {
-		this.container.addEventListener('click', evt => {
+		let cat = document.querySelector(this.container);
+		cat.addEventListener('click', evt => {
 			if (evt.target.name == 'remove') {
 				this.remove(evt.target.dataset.id);
 			}
 		})
-	},
+	}
+
 	_render() {
+      let cat = document.querySelector(this.container);
 		let str = '';
-		this.items.forEach(item => {
-			str += `
-			<div class="headerCart__item">
-				<div class="headerCart__product">
-						<img src="${item.img}" alt="">
-						<div class="headerCart__description">
-							<div class="headerCart__name">
-								${item.name}
+			this.items.forEach(item => {
+				str += `
+				<div class="headerCart__item">
+					<div class="headerCart__product">
+							<img src="${item.img}" alt="">
+							<div class="headerCart__description">
+								<div class="headerCart__name">
+									${item.name}
+								</div>
+								<div class="headerCart__price">
+									${item.amount}  <span>x</span> $${item.price}
+								</div>
 							</div>
-							<div class="headerCart__price">
-								${item.amount}  <span>x</span> $${item.price}
-							</div>
-						</div>
+					</div>
+					<button name="remove" data-id="${item.id}">x</button>
 				</div>
-				<button name="remove" data-id="${item.id}">x</button>
-			</div>
-			`
-		})
-		this.container.innerHTML = str;
-		document.getElementById("sum").innerHTML = basket.sum;
-	},
+				`
+			})
+		cat.innerHTML = str;
+		document.getElementById("sum").innerHTML = this.sum;
+	}
+
 	add(item) {
 		let find = this.items.find(el => el.id == item.id);
 
@@ -49,7 +52,8 @@ export default {
 		}
 		this.sum += item.price;
 		this._render();
-	},
+	}
+
 	remove(itemId) {
 		let find = this.items.find(el => el.id == itemId);
 
@@ -62,5 +66,3 @@ export default {
 		this._render();
 	}
 }
-
-// basket.init();
