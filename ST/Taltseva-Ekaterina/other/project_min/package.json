@@ -1,6 +1,7 @@
 {
-  "name": "project",
+  "name": "project_min",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode development"
@@ -9,17 +10,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "css-loader": "^4.2.0",
+    "css-loader": "^4.2.1",
     "html-webpack-plugin": "^4.3.0",
     "mini-css-extract-plugin": "^0.9.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "bootstrap": "^4.5.1",
-    "copy-webpack-plugin": "^6.0.3",
+    "bootstrap": "^4.5.2",
+    "css-minimizer-webpack-plugin": "^1.1.0",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1"
-  },
-  "description": ""
+  }
 }
