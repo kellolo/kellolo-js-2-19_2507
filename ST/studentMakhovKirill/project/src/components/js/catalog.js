@@ -5,23 +5,28 @@ function createItem(id, name, price, img) {
 };
 
 function initCatalog() {
-	let ids = [1, 2, 3, 4];
+	let ids = [1, 2, 3, 4, 5, 6, 7, 8];
 
-	let names = ["MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT"];
+	let names = ["MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT",
+		"MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT"];
 
-	let prices = ["12.00", "25.00", "32.00", "100.00"];
+	let prices = ["12.00", "25.00", "32.00", "100.00", "10500.00", "666.00", "69.00", "11111.00"];
 
 	let imgs = [
-		"../src/assets/imgs/product1.jpg",
-		"../src/assets/imgs/product2.jpg",
-		"../src/assets/imgs/product3.jpg",
-		"../src/assets/imgs/product4.jpg",
+		"https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product1.jpg",
+		"https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product2.jpg",
+		"https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product3.jpg",
+		"https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product4.jpg",
+		"https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product5.jpg",
+		"https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product6.jpg",
+		"https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product7.jpg",
+		"https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product8.jpg",
 	]
 
 	return names.map((name, index) => createItem(ids[index], name, prices[index], imgs[index]));
 }
 
-const catalog = {
+export default {
 	items: [],
 	container: null,
 	basket: component,
@@ -72,11 +77,11 @@ const catalog = {
 						Add to Cart
 					</button>
 				</div>
-				<img class="products__img mx-auto" src="${item.img}" alt="product1">
+				<img class="products__img" src="${item.img}" alt="product1">
 			</div>
 			<div class="products__bottom">
 				<div class="products__name">${item.name}</div>
-				<div class="products__price">${item.price}</div>
+				<div class="products__price">$${item.price}</div>
 			</div>
 		</div>
 			`
@@ -85,4 +90,4 @@ const catalog = {
 	}
 }
 
-export default catalog
+// catalog.init();
