@@ -1,3 +1,4 @@
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -9,6 +10,7 @@ module.exports = {
     output: {
 
     },*/
+
     module: {
         rules: [
             {
@@ -19,6 +21,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
+            
             filename: 'css/[name].css',
             chunkFilename: '[id].css'
         }),

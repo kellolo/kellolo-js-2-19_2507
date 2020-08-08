@@ -135,6 +135,7 @@ a {
 .nav {
   height: 51px;
   background-color: #fff;
+  
 }
 .nav_category {
   width: 243px;
@@ -230,7 +231,6 @@ a {
 .promo {
   height: 613px;
   background-color: #e8e8e8;
-  /*background-image: url(../src/assets/img/promo.png);*/
   background-repeat: no-repeat;
   background-position: center -51px;
   display: flex;
@@ -373,9 +373,11 @@ a {
   margin-top: 98px;
   transition: all 2s;
 }
-.deal__man:hover {
-  transform: rotate(-15deg);
-}
+
+/*.img_man {
+  position: relative;
+}*/
+
 .deal__h4 {
   font-size: 18px;
   font-weight: 900;
@@ -432,9 +434,7 @@ a {
   margin-top: 98px;
   transition: all 2s;
 }
-.deal__woman:hover {
-  transform: rotate(15deg);
-}
+
 .deal__wallet {
   height: 261px;
   width: 560px;
@@ -454,9 +454,7 @@ a {
   float: right;
   transition: all 2s;
 }
-.deal__kid:hover {
-  transform: rotate(15deg);
-}
+
 .product {
   width: 263px;
   margin-bottom: 30px;
@@ -564,14 +562,14 @@ a {
 .product__add-heart:hover {
   box-shadow: 0 0 3px #fff;
 }
-.product-box {
+.ProductBox {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 60px;
   padding-bottom: 20px;
 }
-.product-box_catalog {
+.CatalogBox {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1171,7 +1169,7 @@ details[open] > summary.sort_by::after {
   width: 234px;
   margin-right: 46px;
 }
-.drop__flex-account {
+.BasketAccount {
   width: 230px;
   display: flex;
   flex-wrap: wrap;

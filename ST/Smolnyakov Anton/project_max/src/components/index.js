@@ -3,7 +3,8 @@ import catalog from "./js/catalog";
 import header from "./js/header"
 
 export default () => {
-    cart.init();
+    catalog(cart);
     header.handleEvents();
-    catalog.init();
 }
+
+
