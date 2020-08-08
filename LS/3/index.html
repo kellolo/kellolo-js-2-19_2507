@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //timeOut & interval
+        //AJAX
+        //fileStreams & readers
+
+        //let a <<< from server
+        //                                          request >>> data >> a = data
+        //console.log(a) //a == undefined
+
+
+        // let a;
+                                    // setTimeout(() => {
+                                    //     a = 100500
+                                    // }, 0)
+
+                                    // function setTimeout(cb, time) {
+                                    //     /// ????? time
+                                    //     cb();
+                                    // }
+
+                                    // function forEach(arr, cb) {
+                                    //     for (let i = 0; i = arr.length; i++) {
+                                    //         cb(arr[i])
+                                    //     }
+                                    // }
+
+                                    // forEach([1, 2, 3], el => {
+                                    //     console.log(el)
+                                    // })
+
+        // console.log(a)
+
+        //PROMISES
+
+        let arrAtServer = [1, 2, 3, 4];
+
+        function tipoRequest() {
+            setTimeout(() => {
+                arrAtServer = [1, 2, 3, 4];
+            }, 2000);
+        }
+
+        function promiseFunction() {
+            return new Promise((resolve, reject) => {
+                if (arrAtServer.length) {
+                    resolve(arrAtServer);
+                } else {
+                    reject('Server error');
+                }
+            })
+        }
+
+        promiseFunction()
+            .then(data => {
+                console.log(data);
+                return data
+            })
+            .then(data1 => {
+                console.log('something');
+                return data1
+            })
+            .then(data2 => {
+                console.log('something');
+            })
+            .catch(errMsg => {
+                throw new Error(errMsg);
+            })
+            .finally(() => {
+                console.log('End of promise')
+            })
+
+        function get() {
+            return [1, 2]
+        }
+
+        async function some() {
+            let data
+            try {
+                data = await get();
+                data.push(3)
+            }
+            catch {
+
+            }
+            finally {
+
+            }
+        }
+
+        let data 
+        
+        function some2 () {
+            return new Promise((res, rej) => {
+                if (true) P{
+                    reolve(get())
+                }
+            })
+        }
+
+        some2()
+        .then(d => {
+            data = d;
+        })
+        .then (() => {
+            data.push(3)
+        })
+    </script>
+</body>
+</html>

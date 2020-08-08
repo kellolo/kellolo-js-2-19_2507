@@ -1,5 +1,3 @@
-import basket from './basket';
-
 function createItem(id, name, price, img) {
     return { id, name, price, img }
 }
@@ -7,7 +5,7 @@ function createItem(id, name, price, img) {
 function initCatalog() {
     let ids = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     let names = ['MANGO PEOPLE T-SHIRT', 'MANGO PEOPLE T-SHIRT', 'MANGO PEOPLE T-SHIRT', 'MANGO PEOPLE T-SHIRT',
-        'MANGO PEOPLE T-SHIRT','MANGO PEOPLE T-SHIRT','MANGO PEOPLE T-SHIRT','MANGO PEOPLE T-SHIRT','MANGO PEOPLE T-SHIRT',];
+        'MANGO PEOPLE T-SHIRT', 'MANGO PEOPLE T-SHIRT', 'MANGO PEOPLE T-SHIRT', 'MANGO PEOPLE T-SHIRT', 'MANGO PEOPLE T-SHIRT',];
     let prices = [52, 52, 52, 52, 52, 52, 52, 52, 52,];
     let images = [
         'https://raw.githubusercontent.com/IKolyas/verstka/master/src/assets/images/man1.jpeg',
@@ -23,24 +21,24 @@ function initCatalog() {
     return names.map((name, index) => createItem(ids[index], name, prices[index], images[index]));
 }
 
-export default {
-    items: [],
-    container: null,
-    slBegin: undefined,
-    slEnd: undefined,
-    basket: null,
-    init(tagID, slBegin, slEnd) {
+export default class Catalog {
+    constructor(container, basket, slBegin, slEnd) {
+        this.items = [];
+        this.container = document.querySelector(container);
+        this.basket = basket;
         this.slBegin = slBegin;
         this.slEnd = slEnd;
-        this.container = document.querySelector(tagID);
+        this._init();
+    }
+
+    _init() {
         this.items = initCatalog();
-        this.basket = basket;
         this._render();
         this._handleActions();
 
-    },
+    }
     _handleActions() {
-        if (this.container){
+        if (this.container) {
             this.container.addEventListener('click', evt => {
                 if (evt.target.name === 'add') {
                     let item = {
@@ -55,7 +53,7 @@ export default {
 
             })
         }
-    },
+    }
     _render() {
         let str = '';
         this.items.slice(this.slBegin, this.slEnd).forEach(item => {
@@ -88,21 +86,10 @@ export default {
                         </div>
                     </div> `
         });
-        if (this.container){
+        if (this.container) {
             this.container.innerHTML = str;
         }
 
-    },
-
-openCart() {
-    let dropdownOn = document.querySelector('.basket__Product');
-    document.addEventListener('click', evt => {
-        if (evt.target.classList.contains('my__cart')) {
-                dropdownOn.classList.toggle('open__basket');
-            }
-
-    })
-}
+    }
 
 };
-
