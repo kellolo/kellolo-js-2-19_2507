@@ -1,25 +1,30 @@
-export default {
-    items: [],
-    container: null,
-    total: 0,
+// ------- Creating Basket -------- //
 
-    init() {
+class BasketAccount {
+    constructor(container) {
+        this.items = [];
+        this.container = null;
+        this._init();
+    }
+    _init() {
         this.container = document.querySelector("#basket");
         this._render();
         this._handleActions();
-    },
+    }
+
     _handleActions() {
         this.container.addEventListener('click', evt => {
             if (evt.target.name == 'remove') {
                 this.remove(evt.target.dataset.id);
             }
         })
-    },
+    }
+
     _render() {
         let str = "";
         this.items.forEach(item => {
             str += `
-            <div class="drop__flex-account">
+            
                 <div class="account_img">
                     <a href="#" class="drop_account-img">
                         <img src="${item.img}" alt="drop_account-img">
@@ -40,12 +45,13 @@ export default {
                     </div>
                     <button name="remove" data-id="${item.id}">x</button>
                 </div>
-            </div>`
+            `
             
         })
         this.container.innerHTML = str;
-    },
-    add(item) {
+    }
+
+    _add(item) {
         let find = this.items.find(el => el.id == item.id);
 
         if (!find) {
@@ -54,8 +60,9 @@ export default {
             find.amount++;
         }
         this._render();
-    },
-    remove(itemId) {
+    }
+
+    _remove(itemId) {
         console.log('remove')
         let find = this.items.find(el => el.id == itemId);
 
@@ -68,7 +75,10 @@ export default {
     }
 }
 
+let ItemBasket = new BasketAccount('#basket');
+
     //basket.init();
 
     //export default basket
+
 
