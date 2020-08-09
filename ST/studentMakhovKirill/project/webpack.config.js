@@ -15,7 +15,15 @@ module.exports = {
 			//правила обработки вебпаком разных типов файлов
 			{
 				test: /\.css$/i,
-				use: [MiniCssExtractPlugin.loader, 'css-loader'],
+				use: [
+					MiniCssExtractPlugin.loader,
+					{
+						loader: "css-loader",
+						options: {
+							url: false
+						}
+					}
+				],
 			}
 		]
 	},

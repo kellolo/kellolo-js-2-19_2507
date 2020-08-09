@@ -1,3 +1,4 @@
+import parentCartAndCatalog from "./parents"
 
 function createItem(id, name, price, img) {
     return {id, name, price, img};
@@ -25,17 +26,13 @@ function initCatalog() {
     return names.map((names, index) => createItem(ids[index], names, prices[index], imgs[index]));
 };
 
-export default {
-    items: [],
-    container: null,
-    cart: cart,
-
-    init() {
+class catalogClass extends parentCartAndCatalog {
+    _init() {
         this.items = initCatalog();
         this.container = document.querySelector("#catalog");
         this._render();
         this._handleActions();
-    },
+    }
 
     _handleActions() {
         this.container.addEventListener('click', evt => {
@@ -50,7 +47,7 @@ export default {
                 this.cart.add(item);
             }
         })
-    },
+    }
 
     _render() {
         let str = "";
@@ -90,3 +87,9 @@ export default {
         this.container.innerHTML = str;
     }
 }
+
+function catalog(cart) {
+    new catalogClass(cart);
+}
+
+export default catalog;
