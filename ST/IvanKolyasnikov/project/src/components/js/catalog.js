@@ -53,6 +53,7 @@ export default class Catalog {
 
             })
         }
+
     }
     _render() {
         let str = '';

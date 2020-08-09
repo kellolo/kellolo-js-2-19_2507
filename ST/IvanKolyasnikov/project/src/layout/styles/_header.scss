@@ -1,0 +1,295 @@
+@import "variables";
+@import "media/mediaSM";
+
+header {
+  background-color: #FFFFFF;
+}
+
+.logo {
+  background: url("https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/logo.png") no-repeat;
+  text-transform: uppercase;
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 4rem;
+  text-decoration: none;
+  color: $mainTextColor;
+  &:hover{
+    color: $mainTextColor;
+    text-decoration: none;
+  }
+
+  span {
+    color: $mainThemeColor;
+    font-weight: 700;
+  }
+}
+
+.searchBrowse {
+  button {
+    border: 1.0px solid #e8e8e8;
+    border-radius: 0.0px 3.0px 3.0px 0.0px;
+    background-color: #f6f6f6;
+
+    &:hover, &:active, &:focus {
+      box-shadow: none !important;
+    }
+
+    i {
+      color: #a4a4a4;
+    }
+  }
+
+  .drMenuHeaderLeft {
+    width: 262px !important;
+    background-color: #ffffff !important;
+    border-radius: 5.0px !important;
+    transform: translate3d(15px, 36px, 0px) !important;
+
+    .drMenuHeaderLeftLinkH {
+      font-size: 14px;
+      line-height: 28px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.025em;
+      color: #232323;
+    }
+
+    .drMenuHeaderLeftLink {
+      font-size: 14px;
+      line-height: 26px;
+      font-weight: 400;
+      letter-spacing: 0.025em;
+      color: #4f4f4f;
+    }
+  }
+
+}
+
+
+.dell__Product {
+  color: #c0c0c0;
+  transition-duration: .5s;
+  border: none;
+  background-color: #FFFFFF!important;
+  &:hover {
+    color: $mainTextColor !important;
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
+  }
+}
+
+.buttMyAccount {
+  width: 225px !important;
+  height: 50px !important;
+  border: 1.0px solid #f16d7f !important;
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  color: #f16d7f !important;
+  background-color: #FFFFFF !important;
+  border-radius: 0 !important;
+  transition-duration: .5s;
+
+  &:hover {
+    background-color: $mainThemeColor !important;
+    color: #FFFFFF !important;
+    border-radius: 0 !important;
+  }
+}
+
+
+.rTop {
+  .basket__block{
+    position: relative;
+    .my__cart {
+      color: $mainThemeColor;
+      font-size: 1.7rem;
+      transition-duration: .5s;
+
+      &:hover {
+        text-decoration: none;
+        color: $mainThemeColor;
+        transform: scale(1.2, 1.2);
+      }
+    }
+
+    .basket__Product {
+      position: absolute;
+      width: 262px !important;
+      background-color: #FFFFFF;
+      border: 1px solid $mainTextColorP;
+      left: -66px;
+      top: 63px;
+      z-index: 100;
+      opacity: 0;
+      transform: perspective(600px) rotateX(-90deg);
+      transform-origin: 0 0;
+      transition: .4s ease-in-out;
+
+    }
+    .open__basket{
+
+      top: 63px;
+      transform: rotate3d(0, 0,0, 0deg);
+      opacity: 1;
+    }
+
+
+    img {
+        width: 72px;
+        height: 85px;
+        object-position: center center;
+        object-fit: cover;
+      }
+      .product__text {
+
+        h3 {
+          text-align: center;
+          font-size: 12px;
+          line-height: 1.2;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: $mainTextColor;
+        }
+
+        .stars {
+          i {
+            font-size: 12px;
+            line-height: 1.2;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #e4af48;
+          }
+        }
+
+        p {
+          font-size: 12px;
+          line-height: 1.2;
+          font-weight: 400;
+          text-transform: uppercase;
+          color: $mainThemeColor;
+          span{
+            font-size: inherit;
+            line-height: inherit;
+            font-weight: inherit;
+            text-transform: inherit;
+            color: inherit;
+          }
+        }
+      }
+    }
+
+  .btn-group {
+    button {
+      background-color: #ef6375;
+    }
+    .dropdown-menu{
+      top:35%!important;
+    }
+  }
+}
+
+.headerLine {
+  border-bottom: 1px solid #ececec;
+  width: 100%;
+}
+
+.topNav {
+
+  .topMenu > li {
+    display: inline-block;
+    position: relative;
+  }
+
+  .menu__top__link{
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+    text-decoration: none;
+    color: $mainTextColor;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 1.5rem;
+    border-bottom: 4px solid #ffffff;
+    transition-duration: .5s;
+
+    &:hover {
+      text-shadow: 2px 4px 6px rgba(150, 150, 150, 1);
+      text-decoration: none;
+      color: $mainTextColor;
+      border-bottom: 4px solid $mainThemeColor;
+    }
+  }
+  .submenu{
+    width: 846px;
+    height: 310px;
+    background-color: #ffffff;
+    border-radius: 5.0px;
+    list-style: none;
+    border: none;
+    position: absolute;
+    left: -100px;
+    opacity: 0;
+    z-index: 5;
+    transform: perspective(600px) rotateX(-90deg);
+    transform-origin: 0 0;
+    transition: .2s ease-in-out;
+
+    h3{
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.025em;
+      color: #232323;
+
+    }
+    .subMenuLink{
+      text-transform: none;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 28px;
+      font-weight: 400;
+      letter-spacing: 0.025em;
+      color: #646464;
+      transition-duration: .7s;
+      &:hover{
+        text-decoration: none;
+        color: $mainThemeColor;
+        text-shadow: 2px 4px 6px rgba(150, 150, 150, 1);
+      }
+    }
+
+  }
+
+  .topMenu li a:hover { color: #E6855F; }
+
+
+
+}
+
+.topNavMobile {
+  a {
+    color: $mainThemeColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 1.5rem;
+
+    &:hover {
+      text-shadow: 2px 4px 6px rgba(150, 150, 150, .4);
+      text-decoration: none;
+      color: $mainThemeColor;
+    }
+  }
+
+  button {
+    background-color: $mainThemeColor;
+  }
+}

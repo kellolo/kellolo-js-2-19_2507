@@ -1,0 +1,910 @@
+@import "variables";
+@import "header";
+@import "footer";
+@import "media/mediaSM";
+
+//---------------------index-------------------------------
+
+
+.topBanner {
+  height: 615px;
+  background: #e8e8e8;
+
+  .topBannerContent {
+    height: inherit;
+    background-size: 48%;
+    background: url("https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/topHeaderBack.png") no-repeat right 8% top, #e8e8e8;
+
+
+    .menLabel {
+      border-left: 14px solid $mainThemeColor;
+      height: 94px;
+      line-height: 40px;
+
+      .menLabeltop {
+        color: $mainTextColor;
+        font-size: 4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .menLabelbut {
+        color: $mainTextColor;
+        font-size: 2.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 80px;
+
+        .menLabelbut span {
+          color: $mainThemeColor;
+        }
+      }
+    }
+  }
+}
+
+@keyframes animatedBackground {
+  0% {
+    background-position: right 8% top;
+  }
+  50%{
+    background-position: right 20% top 20%;
+  }
+  100% {
+    background-position: right 8% top;
+  }
+}
+#fon{
+  width:100%;
+  animation: animatedBackground 15s linear infinite;
+  -moz-animation: animatedBackground 15s linear infinite;
+  -webkit-animation: animatedBackground 15s linear infinite;
+  -o-animation: animatedBackground 15s linear infinite;
+}
+
+.offer {
+  position: relative;
+
+  & > a {
+    text-decoration: none;
+    padding: 0 20px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 25px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .offerText {
+    .topOfferLabel {
+      font-size: 1rem;
+      color: $mainTextColor;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .offerLabel {
+      font-size: 2rem;
+      color: $mainThemeColor;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+}
+
+
+
+.FetItems {
+  h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    color: $mainTextColor;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: $mainTextColorP;
+    text-align: center;
+  }
+}
+
+.prodCard {
+  position: relative;
+  max-width: 261px !important;
+  align-items: center;
+  -webkit-transition: all .7s;
+  -moz-transition: all .7s;
+  -o-transition: all .7s;
+
+  img {
+    width: 261px;
+    height: 280px;
+    object-position: center center;
+    object-fit: cover;
+  }
+
+
+  .psevProdCardBody {
+    width: inherit;
+
+    a {
+      width: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $mainTextColor;
+      text-decoration: none;
+    }
+
+    p {
+      width: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $mainThemeColor;
+    }
+    button{
+      border: none;
+      background-color: #FFFFFF;
+      font-size: 1rem;
+      font-weight: 400;
+      color: $mainThemeColor;
+      i{
+        color: $mainThemeColor;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .psevProdCard {
+    display: none;
+    position: absolute;
+    width: 261px;
+    height: 280px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(58, 56, 56, 0);
+    transition-duration: .7s;
+    &:hover{
+      background-color: rgba(58, 56, 56, 0.83);
+    }
+
+    button {
+      padding: .3rem;
+      display: flex;
+      background-color: rgba(58, 56, 56, 0.83);
+      align-items: center;
+      width: 123px;
+      height: 39px;
+      text-decoration: none;
+      border: 2px solid #ffffff;
+      font-size: 13px;
+      line-height: 1.2;
+      font-weight: 700;
+      color: #ffffff;
+      i{
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+}
+.bBa__container{
+  .butBrowseAllProd {
+    width: 212px;
+    height: 48px;
+    background-color: $mainThemeColor;
+    color: #FFFFFF;
+    &:hover{
+      text-decoration: none;
+      color: #FFFFFF;
+    }
+  }
+  &:hover .butBrowseAllProd{
+    transform: rotateX(360deg);
+    box-shadow: 2px 4px 6px rgba(150, 150, 150, 1);
+    transition: transform .8s cubic-bezier(0, 0.55, 0.45, 1)
+  }
+}
+
+
+.buttBanBG {
+  background-color: #222224;
+  background-image: url("https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/banner.jpeg");
+  background-repeat: no-repeat;
+
+  .buttonBannerOffer {
+    font-size: 53.7px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #ffffff;
+
+    span {
+      color: #f16d7f;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 32.2px;
+      line-height: 1.2;
+      font-weight: 400;
+      letter-spacing: 0.025em;
+      color: #ffffff;
+    }
+  }
+
+  .buttonBannerText {
+    background-color: #222224;
+    min-height: 525px;
+
+    h4 {
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 700;
+      color: #fbfbfb;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 300;
+      letter-spacing: 0.025em;
+      color: #fbfbfb;
+    }
+
+    img {
+      width: 80px !important;
+    }
+  }
+}
+
+//---------------------shopping cart--------------------------------
+
+.newsProd {
+  background-color: #f8f3f3;
+
+  .newsAr {
+    h2 {
+      font-size: 24px;
+      line-height: 20px;
+      color: $mainThemeColor;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  .newsNav {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(99, 99, 99);
+    font-weight: 300;
+
+    .newsNavlink {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: rgb(99, 99, 99);
+
+      &:hover {
+        color: $mainThemeColor;
+        text-decoration: none;
+      }
+    }
+
+    .newsNavLinkActive {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $mainThemeColor;
+      font-weight: 700;
+    }
+
+  }
+
+}
+
+.prodHeaders {
+  font-size: 13px;
+  font-weight: 700;
+  color: $mainTextColor;
+  .productDet {
+    img {
+      width: 101px;
+      height: 116px;
+      display: block;
+      object-position: center center;
+      object-fit: cover;
+    }
+  }
+
+  .ProdDetText {
+    h3 {
+      font-size: 13px;
+      color: $mainTextColor;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+    }
+
+    span {
+      font-size: 13px;
+      color: $mainTextColor;
+    }
+
+    mark {
+      background: none;
+      color: #575757;
+    }
+  }
+
+  .ProdHeadInp {
+    input {
+      width: 55px;
+      height: 31px;
+      text-align: center;
+    }
+  }
+}
+
+.ccShoppingBut {
+  button {
+    width: 236px;
+    height: 51px;
+    background-color: #FFFFFF;
+    color: #4A4A4A;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: 1px solid #EAEAEA;
+    font-weight: 700;
+    transition-duration: .5s;
+
+    &:hover {
+      background-color: $mainThemeColor;
+      color: #FFFFFF;
+      box-shadow: 2px 4px 6px rgba(150, 150, 150, 1);
+    }
+  }
+}
+
+.FormUser {
+  form {
+    input {
+      width: 356px;
+      height: 46px;
+      margin-top: 1rem;
+      border: 2px solid #EAEAEA;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      width: 101px;
+      height: 36px;
+      background-color: #FFFFFF;
+      color: #4A4A4A;
+      border: 2px solid #EAEAEA;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      font-weight: 700;
+
+      &:hover {
+        background-color: $mainThemeColor;
+        color: #FFFFFF;
+        box-shadow: 2px 4px 6px rgba(150, 150, 150, 1);
+        border: none;
+      }
+    }
+  }
+
+  label {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .FormUserGT {
+    span {
+      font-size: 0.7rem;
+    }
+
+    h5 span {
+      color: $mainThemeColor;
+      font-size: 1rem;
+    }
+
+    form {
+      width: 100%;
+
+      button {
+        width: 274px;
+        height: 51px;
+        background-color: $mainThemeColor;
+        color: #FFFF;
+        font-size: 1rem;
+        border: none;
+      }
+    }
+  }
+
+}
+
+//----------------------------------singlePage--------------------------------
+.corusBlock {
+  background-color: #f7f7f7;
+  border: 1.0px solid #eaeaea;
+
+  .carusRow {
+    width: 47px;
+    height: 47px;
+    background-color: rgba(42, 42, 42, 0.14);
+  }
+}
+
+.corImg {
+  width: 597px;
+  height: 724px;
+  object-position: center center;
+  object-fit: contain;
+  border: none;
+}
+
+.productListContainer {
+  position: relative;
+}
+
+.productList {
+  position: absolute;
+  top: -90px;
+  height: 730px;
+  background-color: #ffffff;
+  border: 1.0px solid #eaeaea;
+
+  span {
+    font-size: 14px;
+    font-weight: 700;
+    color: #f16d7f;
+
+  }
+
+  .plrow {
+    width: 63px;
+    height: 1px;
+    background-color: #ef5b70;
+  }
+
+  .plrowActive {
+    width: 63px;
+    height: 3px;
+    background-color: #ef5b70;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4d4d4d;
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    max-width: 618px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: $mainTextColorP;
+  }
+
+  .spansList {
+    color: $mainTextColor;
+
+    span {
+      margin-left: 2px;
+      margin-right: 2px;
+      color: $mainThemeColor;
+    }
+  }
+
+  .money {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ef5b70;
+  }
+
+  .lineList {
+    max-width: 642px;
+    height: 1px;
+    background-color: $mainThemeColor;
+  }
+
+  .inpList {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #2f2f2f;
+
+    input {
+      max-width: 144px;
+      height: 35px;
+      border: 1.0px solid #eaeaea;
+    }
+  }
+
+  .ButList button {
+    width: 537px;
+    height: 55px;
+    background-color: #ffffff;
+    border: 1.0px solid #ef5b70;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #ef5b70;
+
+    &:hover {
+      background-color: $mainThemeColor;
+      color: #ffffff;
+    }
+  }
+
+}
+
+.labelText {
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #4d4d4d;
+}
+
+
+//---------------------------Product_____-----------------
+
+
+.prodCardHeader {
+  border-bottom: 1.0px solid #ebebeb;
+  border-left: 5px solid #ef5b70;;
+
+  button {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $mainTextColorP;
+
+    &:hover {
+      text-decoration: none;
+      color: $mainThemeColor;
+    }
+
+    &:focus, &:active {
+      box-shadow: none !important;
+      text-decoration: none;
+      color: $mainThemeColor;
+
+      svg {
+        transform: rotateZ(180deg);
+        transition-duration: .8s;
+      }
+    }
+  }
+}
+
+.drBtnContProd {
+  a {
+    font-size: 14px;
+    line-height: 33px;
+    font-weight: 500;
+    color: #6f6e6e;
+
+    &:hover {
+      color: $mainThemeColor;
+      text-decoration: none;
+    }
+  }
+
+}
+
+.price {
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+
+  .range-slider {
+    position: relative;
+  }
+
+  .irs--round {
+    top: -20px;
+    height: 30px;
+  }
+
+  .labInpProd {
+    input {
+      border: none;
+    }
+  }
+
+  .irs-bar {
+    background-color: $mainThemeColor !important;
+  }
+
+  .irs-min, .irs-max, .irs-single, .irs-from, .irs-to {
+    display: none;
+  }
+
+  .irs-handle {
+    top: 31px !important;
+    width: 14px !important;
+    height: 14px !important;
+    border: none !important;
+    background-color: $mainThemeColor !important;
+  }
+  .js-input-from, .js-input-to{
+    width: 40px!important;
+  }
+}
+
+
+.rightProduct {
+  label {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #6f6e6e;
+  }
+
+  .labelSize {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #6f6e6e;
+  }
+
+  .inpScroll {
+    width: 260px;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    border-radius: 10px;
+    height: 5px;
+    width: 260px;
+    border: 1px solid #000;
+    background-color: $mainThemeColor;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: $mainThemeColor;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: -5px;
+  }
+
+  .breadCrombProd {
+    a {
+      font-size: 14px;
+      line-height: 26px;
+      font-weight: 400;
+      color: #6f6e6e;
+      text-decoration: none;
+      &:hover{
+        text-decoration: none;
+        color: $mainThemeColor;
+      }
+    }
+
+    .breadcrumb-item:not(:nth-child(1))::before {
+      content: "|" !important;
+    }
+
+  }
+
+  .active {
+    color: $mainThemeColor;
+  }
+
+}
+
+
+.sortProd {
+  height: 50px;
+
+  .input-group {
+    background-color: #ffffff;
+    border: 1.0px solid #ebebeb;
+
+    .input-group-prepend {
+
+      height: 30px;
+
+      select {
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 400;
+        color: #6f6e6e;
+
+        &:focus, &:active, &:hover {
+          box-shadow: none !important;
+          background-color: #ffffff !important;
+        }
+      }
+
+      button {
+        border: none;
+        color: $mainTextColor;
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 400;
+
+        &:focus, &:active, &:hover {
+          box-shadow: none !important;
+          background-color: #ffffff !important;
+        }
+      }
+
+    }
+
+    .custom-select {
+      height: 30px;
+    }
+  }
+}
+
+.paginationProduct {
+  button {
+    width: 150px;
+    height: 44px;
+    background-color: #ffffff;
+    border: 1.0px solid $mainThemeColor;
+    border-radius: 3.0px;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #ef5b70;
+
+    &:hover {
+      background-color: $mainThemeColor;
+      color: #ffffff;
+    }
+  }
+
+  .pagination {
+    a {
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: 300;
+      color: #c4c4c4;
+
+      &:hover {
+        color: $mainThemeColor;
+        font-weight: 700;
+      }
+    }
+
+    .page-linkActive {
+      color: #ef5b70;
+      font-weight: 400;
+    }
+  }
+}
+
+.buttBanBGProduct {
+  background-color: #222224;
+
+  .buttonBannerText {
+    min-height: 340px;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+    color: #fbfbfb;
+
+    h4 {
+      margin-top: 2rem;
+    }
+
+    p {
+      margin-top: .5rem;
+      padding: .5rem;
+    }
+  }
+}
+
+//-----------------------check----------------------
+
+.card {
+  border: none !important;
+}
+
+.cardCheckOut {
+  .card-header {
+    background-color: transparent !important;
+    border: none !important;
+
+  }
+
+  h2 button {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $mainTextColor;
+    &:hover, &:active, &:focus{
+      box-shadow: none;
+      text-decoration: none;
+      color: $mainThemeColor;
+    }
+  }
+
+  .hedThemeText {
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $mainTextColor
+  }
+
+  p, a {
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+    color: $mainTextColorP;
+  }
+  a:hover {
+    text-decoration: none;
+    color: $mainThemeColor;
+  }
+  .checkButton{
+    width: 180px;
+    height: 50px;
+    border: 1.0px solid #eaeaea;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4a4a4a;
+    &:hover{
+      background-color: $mainThemeColor;
+      border: none;
+    }
+  }
+
+  .inpCheck{
+    width: 390px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 1.0px solid #eaeaea;
+    &:hover, &:active, &:focus{
+      box-shadow: none;
+    }
+  }
+  mark{
+    background-color: transparent;
+    color: $mainThemeColor;
+  }
+  span{
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #ff0d0d;
+  }
+  .forgotPass{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: $mainTextColor;
+  }
+}
