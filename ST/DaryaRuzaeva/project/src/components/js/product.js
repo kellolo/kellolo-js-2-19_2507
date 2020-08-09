@@ -26,17 +26,22 @@ function initCatalog() {
     return names.map((names, index) => createItem(ids[index], names, prices[index], imgs[index]));
 };
 
-export default {
-    items: [],
-    container: null,
-    basket: basket,
+class CatalogBox {
+    constructor(container) {
+        this.items = [];
+        this.basket = null;
+        this.container = null;
+        this._init();
+    }
 
-    init() {
+    _init(qty, bask) {
+        this.basket = bask;
         this.items = initCatalog();
-        this.container = document.querySelector("#catalog");
+        this.container = document.querySelector("#catalog_2");
         this._render();
         this._handleActions();
-    },
+    }
+
     _handleActions() {
         this.container.addEventListener('click', evt => {
             if (evt.target.name == 'add') {
@@ -50,7 +55,8 @@ export default {
                 this.basket.add(item);
             }
         })
-    },
+    }
+
     _render() {
         let str = "";
         this.items.forEach(item => {
@@ -74,6 +80,7 @@ export default {
         this.container.innerHTML = str;
     }
 }
-//catalog.init();
+
+let ItemProduct = new CatalogBox('#catalog_2');
 
 //export default catalog

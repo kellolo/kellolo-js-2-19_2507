@@ -16,10 +16,10 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'css/[name].css',
-            chunkFilename: '[id].css'
+            chunkFilename: '[id].css',
         }),
         new HtmlWebpackPlugin({
-            template: './public/index.html'
+            template: './public/index.html',
         })
 
 
