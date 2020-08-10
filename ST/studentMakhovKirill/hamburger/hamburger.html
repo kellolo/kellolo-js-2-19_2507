@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		const smallBurger = {
+			name: 'маленький',
+			price: 50,
+			calories: 20
+		}
+
+		const bigBurger = {
+			name: 'большой',
+			price: 100,
+			calories: 40
+		}
+
+		const cheese = {
+			name: 'сыр',
+			price: 10,
+			calories: 20
+		}
+
+		const salad = {
+			name: 'салат',
+			price: 20,
+			calories: 5
+		}
+
+		const potato = {
+			name: 'картофель',
+			price: 15,
+			calories: 10
+		}
+
+		const seasoning = {
+			name: 'приправа',
+			price: 15,
+			calories: 0
+		}
+
+		const mayo = {
+			name: 'майонез',
+			price: 20,
+			calories: 5
+		}
+
+
+
+		class Hamburger {
+			constructor(size, stuffing) {
+				this.size = size.name;
+				this.stuffing = stuffing.name;
+				this.price = size.price + stuffing.price;
+				this.calories = size.calories + stuffing.calories;
+				this.seasoningSum = 0;
+				this.mayoSum = 0;
+			}
+
+			// Добавить добавку 
+			addTopping(topping) {
+				topping == seasoning ? this.seasoningSum += 1 : this.mayoSum += 1;
+				this.price += topping.price;
+				this.calories += topping.calories;
+			}
+
+			// Убрать добавку 
+			removeTopping(topping) {
+				if (topping == seasoning && this.seasoningSum > 0) {
+					this.seasoningSum -= 1;
+					this.price -= topping.price;
+					this.calories -= topping.calories;
+				}
+				else if (this.mayoSum > 0) {
+					this.mayoSum -= 1;
+					this.price -= topping.price;
+					this.calories -= topping.calories;
+				}
+			}
+
+			// Получить список добавок 
+			getToppings() {
+				if (this.seasoningSum > 0 || this.mayoSum > 0) {
+					if (this.seasoningSum > 0) {
+						console.log('приправа:' + this.seasoningSum + ' шт.')
+					};
+					if (this.mayoSum > 0) {
+						console.log('майонез:' + this.mayoSum + ' шт.')
+					}
+				} else {
+					console.log('приправ нет')
+				}
+			}
+			// Узнать размер гамбургера
+			getSize() {
+				console.log('этот бургер ' + this.size)
+			}
+			// Узнать начинку гамбургера           
+			getStuffing() {
+				console.log('начинка: ' + this.stuffing)
+			}
+			// Узнать цену       
+			calculatePrice() {
+				console.log('цена: ' + this.price)
+			}
+			// Узнать калорийность    
+			calculateCalories() {
+				console.log('калории: ' + this.calories)
+			}
+			check() {
+				myBurger.getSize();
+				myBurger.getStuffing();
+				myBurger.getToppings();
+				myBurger.calculatePrice();
+				myBurger.calculateCalories();
+			}
+		}
+
+		// Проверка
+		// Сделаем вариант бургера
+		let myBurger = new Hamburger(smallBurger, salad);
+		// Проверим данные
+		myBurger.check();
+		// Добавим одну приправу и два майонеза
+		myBurger.addTopping(seasoning);
+		myBurger.addTopping(mayo);
+		myBurger.addTopping(mayo);
+		// Проверим данные
+		myBurger.check();
+		// Пробуем удалить 3 майонеза, хотя у нас их 2
+		myBurger.removeTopping(mayo);
+		myBurger.removeTopping(mayo);
+		myBurger.removeTopping(mayo);
+		// Проверим данные
+		myBurger.check();
+
+
+
+	</script>
+</body>
+
+</html>

@@ -1,7 +1,6 @@
 export default {
     items: [],
     container: null,
-    basket: basket,
     total: 0,
 
     init() {

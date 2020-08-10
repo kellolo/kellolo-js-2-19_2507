@@ -1,6 +1,7 @@
 
 import basket2 from './basket';
-basket2.init();
+let basket3 = new basket2;
+basket3.init();
 
 /////////////
 
@@ -14,19 +15,21 @@ function initCatalog(par) {
     return par.names.map((names, index) => createItem(par.ids[index], names, par.prices[index], par.imgs[index]));
 };
 
-export default function listClass(container, par) {
-    return {
-    items: [],
-    container,
-    par,
-    basket: basket2,
+export default class listClass {
+    constructor(container, par) {
+        this.items = [];
+        this.container = container;
+        this.par = par;
+        this.basket = basket3;
+    }
+
 
     init() {
-        this.items = initCatalog(par);
-        this.container = document.querySelector(container);
+        this.items = initCatalog(this.par);
+        this.container = document.querySelector(this.container);
         this._render();
         this._handleActions();
-    },
+    }
     _handleActions() {
         this.container.addEventListener('click', evt => {
             if (evt.target.name == 'add') {
@@ -41,7 +44,7 @@ export default function listClass(container, par) {
                 this.basket.add(item);
             }
         })
-    },
+    }
 
     _render() {
         let str = "";
@@ -86,7 +89,7 @@ export default function listClass(container, par) {
         this.container.innerHTML = str;
     }
 
-}
+
 
 }
 
