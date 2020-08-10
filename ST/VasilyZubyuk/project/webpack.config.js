@@ -14,19 +14,23 @@ module.exports = {
             //правила обработки webpack'ом разных типов файлов
             {
                 test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, 'css-loader'],
+                use: [MiniCssExtractPlugin.loader, 
+                    {
+                        loader: 'css-loader',
+                        options: {url: false}
+                    }],
             }
         ]
     },
     plugins: [
         //настройки плагинов
         new MiniCssExtractPlugin({
-            filename: 'css/[name].css',
+            filename: 'layout/css/[name].css',
             chunkFilename: '[id].css'
         }),
         new CopyPlugin({
             patterns: [
-                {from: 'src/assets/imgs', to: 'img'},
+                {from: 'src/assets/imgs', to: 'assets/imgs'},
             ]
         }),
         new HtmlWebpackPlugin({

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="mini">
+
+        <input type="checkbox" class="clickChek" data-rubl='10' data-kall='20'>Мини гамбургер 10rub,
+        20kal<Br>
+        <input type="checkbox" class="clickChek" data-rubl='100' data-kall='40'>Большой гамбургер 100rub, 40kal<Br>
+        <p>Гамбургер может быть с одним из нескольких видов начинок:</p>
+        <input type="checkbox" class="clickChek" data-rubl='10' data-kall='20'>С сыром (+10 рублей, +20 калорий)<Br>
+        <input type="checkbox" class="clickChek" data-rubl='20' data-kall='5'>С салатом (+20 рублей, +5 калорий)<Br>
+        <input type="checkbox" class="clickChek" data-rubl='15' data-kall='10'>С картофелем (+15 рублей, +10
+        калорий)<Br>
+        <p>Общая стоимость: <span id="total1"></span></p>
+        <p>Общая калорийность: <span id="total2"></span></p>
+
+
+
+    </div>
+    <script>
+
+
+        let hamb = {
+            sum1: 0,
+            sum2: 0,
+
+            handleEvents() {
+
+                let total1 = document.querySelector('#total1');
+                let total2 = document.querySelector('#total2');
+                document.addEventListener('click', evt => {
+                    if (evt.target.checked) {
+                        this.sum1 += +evt.target.dataset.rubl;
+                        this.sum2 += +evt.target.dataset.kall;
+
+                    }
+                    if (!evt.target.checked) {
+                        this.sum1 -= evt.target.dataset.rubl;
+                        this.sum2 -= evt.target.dataset.kall;
+                    }
+                    total1.innerHTML = this.sum1;
+                    total2.innerHTML = this.sum2;
+                })
+
+
+            }
+
+        }
+        hamb.handleEvents();
+
+
+    </script>
+</body>
+
+</html>
