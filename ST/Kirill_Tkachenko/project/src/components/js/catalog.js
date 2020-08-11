@@ -18,19 +18,16 @@ function initCatalog(qty) {
     return names.map((names, index) => createItem(ids[index], names, prices[index], imgs[index]));
 };
 
-export default {
-    items: [],
-    container: null,
-    basket: null,
+export default class Catalog {
 
-
-    init(qty, basket) {
-        this.items = initCatalog(qty);
+    constructor(qty, basket) {
         this.container = document.querySelector("#catalog");
+        this.items = initCatalog(qty);
         this.basket = basket;
-        this._render(qty);
+        this._render();
         this._handleActions();
-    },
+    }
+
     _handleActions() {
         this.container.addEventListener('click', evt => {
             if (evt.target.classList.contains("add")) {
@@ -44,9 +41,9 @@ export default {
                 this.basket.add(item);
             }
         })
-    },
-    _render() {
+    }
 
+    _render() {
         let str = "";
         this.items.forEach(item => {
             str += `
