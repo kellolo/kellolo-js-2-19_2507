@@ -6,7 +6,7 @@ let classes = {
 }
 
 export default class List {
-    constructor(url, container, basket) {
+    constructor(url, container, basket = false) {
         this.url = url;
         this.container = container;
         this.items = [];
@@ -15,11 +15,10 @@ export default class List {
     _init(basket = false) {
         let url = 'https://raw.githubusercontent.com/kellolo/static/master/JSON' + this.url;
         this._get(url)
-        .then(data => { 
-            this.items = !basket ? data : data.contents;
+        .then(data => {
+            this.items = basket ? data : data.content;
         })
         .then(() => {
-            console.log(this.items)
             this._render();
         });
     }
