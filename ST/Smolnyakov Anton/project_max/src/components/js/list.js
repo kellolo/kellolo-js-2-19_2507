@@ -17,8 +17,8 @@ export default class List {
         let url = 'https://raw.githubusercontent.com/Smolnyakov/static/master/online-store-api/JSON/' + this.url;
         this._get(url)
             .then(data => {
-                this.items = !cart ? data : data.contents;
-                console.log(data.contents)
+                this.items = !cart ? data.contents : data;
+                console.log(this.items)
             })
             .then(() => {
                 this._render();
