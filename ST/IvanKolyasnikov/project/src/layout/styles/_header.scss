@@ -76,6 +76,9 @@ header {
     transform: scale(1.2, 1.2);
     cursor: pointer;
   }
+  &:focus {
+    outline: none;
+  }
 }
 
 .buttMyAccount {

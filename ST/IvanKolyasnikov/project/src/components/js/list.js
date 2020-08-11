@@ -17,7 +17,7 @@ export default class List {
         let url = 'https://raw.githubusercontent.com/IKolyas/static/master/GBProject/json' + this.url;
         this._get(url)
             .then(data => {
-                this.items = (!basket ? data : data.contents);
+                this.items = basket ? data : data.contents;
             })
             .then(() => {
                 this._render();
