@@ -1,6 +1,6 @@
 import { CatalogItem, BasketItem } from "./items";
 
-let itemClass = {
+let classes = {
     "Catalog": CatalogItem,
     "Basket": BasketItem
 }
@@ -58,7 +58,7 @@ export default class List {
     _render() {
         let listContent = "";
         this.items.forEach(item => {
-            listContent += new itemClass[this.constructor.name](item).render()
+            listContent += new classes[this.constructor.name](item).render()
         });
         this.container.innerHTML = listContent;
     }
