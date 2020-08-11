@@ -1,22 +1,26 @@
-var basket = {
-    items: [],
-    container: null,
-    basket: basket,
-    sum: null,
+export default class Basket {
 
-    init() {
+    constructor() {
+        this.items = [];
+        this.container = null;
+        this.sum = null;
+        this._init();
+    }
+
+    _init() {
         this.container = document.querySelector("#basket");
         this._render();
         this._handleActions();
 
-    },
+    }
+
     _handleActions() {
         this.container.addEventListener('click', evt => {
-            if (evt.target.name == 'remove') {
+            if (evt.target.name === 'remove') {
                 this.remove(evt.target.dataset.id);
             }
         })
-    },
+    }
     _render() {
         let str = "";
         this.items.forEach(item => {
@@ -31,7 +35,7 @@ var basket = {
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                             </div>
-                            <p class="mt-1">${+item.amount} x $<span class="product__Price">${+item.price*+item.amount}</span></p>
+                            <p class="mt-1">${+item.amount} x $<span class="product__Price">${+item.price * +item.amount}</span></p>
                         </div>
                         <button name="remove" class="dell__Product fa fa-times-circle" data-id="${item.id}" aria-hidden="true"></button>
                     </div>
@@ -40,9 +44,9 @@ var basket = {
         })
         this.container.innerHTML = str;
         this._sumBasket();
-    },
+    }
     add(item) {
-        let find = this.items.find(el => el.id == item.id);
+        let find = this.items.find(el => el.id === item.id);
 
         if (!find) {
             this.items.push(item);
@@ -50,9 +54,9 @@ var basket = {
             find.amount++;
         }
         this._render();
-    },
+    }
     remove(itemId) {
-        let find = this.items.find(el => el.id == itemId);
+        let find = this.items.find(el => el.id === itemId);
 
         if (find.amount > 1) {
             find.amount--;
@@ -60,14 +64,21 @@ var basket = {
             this.items.splice(this.items.indexOf(find), 1);
         }
         this._render();
-    },
-    _sumBasket(){
+    }
+    _sumBasket() {
         this.sum = null;
         let allProd = document.querySelectorAll('.product__Price');
         allProd.forEach(el => this.sum += +(el.textContent));
-        document.querySelector('.prod_sum').innerHTML =`$${this.sum}`;
+        document.querySelector('.prod_sum').innerHTML = `$${this.sum}`;
 
     }
-};
+    openCart() {
+        let dropdownOn = document.querySelector('.basket__Product');
+        document.addEventListener('click', evt => {
+            if (evt.target.classList.contains('my__cart')) {
+                dropdownOn.classList.toggle('open__basket');
+            }
 
-export default basket;
+        })
+    }
+};

@@ -1,9 +1,6 @@
-import catalog from './components/js/catalog';
+import app from "./components/index";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './layout/styles/styles.css';
 
-catalog.basket.init()
 
-
-
-catalog.init('#catalog');
-catalog.init('#index_catalog', 0, 8)
-catalog.init('#single_catalog', 0, 4)
+app()

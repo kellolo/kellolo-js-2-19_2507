@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/1bbbc1ee96.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="../src/layout/styles/style.css">
+	<title>Product</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__header container">
+				<div class="logo">Bran<span>d</span></div>
+				<div class="header__search">
+					<form class="header__searchform">
+						<button type="button" class="header__search-browse btn dropdown-toggle" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">
+							Browse
+						</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item disabled text-uppercase" href="#">women</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Dresses</a>
+							<a class="dropdown-item" href="#">Tops</a>
+							<a class="dropdown-item" href="#">Sweaters/Knits</a>
+							<a class="dropdown-item" href="#">Jackets/Coats</a>
+							<a class="dropdown-item" href="#">Blazers</a>
+							<a class="dropdown-item" href="#">Denim</a>
+							<a class="dropdown-item" href="#">Skirts/Shorts</a>
+							<a class="dropdown-item" href="#">Accessories </a>
+							<a class="dropdown-item disabled text-uppercase" href="#">men</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Tees/Tank tops</a>
+							<a class="dropdown-item" href="#">Shirts/Polos</a>
+							<a class="dropdown-item" href="#">Sweaters</a>
+							<a class="dropdown-item" href="#">Sweatshirts/Hoodies</a>
+							<a class="dropdown-item" href="#">Blazers</a>
+							<a class="dropdown-item" href="#">Jackets/vests</a>
+							<input class="header__search-input" name="search" type="text" placeholder="Search for Item...">
+							<button class="header__search-buton"><i class="fas fa-search"></i></button>
+						</div>
+						<input class="header__search-input" name="search" type="text" placeholder="Search for Item...">
+						<button class="header__search-buton"><i class="fas fa-search"></i></button>
+					</form>
+				</div>
+				<div class="header__cart">
+					<a href="#" class="header__cart-a"><img id="hide" class="header__cart-img"
+							src="../src/assets/imgs/headerCart.png" alt="headerCart"></a>
+					<div class="headerCart" id="cart">
+						<div id="basket" class="headerCart__main">
+							<div class="headerCart__item">
+								<div class="headerCart__product">
+									<img src="https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product1.jpg" alt="">
+									<div class="headerCart__description">
+										<div class="headerCart__name">
+											Rebox Zane
+										</div>
+										<div class="headerCart__price">
+											1 <span>x</span> $250
+										</div>
+									</div>
+								</div>
+								<button name="remove" data-id="${item.id}"><i class="fas fa-times-circle"></i></button>
+							</div>
+						</div>
+						<div class="headerCart__totalPrice">
+							<div>total</div>
+							<div>
+								$<div id="sum">500.00</div>
+							</div>
+						</div>
+						<button class="headerCart__button"><a href="checkout.html">Checkout</a></button>
+						<button class="headerCart__button"><a href="cart.html">Go to cart</a></button>
+					</div>
+				</div>
+
+				<div class="header__account">
+					<button class="header__btn">My Account <i class="fas fa-caret-down"></i></button>
+				</div>
+			</div>
+			<div class="header__line"></div>
+			<div class="header__footer">
+				<nav class="header__burger navbar navbar-expand-lg navbar-light bg-light text-uppercase">
+					<div class="container">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+							aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+							<div class="navbar-nav">
+								<a class="nav-item nav-link active" href="index.html">Home<span
+										class="sr-only">(current)</span></a>
+								<a class="nav-item nav-link" href="#">Man</a>
+								<a class="nav-item nav-link" href="#">Women</a>
+								<a class="nav-item nav-link" href="#">Kids</a>
+								<a class="nav-item nav-link" href="#">Accoseriese</a>
+								<a class="nav-item nav-link" href="#">Featured</a>
+								<a class="nav-item nav-link" href="#">Hot Deals</a>
+							</div>
+						</div>
+					</div>
+				</nav>
+				<nav class="header__nav">
+					<a href="index.html">Home</a>
+					<a href="#">Man</a>
+					<a href="#">Women</a>
+					<a href="#">Kids</a>
+					<a href="#">Accoseriese</a>
+					<a href="#">Featured</a>
+					<a href="#">Hot Deals</a>
+				</nav>
+			</div>
+		</header>
+		<div class="content">
+			<div class="new-arrivals-wrapper">
+				<div class="new-arrivals container">
+					<h1>New Arrivals</h1>
+					<nav class="new-arrivals__nav">
+						<a href="index.html" class="new-arrivals__a">home</a>
+						/
+						<a href="#" class="new-arrivals__a">men</a>
+						/
+						<a href="#" class="new-arrivals__a new-arrivals__a-active">new arrivals</a>
+					</nav>
+				</div>
+			</div>
+			<div class="container container-none">
+				<div class="row">
+					<aside class="col-3">
+						<div class="accordion accordion-my" id="accordionExample">
+							<div class="card card-my">
+								<div class="card-header card-header-my" id="headingOne">
+									<div class="card-header__line card-header-my__line"></div>
+									<h2 class="mb-0">
+										<button class="text-uppercase btn btn-link btn-block text-left" type="button"
+											data-toggle="collapse collapse-my" data-target="#collapseOne" aria-expanded="true"
+											aria-controls="collapseOne">
+											Category
+										</button>
+									</h2>
+									<i class="fas fa-caret-down"></i>
+								</div>
+								<div id="collapseOne" class="collapse collapse-my show" aria-labelledby="headingOne"
+									data-parent="#accordionExample">
+									<div class="card-body card-body-my">
+										<a href="#">Accessories</a>
+										<a href="#">Bags</a>
+										<a href="#">Denim</a>
+										<a href="#">Hoodies & Sweatshirts</a>
+										<a href="#">Jackets & Coats</a>
+										<a href="#">Pants</a>
+										<a href="#">Polos</a>
+										<a href="#">Shirts</a>
+										<a href="#">Shoes</a>
+										<a href="#">Shorts</a>
+										<a href="#">Sweaters & Knits</a>
+										<a href="#">T-Shirts</a>
+										<a href="#">Tanks</a>
+									</div>
+								</div>
+							</div>
+							<div class="card card-my">
+								<div class="card-header card-header-my" id="headingTwo">
+									<div class="card-header__line card-header-my__line"></div>
+									<h2 class="mb-0">
+										<button class="text-uppercase btn btn-link btn-block text-left collapsed" type="button"
+											data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+											aria-controls="collapseTwo">
+											BRAND
+										</button>
+									</h2>
+									<i class="fas fa-caret-down"></i>
+								</div>
+								<div id="collapseTwo" class="collapse collapse-my" aria-labelledby="headingTwo"
+									data-parent="#accordionExample">
+									<div class="card-body card-body-my">
+										<a href="#">Accessories</a>
+										<a href="#">Bags</a>
+										<a href="#">Denim</a>
+										<a href="#">Hoodies & Sweatshirts</a>
+										<a href="#">Jackets & Coats</a>
+										<a href="#">Pants</a>
+										<a href="#">Polos</a>
+										<a href="#">Shirts</a>
+										<a href="#">Shoes</a>
+										<a href="#">Shorts</a>
+										<a href="#">Sweaters & Knits</a>
+										<a href="#">T-Shirts</a>
+										<a href="#">Tanks</a>
+									</div>
+								</div>
+							</div>
+							<div class="card card-my">
+								<div class="card-header card-header-my" id="headingThree">
+									<div class="card-header__line card-header-my__line"></div>
+									<h2 class="mb-0">
+										<button class="text-uppercase btn btn-link btn-block text-left collapsed" type="button"
+											data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+											aria-controls="collapseThree">
+											dESIGNER
+											<i class="fas fa-caret-down suka"></i>
+										</button>
+									</h2>
+
+								</div>
+								<div id="collapseThree" class="collapse collapse-my" aria-labelledby="headingThree"
+									data-parent="#accordionExample">
+									<div class="card-body card-body-my">
+										<a href="#">Accessories</a>
+										<a href="#">Bags</a>
+										<a href="#">Denim</a>
+										<a href="#">Hoodies & Sweatshirts</a>
+										<a href="#">Jackets & Coats</a>
+										<a href="#">Pants</a>
+										<a href="#">Polos</a>
+										<a href="#">Shirts</a>
+										<a href="#">Shoes</a>
+										<a href="#">Shorts</a>
+										<a href="#">Sweaters & Knits</a>
+										<a href="#">T-Shirts</a>
+										<a href="#">Tanks</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</aside>
+					<main class="col-9">
+						<div class="sort-nav">
+							<div class="collapse" id="navbarToggleExternalContent">
+								<div class="product-head">
+									<div class="col">
+										<h3 class="product-head__text product-head__text--bold">
+											Trending now
+										</h3>
+										<nav aria-label="breadcrumb">
+											<ol class="breadcrumb">
+												<li class="breadcrumb-item product-head__particle"><a class="product-head__text"
+														href="#">Bohemian</a></li>
+												<li class="breadcrumb-item product-head__particle"><a class="product-head__text"
+														href="#">Floral</a></li>
+												<li class="breadcrumb-item product-head__particle"><a class="product-head__text"
+														href="#">Lace</a></li>
+												<li class="breadcrumb-item product-head__particle"><a class="product-head__text"
+														href="#">Lace</a></li>
+												<li class="breadcrumb-item product-head__particle"><a class="product-head__text"
+														href="#">Floral</a></li>
+												<li class="breadcrumb-item product-head__particle"><a class="product-head__text"
+														href="#">Bohemian</a></li>
+											</ol>
+										</nav>
+									</div>
+									<div class="col">
+										<h3 class="product-head__text product-head__text--bold">
+											Size
+										</h3>
+										<form class="product-head__form row">
+											<div class="form-check form-check-inline product-head__particle col-3">
+												<input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+													value="option1">
+												<label class="form-check-label product-head__text" for="inlineCheckbox1">XXS</label>
+											</div>
+											<div class="form-check form-check-inline product-head__particle col-3">
+												<input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+													value="option2">
+												<label class="form-check-label product-head__text" for="inlineCheckbox2">XS</label>
+											</div>
+											<div class="form-check form-check-inline product-head__particle col-3">
+												<input class="form-check-input" type="checkbox" id="inlineCheckbox3"
+													value="option3">
+												<label class="form-check-label product-head__text" for="inlineCheckbox3">S</label>
+											</div>
+											<div class="form-check form-check-inline product-head__particle col-3">
+												<input class="form-check-input" type="checkbox" id="inlineCheckbox4"
+													value="option4">
+												<label class="form-check-label product-head__text" for="inlineCheckbox4">M</label>
+											</div>
+											<div class="form-check form-check-inline product-head__particle col-3">
+												<input class="form-check-input" type="checkbox" id="inlineCheckbox5"
+													value="option5">
+												<label class="form-check-label product-head__text" for="inlineCheckbox5">L</label>
+											</div>
+											<div class="form-check form-check-inline product-head__particle col-3">
+												<input class="form-check-input" type="checkbox" id="inlineCheckbox6"
+													value="option6">
+												<label class="form-check-label product-head__text" for="inlineCheckbox6">XL</label>
+											</div>
+											<div class="form-check form-check-inline product-head__particle col-3">
+												<input class="form-check-input" type="checkbox" id="inlineCheckbox7"
+													value="option7">
+												<label class="form-check-label product-head__text" for="inlineCheckbox7">XXL</label>
+											</div>
+										</form>
+									</div>
+									<div class="col">
+										<h3 class="product-head__text product-head__text--bold">
+											Price
+										</h3>
+										<form>
+											<div class="form-group product-head__particle">
+												<input type="range" class="form-control-range" id="formControlRange">
+											</div>
+										</form>
+										<div class="d-flex justify-content-between product-head__particle">
+											<div class="product-head__text">$52</div>
+											<div class="product-head__text">$400</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<nav class="navbar navbar-light">
+								<form class="sort__form">
+									<div class="sort__text">
+										Sort By
+									</div>
+									<div class="sort__select-wrap">
+										<div class="sort__select-side">
+											<i class="fas fa-caret-down"></i>
+										</div>
+										<select class="sort__text sort__select">
+											<option selected>Name</option>
+											<option>Price</option>
+										</select>
+									</div>
+									<div class="sort__text">
+										Show
+									</div>
+									<div class="sort__select-wrap">
+										<div class="sort__select-side">
+											<i class="fas fa-caret-down"></i>
+										</div>
+										<select class="sort__text sort__select">
+											<option selected>09</option>
+											<option>18</option>
+											<option>28</option>
+											<option>37</option>
+										</select>
+									</div>
+								</form>
+								<button class="navbar-toggler" type="button" data-toggle="collapse"
+									data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+									aria-expanded="false" aria-label="Toggle navigation">
+									<span class="navbar-toggler-icon"></span>
+								</button>
+							</nav>
+						</div>
+						<div class="row product-head">
+							<div class="col">
+								<h3 class="product-head__text product-head__text--bold">
+									Trending now
+								</h3>
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item product-head__particle"><a class="product-head__text"
+												href="#">Bohemian</a></li>
+										<li class="breadcrumb-item product-head__particle"><a class="product-head__text"
+												href="#">Floral</a></li>
+										<li class="breadcrumb-item product-head__particle"><a class="product-head__text"
+												href="#">Lace</a></li>
+										<li class="breadcrumb-item product-head__particle"><a class="product-head__text"
+												href="#">Lace</a></li>
+										<li class="breadcrumb-item product-head__particle"><a class="product-head__text"
+												href="#">Floral</a></li>
+										<li class="breadcrumb-item product-head__particle"><a class="product-head__text"
+												href="#">Bohemian</a></li>
+									</ol>
+								</nav>
+							</div>
+							<div class="col">
+								<h3 class="product-head__text product-head__text--bold">
+									Size
+								</h3>
+								<form class="product-head__form row">
+									<div class="form-check form-check-inline product-head__particle col-3">
+										<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+										<label class="form-check-label product-head__text" for="inlineCheckbox1">XXS</label>
+									</div>
+									<div class="form-check form-check-inline product-head__particle col-3">
+										<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+										<label class="form-check-label product-head__text" for="inlineCheckbox2">XS</label>
+									</div>
+									<div class="form-check form-check-inline product-head__particle col-3">
+										<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+										<label class="form-check-label product-head__text" for="inlineCheckbox3">S</label>
+									</div>
+									<div class="form-check form-check-inline product-head__particle col-3">
+										<input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+										<label class="form-check-label product-head__text" for="inlineCheckbox4">M</label>
+									</div>
+									<div class="form-check form-check-inline product-head__particle col-3">
+										<input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+										<label class="form-check-label product-head__text" for="inlineCheckbox5">L</label>
+									</div>
+									<div class="form-check form-check-inline product-head__particle col-3">
+										<input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
+										<label class="form-check-label product-head__text" for="inlineCheckbox6">XL</label>
+									</div>
+									<div class="form-check form-check-inline product-head__particle col-3">
+										<input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
+										<label class="form-check-label product-head__text" for="inlineCheckbox7">XXL</label>
+									</div>
+								</form>
+							</div>
+							<div class="col">
+								<h3 class="product-head__text product-head__text--bold">
+									Price
+								</h3>
+								<form>
+									<div class="form-group product-head__particle">
+										<input type="range" class="form-control-range" id="formControlRange">
+									</div>
+								</form>
+								<div class="d-flex justify-content-between product-head__particle">
+									<div class="product-head__text">$52</div>
+									<div class="product-head__text">$400</div>
+								</div>
+							</div>
+						</div>
+						<div class="sort">
+							<form class="sort__form">
+								<div class="sort__text">
+									Sort By
+								</div>
+								<div class="sort__select-wrap">
+									<div class="sort__select-side">
+										<i class="fas fa-caret-down"></i>
+									</div>
+									<select class="sort__text sort__select">
+										<option selected>Name</option>
+										<option>Price</option>
+									</select>
+								</div>
+								<div class="sort__text">
+									Show
+								</div>
+								<div class="sort__select-wrap">
+									<div class="sort__select-side">
+										<i class="fas fa-caret-down"></i>
+									</div>
+									<select class="sort__text sort__select">
+										<option selected>09</option>
+										<option>18</option>
+										<option>28</option>
+										<option>37</option>
+									</select>
+								</div>
+							</form>
+						</div>
+						<div id="catalog" class="row product">
+						</div>
+						<div class="product-bottom row">
+							<div class="col-4">
+								<div class="product-bottom__crumb">
+									<a href="#"><i class="fas fa-angle-left"></i></a>
+									<a class="product-bottom__a-active" href="#">1</a>
+									<a href="#">2</a>
+									<a href="#">3</a>
+									<a href="#">4</a>
+									<a href="#">5</a>
+									<div>
+										<a href="#">6</a>
+										<a href="#">.....</a>
+										<a href="#">20</a>
+									</div>
+									<a class="product-bottom__a-active" href="#"><i class="fas fa-angle-right"></i></a>
+								</div>
+							</div>
+							<button type="button" class="btn btn-outline-primary">View All</button>
+						</div>
+					</main>
+				</div>
+			</div>
+			<div class="product-footer">
+				<div class="container product-footer__wrapper">
+					<div class="product-footer__item">
+						<div class="product-footer__head-text">
+							Free Delivery
+						</div>
+						<div class="product-footer__text">
+							Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+						</div>
+					</div>
+					<div class="product-footer__item">
+						<div class="product-footer__head-text">
+							Sales & discounts
+						</div>
+						<div class="product-footer__text">
+							Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+						</div>
+					</div>
+					<div class="product-footer__item">
+						<div class="product-footer__head-text">
+							Quality assurance
+						</div>
+						<div class="product-footer__text">
+							Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="subscribe-wrap">
+				<div class="subscribe container">
+					<div class="subscribe__left">
+						<div class="subscribe__review">
+							<div class="subscribe__photo">
+								<img src="https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/reviewPerson.png" alt="photo">
+							</div>
+							<div class="subscribe__text">
+								<blockquote>
+									“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a.
+									Aliquam condimentum mattis neque sed pretium”
+								</blockquote>
+								<div class="subscribe__name">Bin Burhan</div>
+								<div class="subscribe__adress">Dhaka, Bd</div>
+								<div class="subscribe__switch">
+									<div class="subscribe__switch-inactive"></div>
+									<div class="subscribe__switch-inactive subscribe__switch-active"></div>
+									<div class="subscribe__switch-inactive"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="subscribe__switch-1-wrap">
+						<div class="subscribe__switch-1">
+							<div class="subscribe__switch-1-inactive"></div>
+							<div class="subscribe__switch-1-inactive subscribe__switch-1-active"></div>
+							<div class="subscribe__switch-1-inactive"></div>
+						</div>
+					</div>
+					<div class="subscribe__delimiter"></div>
+					<div class="subscribe__right">
+						<div class="subscribe__header">Subscribe</div>
+						<div class="subscribe__right-text">FOR OUR NEWLETTER AND PROMOTION</div>
+						<form action="" class="subscribe__form">
+							<input type="email" placeholder="Enter Your Email">
+							<button>Subscribe</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer container">
+			<div class="footer__brand">
+				<div class="logo">Bran<span>d</span></div>
+				<div class="footer__text-1">Objectively transition extensive data rather than cross functional solutions.
+					Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an
+					expanded array of processes and cross-unit partnerships.</div>
+				<div class="footer__text-2">Efficiently plagiarize 24/365 action items and focused infomediaries.
+					Distinctively seize superior initiatives for wireless technologies. Dynamically optimize</div>
+			</div>
+			<div class="footer__column">
+				<h2>COMPANY</h2>
+				<a href="index.html">Home</a>
+				<a href="#">Shop</a>
+				<a href="#">About</a>
+				<a href="#">How It Works</a>
+				<a href="#">Contact</a>
+			</div>
+			<div class="footer__column">
+				<h2>INFORMATION</h2>
+				<a href="#">Tearms & Condition</a>
+				<a href="#">Privacy Policy</a>
+				<a href="#">How to Buy</a>
+				<a href="#">How to Sell</a>
+				<a href="#">Promotion</a>
+			</div>
+			<div class="footer__column">
+				<h2>SHOP CATEGORY</h2>
+				<a href="#">Men</a>
+				<a href="#">Women</a>
+				<a href="#">Child</a>
+				<a href="#">Apparel</a>
+				<a href="#">Brows All</a>
+			</div>
+		</footer>
+		<div class="copyright">
+			<div class="copyright__wrap container">
+				<div class="copyright__copyright">
+					&copy; 2017 Brand All Rights Reserved.
+				</div>
+				<div class="copyright__link">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+					<a href="#"><i class="fab fa-twitter"></i></a>
+					<a href="#"><i class="fab fa-linkedin-in"></i></a>
+					<a href="#"><i class="fab fa-pinterest-p"></i></a>
+					<a href="#"><i class="fab fa-google-plus-g"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+		crossorigin="anonymous"></script>
+	<script src="../src/components/js/basket.js"></script>
+	<script src="../src/components/js/product.js"></script>
+</body>
+
+</html>

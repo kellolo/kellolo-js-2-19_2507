@@ -6,7 +6,7 @@ var basket = {
     total: 0,
 
     init() {
-        this.container = document.querySelector("#basket");
+        this.container = document.querySelector("#Basket");
         this._render();
         this._handleActions();
     },
