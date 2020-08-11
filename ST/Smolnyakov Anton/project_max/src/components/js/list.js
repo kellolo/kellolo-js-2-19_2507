@@ -2,7 +2,7 @@ import { CartItem, CatalogItem } from './items';
 
 let classes = {
     'Catalog': CatalogItem,
-    'Basket': CartItem
+    'Cart': CartItem
 }
 
 export default class List {
@@ -18,6 +18,7 @@ export default class List {
         this._get(url)
             .then(data => {
                 this.items = !cart ? data : data.contents;
+                console.log(data.contents)
             })
             .then(() => {
                 this._render();
