@@ -1,8 +1,8 @@
 import { Catalog, Basket } from './js/lists';
 
 export default () => {
-    let catalog = new Catalog('/catalog.json', '#catalog');
-    console.log(catalog)
+    let basket = new Basket('/basket.json', '#basket');
+    let catalog = new Catalog('/catalog.json', '#catalog', basket);
 }
 
 
