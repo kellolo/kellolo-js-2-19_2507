@@ -15,7 +15,7 @@ export default class List {
         this._init(cart);
     }
 
-    _init(cart = false) {
+    _init(cart) {
         let url = 'https://raw.githubusercontent.com/Smolnyakov/static/master/online-store-api/JSON/' + this.url;
         this._get(url)
             .then(data => {
