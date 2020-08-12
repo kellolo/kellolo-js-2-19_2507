@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Burger</title>
+    <style>
+        .fon {
+            width: 1393px;
+            height: 952px;
+            background: url('https://f.partnerkin.com/uploads/objimgs/9f149f208c.jpg') no-repeat;
+        }
+        h2{
+            color: green;
+            font-weight: 700;
+        }
+        .input-group{
+            width: 400px;
+        }
+        #dataBurger{
+            opacity: .7;
+            background-color: rgb(88, 88, 88);
+            border-radius: 15px;
+        }
+        .d_b p {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color:rgb(183, 255, 0);
+        
+        }
+       
+
+    </style>
+</head>
+
+<body>
+    <main class="fon row d-flex flex-column justify-content-start align-items-center m-auto">
+        
+        <h2 class="my-2 py-3">Собери свой бургер...</h2>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="burgerSize">Размер бургера</label>
+            </div>
+            <select class="custom-select" id="burgerSize" onchange="burger()">
+              <option selected>...</option>
+              <option value="Большой">Большой (+100 р./+40 ккал.)</option>
+              <option value="Маленький">Маленький (+50 р./+20 ккал.)</option>
+            </select>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="burgerFilling">Начинка</label>
+            </div>
+            <select class="custom-select" id="burgerFilling" onchange="burger()">
+              <option selected>...</option>
+              <option value="Сыр">Сыр (+10 р./+20 ккал.)</option>
+              <option value="Салат">Салат (+20 р./+5 ккал.)</option>
+              <option value="Картофель">Картофель (+15 р./+10 ккал.)</option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="burgerAdditionally">Добавка...</label>
+            </div>
+            <select class="custom-select" id="burgerAdditionally" onchange="burger()">
+              <option selected>...</option>
+              <option value="Приправа">Приправа (+15 р./+0 ккал.)</option>
+              <option value="Майонез">Майонез (+20 р./+5 ккал.)</option>
+            </select>
+        </div>
+
+        <div id="dataBurger" class="d_b d-flex flex-column justify-content-center p-3">
+
+        </div>
+
+    </main>
+
+    <script src="./burger.js"></script>
+</body>
+
+</html>

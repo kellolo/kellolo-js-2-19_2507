@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/2bcecb9e0d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../src/layout/css/style.css">
+    <title>Product</title>
+  </head>
+  <body>
+    <header class="container mx-0 px-0 mx-auto row d-flex justify-content-md-between justify-content-sm-center">
+      <div class="col-md-8 col-12 mx-0 p-0 d-flex align-items-center justify-content-md-start justify-content-center row">
+        <a class="logo mr-md-5 col-md-3 col-sm-12 my-2 my-md-0" href="index.html">Bran<span>d</span></a> 
+        <div class="d-flex col-md-8 col-12 align-items-center justify-content-md-start justify-content-center p-0 m-0">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle searchBrowse" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Browse
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item disabled" href="#">WOMEN</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Dresses</a>
+              <a class="dropdown-item" href="#">Tops</a>
+              <a class="dropdown-item" href="#">Sweaters/Knits</a>
+              <a class="dropdown-item" href="#">Jackets/Coats</a>
+              <a class="dropdown-item" href="#">Blazers</a>
+              <a class="dropdown-item" href="#">Denim</a>
+              <a class="dropdown-item" href="#">Leggings/Pants</a>
+              <a class="dropdown-item" href="#">Skirts/Shorts</a>
+              <a class="dropdown-item" href="#">Accessories</a>
+              <a class="dropdown-item disabled" href="#">MEN</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Tees/Tank tops</a>
+              <a class="dropdown-item" href="#">Shirts/Polos</a>
+              <a class="dropdown-item" href="#">Sweaters</a>
+              <a class="dropdown-item" href="#">Sweatshirts/Hoodies</a>
+              <a class="dropdown-item" href="#">Blazers</a>
+              <a class="dropdown-item" href="#">Jackets/vests</a>
+            </div>
+          </div>
+          <div class="search d-flex align-items-center">
+            <form class="d-flex justify-content-between align-items-center" action="#">
+              <input name="search" type="text" placeholder="Search for Item...">
+              <button class="p-2"><i class="fas fa-search"></i></button>
+            </form>
+          </div>
+        </div>
+        
+      </div>
+      <div class="d-none d-md-block d-md-flex col-md-4 col-sm-12 justify-content-md-end justify-content-center align-items-center my-2 my-md-0">
+        <a href="#"><img class="cartButton" src="https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/cart.png?raw=true" alt="Cart"></a>
+        <div id="basket" class="d-none">
+          
+        </div>
+        <button class="myaccountBtn ml-4">My Account <i class="fas fa-caret-down"></i></button>
+      </div>
+    </header>
+    <div class="headerLine"></div>
+    <nav>
+      <div class="burgermenu d-md-none d-block d-flex justify-content-between align-items-center">
+        <div class="dropdown">
+          <button class="btn btn-secondary" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <a href="index.html" class="dropdown-item" type="button">home</a>
+            <a href="#" class="dropdown-item" type="button">man</a>
+            <a href="#" class="dropdown-item" type="button">women</a>
+            <a href="#" class="dropdown-item" type="button">kids</a>
+            <a href="#" class="dropdown-item" type="button">accessories</a>
+            <a href="#" class="dropdown-item" type="button">featured</a>
+            <a href="#" class="dropdown-item" type="button">hot deals</a>
+          </div>
+        </div>
+        <div class="d-flex justify-content-md-end justify-content-center align-items-center my-2 my-md-0">
+          <a class="cartButton-sm" href="#"><img src="https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/cart.png?raw=true" alt="Cart"></a>
+          <div id="basket" class="d-none">
+            <div class="cartMenu-block d-flex justify-content-between align-items-center mx-3 py-3">
+              <img src="https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/CartMenu1.png?raw=true" alt="First">
+              <div class="cartMenu-block-content my-auto ml-3">
+                <h4 class="cartMenu-h4-f1">Rebox Zane</h4>
+                <h4 class="cartMenu-h4-f2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></h4>
+                <h4 class="cartMenu-h4-f3">1  x  $250</h4>
+              </div>
+              <p class="cartMenu-h4-f4"><i class="fas fa-times-circle"></i></p>
+            </div>
+            <div class="cartMenu-block d-flex justify-content-between align-items-center mx-3 py-3">
+              <img src="https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/CartMenu2.png?raw=true" alt="First">
+              <div class="cartMenu-block-content my-auto ml-3">
+                <h4 class="cartMenu-h4-f1">Rebox Zane</h4>
+                <h4 class="cartMenu-h4-f2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></h4>
+                <h4 class="cartMenu-h4-f3">1  x  $250</h4>
+              </div>
+              <p class="cartMenu-h4-f4"><i class="fas fa-times-circle"></i></p>
+            </div>
+            <div class="cartMenu-price d-flex mx-3 mt-3 justify-content-between align-items-center">
+              <h2>TOTAL</h2>
+              <h2>$500.00</h2>
+            </div>
+            <div class="cartMenu-chkButton mx-3 d-flex justify-content-center align-items-center">
+              <a href="#">Checkout</a>
+            </div>
+            <div class="cartMenu-crtButton mx-3 d-flex justify-content-center align-items-center">
+              <a href="#">Go to cart</a>
+            </div>
+          </div>
+          <button class="myaccountBtnPhones ml-4 mr-4 my-0">My Account <i class="fas fa-caret-down"></i></button>
+        </div>
+      </div>
+      <ul class="mainMenu nav d-none d-md-block d-md-flex justify-content-center align-items-center">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link" href="#">home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">man</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">women</a>
+          <div id="megaMenu">
+            <div class="d-flex justify-content-around align-items-start pt-3 d-none">
+              <div class="megaMenu-col d-flex flex-column">
+                <p class="">WOMEN</p>
+                <a href="#">Dresses</a>
+                <a href="#">Tops</a>
+                <a href="#">Sweaters/Knits</a>
+                <a href="#">Jackets/Coats</a>
+                <a href="#">Blazers</a>
+                <a href="#">Denim</a>
+                <a href="#">Leggings/Pants</a>
+                <a href="#">Skirts/Shorts</a>
+                <a href="#">Accessories</a>
+              </div>
+              <div class="megaMenu-col d-flex flex-column">
+                <p class="">WOMEN</p>
+                <a href="#">Dresses</a>
+                <a href="#">Tops</a>
+                <a href="#">Sweaters/Knits</a>
+                <a href="#">Jackets/Coats</a>
+                <p class="my-3">WOMEN</p>
+                <a href="#">Dresses</a>
+                <a href="#">Tops</a>
+                <a href="#">Sweaters/Knits</a>
+              </div>
+              <div class="megaMenu-col d-flex flex-column">
+                <p class="">WOMEN</p>
+                <a href="#">Dresses</a>
+                <a href="#">Tops</a>
+                <a href="#">Sweaters/Knits</a>
+                <a href="#">Jackets/Coats</a>
+                <div>
+                  <img class="my-3" src="https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/megaMenuImg.png?raw=true" alt="">
+                  <span>Super sale!</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">kids</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">accessories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">featured</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">hot deals</a>
+        </li>
+      </ul> 
+    </nav>
+    <div class="breadcrumbs-bg">
+      <div class="breadcrumbs-block container d-flex flex-md-row flex-column justify-content-md-between justify-content-around align-items-md-center align-items-start">
+        <div class="breadcrumbs-title">New Arrivals</div>
+        <div class="breadcrumbs">Home / Men / <span>New Arrivals</span></div>
+      </div>
+    </div>
+    <div class="product row container mx-auto mx-0 px-0">
+      <div class="leftCatalog col-md-3 col-12 mx-0 px-0">
+        <div class="accordion pr-md-5" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left d-flex justify-content-between" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <span>CATEGORY</span><i class="fas fa-caret-down"></i>
+              </button>
+              </h2>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body d-flex flex-column pl-0">
+                <a href="#">Accessories</a>
+                <a href="#">Bags</a>
+                <a href="#">Denim</a>
+                <a href="#">Hoodies & Sweatshirts</a>
+                <a href="#">Jackets & Coats</a>
+                <a href="#">Pants</a>
+                <a href="#">Polos</a>
+                <a href="#">Shirts</a>
+                <a href="#">Shoes</a>
+                <a href="#">Shorts</a>
+                <a href="#">Sweaters & Knits</a>
+                <a href="#">T-Shirts</a>
+                <a href="#">Tanks</a>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed d-flex justify-content-between" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <span>BRAND</span><i class="fas fa-caret-down"></i>
+              </button>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body d-flex flex-column pl-0">
+                <a href="#">Accessories</a>
+                <a href="#">Bags</a>
+                <a href="#">Denim</a>
+                <a href="#">Hoodies & Sweatshirts</a>
+                <a href="#">Jackets & Coats</a>
+                <a href="#">Pants</a>
+                <a href="#">Polos</a>
+                <a href="#">Shirts</a>
+                <a href="#">Shoes</a>
+                <a href="#">Shorts</a>
+                <a href="#">Sweaters & Knits</a>
+                <a href="#">T-Shirts</a>
+                <a href="#">Tanks</a>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed d-flex justify-content-between" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <span>DESIGNER</span><i class="fas fa-caret-down"></i>
+              </button>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body d-flex flex-column pl-0">
+                <a href="#">Accessories</a>
+                <a href="#">Bags</a>
+                <a href="#">Denim</a>
+                <a href="#">Hoodies & Sweatshirts</a>
+                <a href="#">Jackets & Coats</a>
+                <a href="#">Pants</a>
+                <a href="#">Polos</a>
+                <a href="#">Shirts</a>
+                <a href="#">Shoes</a>
+                <a href="#">Shorts</a>
+                <a href="#">Sweaters & Knits</a>
+                <a href="#">T-Shirts</a>
+                <a href="#">Tanks</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rightCatalog col-md-9 col-12 row mx-0 px-0">
+        <div class="rightProduct col-12 row mx-0 px-0">
+          <div class="productTrend col-md-6 col-lg-4 col-12 my-md-1 my-2 px-4 mx-md-0 px-0">
+            <h4 class="productTrend-h4 mb-3">Trending now</h4>
+            <div class="mx-0 px-0">
+              <a href="#">Bohemian</a>|<a href="#">Floral</a>|<a href="#">Lace</a><br>
+              <a href="#">Floral</a>|<a href="#">Lace</a>|<a href="#">Bohemian</a>
+            </div>
+          </div>
+          <div class="productSize col-md-6 col-lg-4 col-12 my-md-1 my-2 px-4 mx-md-0 px-0">
+            <h4 class="productTrend-h4 mb-3">Size</h4>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox">
+              <label class="form-check-label">XXS</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox">
+              <label class="form-check-label">XS</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox">
+              <label class="form-check-label">S</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox">
+              <label class="form-check-label">M</label>
+            </div>
+            <br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox">
+              <label class="form-check-label">L</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox">
+              <label class="form-check-label">XL</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox">
+              <label class="form-check-label">XXL</label>
+            </div>
+          </div>
+          <div class="productPrice col-md-12 col-lg-4 col-12 my-md-1 my-2 px-4 mx-md-0 px-0">
+            <h4 class="productTrend-h4 mb-3">Price</h4>
+            <form>
+              <div class="form-group">
+                <input type="range" class="form-control-range" id="formControlRange" min="52" max="400">
+              </div>
+            </form>
+            <div class="d-flex justify-content-between">
+              <span>$52</span><span>$400</span>
+            </div>
+          </div>
+        </div>
+        <div class="rightProductSort col-12 mx-0 px-0 d-flex justify-content-md-start justify-content-center align-items-center">
+          <div class="rightProductSortName ml-2">
+            <span>Sort By</span>
+            <span>Name<i class="fas fa-caret-down"></i></span>
+          </div>
+          <div class="rightProductSortShow ml-2">
+            <span>Show</span>
+            <span>09<i class="fas fa-caret-down"></i></span>
+          </div>
+        </div>
+        <div class="rightCatalogList col-12 text-left mx-0 px-0 d-flex flex-wrap justify-content-md-between justify-content-center align-items-center">
+          <!-- Контент грузит JS -->
+        </div>
+        <div class="productPagination col-12 d-flex flex-md-row flex-column justify-content-md-between justify-content-center align-items-center mx-0 px-0">
+         <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true"><i class="fas fa-chevron-left"></i></span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item"><a class="page-link" href="#">6</a></li>
+            <span class="dots">.....</span>
+            <li class="page-item"><a class="page-link" href="#">20</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+              </a>
+            </li>
+          </ul>
+        </nav> 
+          <div class="buttonViewAll">
+            <a href="#" class="productpage-button">
+                <p>View All</p>
+            </a>
+         </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="productFeaturesBG container-fluid d-flex align-items-center">
+      <div class="productFeatures container">
+        <div class="discountBannerBlocks d-flex flex-md-row flex-column text-center justify-content-between align-items-center">
+          <div class="bannerBlock pt-md-1 pt-4 d-flex flex-column justify-content-center align-items-center">
+            <div class="banner-ico"><img src="https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/Banner_ico_3.png?raw=true" alt=""></div>
+            <div class="banner-content">
+              <div class="banner-title my-3">Free Delivery</div>
+              <div class="banner-text">Worldwide delivery on all. Authorit tively morph next-generation innovtion with extensive models.</div>
+            </div>
+          </div>
+          <div class="bannerBlock pt-md-1 pt-4 d-flex flex-column justify-content-center align-items-center">
+            <div class="banner-ico"><img src="https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/Banner_ico_2.png?raw=true" alt=""></div>
+            <div class="banner-content">
+              <div class="banner-title my-3">Sales & discounts</div>
+              <div class="banner-text">Worldwide delivery on all. Authorit tively morph next-generation innovtion with extensive models.</div>
+            </div>
+          </div>
+          <div class="bannerBlock pt-md-1 pt-4 d-flex flex-column justify-content-center align-items-center">
+            <div class="banner-ico"><img src="https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/Banner_ico_1.png?raw=true" alt=""></div>
+            <div class="banner-content">
+              <div class="banner-title my-3">Quality assurance</div>
+              <div class="banner-text">Worldwide delivery on all. Authorit tively morph next-generation innovtion with extensive models.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="subscribe-bg container-fluid">
+      <div class="subscribe container row mx-auto m-0 p-0">
+        <div class="subscribe-left col-12 col-lg-6 d-flex justify-content-center align-items-center ml-0 pl-0">
+          <div class="d-flex align-items-start">
+            <div class="subscribe-img"><img src="https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/subscribe_photo.png?raw=true" alt=""></div>
+            <div class="subscribe-citata mr-3">
+              <div class="citata-text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</div>
+              <div class="citata-author">Bin Burhan<br><span>Dhaka, Bd</span></div>
+              <div class="citata-pagination d-flex mb-md-0 mb-4">
+                <a href="#" class="citata-line"></a>
+                <a href="#" class="citata-line"></a>
+                <a href="#" class="citata-line"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shape d-none d-lg-block"></div>
+        <div class="subscribe-right col-12 col-lg-6 d-flex flex-column text-center align-items-center justify-content-center">
+          <div class="subscribe-text">Subscribe<br><span>FOR OUR NEWLETTER AND PROMOTION</span></div>
+          <div class="subscribe-input d-flex align-items-center overflow-hidden mb-md-0 mb-3">
+            <input name="subscribe" type="text" placeholder="Enter Your Email">
+            <button class="subscribe-btn">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-content container d-flex justify-content-between row mx-auto mb-5">
+        <div class="footer-text col-12 col-lg-5">
+          <div class="logo">Bran<span>d</span></div>
+          <div class="footer-h4 mt-4 mb-4">Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.<br><br>Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</div>
+        </div>
+        <div class="d-flex justify-content-between col-12 col-lg-7 pl-lg-5 mr-0 pr-0">
+          <div class="footer-menu d-flex flex-column">
+            <h2 class="footer-menuItem ">COMPANY</h2>
+            <a href="#" class="footer-menuItem">Home </a>
+            <a href="#" class="footer-menuItem">Shop</a>
+            <a href="#" class="footer-menuItem">About</a>
+            <a href="#" class="footer-menuItem">How It Works</a>
+            <a href="#" class="footer-menuItem">Contact</a>
+          </div>
+          <div class="footer-menu d-flex flex-column">
+            <h2 class="footer-menuItem">INFORMATION</h2>
+            <a href="#" class="footer-menuItem">Tearms & Condition</a>
+            <a href="#" class="footer-menuItem">Privacy Policy</a>
+            <a href="#" class="footer-menuItem">How to Buy</a>
+            <a href="#" class="footer-menuItem">How to Sell</a>
+            <a href="#" class="footer-menuItem">Promotion</a>
+          </div>
+          <div class="footer-menu d-flex flex-column">
+            <h2 class="footer-menuItem">SHOP CATEGORY</h2>
+            <a href="#" class="footer-menuItem">Men</a>
+            <a href="#" class="footer-menuItem">Women</a>
+            <a href="#" class="footer-menuItem">Child</a>
+            <a href="#" class="footer-menuItem">Apparel</a>
+            <a href="#" class="footer-menuItem">Browse All</a>
+          </div>
+        </div>
+        
+      </div>
+      <div class="copyright">
+        <div class="footer-copyright container d-flex align-items-center justify-content-center justify-content-md-between row mx-auto">
+          <div class="copyright-text d-flex col-md-6 col-sm-12 justify-content-md-start justify-content-center">© 2017  Brand  All Rights Reserved.</div>
+          <div class="copyright-social d-flex col-md-6 col-sm-12 justify-content-md-end justify-content-center">
+            <div class="social-block text-center"><i class="fab fa-facebook-f"></i></div>
+            <div class="social-block text-center"><i class="fab fa-twitter"></i></div>
+            <div class="social-block text-center"><i class="fab fa-linkedin-in"></i></div>
+            <div class="social-block text-center"><i class="fab fa-pinterest-p"></i></div>
+            <div class="social-block text-center"><i class="fab fa-google-plus-g"></i></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+  <script src="../src/components/js/Basket.js"></script>
+  <script src="../src/components/js/initNewCatalog.js"></script>
+  <script src="../src/components/js/data_product.js"></script>
+  </body>
+</html>

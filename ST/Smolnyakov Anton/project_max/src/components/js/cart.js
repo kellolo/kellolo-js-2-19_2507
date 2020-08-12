@@ -1,18 +1,13 @@
+import parentCartAndCatalog from "./parents"
 
-
-export default {
-    items: [],
-    container: null,
-    totalSumContainer: null,
-    totalSum: 0,
-
-    init() {
+class cartClass extends parentCartAndCatalog {
+    _init() {
         this.container = document.querySelector("#cart");
         this.totalSumContainer = document.querySelector("#totalSum");
         this._render();
         this._handleActions();
         this._minusTotalSum();
-    },
+    }
 
     _handleActions() {
         this.container.addEventListener('click', evt => {
@@ -20,11 +15,10 @@ export default {
                 this.remove(evt.target.dataset.id);
             }
         })
-    },
+    }
 
     _render() {
         let str = "";
-        // let totalsum = "";
         this.items.forEach(item => {
             str += `
             <div class="d-flex">
@@ -39,7 +33,7 @@ export default {
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </span>
-                        <div class="headerCartWrapPrice">${item.amount} 
+                        <div class="headerCartWrapPrice">${item.amount}
                             <span>x</span> $${item.price}
                         </div>
                     </div>
@@ -49,7 +43,7 @@ export default {
             `
         })
         this.container.innerHTML = str;
-    },
+    }
 
     add(item) {
         let find = this.items.find(el => el.id == item.id);
@@ -61,11 +55,11 @@ export default {
         }
         this._render();
         this.renderTotalSum();
-    },
+    }
 
     remove(itemId) {
         let find = this.items.find(el => el.id == itemId);
-
+        console.log(find.amount)
         if (find.amount > 1) {
             find.amount--;
         } else {
@@ -73,7 +67,7 @@ export default {
         }
         this._minusTotalSum();
         this._render();
-    },
+    }
 
     renderTotalSum() {
         let sum = 0;
@@ -81,9 +75,8 @@ export default {
         this.items.forEach(item => {
             sum += +item.price * +item.amount;
         });
-        console.log(sum)
         this.totalSumContainer.innerHTML = "$" + sum;
-    },
+    }
 
     _minusTotalSum() {
         let sum = 0;
@@ -91,8 +84,10 @@ export default {
         this.items.forEach(item => {
             sum -= +item.price * +item.amount * -1;
         });
-        console.log(sum)
         this.totalSumContainer.innerHTML = "$" + sum;
-    },
+    }
 }
 
+let cart = new cartClass()
+
+export default cart;

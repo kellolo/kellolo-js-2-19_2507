@@ -6,7 +6,10 @@
     <title>Document</title>
     <script src="https://kit.fontawesome.com/8b21984430.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet">
-  
+    <style>
+        .promo {background: url(../src/assets/img/promo.png); }
+    </style>
+
 <link href="css/main.css" rel="stylesheet"></head>
 <body>
     <div class="container">
@@ -63,12 +66,10 @@
             </div>
             <div class="header__right">
 
-                <div class="shopping_cart" id="cart"></div>
-
                    <div class="shopping_cart">
                        <a class="cart_basket" href="../public/shopping_cart.html"><img class="header__cart" src="../src/assets/img/cart.png" alt="cart"></a>
                        <div class="drop_account">
-                        <div id="basket" class="drop__flex-account"></div>
+                        <div id="basket" class="BasketAccount"></div>
                         <div class="total_price">
                             <h3 class="total_h3">TOTAL</h3>
                             <h3 class="total_h3">$500.00</h3>
@@ -190,7 +191,7 @@
                     <li class="menu__list"><a href="#" class="menu__link">Hot Deals</a></li>
                 </ul>
             </div>
-            <div class="promo center"> 
+            <div class="promo center">
                 
                 <div class="promo__content">
                     <h2 class="promo__h2">THE BRAND</h2>
@@ -200,6 +201,7 @@
             <div class="deal center">
                 <div class="deal__man">
                 <a href="#">
+                    <!-- <img class="img_man" src="../src/assets/img/deal_man.png" alt="deal_man"> -->
                     <div class="deal__content">
                     <h4 class="deal__h4">HOT DEAL</h4>
                     <h3 class="deal__h3">FOR MEN</h3>  
@@ -235,7 +237,7 @@
                  <p class="product__h3">Fetured Items</p>
                  <p class="product__h4">Shop for items based on&nbsp;what we&nbsp;featured in&nbsp;this week</p>
                 
-                 <div class="product-box" id="catalog"></div>
+                 <div class="ProductBox" id="catalog"></div>
 
                  <div class="button_browse">
                     <a  href="../public/product.html" class="browse_product">Browse All Product

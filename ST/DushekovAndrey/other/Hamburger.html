@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hamburger</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+	<h2 class="text-center">Собери свой бургер</h2>
+	<br>
+	<form class="container">
+	  <fieldset class="form-group">
+	    <div class="row">
+	      <legend class="col-form-label col-sm-2 pt-0">Выберите размер Бургера</legend>
+	      <div class="col-sm-10">
+	        <div class="form-check">
+	          <input class="form-check-input change-size" type="radio" name="gridRadiosSize" id="gridRadiosBurger1" value="option1" checked
+                data-name="Маленький"
+                data-price="50"
+                data-cal="20"
+                data-id="1"
+	          >
+	          <label class="form-check-label" for="gridRadiosBurger1">Small Burger (50 рублей, 20 калорий)</label>
+	        </div>
+	        <div class="form-check">
+	          <input class="form-check-input change-size" type="radio" name="gridRadiosSize" id="gridRadiosBurger2" value="option2"
+                data-name="Большой"
+                data-price="100"
+                data-cal="40"
+                data-id="2"
+	          >
+	          <label class="form-check-label" for="gridRadiosBurger2">Big Burger (100 рублей, 40 калорий)</label>
+	        </div>
+	      </div>
+	    </div>
+	  </fieldset>
+	   <fieldset class="form-group">
+	    <div class="row">
+	      <legend class="col-form-label col-sm-2 pt-0">Выберите начинку для Бургера</legend>
+	      <div class="col-sm-10">
+	        <div class="form-check">
+	          <input class="form-check-input change-filling" type="radio" name="gridRadiosFilling" id="gridRadiosFilling1" value="option1" checked
+	          	data-name="Сыр"
+                data-price="10"
+                data-cal="20"
+                data-id="1"
+	          >
+	          <label class="form-check-label" for="gridRadiosFilling1">Cheese (10 рублей, 20 калорий)</label>
+	        </div>
+	        <div class="form-check">
+	          <input class="form-check-input change-filling" type="radio" name="gridRadiosFilling" id="gridRadiosFilling2" value="option2"
+	          	data-name="Салат"
+                data-price="20"
+                data-cal="5"
+                data-id="2"
+	          >
+	          <label class="form-check-label" for="gridRadiosFilling2">Salad (20 рублей, 5 калорий)</label>
+	        </div>
+	        <div class="form-check">
+	          <input class="form-check-input change-filling" type="radio" name="gridRadiosFilling" id="gridRadiosFilling3" value="option3"
+	            data-name="Картофель"
+                data-price="15"
+                data-cal="10"
+                data-id="3"
+	          >
+	          <label class="form-check-label" for="gridRadiosFilling3">Potato (15 рублей, 10 калорий)</label>
+	        </div>
+	      </div>
+	    </div>
+	  </fieldset>
+	  <div class="form-group row">
+	    <div class="col-sm-2">Дополнительно</div>
+	    <div class="col-sm-10">
+	      <div class="form-check">
+	        <input class="form-check-input add-topping" type="checkbox" id="gridCheck1"
+	        	data-name="Приправа"
+            	data-price="15"
+            	data-cal="0"
+            	data-id="1"
+	        >
+	        <label class="form-check-label" for="gridCheck1">Добавить приправы (15 рублей, 0 калорий)</label>
+	      </div>
+	      <div class="form-check">
+	        <input class="form-check-input add-topping" type="checkbox" id="gridCheck2"
+	        	data-name="Майонез"
+            	data-price="20"
+           	 	data-cal="5"
+            	data-id="2"
+	        >
+	        <label class="form-check-label" for="gridCheck2">Добавить майонез (20 рублей, 5 калорий)</label>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <div class=" burger col-sm-10">
+	      <h5 class="ml-2">Ваш Бургер</h5>
+	      <h6 class="ml-3">Цена Бургера: </h6>
+	      <h6 class="ml-3">Калорийность Бургера: </h6>
+	    </div>
+	  </div>
+	</form>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+	<script>
+		class Hamburger {
+			constructor (size, filling) {
+				this.size = size;
+				this.filling = filling;
+				this.topping = [];
+				this.container = null;
+				this.price = 0;
+				this.cal = 0;
+				this._init();
+			}
+
+			_init() {
+				this.container = document.querySelector(".burger");
+				this._render();
+				this._handleActions();
+			}
+
+			_calc() {
+				let toppingPrice = 0;
+				let toppingCal = 0;
+				if (this.topping.length != 0) {
+					this.topping.forEach((el) => {
+						toppingPrice += el.price;
+						toppingCal += el.cal;
+					});
+				} 
+				this.price = +this.size.price + +this.filling.price + toppingPrice;
+				this.cal = +this.size.cal + +this.filling.cal + toppingCal;
+			}
+
+			_render() {
+				let str = "";
+				this._calc();
+				str += ` 
+				  <h5 class="ml-2">Ваш Бургер: Размер: ${this.size.name}, Начинка: ${this.filling.name}, Добавки: ${this.topping.length}</h5>
+			      <h6 class="ml-3">Цена Бургера: ${this.price}</h6>
+			      <h6 class="ml-3">Калорийность Бургера: ${this.cal}</h6>
+            `
+				this.container.innerHTML = str;
+
+			}
+
+			_handleActions() {
+		       	document.addEventListener('click', evt => {
+		       		if (evt.target.classList.contains('change-size') ||
+		       			evt.target.classList.contains('change-filling') ||
+		       			evt.target.classList.contains('add-topping')) {
+
+		       			let item = {
+	                   		name: evt.target.dataset.name,
+	                   		price: +evt.target.dataset.price,
+	                   		cal: +evt.target.dataset.cal,
+	                   		id: evt.target.dataset.id
+              			}
+
+              		if ( evt.target.checked == true ) {
+				        if (evt.target.classList.contains('change-size')) { this.size = item }
+				        if (evt.target.classList.contains('change-filling')) { this.filling = item }
+				        if (evt.target.classList.contains('add-topping')) { this._addTopping(item) }							 
+				    } else {
+				        this._removeTopping(item.id);
+				    }
+				    	this._render();
+					}
+		        })
+		    }
+
+		    _addTopping(topping) {
+		    	let find = this.topping.find(el => el.id == topping.id);
+		        if (!find) {
+		            this.topping.push(topping);
+		        }
+		    }
+
+		    _removeTopping(itemId) {
+		    	let find = this.topping.find(el => el.id == itemId);
+		        if (find) {
+		            this.topping.splice(this.topping.indexOf(find), 1);
+		        }
+		    }
+
+		}
+
+		let Burger = new Hamburger(gridRadiosBurger1.dataset, gridRadiosFilling1.dataset);
+	</script>
+</body>
+</html>

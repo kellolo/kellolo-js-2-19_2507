@@ -1,22 +1,24 @@
 
-export default {
-    items: [],
-    container: null,
-    basket: basket,
-    total: 0,
+export default class Basket {
+    constructor(container) {
+        this.items = [];
+        this.container = container;
+        this.total = 0;
+        this.init();
+    }
 
     init() {
-        this.container = document.querySelector("#basket");
+
         this._render();
         this._handleActions();
-    },
+    }
     _handleActions() {
-        this.container.addEventListener('click', evt => {
+        document.addEventListener('click', evt => {
             if (evt.target.classList.contains('remove')) {
                 this.remove(evt.target.dataset.id);
             }
         })
-    },
+    }
     _render() {
         let str = "";
         this.items.forEach(item => {
@@ -42,7 +44,8 @@ export default {
             </div>
             `
         })
-        this.container.innerHTML = str + `
+        let cat1 = document.querySelector(this.container);
+        cat1.innerHTML = str + `
         <div class="headerCartWrapTotalPrice">
                             <div>total&nbsp;</div>
                             <div>$${this.total}</div>
@@ -51,7 +54,7 @@ export default {
                         <button type="button" class="productsButtonIndex">Checkout</button>
                         <button type="button" class="productsButtonIndex">Go to cart</button>`;
 
-    },
+    }
     add(item) {
         let find = this.items.find(el => el.id == item.id);
 
@@ -63,7 +66,7 @@ export default {
             this.total = this.total + Number(find.price);
         }
         this._render();
-    },
+    }
     remove(itemId) {
 
         let find = this.items.find(el => el.id == itemId);

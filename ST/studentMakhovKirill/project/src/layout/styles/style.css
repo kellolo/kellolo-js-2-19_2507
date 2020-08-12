@@ -318,7 +318,7 @@ body {
 
 .logo {
   width: 165px;
-  /*background: url("../../assets/imgs/logo.png") no-repeat;*/
+  background: url("../../assets/imgs/logo.png") no-repeat;
   text-transform: uppercase;
   font-size: 27px;
   font-weight: 300;
@@ -480,7 +480,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /*background: url(../../assets/imgs/topHeaderBack.png) no-repeat 554px 0;*/
+  background: url("../../assets/imgs/topHeaderBack.png") no-repeat 554px 0;
   background-size: 550px;
 }
 
@@ -764,7 +764,7 @@ body {
       flex-shrink: 0;
   height: inherit;
   width: 767px;
- /*  background: url(../../assets/imgs/offerForWomen.jpg) no-repeat; */
+ background: url("../../assets/imgs/offerForWomen.jpg") no-repeat; 
   background-size: cover;
   position: relative;
 }
@@ -836,15 +836,15 @@ body {
 }
 
 .offer-women__item:first-child {
-  /* background: url(../../assets/imgs/offerDetails1.png) no-repeat 30px 30px; */
+  background: url(../../assets/imgs/offerDetails1.png) no-repeat 30px 30px;
 }
 
 .offer-women__item:nth-child(2) {
-  /* background: url(../../assets/imgs/offerDetails2.png) no-repeat 30px 30px; */
+  background: url(../../assets/imgs/offerDetails2.png) no-repeat 30px 30px;
 }
 
 .offer-women__item:last-child {
- /*  background: url(../../assets/imgs/offerDetails3.png) no-repeat 30px 30px; */
+ background: url(../../assets/imgs/offerDetails3.png) no-repeat 30px 30px; 
 }
 
 .offer-women__header-text {
@@ -1895,69 +1895,69 @@ body {
 }
 
 .product-footer__item:first-child {
-  /* background: url(../../assets/imgs/offerDetails1.png) no-repeat 160px 0px; */
+  background: url(../../assets/imgs/offerDetails1.png) no-repeat 160px 0px;
 }
 
 @media (max-width: 1200px) {
   .product-footer__item:first-child {
-    /* background: url(../../assets/imgs/offerDetails1.png) no-repeat 129px 0px; */
+    background: url(../../assets/imgs/offerDetails1.png) no-repeat 129px 0px; 
   }
 }
 
 @media (max-width: 992px) {
   .product-footer__item:first-child {
-    /* background: url(../../assets/imgs/offerDetails1.png) no-repeat 90px 0px; */
+    background: url(../../assets/imgs/offerDetails1.png) no-repeat 90px 0px;
   }
 }
 
 @media (max-width: 768px) {
   .product-footer__item:first-child {
-    /* background: url(../../assets/imgs/offerDetails1.png) no-repeat center 0px; */
+    background: url(../../assets/imgs/offerDetails1.png) no-repeat center 0px; 
   }
 }
 
 .product-footer__item:nth-child(2) {
-  /* background: url(../../assets/imgs/offerDetails2.png) no-repeat 160px 0px; */
+  background: url(../../assets/imgs/offerDetails2.png) no-repeat 160px 0px;
 }
 
 @media (max-width: 1200px) {
   .product-footer__item:nth-child(2) {
-   /*  background: url(../../assets/imgs/offerDetails2.png) no-repeat 129px 0px; */
+   background: url(../../assets/imgs/offerDetails2.png) no-repeat 129px 0px;
   }
 }
 
 @media (max-width: 992px) {
   .product-footer__item:nth-child(2) {
-    /* background: url(../../assets/imgs/offerDetails2.png) no-repeat 90px 0px; */
+    background: url(../../assets/imgs/offerDetails2.png) no-repeat 90px 0px;
   }
 }
 
 @media (max-width: 768px) {
   .product-footer__item:nth-child(2) {
-    /* background: url(../../assets/imgs/offerDetails2.png) no-repeat center 0px; */
+    background: url(../../assets/imgs/offerDetails2.png) no-repeat center 0px;
     margin-top: 15px;
   }
 }
 
 .product-footer__item:last-child {
-  /* background: url(../../assets/imgs/offerDetails3.png) no-repeat 160px 0px; */
+  background: url(../../assets/imgs/offerDetails3.png) no-repeat 160px 0px;
 }
 
 @media (max-width: 1200px) {
   .product-footer__item:last-child {
-    /* background: url(../../assets/imgs/offerDetails3.png) no-repeat 129px 0px; */
+    background: url(../../assets/imgs/offerDetails3.png) no-repeat 129px 0px;
   }
 }
 
 @media (max-width: 992px) {
   .product-footer__item:last-child {
-    /* background: url(../../assets/imgs/offerDetails3.png) no-repeat 90px 0px; */
+    background: url(../../assets/imgs/offerDetails3.png) no-repeat 90px 0px;
   }
 }
 
 @media (max-width: 768px) {
   .product-footer__item:last-child {
-    /* background: url(../../assets/imgs/offerDetails3.png) no-repeat center 0px; */
+    background: url(../../assets/imgs/offerDetails3.png) no-repeat center 0px;
     margin-top: 15px;
   }
 }
@@ -1982,7 +1982,7 @@ body {
 .subscribe-wrap {
   height: 438px;
   margin-top: 97px;
-  /* background: url(../../assets/imgs/subscribe.jpg) no-repeat center bottom #ccc; */
+  background: url(../../assets/imgs/subscribe.jpg) no-repeat center bottom #ccc;
   background-size: cover;
   background-blend-mode: overlay;
 }

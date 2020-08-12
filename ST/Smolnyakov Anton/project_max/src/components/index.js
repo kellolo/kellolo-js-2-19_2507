@@ -1,9 +1,16 @@
-import cart from "./js/cart";
-import catalog from "./js/catalog";
+import { Catalog, Cart } from './js/lists';
 import header from "./js/header"
 
 export default () => {
-    cart.init();
+    let cart = new Cart('/cart.json', '#cart');
+    let catalog = new Catalog('/catalog.json', '#catalog', cart);
+    console.log(cart, catalog)
     header.handleEvents();
-    catalog.init();
 }
+
+//{
+//  "amount": 150,
+//  "countGoods": 2,
+//  "contents":
+//}
+

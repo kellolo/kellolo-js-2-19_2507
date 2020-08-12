@@ -28,7 +28,7 @@ var basket = {
     
     
     init() {
-        this.container = document.querySelector("#basket");
+        this.container = document.querySelector("#Basket");
         this.container2 = document.querySelector("#basket2");
         this.total = this._recalcTotal();
         this._render();
