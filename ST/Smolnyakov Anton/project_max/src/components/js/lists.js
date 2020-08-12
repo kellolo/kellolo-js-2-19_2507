@@ -11,12 +11,12 @@ export class Cart extends List {
         super(url, container);
     }
 
-    // add(item) {
-    //
-    // }
-    //
-    // remove(itemId) {
-    //
-    // }
+    add(item) {
+
+    }
+
+    remove(itemId) {
+
+    }
 }
 

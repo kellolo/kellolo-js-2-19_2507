@@ -8,9 +8,3 @@ export default () => {
     header.handleEvents();
 }
 
-//{
-//  "amount": 150,
-//  "countGoods": 2,
-//  "contents":
-//}1
-
