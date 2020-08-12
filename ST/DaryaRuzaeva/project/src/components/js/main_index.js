@@ -25,15 +25,43 @@ function initCatalog() {
     return names.map((names, index) => createItem(ids[index], names, prices[index], imgs[index]));
 };
 
-const catalog = {
+/*
+export default {
     items: [],
     container: null,
+    basket: null,
+*/
 
-    init() {
+class ProductBox {
+    constructor(container) {
+        this.items = [];
+        this.basket = null;
+        this.container = null;
+        this._init();
+    }
+
+    _init(qty, bask) {
+        this.basket = bask;
         this.items = initCatalog();
         this.container = document.querySelector("#catalog");
         this._render();
-    },
+        this._handleActions();
+    }
+
+    _handleActions() {
+        this.container.addEventListener('click', evt => {
+            if (evt.target.name == 'add') {
+                let item = {
+                    name: evt.target.dataset.name,
+                    price: +evt.target.dataset.price,
+                    img: evt.target.dataset.img,
+                    amount: 1,
+                    id: evt.target.dataset.id
+                }
+                this.basket.add(item);
+            }
+        })
+    }
 
     _render() {
         let str = "";
@@ -52,5 +80,7 @@ const catalog = {
         this.container.innerHTML = str;
     }
 }
+
+let ItemIndex = new ProductBox('#catalog');
 //catalog.init();
 

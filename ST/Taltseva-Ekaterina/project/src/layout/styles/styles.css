@@ -1,11 +1,11 @@
+/*@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+@import url(styles/footer.css);*/
+/*@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-@import url(footer.css);
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");*/
 @media (max-width: 575.98px) {
   .logo {
     margin: auto; } }
@@ -332,7 +332,7 @@
 
 /*-------------------------------SUBSCRIBE ST-----------------------------*/
 .subscribeBg {
-  background: url("https://github.com/EkaterinaTaltseva/shop-img/blob/master/SubscribbeBG.jpg?raw=true") no-repeat center center, #ccc;
+  /*background: url("https://github.com/EkaterinaTaltseva/shop-img/blob/master/SubscribbeBG.jpg?raw=true") no-repeat center center, #ccc;*/
   background-blend-mode: overlay;
   background-size: cover;
   margin-top: 3rem; }
@@ -451,7 +451,7 @@
 .topBannerContent {
   display: flex;
   height: 610px;
-  background: url("https://github.com/EkaterinaTaltseva/shop-img/blob/master/topHeaderBack.png?raw=true") no-repeat;
+ /* background: url("https://github.com/EkaterinaTaltseva/shop-img/blob/master/topHeaderBack.png?raw=true") no-repeat;*/
   background-size: 550px;
   background-position: 93% 0%;
   align-items: center; }
@@ -614,7 +614,7 @@
 /*-------------------------------FETURED END-----------------------------*/
 /*-------------------------------OFFER FOR WOMEN ST-----------------------------*/
 .offerWomenLeft {
-  background: url("https://github.com/EkaterinaTaltseva/shop-img/blob/master/offerForWomen.jpg?raw=true");
+/*  background: url("https://github.com/EkaterinaTaltseva/shop-img/blob/master/offerForWomen.jpg?raw=true");*/
   flex-shrink: 0;
   background-size: cover; }
   @media (max-width: 992px) {
@@ -793,7 +793,7 @@ details[open] summary .fa-caret-up {
       outline: none;
       border: 1px solid #ebebeb;
       -webkit-appearance: none;
-      background: url("../../assets/imgs/caret.jpg") no-repeat;
+      /*background: url("../../assets/imgs/caret.jpg") no-repeat;*/
       background-position: 90% 50%;
       padding-left: 0.8rem;
       padding-right: 2rem;
@@ -1105,7 +1105,7 @@ details[open] summary .fa-caret-up {
     outline: none;
     border: 1px solid #eaeaea;
     -webkit-appearance: none;
-    background: url("../../assets/imgs/caret.jpg") no-repeat;
+    /*background: url("../../assets/imgs/caret.jpg") no-repeat;*/
     background-position: 97% 50%;
     width: 355px;
     height: 45px;
