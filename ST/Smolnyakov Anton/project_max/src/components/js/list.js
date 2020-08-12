@@ -6,10 +6,12 @@ let classes = {
 }
 
 export default class List {
-    constructor(url, container, cart) {
+    constructor(url, container, cart = false) {
         this.url = url;
         this.container = container;
+        this.totalSumContainer = document.querySelector("#totalSum");
         this.items = [];
+        this.totalSum = 0;
         this._init(cart);
     }
 
@@ -18,11 +20,18 @@ export default class List {
         this._get(url)
             .then(data => {
                 this.items = !cart ? data.contents : data;
-                console.log(this.items)
+
             })
             .then(() => {
                 this._render();
-            });
+            })
+            .then(() => {
+                this._handleActions();
+            })
+            .then(() => {
+                this.renderTotalSum();
+            })
+
     }
 
     _get(url) {
@@ -39,4 +48,5 @@ export default class List {
         });
         document.querySelector(this.container).innerHTML = template;
     }
+
 }
