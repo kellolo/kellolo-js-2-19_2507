@@ -1,0 +1,171 @@
+@import "variables";
+@import "media/mediaSM";
+
+
+
+
+.futFon {
+  min-height: 438px;
+  background: url("https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/footerFon.jpeg") no-repeat center 28%, #ccc;
+  background-blend-mode: overlay;
+  background-size: cover;
+
+  .futFonInfo {
+    min-height: 438px;
+
+    .leftFutFon {
+      min-height: inherit;
+
+      .footerCarousel {
+        position: relative;
+        justify-content: left;
+        margin-left: 20%;
+
+        li{
+          height: 4px;
+          width: 40px;
+        }
+        .active {
+          background-color: $mainThemeColor;
+        }
+      }
+
+      .photoForm {
+        font-size: 1rem;
+
+        p {
+          color: $mainTextColor;
+          font-size: 1rem;
+          text-align: justify;
+          font-weight: 400;
+        }
+
+        span {
+          color: $mainThemeColor;
+          font-size: 1rem;
+          font-weight: 700;
+        }
+
+        img {
+          width: 84px;
+          height: 84px;
+          border-radius: 45px;
+        }
+
+        .photoFormText {
+          max-width: 390px;
+        }
+      }
+    }
+
+    .RiFutFon {
+      min-height: inherit;
+    }
+  }
+
+
+}
+
+.formMail {
+  h2 {
+    color: $mainTextColor;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .inpForm {
+    input {
+      float: left;
+      width: 260px;
+      height: 47px;
+      border: none;
+      border-top-left-radius: 45px;
+      border-bottom-left-radius: 45px;
+      padding-left: 20px;
+    }
+
+    .subsBTN {
+      height: 47px;
+      width: 105px;
+      background-color: #f16d7f;
+      color: #ffffff;
+      font-size: 0.9rem;
+      border: none;
+      border-top-right-radius: 45px;
+      border-bottom-right-radius: 45px;
+    }
+  }
+}
+
+
+.footerBut {
+  a {
+    text-decoration: none;
+    color: $mainTextColorP;
+    line-height: 2.5;
+
+    &:hover {
+      text-shadow: 2px 4px 6px rgba(150, 150, 150, 1);
+      text-decoration: none;
+      color: $mainTextColorP;
+    }
+  }
+
+  h2 {
+    color: $mainThemeColor;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    margin: 0;
+  }
+
+  .blockBrand {
+    text-align: justify;
+
+    p {
+      color: $mainTextColorP;
+    }
+  }
+}
+
+.brandAllFooter {
+  height: 80px;
+  background-color: #E6E6E6;
+
+  .brandAll {
+    color: #7A7A7A;
+  }
+
+  .messenge {
+    a {
+      color: $mainTextColor;
+
+      &:hover {
+        color: white;
+        text-decoration: none;
+      }
+    }
+
+    i {
+      width: 32px;
+      height: 32px;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -o-transition: all 1s;
+
+
+      &:hover {
+        color: white;
+        text-decoration: none;
+        background: $mainThemeColor;
+        transform: scale(1.2, 1.2);
+      }
+    }
+  }
+}
