@@ -1,5 +1,3 @@
-import basket from "./basket";
-
 function createItem(id, name, price, img) {
     return {id, name, price, img};
 };
@@ -20,18 +18,16 @@ function initCatalog(qty) {
     return names.map((names, index) => createItem(ids[index], names, prices[index], imgs[index]));
 };
 
-export default {
-    items: [],
-    container: null,
-    basket: basket,
+export default class Catalog {
 
-
-    init(qty) {
-        this.items = initCatalog(qty);
+    constructor(qty, basket) {
         this.container = document.querySelector("#catalog");
-        this._render(qty);
+        this.items = initCatalog(qty);
+        this.basket = basket;
+        this._render();
         this._handleActions();
-    },
+    }
+
     _handleActions() {
         this.container.addEventListener('click', evt => {
             if (evt.target.classList.contains("add")) {
@@ -45,9 +41,9 @@ export default {
                 this.basket.add(item);
             }
         })
-    },
-    _render() {
+    }
 
+    _render() {
         let str = "";
         this.items.forEach(item => {
             str += `
