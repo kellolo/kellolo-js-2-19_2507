@@ -1,5 +1,6 @@
 
-// ------- Creating Catalog of Products ------- //
+// ------- Creating Catalog of Products from Index.html ------- //
+
 
 function createItem(id, name, price, img) {
     return {id, name, price, img};
@@ -7,11 +8,11 @@ function createItem(id, name, price, img) {
 
 function initCatalog() {
     let ids = [0, 1, 2, 3, 4, 5, 6, 7];
-    let names = ["MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT", 
-                "MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT", 
-                "MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT"];
+    let names = ["MANGO T-SHIRT", "PEOPLE BLOUSE", "ZARA JACKET", "MANGO BLOUSE", 
+                "BANANA REPUBLIC", "ZARA HAT", "MANGO TROUSERS", "ZARA SHORTS"];
 
-    let prices = ["52.00", "52.00", "52.00", "52.00", "52.00", "52.00", "52.00", "52.00"];
+    let prices = ["52.00", "71.00", "62.00", "55.00", 
+                "60.00", "85.00", "45.00", "30.00"];
 
     let imgs = ["https://raw.githubusercontent.com/RDarya/static/master/img/item_1.png", 
                 "https://raw.githubusercontent.com/RDarya/static/master/img/item_2.png", 
@@ -24,13 +25,6 @@ function initCatalog() {
 
     return names.map((names, index) => createItem(ids[index], names, prices[index], imgs[index]));
 };
-
-/*
-export default {
-    items: [],
-    container: null,
-    basket: null,
-*/
 
 class ProductBox {
     constructor(container) {
@@ -83,4 +77,4 @@ class ProductBox {
 
 let ItemIndex = new ProductBox('#catalog');
 //catalog.init();
-
+ 
