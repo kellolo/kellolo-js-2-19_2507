@@ -3,29 +3,23 @@ function createItem(id, name, price, img) {
 };
 
 function initCatalog(qty) {
-    //let ids = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-    //let names = ["MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT", "MANGO //PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT",
-    //    "MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-// SHIRT", "MANGO PEOPLE T-SHIRT"];
-
-    // let prices = ["52.00", "62.00", "72.00", "82.00", "52.00", "62.00", "72.00", "82.00", "72.00"];
-
-    
     let ids = [];
     let names = [];
     let imgs = [];
     let prices = [];
 
-    for (let i=0; i <= qty; i++) {
+    for (let i = 1; i <= qty - 1; i++) {
         ids.push(i);
         names.push("MANGO PEOPLE T-SHIRT");
-        prices.push("1" + String(i)+".00");
-        imgs.push(`https://raw.githubusercontent.com/Rutard-Hash/static/master/Fetured${i}.jpg`);
+        prices.push("1" + String(i) + ".00");
+        // imgs.push("https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem1.jpg" + String(i) + ".jpg");
+        imgs.push(`https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem${i}.jpg`);
     } 
 
     return names.map((names, index) => createItem(ids[index], names, prices[index], imgs[index]));
 };
 
-var catalog = {
+export default {
     items: [],
     container: null,
     basket: basket,
@@ -81,4 +75,3 @@ var catalog = {
     }
 }
 
-export default catalog;

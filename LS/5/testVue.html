@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 40%;
+            margin: 0 auto
+        }
+
+        .catalog-item {
+            border-radius: 5px;
+            border: 2px solid grey;
+            padding: 15px;
+            margin-bottom: 10px;
+            width: 150px
+        }
+
+        .footer {
+            text-align: right
+        }
+
+        .font-it {
+            font-style: italic
+        }
+
+        .red {
+            color: red
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button @click="catalogShown = !catalogShown">{{ buttonPlaceholder }} Catalog</button>
+
+        <input type="text" v-model="searchText">
+        <button @click="filter">Search</button>
+
+        <div class="container" v-if="catalogShown">
+            <div class="catalog-item" v-for="item of catalogItemsFiltered">
+                <img :src="item.productImg" alt="" width="80px" height="100px">
+                <hr>
+                <strong>{{ item.productName }}</strong>
+                <p>${{ item.productPrice }}</p>
+                <div class="footer">
+                    <button @click="add(item)">купить</button>
+                </div>
+            </div>
+        </div>
+        <div class="container" v-else>
+            <h1>Catalog not avaliable</h1>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

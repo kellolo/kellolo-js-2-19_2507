@@ -1,5 +1,5 @@
 
-// ------- Creating Catalog of Products ------- //
+// ------- Creating Catalog of Products from Catalog.html ------- //
 
 function createItem(id, name, price, img) {
     return {id, name, price, img};
@@ -7,11 +7,11 @@ function createItem(id, name, price, img) {
 
 function initCatalog() {
     let ids = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-    let names = ["MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT", 
-                "MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT", 
-                "MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT", "MANGO PEOPLE T-SHIRT"];
+    let names = ["MANGO T-SHIRT", "PEOPLE T-SHIRT", "ZARA T-SHIRT", 
+                "ZARA POLO", "BANANA REPUBLIC", "TROUSERS", 
+                "SWEATSHIRT", "MANGO HAT", "ZARA TROUSERS"];
 
-    let prices = ["52.00", "52.00", "52.00", "52.00", "52.00", "52.00", "52.00", "52.00", "52.00"];
+    let prices = ["52.00", "71.00", "62.00", "55.00", "60.00", "85.00", "45.00", "30.00", "70.00"];
 
     let imgs = ["https://raw.githubusercontent.com/RDarya/static/master/img/catalog_1.png", 
                 "https://raw.githubusercontent.com/RDarya/static/master/img/catalog_2.png",
