@@ -7,7 +7,7 @@ export class BasketItem extends Item {
     render() {
         let item = this.item;
         return `
-        <div class="d-flex px-3 justify-content-between align-items-center">
+        <div class="d-flex px-3 justify-content-between align-items-center py-1">
             <a href="#""><img src="${item.img}" alt="${item.name}"></a>
             <div class="d-flex flex-column justify-content-center align-items-center product__text">
                 <h3 class="mb-0">${item.name}</h3>
