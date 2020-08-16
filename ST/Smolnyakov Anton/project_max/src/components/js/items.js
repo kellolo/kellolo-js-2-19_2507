@@ -3,7 +3,6 @@ import Item from "./item"
 export class CartItem extends Item {
     constructor(item) {
         super(item);
-        this.amount = 1;
     }
 
     render() {
@@ -32,4 +31,4 @@ export class CartItem extends Item {
     }
 }
 
-export class CatalogItem extends Item { }
+export class CatalogItem extends Item {}

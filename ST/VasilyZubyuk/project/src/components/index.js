@@ -1,9 +1,15 @@
-import basket from './js/basket';
-import Catalog from './js/catalog';
-
-let Cat1 = new Catalog('#catalog', basket);
+import { Catalog, Basket } from './js/lists';
 
 export default () => {
-    basket.init();
-    catalog.init(8, basket);
+    let basket = new Basket('/basket.json', '#basket');
+    let catalog = new Catalog('/catalog.json', '#catalog', basket);
 }
+
+
+// import basket from './js/basket';
+// import catalog from './js/catalog';
+
+// export default () => {
+//     basket.init();
+//     catalog.init(9);
+// }
