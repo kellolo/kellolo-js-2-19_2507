@@ -1,10 +1,9 @@
-import cart from "./js/cart";
-import catalog from "./js/catalog";
+import { Catalog, Cart } from './js/lists';
 import header from "./js/header"
 
 export default () => {
-    catalog(cart);
+    let cart = new Cart('/cart.json', '#cart');
+    let catalog = new Catalog('/catalog.json', '#catalog', cart);
     header.handleEvents();
 }
-
 
