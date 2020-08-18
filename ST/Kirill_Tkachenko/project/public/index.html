@@ -95,8 +95,8 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="remove">
-                                    <i class="fas fa-times-circle remove" @click="remove(item.id)"></i>
+                                <a href="#" class="remove" @click.stop.prevent="remove(item.id)">
+                                    <i class="fas fa-times-circle remove"></i>
                                 </a>
                             </div>
                             <div class="headerCartWrapTotalPrice">
