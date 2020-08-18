@@ -6,8 +6,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://kit.fontawesome.com/5b090da90e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="../src/layout/styles/styles.css">
     
 </head>
 <body>
@@ -75,13 +73,40 @@
 
 
             <div class="headerCart pr-4" >
-               <label for="cart_checkbox" class="label_cart_checkbox"></label>
-                <a href="#"><img src="../src/assets/imgs/cart.png" alt="headerCart"></a>
-                <input type="checkbox" id="cart_checkbox">
-                <div class="headerCartWrap">
+                <a href="#" @click="basketShown = !basketShown"><img src="../src/assets/imgs/cart.png" alt="headerCart"></a>
+                <div class="headerCartWrap" v-show="basketShown">
                     <div class="headerCartWrapBlock"></div>
                     <div class="headerCartWrapInAll">
-                       <div id="basket" class="d-flex flex-column"></div>
+                       <div id="basket" class="d-flex flex-column">
+                            <div class="d-flex headerCartWrapIn" v-for="item of basketItems">
+                                <a href="#" class="d-flex">
+                                    <img :src="item.img" alt="" style="height: 85px">
+                                    <div>
+                                        <div>{{ item.name }}</div>
+                                        <span>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </span>
+                                        <div class="headerCartWrapPrice">{{ item.amount}}
+                                            <span>x</span> ${{ decimal(item.price) }}
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="remove">
+                                    <i class="fas fa-times-circle remove" @click="remove(item.id)"></i>
+                                </a>
+                            </div>
+                            <div class="headerCartWrapTotalPrice">
+                                <div>total&nbsp;</div>
+                                <div>${{ decimal(basketTotal) }}</div>
+                            </div>
+    
+                            <button type="button" class="productsButtonIndex">Checkout</button>
+                            <button type="button" class="productsButtonIndex">Go to cart</button>
+                        </div>
                     </div>
                 </div>
 
@@ -566,7 +591,28 @@
                 <div class="feturedHeadBottom">Shop for items based on what we featured in this week</div>
             </a>
         </div>
-        <div class="row" id="catalog"></div>
+        <div class="row" id="catalog">
+            <div class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 feturedItems" v-for="item of catalogItems">
+                <div class="feturedItem">
+                    <div class="feturedImgWrap">
+                        <div class="feturedBuy">
+                            <button class="add" @click="add(item)">
+                                <div class="add">
+                                    <i class="add fas fa-shopping-cart"></i>
+                                    Add to Cart
+                                </div>
+                            </button>
+                        </div>
+                        <img class="feturedProduct" :src="item.img" :alt="item.name">
+                    </div>
+                    <div class="feturedBuySm d-flex flex-column justify-content-around align-items-center align-items-md-start">
+                        <div class="feturedItemName">{{ item.name }}</div>
+                        <div class="feturedItemPrice">${{ decimal(item.price) }}</div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <div class="container px-0 d-flex justify-content-around">
             <button type="button" class="btn btn-outline-secondary feturedButton">
@@ -635,6 +681,7 @@
     <!-------------------------------OFFER FOR WOMEN END----------------------------->
 
 </main>
+</div>
 <!-------------------------------FOOTER ST----------------------------->
 
 <!-------------------------------SUBSCRIBE ST----------------------------->
@@ -800,10 +847,6 @@
         </div>
     </div>
 </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </body>
 </html>
