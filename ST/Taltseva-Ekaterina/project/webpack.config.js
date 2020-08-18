@@ -21,7 +21,7 @@ module.exports = {
     plugins: [
         //настройки плагинов
         new MiniCssExtractPlugin({
-            filename: 'css/[name].css', // куда собирать
+            filename: 'css/[name].css',
             chunkFilename: '[id].css'
         }),
         new CopyPlugin({

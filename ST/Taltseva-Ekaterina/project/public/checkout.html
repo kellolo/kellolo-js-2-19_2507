@@ -81,41 +81,13 @@
 
 
             <div class="headerCart pr-4" >
+               <label for="cart_checkbox" class="label_cart_checkbox"></label>
                 <a href="#"><img src="../src/assets/imgs/cart.png" alt="headerCart"></a>
+                <input type="checkbox" id="cart_checkbox">
                 <div class="headerCartWrap">
                     <div class="headerCartWrapBlock"></div>
                     <div class="headerCartWrapInAll">
-                        <div class="d-flex headerCartWrapIn">
-                            <a href="#" class="d-flex ">
-                                <img src="../src/assets/imgs/myAccount1.jpg" alt="">
-                                <div>
-                                    <div>Rebox Zane</div>
-                                    <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
-                                    <div class="headerCartWrapPrice">1 <span>x</span> $250</div>
-                                </div>
-                            </a>
-                            <a href="#"><i class="fas fa-times-circle"></i></a>
-                        </div>
-
-                        <div class="d-flex">
-                            <a href="#" class="d-flex headerCartWrapIn">
-                                <img src="../src/assets/imgs/myAccount2.jpg" alt="">
-                                <div>
-                                    <div>Rebox Zane</div>
-                                    <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
-                                    <div class="headerCartWrapPrice">1 <span>x</span> $250</div>
-                                </div>
-                            </a>
-                            <a href="#"><i class="fas fa-times-circle"></i></a>
-                        </div>
-
-                        <div class="headerCartWrapTotalPrice">
-                            <div>total</div>
-                            <div>$500.00</div>
-                        </div>
-
-                        <button type="button" class="productsButtonIndex">Checkout</button>
-                        <button type="button" class="productsButtonIndex">Go to cart</button>
+                        <div id="basket" class="d-flex flex-column"></div>
                     </div>
                 </div>
 
@@ -260,11 +232,11 @@
         </div>
     </div>
 
-    <a class="nav-link" href="Product.html">Man</a>
-    <a class="nav-link" href="singlePage.html">Women</a>
-    <a class="nav-link" href="shoppingCart.html">Kids</a>
-    <a class="nav-link" href="singlePage.html">Accoseriese</a>
-    <a class="nav-link" href="checkout.html">Featured</a>
+    <a class="nav-link" href="#">Man</a>
+    <a class="nav-link" href="#">Women</a>
+    <a class="nav-link" href="#">Kids</a>
+    <a class="nav-link" href="#">Accoseriese</a>
+    <a class="nav-link" href="#">Featured</a>
     <a class="nav-link" href="#">Hot Deals</a>
 </nav>
 
@@ -698,7 +670,7 @@
                     FOR OUR NEWLETTER AND PROMOTION
                 </div>
                 <form class="subscribeForm input-group mb-3 pl-1 pl-sm-4">
-                    <input type="text" class="form-control pt-4 pb-4
+                    <input type="email" class="form-control pt-4 pb-4
                                                 ml-xl-5
                                                 col-lg-7 offset-lg-0 ml-lg-4
                                                 col-md-6 offset-md-2
@@ -753,7 +725,7 @@
             </div>
             <div class="footerColumn">
                 <h2>INFORMATION</h2>
-                <a href="#">Tearms & Condition</a>
+                <a href="#">Tearms&amp;Condition</a>
                 <a href="#">Privacy Policy</a>
                 <a href="#">How to Buy</a>
                 <a href="#">How to Sell</a>
@@ -780,7 +752,7 @@
             </div>
             <h2 class="d-flex justify-content-around pt-5">INFORMATION</h2>
             <div class="footerColumn d-flex justify-content-around px-5 ">
-                <a href="#">Tearms & Condition</a>
+                <a href="#">Tearms&amp;Condition</a>
                 <a href="#">Privacy Policy</a>
                 <a href="#">How to Buy</a>
                 <a href="#">How to Sell</a>
@@ -822,5 +794,6 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="../src/components/js/1basket.js"></script>
 </body>
 </html>
