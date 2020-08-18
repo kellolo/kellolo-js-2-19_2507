@@ -4,6 +4,7 @@ class BasketAccount {
     constructor(container) {
         this.items = [];
         this.container = null;
+        this.total = 0;
         this._init();
     }
     _init() {
@@ -24,7 +25,6 @@ class BasketAccount {
         let str = "";
         this.items.forEach(item => {
             str += `
-            
                 <div class="account_img">
                     <a href="#" class="drop_account-img">
                         <img src="${item.img}" alt="drop_account-img">
@@ -46,30 +46,38 @@ class BasketAccount {
                     <button name="remove" data-id="${item.id}">x</button>
                 </div>
             `
-            
         })
-        this.container.innerHTML = str;
+        this.container.innerHTML = str + `
+        <div class="total_price">
+            <div class="total_h3">total&nbsp;</div>
+            <div class="total_h3">$${this.total}</div>
+        </div>
+        `;
     }
 
-    _add(item) {
+    add(item) {
         let find = this.items.find(el => el.id == item.id);
 
         if (!find) {
             this.items.push(item);
+            this.total = this.total + Number(item.price);
         } else {
             find.amount++;
+            this.total = this.total + Number(find.price);            
         }
         this._render();
     }
 
-    _remove(itemId) {
-        console.log('remove')
+    remove(itemId) {
+        
         let find = this.items.find(el => el.id == itemId);
 
         if (find.amount > 1) {
             find.amount--;
+            this.total = this.total - Number(find.price);
         } else {
             this.items.splice(this.items.indexOf(find), 1);
+            this.total = this.total - Number(find.price);
         }
         this._render();
     }
