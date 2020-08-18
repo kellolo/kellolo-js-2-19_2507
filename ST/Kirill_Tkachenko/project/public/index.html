@@ -73,7 +73,7 @@
 
 
             <div class="headerCart pr-4" >
-                <a href="#" @click="basketShown = !basketShown"><img src="../src/assets/imgs/cart.png" alt="headerCart"></a>
+                <a href="#" @click.stop.prevent="basketShown = !basketShown"><img src="../src/assets/imgs/cart.png" alt="headerCart"></a>
                 <div class="headerCartWrap" v-show="basketShown">
                     <div class="headerCartWrapBlock"></div>
                     <div class="headerCartWrapInAll">
