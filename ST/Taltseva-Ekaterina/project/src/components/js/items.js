@@ -8,7 +8,6 @@ export class BasketItem extends Item {
 
     render() {
          let item = this.item;
-        console.log(item)
         return `
             <div class="d-flex headerCartWrapIn">
                 <a href="#" class="d-flex">

@@ -5,7 +5,6 @@ export default class Item {
 
     render() {
         let item = this.item;
-        console.log(item)
         return `
             <div class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 feturedItems">
                 <div class="feturedItem">
