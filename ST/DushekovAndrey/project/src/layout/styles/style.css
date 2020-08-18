@@ -313,7 +313,7 @@ body {
     font-weight: 900;
     color: #f16d7f; }
 
-#basket {
+#basketBlock {
   position: absolute;
   z-index: 1;
   top: 75px;
@@ -323,66 +323,66 @@ body {
   border: 1px solid #ededed;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
   background-color: #ffffff; }
-  #basket .cartMenu-chkButton {
+  #basketBlock .cartMenu-chkButton {
     width: 88%;
     height: 50px;
     border: 1px solid #f16d7f;
     margin-top: 20px; }
-    #basket .cartMenu-chkButton a {
+    #basketBlock .cartMenu-chkButton a {
       text-decoration: none;
       text-align: center;
       color: #f16d7f;
       font-size: 14px;
       font-weight: 700;
       text-transform: uppercase; }
-    #basket .cartMenu-chkButton:hover {
+    #basketBlock .cartMenu-chkButton:hover {
       background-color: #facad1;
       cursor: pointer; }
-  #basket .cartMenu-crtButton {
+  #basketBlock .cartMenu-crtButton {
     width: 88%;
     height: 50px;
     border: 1px solid #222222;
     margin-top: 11px;
     margin-bottom: 15px; }
-    #basket .cartMenu-crtButton a {
+    #basketBlock .cartMenu-crtButton a {
       text-decoration: none;
       text-align: center;
       color: #222222;
       font-size: 14px;
       font-weight: 700;
       text-transform: uppercase; }
-    #basket .cartMenu-crtButton:hover {
+    #basketBlock .cartMenu-crtButton:hover {
       background-color: #e8e8e8;
       cursor: pointer; }
-  #basket .cartMenu-price h2 {
+  #basketBlock .cartMenu-price h2 {
     font-size: 16px;
     font-weight: 900; }
-  #basket .cartMenu-block {
+  #basketBlock .cartMenu-block {
     border-bottom: 1px solid #ededed; }
-    #basket .cartMenu-block img {
+    #basketBlock .cartMenu-block img {
       width: 72px;
       height: 85px;
       object-position: center center;
       object-fit: contain; }
-    #basket .cartMenu-block .cartMenu-h4-f4 {
+    #basketBlock .cartMenu-block .cartMenu-h4-f4 {
       color: #c0c0c0;
       font-size: 1rem;
       background: none;
       border: none;
       outline: none; }
-      #basket .cartMenu-block .cartMenu-h4-f4:hover {
+      #basketBlock .cartMenu-block .cartMenu-h4-f4:hover {
         color: #f48997;
         cursor: pointer; }
-    #basket .cartMenu-block .cartMenu-block-content .cartMenu-h4-f1 {
+    #basketBlock .cartMenu-block .cartMenu-block-content .cartMenu-h4-f1 {
       color: #222222;
       font-size: 12px;
       font-weight: 900;
       text-transform: uppercase; }
-    #basket .cartMenu-block .cartMenu-block-content .cartMenu-h4-f2 {
+    #basketBlock .cartMenu-block .cartMenu-block-content .cartMenu-h4-f2 {
       color: #e4af48;
       font-size: 12px;
       font-weight: 400; }
-    #basket .cartMenu-block .cartMenu-block-content .cartMenu-h4-f3 {
+    #basketBlock .cartMenu-block .cartMenu-block-content .cartMenu-h4-f3 {
       color: #f16d7f;
       font-size: 12px;
       font-weight: 700;
