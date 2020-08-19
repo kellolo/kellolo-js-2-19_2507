@@ -19,11 +19,9 @@ export class Catalog extends List {
 				this.basket.add(item);
 			}
 		});
-		document.addEventListener('click', evt => {
-			let main = document.querySelector('#cart');
-			if (evt.target.id == 'hide') {
-				main.classList.toggle('hidden');
-			}
+		document.querySelector('.basketHidden').addEventListener('click', evt => {
+			let elHid = document.querySelector('.headerCartWrap');
+			elHid.classList.toggle('headerCartWrapHidden');
 		})
 	}
 }
@@ -66,9 +64,12 @@ export class Basket extends List {
 		[...document.querySelectorAll(".sum")].forEach(el => el.innerHTML = this.sum);
 	}
 	_summ() {
-    this._get('https://raw.githubusercontent.com/EkaterinaTaltseva/static/master/api/basket.json')
-			.then(data => {this.sum = data.sum})
-			.then(() => {[...document.querySelectorAll(".sum")].forEach(el => el.innerHTML = this.sum);
+    this._get('https://raw.githubusercontent.com/EkaterinaTaltseva/static/master/api'  + this.url)
+			.then(data => {
+					this.sum = data.sum;
+			})
+			.then(() => {
+					[...document.querySelectorAll(".sum")].forEach(el => el.innerHTML = this.sum);
 			})
 	}
 }

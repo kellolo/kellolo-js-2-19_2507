@@ -15,9 +15,15 @@ export default class List {
 	_init(basket = false) {
 		let url = 'https://raw.githubusercontent.com/EkaterinaTaltseva/static/master/api' + this.url;
 		this._get(url)
-		.then(data => {this.items = basket ? data : data.content;})
-		.then(() => {this._render();})
-		.then(() => {this._handleActions();})
+		.then(data => {
+				this.items = basket ? data : data.content;
+		})
+		.then(() => {
+				this._render();
+		})
+		.then(() => {
+				this._handleActions();
+		})
 	}
 
 	_get(url) {
