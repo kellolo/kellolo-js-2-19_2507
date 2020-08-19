@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .catalog {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .item {
+            width: 200px;
+            height: 50px;
+            padding: 10px;
+            border: 1px solid black
+        }
+    </style>
+</head>
+<body>
+    <div id="catalog_1" class="catalog">
+
+    </div>
+
+    <div id="catalog_2" class="catalog">
+
+    </div>
+
+    <div id="catalog_3" class="catalog">
+
+    </div>
+
+    <div id="catalog_4" class="catalog">
+
+    </div>
+    <script>
+        let basket = {
+            items: [],  
+            add(prod) {
+                this.items.push(prod);
+                console.log('Куплен ' + prod, this.items);
+            }
+        }
+
+        class Catalog {
+            constructor(container) {
+                this.items = ['item_1', 'item_2', 'item_3'];
+                this.basket = null;
+                this.container = container;
+                this._init();
+            }
+
+            _init() {
+                this.basket = basket;
+                this._render();
+            }
+
+            _render() {
+                console.log(this)
+                let cat = document.querySelector(this.container);
+                let str = '';
+                this.items.forEach(item => {
+                    str += `
+                            <div class="item"> 
+                                <strong>${item}</strong>
+                                <button 
+                                    name="buy" 
+                                    data-prod="${item}"
+                                >Buy</button>
+                            </div>
+                    `
+                })
+                cat.innerHTML = str;
+                cat.addEventListener('click', evt => {
+                    if (evt.target.name == 'buy') {
+                        this.basket.add(evt.target.dataset.prod);
+                    }
+                })
+            }
+        }
+
+        // function newCatalog(container) {
+        //     return {
+        //         items: ['item_1', 'item_2', 'item_3'],
+        //         basket: null,
+        //         container: container,
+        //         init() {
+        //             this.basket = basket;
+        //             render.call(this);
+        //         }
+        //     }
+        // }
+
+        // function render() {
+        //     console.log(this)
+        //     let cat = document.querySelector(this.container);
+        //     let str = '';
+        //     this.items.forEach(item => {
+        //         str += `
+        //                 <div class="item"> 
+        //                     <strong>${item}</strong>
+        //                     <button 
+        //                         name="buy" 
+        //                         data-prod="${item}"
+        //                     >Buy</button>
+        //                 </div>
+        //         `
+        //     })
+        //     cat.innerHTML = str;
+        //     cat.addEventListener('click', evt => {
+        //         if (evt.target.name == 'buy') {
+        //             this.basket.add(evt.target.dataset.prod);
+        //         }
+        //     })
+        // }
+
+        // let catalog = {
+        //     items: ['item_1', 'item_2', 'item_3'],
+        //     basket: null,
+        //     init() {
+        //         this.basket = basket;
+        //         this.render();
+        //     },
+        //     render() {
+        //         let cat = document.querySelector('#catalog');
+        //         let str = '';
+        //         this.items.forEach(item => {
+        //             str += `
+        //                     <div class="item"> 
+        //                         <strong>${item}</strong>
+        //                         <button 
+        //                             name="buy" 
+        //                             data-prod="${item}"
+        //                         >Buy</button>
+        //                     </div>
+        //             `
+        //         })
+        //         cat.innerHTML = str;
+        //         cat.addEventListener('click', evt => {
+        //             if (evt.target.name == 'buy') {
+        //                 this.basket.add(evt.target.dataset.prod);
+        //             }
+        //         })
+        //     }
+
+        // }
+
+        // catalog.init();
+
+        let WokCatalog = new Catalog('#catalog_1');
+        let RiceCatalog = new Catalog('#catalog_2');
+    </script>
+</body>
+</html>
