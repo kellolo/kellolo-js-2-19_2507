@@ -568,6 +568,14 @@ a {
   padding-top: 60px;
   padding-bottom: 20px;
 }
+
+.product-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
 .CatalogBox {
   display: flex;
   flex-wrap: wrap;
@@ -1191,6 +1199,12 @@ details[open] > summary.sort_by::after {
   margin-right: 46px;
 }
 .BasketAccount {
+  width: 230px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.basket-account {
   width: 230px;
   display: flex;
   flex-wrap: wrap;
