@@ -3,11 +3,10 @@ import Item from './item';
 export class BasketItem extends Item {
     constructor(item) {
         super(item);
-        this.amount = 1;
     }
 
     render() {
-         let item = this.item;
+        let item = this.item;
         return `
             <div class="d-flex headerCartWrapIn">
                 <a href="#" class="d-flex">
@@ -25,10 +24,7 @@ export class BasketItem extends Item {
                             <span>x</span> $${item.price}
                         </div>
                     </div>
-                </a>
-                <a href="#" class="remove">
-                  <i class="fas fa-times-circle remove" data-id="${item.id}"></i>
-                </a>
+                  <button name="remove" data-id="${item.id}">x</button>
             </div>
         `
     }

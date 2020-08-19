@@ -5,9 +5,8 @@
     <title>Brand</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <script src="https://kit.fontawesome.com/5b090da90e.js" crossorigin="anonymous"></script>
-    
+
 </head>
 <body>
 
@@ -21,7 +20,7 @@
                                     col-lg-2 offset-lg-0
                                     col-md-3 offset-md-4
                                     col-sm-4 offset-sm-4">
-            <a href="#" class="pr-2"><img src="../src/assets/imgs/logo.png" alt="logo"></a>
+            <a href="#" class="pr-2"><img src="https://raw.githubusercontent.com/EkaterinaTaltseva/shop-img/master/logo.png" alt="logo"></a>
             <a href="#" class="pr-3 pr-xl-3 pr-lg-0 pr-md-2 pr-sm-2 brand">bran<span>d</span></a>
         </div>
 
@@ -35,6 +34,7 @@
                 <button class=" btn-lg btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Browse
                 </button>
+
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                     <div class="dropdown-item">woman</div>
                     <a href="#" class="dropdown-item" type="button">Dresses</a>
@@ -66,20 +66,33 @@
 
         <div class="row headerAccountAndCart d-none  align-items-center
                                     col-12 offset-0 px-0 pt-3 mx-auto justify-content-center
-                                    col-xl-2 offset-xl-3 mt-xl-0
-                                    col-lg-3 offset-lg-2 pt-lg-0
+                                    col-xl-3 offset-xl-3 mt-xl-0
+                                    col-lg-4 offset-lg-2 pt-lg-0
                                     col-md-3 offset-md-2 mt-md-0 mr-md-0 d-md-flex
                                     col-sm-4 offset-sm-4 pt-sm-3 justify-content-sm-end ">
 
 
-            <div class="headerCart pr-4" >
-               <label for="cart_checkbox" class="label_cart_checkbox"></label>
-                <a href="#"><img src="../src/assets/imgs/cart.png" alt="headerCart"></a>
-                <input type="checkbox" id="cart_checkbox">
-                <div class="headerCartWrap">
+           <div class="headerCart pr-4" id="cart" >
+                <a href="#" class="basketHidden">
+                    <span class="priceSum sum" >0.00</span> <span class="mr-lg-3">$</span>
+                    <img src="https://raw.githubusercontent.com/EkaterinaTaltseva/shop-img/master/cart.png" alt="headerCart">
+                </a>
+                <div class="headerCartWrap headerCartWrapHidden">
                     <div class="headerCartWrapBlock"></div>
                     <div class="headerCartWrapInAll">
-                       <div id="basket" class="d-flex flex-column"></div>
+
+                        <div id="basket" class="d-flex flex-column">
+
+                        </div>
+
+
+                        <div class="headerCartWrapTotalPrice">
+                            <div>total</div>
+                            <div class="priceSum ml-auto pr-md-2 sum " id="sum">0.00</div><span>$</span>
+                        </div>
+
+                        <button type="button" class="productsButtonIndex">Checkout</button>
+                        <button type="button" class="productsButtonIndex">Go to cart</button>
                     </div>
                 </div>
 
@@ -123,38 +136,28 @@
                                 col-2 pt-1
                                 col-sm-6">
             <div class="headerCart pr-4" >
-                <a href="#"><img src="../src/assets/imgs/cart.png" alt="headerCart"></a>
+                <a href="#"><img src="https://raw.githubusercontent.com/EkaterinaTaltseva/shop-img/master/cart.png" alt="headerCart"></a>
                 <div class="headerCartWrap">
                     <div class="headerCartWrapBlock"></div>
                     <div class="headerCartWrapInAll">
+
                         <div class="d-flex headerCartWrapIn">
                             <a href="#" class="d-flex ">
-                                <img src="../src/assets/imgs/myAccount1.jpg" alt="">
+                                <img src="https://raw.githubusercontent.com/EkaterinaTaltseva/shop-img/master/myAccount1.jpg" alt="">
                                 <div>
                                     <div>Rebox Zane</div>
                                     <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
                                     <div class="headerCartWrapPrice">1 <span>x</span> $250</div>
                                 </div>
                             </a>
-                            <a href="#"><i class="fas fa-times-circle"></i></a>
-                        </div>
-
-                        <div class="d-flex">
-                            <a href="#" class="d-flex headerCartWrapIn">
-                                <img src="../src/assets/imgs/myAccount2.jpg" alt="">
-                                <div>
-                                    <div>Rebox Zane</div>
-                                    <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
-                                    <div class="headerCartWrapPrice">1 <span>x</span> $250</div>
-                                </div>
+                            <a href="#">
+                                <i class="fas fa-times-circle"></i>
                             </a>
-                            <a href="#"><i class="fas fa-times-circle"></i></a>
                         </div>
 
-                        <div class="headerCartWrapTotalPrice">
-                            <div>total</div>
-                            <div>$500.00</div>
-                        </div>
+
+
+
 
                         <button type="button" class="productsButtonIndex">Checkout</button>
                         <button type="button" class="productsButtonIndex">Go to cart</button>
@@ -182,9 +185,9 @@
 <div class="headerLine"></div>
 
 
-<nav class="nav container d-none d-md-flex justify-content-center mt-3"> 
-        <div class="navAll">
-        <a class="nav-link" href="#">Home</a>
+<nav class="nav container d-none d-md-flex justify-content-center mt-3">
+    <div class="navAll">
+        <a class="nav-link" href="index.html">Home</a>
         <div class="dropNav">
             <div class="dropNavIn">
                 <div class="dropNavItem">home</div>
@@ -218,14 +221,14 @@
                 <a href="#" class="dropNavItem" type="button">Jackets/Coats</a>
                 <a href="">
                     <div>Super sale!</div>
-                    <img src="../src/assets/imgs/navDrop.jpg" alt="nav img">
+                    <img src="https://raw.githubusercontent.com/EkaterinaTaltseva/shop-img/master/navDrop.jpg" alt="nav img">
                 </a>
             </div>
         </div>
     </div>
 
     <div class="navAll">
-        <a class="nav-link" href="#">Man</a>
+        <a class="nav-link" href="Product.html">Man</a>
         <div class="dropNav">
             <div class="dropNavIn">
                 <div class="dropNavItem">Man</div>
@@ -259,14 +262,14 @@
                 <a href="#" class="dropNavItem" type="button">Jackets/Coats</a>
                 <a href="">
                     <div>Super sale!</div>
-                    <img src="../src/assets/imgs/navDrop.jpg" alt="nav img">
+                    <img src="https://raw.githubusercontent.com/EkaterinaTaltseva/shop-img/master/navDrop.jpg" alt="nav img">
                 </a>
             </div>
         </div>
     </div>
 
     <div class="navAll">
-        <a class="nav-link" href="#">woman</a>
+        <a class="nav-link" href="singlePage.html">woman</a>
         <div class="dropNav">
             <div class="dropNavIn">
                 <div class="dropNavItem">woman</div>
@@ -300,14 +303,14 @@
                 <a href="#" class="dropNavItem" type="button">Jackets/Coats</a>
                 <a href="">
                     <div>Super sale!</div>
-                    <img src="../src/assets/imgs/navDrop.jpg" alt="nav img">
+                    <img src="https://raw.githubusercontent.com/EkaterinaTaltseva/shop-img/master/navDrop.jpg" alt="nav img">
                 </a>
             </div>
         </div>
     </div>
 
     <div class="navAll">
-        <a class="nav-link" href="#">Kids</a>
+        <a class="nav-link" href="shoppingCart.html">Kids</a>
         <div class="dropNav">
             <div class="dropNavIn">
                 <div class="dropNavItem">Kids</div>
@@ -341,14 +344,14 @@
                 <a href="#" class="dropNavItem" type="button">Jackets/Coats</a>
                 <a href="">
                     <div>Super sale!</div>
-                    <img src="../src/assets/imgs/navDrop.jpg" alt="nav img">
+                    <img src="https://raw.githubusercontent.com/EkaterinaTaltseva/shop-img/master/navDrop.jpg" alt="nav img">
                 </a>
             </div>
         </div>
     </div>
 
     <div class="navAll">
-        <a class="nav-link" href="#">Accoseriese</a>
+        <a class="nav-link" href="singlePage.html">Accoseriese</a>
         <div class="dropNav">
             <div class="dropNavIn">
                 <div class="dropNavItem">Accoseriese</div>
@@ -382,14 +385,14 @@
                 <a href="#" class="dropNavItem" type="button">Jackets/Coats</a>
                 <a href="">
                     <div>Super sale!</div>
-                    <img src="../src/assets/imgs/navDrop.jpg" alt="nav img">
+                    <img src="https://raw.githubusercontent.com/EkaterinaTaltseva/shop-img/master/navDrop.jpg" alt="nav img">
                 </a>
             </div>
         </div>
     </div>
 
     <div class="navAll">
-        <a class="nav-link" href="#">Featured</a>
+        <a class="nav-link" href="checkout.html">Featured</a>
         <div class="dropNav">
             <div class="dropNavIn">
                 <div class="dropNavItem">Featured</div>
@@ -423,7 +426,7 @@
                 <a href="#" class="dropNavItem" type="button">Jackets/Coats</a>
                 <a href="">
                     <div>Super sale!</div>
-                    <img src="../src/assets/imgs/navDrop.jpg" alt="nav img">
+                    <img src="https://raw.githubusercontent.com/EkaterinaTaltseva/shop-img/master/navDrop.jpg" alt="nav img">
                 </a>
             </div>
         </div>
@@ -464,24 +467,12 @@
                 <a href="#" class="dropNavItem" type="button">Jackets/Coats</a>
                 <a href="">
                     <div>Super sale!</div>
-                    <img src="../src/assets/imgs/navDrop.jpg" alt="nav img">
+                    <img src="https://raw.githubusercontent.com/EkaterinaTaltseva/shop-img/master/navDrop.jpg" alt="nav img">
                 </a>
             </div>
         </div>
     </div>
-    <div class="navAll">
-        <a class="nav-link" href="singlePage.html" style="color: blue">Single Page</a>
-    </div>
-    <div class="navAll">
-        <a class="nav-link" href="shoppingCart.html" style="color: blue">Shopping Cart</a>
-    </div>
-    <div class="navAll">
-        <a class="nav-link" href="checkout.html" style="color: blue">Checkout</a>
-    </div>
-    <div class="navAll">
-        <a class="nav-link" href="Product.html" style="color: blue">Product</a>
-    </div>      
-        
+
 </nav>
 
 
@@ -522,15 +513,15 @@
                         <div>hot deal</div>
                         <div>for men</div>
                     </a>
-                    <a href="#"><img src="../src/assets/imgs/offer1.jpg" alt=""></a>
+                    <a href="#"><img src="https://github.com/EkaterinaTaltseva/shop-img/blob/master/offer1.jpg?raw=true" alt=""></a>
                 </div>
 
                 <div class="offer mt-4">
                     <a href="#">
-                        <div>LUXIROUS&amp;trendy</div>
+                        <div>LUXIROUS & trendy</div>
                         <div>ACCESORIES</div>
                     </a>
-                    <a href="#"><img src="../src/assets/imgs/offer2.jpg" alt=""></a>
+                    <a href="#"><img src="https://github.com/EkaterinaTaltseva/shop-img/blob/master/offer2.jpg?raw=true" alt=""></a>
                 </div>
             </div>
 
@@ -540,7 +531,7 @@
                         <div>30% offer</div>
                         <div>women</div>
                     </a>
-                    <a class="one" href="#"><img src="../src/assets/imgs/offer3.jpg" alt=""></a>
+                    <a class="one" href="#"><img src="https://github.com/EkaterinaTaltseva/shop-img/blob/master/offer3.jpg?raw=true" alt=""></a>
                 </div>
 
                 <div class="offer pt-4 pt-sm-0 order-1 order-md-2 mt-0 mt-md-4">
@@ -548,7 +539,7 @@
                         <div>new arrivals</div>
                         <div>FOR kids</div>
                     </a>
-                    <a class="one" href="#"><img src="../src/assets/imgs/offer4.jpg" alt=""></a>
+                    <a class="one" href="#"><img src="https://github.com/EkaterinaTaltseva/shop-img/blob/master/offer4.jpg?raw=true" alt=""></a>
                 </div>
             </div>
         </div>
@@ -564,12 +555,13 @@
                 <div class="feturedHeadBottom">Shop for items based on what we featured in this week</div>
             </a>
         </div>
-        <div class="row" id="catalog"></div>
-        
+
+        <div class="row" id="catalog"></div> <!-- товары--->
+
         <div class="container px-0 d-flex justify-content-around">
-            <button type="button" class="btn btn-outline-secondary feturedButton">
+            <a href="Product.html" type="button" class="btn btn-outline-secondary feturedButton">
                 Browse All Product<i class="fas fa-long-arrow-alt-right"></i>
-            </button>
+            </a>
         </div>
 
         <!-------------------------------FETURED END----------------------------->
@@ -591,7 +583,7 @@
                     <div class="d-flex flex-column justify-content-center align-items-center
                                 flex-lg-row">
                         <div class="">
-                            <img src="../src/assets/imgs/Truck.png" alt="">
+                            <img src="https://raw.githubusercontent.com/EkaterinaTaltseva/shop-img/master/Truck.png" alt="">
                         </div>
                         <div class="offerWomenDetail">
                             <div class="offerWomenDetailUp">Free Delivery</div>
@@ -604,7 +596,7 @@
                     <div class="d-flex flex-column justify-content-center align-items-center
                                 flex-lg-row">
                         <div class="">
-                            <img src="../src/assets/imgs/percent.png" alt="">
+                            <img src="https://raw.githubusercontent.com/EkaterinaTaltseva/shop-img/master/percent.png" alt="">
                         </div>
                         <div class="offerWomenDetail">
                             <div class="offerWomenDetailUp">Free Delivery</div>
@@ -617,7 +609,7 @@
                     <div class="d-flex flex-column justify-content-center align-items-center
                                 flex-lg-row">
                         <div class="">
-                            <img src="../src/assets/imgs/Crown.png" alt="">
+                            <img src="https://raw.githubusercontent.com/EkaterinaTaltseva/shop-img/master/Crown.png" alt="">
                         </div>
                         <div class="offerWomenDetail">
                             <div class="offerWomenDetailUp">Free Delivery</div>
@@ -643,7 +635,7 @@
 
             <div class="subscribeReview d-flex col-lg-6 px-0 mt-5 mb-5 pr-0 pr-lg-5">
                 <div class="col-2 col-md-2 d-flex align-self-start">
-                    <img src="../src/assets/imgs/Avatar.png" alt="Avatar">
+                    <img src="https://raw.githubusercontent.com/EkaterinaTaltseva/shop-img/master/Avatar.png" alt="Avatar">
                 </div>
                 <div class="col-10 pl-5 pl-md-2 pl-lg-5">
                     <blockquote class="reviewsTextMassage ">
@@ -677,7 +669,7 @@
                     FOR OUR NEWLETTER AND PROMOTION
                 </div>
                 <form class="subscribeForm input-group mb-3 pl-1 pl-sm-4">
-                    <input type="email" class="form-control pt-4 pb-4
+                    <input type="text" class="form-control pt-4 pb-4
                                                 ml-xl-5
                                                 col-lg-7 offset-lg-0 ml-lg-4
                                                 col-md-6 offset-md-2
@@ -701,7 +693,7 @@
         <div class="col-12 px-0
                     col-lg-6">
             <div class="logo d-flex justify-content-center pb-3 justify-content-lg-start">
-                <a href="#" class="pr-2"><img src="../src/assets/imgs/logo.png" alt="logo"></a>
+                <a href="#" class="pr-2"><img src="https://raw.githubusercontent.com/EkaterinaTaltseva/shop-img/master/logo.png" alt="logo"></a>
                 <a href="#" class="pr-3 pr-xl-3 pr-lg-0 pr-md-2 pr-sm-2 brand">bran<span>d</span></a>
             </div>
 
@@ -735,7 +727,7 @@
             </div>
             <div class="footerColumn">
                 <h2>INFORMATION</h2>
-                <a href="#">Tearms&amp;Condition</a>
+                <a href="#">Tearms & Condition</a>
                 <a href="#">Privacy Policy</a>
                 <a href="#">How to Buy</a>
                 <a href="#">How to Sell</a>
@@ -762,7 +754,7 @@
             </div>
             <h2 class="d-flex justify-content-around pt-5">INFORMATION</h2>
             <div class="footerColumn d-flex justify-content-around px-5 ">
-                <a href="#">Tearms&amp;Condition</a>
+                <a href="#">Tearms & Condition</a>
                 <a href="#">Privacy Policy</a>
                 <a href="#">How to Buy</a>
                 <a href="#">How to Sell</a>
@@ -798,5 +790,6 @@
         </div>
     </div>
 </div>
+
 </body>
 </html>
