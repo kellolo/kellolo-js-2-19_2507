@@ -1,9 +1,13 @@
-import basket from './js/Basket.js';
-import Catalog from './js/initNewCatalog.js';
-import data_catalog from './js/data_index.js';
+import app from './js/app.js'
+export default () => {
+	let appVue = new Vue(app);
+}
 
+
+/*import { Catalog, Basket } from './js/lists';
 
 export default () => {
-	basket.init();
-	let indexCatalog = new Catalog(data_catalog, basket);
-}
+	let basket = new Basket('/getBasket.json', '#basket');
+    let catalog = new Catalog('/catalogData.json', '.feturedArea', basket);
+
+}*/
