@@ -34,7 +34,6 @@ let app = new Vue({
         this.get(this.catalogUrl).then(items => { 
             this.catalogItems = items;
             this.catalogItemsFiltered = items;
-            console.log(this.catalogItems)
         })
     }
 });
