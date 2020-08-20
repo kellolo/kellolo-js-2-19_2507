@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<div class="wrapper">
+	<div class="wrapper" id="app">
 		<header class="header">
 			<div class="header__header container">
 				<div class="logo">Bran<span>d</span></div>
@@ -48,28 +48,28 @@
 				</div>
 				<div class="header__cart">
 					<a href="#" class="header__cart-a"><img id="hide" class="header__cart-img"
-							src="../src/assets/imgs/headerCart.png" alt="headerCart"></a>
-					<div class="headerCart" id="cart">
+							src="../src/assets/imgs/headerCart.png" alt="headerCart" @click="cartShown = !cartShown"></a>
+					<div class="headerCart" id="cart" v-if="cartShown">
 						<div id="basket" class="headerCart__main">
-							<div class="headerCart__item">
+							<div class="headerCart__item" v-for="item of cartItems">
 								<div class="headerCart__product">
-									<img src="https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product1.jpg" alt="">
+									<img :src=item.img alt="">
 									<div class="headerCart__description">
 										<div class="headerCart__name">
-											Rebox Zane
+											{{ item.name }}
 										</div>
 										<div class="headerCart__price">
-											1 <span>x</span> $250
+											{{ item.amount }}  <span>x</span> ${{ item.price }}
 										</div>
 									</div>
 								</div>
-								<button name="remove" data-id="${item.id}"><i class="fas fa-times-circle"></i></button>
+								<button name="remove" :data-id=item.id @click="remove(item)">x</button>
 							</div>
 						</div>
 						<div class="headerCart__totalPrice">
 							<div>total</div>
 							<div>
-								$<div id="sum">500.00</div>
+								$<div id="sum">{{ sum }}</div>
 							</div>
 						</div>
 						<button class="headerCart__button"><a href="checkout.html">Checkout</a></button>
@@ -161,8 +161,24 @@
 					</div>
 					<div class="sub-text">Shop for items based on what we featured in this week</div>
 				</div>
-				<div id="catalog" class="products row">
-
+				<div class="products row">
+					<div class="products__item col-sm-6 col-lg-3" v-for="item of catalogItems">
+						<div class="products__wrap-img">
+							<div class="products__buy">
+								<button
+									@click="add(item)"
+								>
+									<img src="../src/assets/imgs/addToCart.png" alt="">
+									Add to Cart
+								</button>
+							</div>
+							<img class="products__img" :src="item.img" alt="product1">
+						</div>
+						<div class="products__bottom">
+							<div class="products__name">{{ item.name }} </div>
+							<div class="products__price">{{ item.price }}</div>
+						</div>
+					</div>
 				</div>
 				<button class="featured-items__button products__button">
 					<a href="product.html">Browse All Product</a>
@@ -285,7 +301,7 @@
 			</div>
 		</div>
 	</div>
-
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </body>
 
 </html>
