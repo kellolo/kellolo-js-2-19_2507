@@ -122,22 +122,25 @@ header {
       width: 262px !important;
       background-color: #FFFFFF;
       border: 1px solid $mainTextColorP;
+      z-index: 2;
       left: -66px;
       top: 63px;
-      z-index: 100;
-      opacity: 0;
-      transform: perspective(600px) rotateX(-90deg);
-      transform-origin: 0 0;
-      transition: .4s ease-in-out;
-
     }
-    .open__basket{
 
+    .basket-enter, .basket-leave-to {
       top: 63px;
-      transform: rotate3d(0, 0,0, 0deg);
-      opacity: 1;
+      transform: perspective(500px) rotateX(-90deg);
+      opacity: 0;
+      transition: .5s ;
     }
 
+
+    .basket-enter-to, .basket-leave {
+        top: 63px;
+        transform: rotate3d(0, 0,0, 0deg);
+        opacity: 1;
+      transition: .3s ;
+    }
 
     img {
         width: 72px;
