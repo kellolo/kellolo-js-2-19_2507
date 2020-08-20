@@ -1,9 +1,12 @@
 
-//for install all -D
+// (step 1) for install all -D
 npm i -D webpack webpack-cli css-loader mini-css-extract-plugin html-webpack-plugin webpack-dev-server
 
-//for install all without -D
-npm i copy-webpack-plugin --save-dev bootstrap jquery popper.js
+// (step 2) for install all without -D
+npm i copy-webpack-plugin --save-dev bootstrap jquery popper.js vue
+
+// (step 3) for vue
+npm i vue-loader vue-template-compiler -D
 
 //for webpack
 npm i -D webpack webpack-cli
