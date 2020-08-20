@@ -58,35 +58,60 @@
                         <div class="search_form">
                             <input class="search_for" placeholder="Search for Item..." type="text">
                             <div class="search__button"> 
-                                <a class="search__link" href="#"><i class="fas fa-search"></i></a>
+                                <a class="search__link" href="#"><i class="fas fa-search"></i>
+                                </a>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
             <div class="header__right">
-
-                   <div class="shopping_cart">
-                        <a class="cart_basket" href="../public/shopping_cart.html"><img class="header__cart" src="../src/assets/img/cart.png" alt="cart"></a>
-                        <div class="drop_account">
-                            <!-------------------------- BASKET in JS --------------------------->
-                            <div id="basket" class="BasketAccount"></div>
-                                
-                            <button type="button" class="checkout_button">
-                                <a class="checkout" href="../public/checkout.html">Checkout</a>
-                            </button>
-                            <button type="button" class="cart_button">
-                                <a class="go_cart" href="../public/shopping_cart.html">Go&nbsp;to&nbsp;cart</a>
-                            </button>
-                                
-                            <!-------------------------- BASKET in JS --------------------------->
+                <div class="shopping_cart">
+                    <a class="cart_basket" href="../public/shopping_cart.html">
+                        <img class="header__cart" src="../src/assets/img/cart.png" alt="cart">
+                    </a>
+                    <div v-if="basketShown" class="drop_account">
+                        <!-------------------------- BASKET in JS --------------------------->
+                            
+                        <!-- <div id="basket" class="BasketAccount"></div> -->
+                        
+                        <div class="account_img">
+                            <a href="#" class="drop_account-img">
+                                <img :src="item.img"  alt="drop_account-img">
+                            </a>
                         </div>
-                   </div>
-                   <div class="button_browse">
+                        <div class="account_description">
+                            <div class="account__h3">{{ item.name }}</div>
+                            <span>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <div class="account_price">
+                                <p>{{ item.amount }}</p>
+                                <span class="multiply">x</span> ${{ item.price }}
+                            </div>
+                            <button @click="remove(item)" name="remove" data-id="${item.id}">x</button>
+                        </div>
+                              
+                        <button type="button" class="checkout_button">
+                            <a class="checkout" href="../public/checkout.html">Checkout</a>
+                        </button>
+                        <button type="button" class="cart_button">
+                            <a class="go_cart" href="../public/shopping_cart.html">Go&nbsp;to&nbsp;cart</a>
+                        </button>
+                                
+                        <!-------------------------- BASKET in JS --------------------------->
+                    </div>
+ 
+                </div>
+                <div class="button_browse">
                     <details class="my_account">
-                            <summary class="button">My&nbsp;account</summary>
+                        <summary class="button">My&nbsp;account</summary>
                     </details>
-                   </div>
+                </div>
             </div>
         </div>
         <div class="main">
@@ -248,7 +273,19 @@
                 
                 <!------------------------------- CATALOG START (catalog.js) ---------------------->
 
-                <div class="ProductBox" id="catalog"></div>
+                <!--<div class="ProductBox" id="catalog"></div>-->
+
+                <div id="app" class="product-box">
+
+                    <div class="product"  v-for="item of catalogItems">
+                        <img :src="item.img" class="product__img" alt="">
+                        <div class="product__name">{{ item.name }}</div>
+                        <div class="product__price">${{ item.price }}</div>
+                        <button @click="add(item)" class="product__add">
+                            <i class="fas fa-shopping-cart"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
 
                 <!------------------------------- CATALOG END (catalog.js) ------------------------>
 
@@ -394,7 +431,8 @@
         </div>
     </div>  
     
-    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="../src/components/js/app.js"></script>
     
     
 </body>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <script src="https://kit.fontawesome.com/861689887d.js" crossorigin="anonymous"></script>
-    
+
     <title>Home</title>
 </head>
 <body>
@@ -45,19 +45,56 @@
             <button><i class="fas fa-search"></i></button>
         </div>
         <div class="rTop d-none d-sm-flex col-lg-3 ml-lg-auto justify-content-center justify-content-lg-end p-0 align-items-center">
-            <div class="basket__block">
-                <i class="fa fa-shopping-cart my__cart" aria-hidden="true"></i>
-                <div class="basket__Product">
-                    <div id="basket" class="py-2">
+            <div class="basket__block" id="basket" >
+                <i class="fa fa-shopping-cart my__cart" aria-hidden="true" @click="basketShown = !basketShown"></i>
+                <transition name="basket">
+                <div v-if="basketShown">
+                    <div class="basket__Product" >
+                        <div class="py-2">
+                            <div v-if="basketItems.length > 0">
+                                <div v-for="item of basketItems">
+                                    <div class="d-flex px-3 justify-content-between align-items-center py-1">
+                                        <a href="#"><img :src="item.img" :alt="item.name"></a>
+                                        <div class="d-flex flex-column justify-content-center align-items-center product__text">
+                                            <h3 class="mb-0">{{item.name}}</h3>
+                                            <div class="stars py-0">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <p class="mt-1">{{+item.quantity}} x $
+                                                <span class="product__Price">{{+item.price * +item.quantity}}</span>
+                                            </p>
+                                        </div>
+                                        <button name="remove" class="dell__Product fa fa-times-circle"
+                                                @click="remove(item.id)"
+                                                data-id="${item.id}"
+                                                aria-hidden="true">
+                                        </button>
+                                    </div>
+                                    <div class="dropdown-divider mx-3"></div>
 
-                    </div>
-                    <div class="row mx-3 d-flex justify-content-between mt-2"><span>TOTAL</span> <span class="prod_sum">$0.00</span>
-                        <a href="#" class="btn btn-primary btn-lg buttMyAccount mt-4 d-flex align-items-center justify-content-center"
-                           role="button" aria-pressed="true">Checkout</a>
-                        <a href="shoppingCart.html" class="btn btn-primary btn-lg buttMyAccount my-2 d-flex align-items-center justify-content-center"
-                           role="button" aria-pressed="true">Go to cart</a>
+                                </div>
+
+                            </div>
+                            <div class="d-flex justify-content-center color-green p-2" v-else>
+                                <h4 class="text-center">No products in the shopping cart</h4>
+                            </div>
+
+                        </div>
+                        <div class="row mx-3 d-flex justify-content-between my-2"><span>TOTAL</span> <span
+                                class="text-muted">${{countingGoods}}</span>
+                            <a href="#"
+                               class="btn btn-primary btn-lg buttMyAccount mt-4 d-flex align-items-center justify-content-center"
+                               role="button" aria-pressed="true">Checkout</a>
+                            <a href="shoppingCart.html"
+                               class="btn btn-primary btn-lg buttMyAccount my-2 d-flex align-items-center justify-content-center"
+                               role="button" aria-pressed="true">Go to cart</a>
+                        </div>
                     </div>
                 </div>
+                </transition>
             </div>
             <div class="btn-group">
                 <button type="button" class="btn btn-danger ml-4">My Account</button>
@@ -111,7 +148,8 @@
                         <a class="subMenuLink" href="#">Tops</a>
                         <a class="subMenuLink" href="#">Sweaters/Knits</a>
                         <a class="subMenuLink" href="#">Jackets/Coats</a>
-                        <img src="https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/subMenu.jpg" alt="subMan" class="mt-3">
+                        <img src="https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/subMenu.jpg"
+                             alt="subMan" class="mt-3">
                     </li>
                 </ul>
             </li>
@@ -137,7 +175,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="rTop d-flex justify-content-center align-items-center justify-content-lg-start">
-                    <a href="shoppingCart.html" class="fa fa-shopping-cart my__cart px-2" aria-hidden="true"></a>
+                <a href="shoppingCart.html" class="fa fa-shopping-cart my__cart px-2" aria-hidden="true"></a>
                 <div class="btn-group btnNonSSM">
                     <button type="button" class="btn btn-danger">My Account</button>
                     <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split"
@@ -209,13 +247,40 @@
     </div>
 </div>
 <div class="container">
-    <div class="row d-flex justify-content-around justify-content-lg-between" id="index_catalog">
+    <div id="index_catalog">
+
+        <div class="row d-flex justify-content-around justify-content-lg-between" v-if="catalogItems">
+            <div v-for="item of catalogItems">
+                <div class="prodCard card col-12 col-md-6 col-lg-4 border-0 mx-0 px-0 mb-5">
+                    <div class="psevProdCard mx-0 px-0">
+                        <button class="d-flex justify-content-around" @click="add(item)">
+                            <i class="fas fa-cart-plus"></i>Add to Cart
+                        </button>
+                    </div>
+                    <img :src="item.img" class="card-img-top" :alt="item.name">
+                    <div class="psevProdCardBody card-body d-flex flex-column align-content-start pb-0 px-0">
+                        <a href="#" class="card-text px-3">{{ item.name }}</a>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <p class="d-flex justify-content-between px-3">${{ item.price }}</p>
+                            <button class="d-flex d-md-none justify-content-around" @click="add(item)">
+                                Add to Cart
+                                <i class="fas fa-cart-plus pl-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div v-else>
+            <h3>Not Products</h3>
+        </div>
 
     </div>
 </div>
 <div class="container d-flex justify-content-center align-items-center mb-5">
     <div class="bBa__container">
-        <a type="button" class="butBrowseAllProd  d-flex justify-content-center align-items-center" href="product.html">Browse All
+        <a type="button" class="butBrowseAllProd  d-flex justify-content-center align-items-center" href="product.html">Browse
+            All
             Product <i class="pl-2 fa fa-long-arrow-right" aria-hidden="true"></i>
         </a>
     </div>
@@ -243,7 +308,8 @@
                             models</p></div>
                 </div>
                 <div class="d-flex justify-content-center align-items-center align-items-lg-start my-3"><img
-                        src="https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/procent.png" alt="..."
+                        src="https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/procent.png"
+                        alt="..."
                         class="col-lg-3 pb-2 mx-2">
                     <div class="col-lg-9 p-0"><h4>Quality assurance</h4>
                         <p>Worldwide delivery on all. Authorit tively morp next-generation innovation with extensive
@@ -260,7 +326,9 @@
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <div class="photoForm d-flex"><img src="https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/Layerwomen.jpeg" alt="photo">
+                            <div class="photoForm d-flex"><img
+                                    src="https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/Layerwomen.jpeg"
+                                    alt="photo">
                                 <div class="photoFormText ml-4">
                                     <p><i>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
                                         condimentum a.
@@ -270,7 +338,9 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="photoForm d-flex"><img src="https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/Layerwomen.jpeg" alt="photo">
+                            <div class="photoForm d-flex"><img
+                                    src="https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/Layerwomen.jpeg"
+                                    alt="photo">
                                 <div class="photoFormText ml-4">
                                     <p><i>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
                                         condimentum a.
@@ -280,7 +350,9 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="photoForm d-flex"><img src="https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/Layerwomen.jpeg" alt="photo">
+                            <div class="photoForm d-flex"><img
+                                    src="https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/Layerwomen.jpeg"
+                                    alt="photo">
                                 <div class="photoFormText ml-4">
                                     <p><i>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
                                         condimentum a.
@@ -366,5 +438,8 @@
         </div>
     </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
 </body>
 </html>
