@@ -1,7 +1,4 @@
-import { Catalog, Basket } from './js/lists';
-
+import app from './js/app.js'
 export default () => {
-	let basket = new Basket('/getBasket.json', '#basket');
-    let catalog = new Catalog('/catalogData.json', '.feturedArea', basket);
-
+	let appVue = new Vue(app);
 }

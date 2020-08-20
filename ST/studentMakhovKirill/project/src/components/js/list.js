@@ -17,7 +17,6 @@ export default class List {
 		this._get(url)
 		.then(data => { 
 			this.items = basket ? data : data.content;
-
 		})
 		.then(() => {
 			this._render();

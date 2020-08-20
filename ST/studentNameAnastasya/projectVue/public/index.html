@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Index</title>
+	<script src="https://kit.fontawesome.com/a5fef26e8a.js" crossorigin="anonymous"></script>
+	<title>First page</title>
+	<link rel="stylesheet" href="../src/layout/styles.css">
+	<style>
+		.show {
+			display: flex;
+		}
+	</style>
+
+</head>
+
+
+<body>
+	<div id="app">
+		<header class="header center">
+			<div class="header__left">
+				<a href="index.html" class="logo">Bran<span class="logo__span">d</span></a>
+				<form class="search">
+					<div class="searchBrowse">Browse <i class="fas fa-caret-down"></i>
+						<div class="searchBrowse__drop drop">
+							<div class="drop__flex">
+								<h3 class="drop__h3">Women</h3>
+								<ul class="drop__ul">
+									<li><a class="drop__a" href="#">Dresses</a></li>
+									<li><a class="drop__a" href="#">Tops</a></li>
+									<li><a class="drop__a" href="#">Sweaters/Knits </a></li>
+									<li><a class="drop__a" href="#">Jackets/Coats</a></li>
+									<li><a class="drop__a" href="#">Blazers</a></li>
+									<li><a class="drop__a" href="#">Denim</a></li>
+									<li><a class="drop__a" href="#">Leggings/Pants </a></li>
+									<li><a class="drop__a" href="#">Skirts/Shorts</a></li>
+									<li><a class="drop__a" href="#">Accessories</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<input name="search" type="text" placeholder="Search for Item...">
+					<button><i class="fas fa-search"></i></button>
+				</form>
+			</div>
+			<div class="header__right">
+				<img id="cart" class="header__cart" src="../src/assets/img/cart.png" alt="headerCart"
+					@click="basketShown = !basketShown">
+				<div class="button">My Account <i class="fas fa-caret-down"></i>
+					<div class="button__drop button__drop_drop">
+						<div class="account" v-if="basketShown">
+							<div class="account__box" v-for="item of basketItems" >
+								<a href="product.html">
+									<img class="account__img" :src="item.img" alt="img"></a>
+								<div class="account__item">
+									<h3 class="account__h">{{item.name}}</h3>
+
+									<p class="account__price">{{item.amount}} <span class="account__span"> x </span>
+										${{item.price}}</p>
+
+								</div>
+								<button class="account__none" name="remove" @click="remove(item.id)">x</button>
+							</div>
+							<div class="account-total">
+								<h3 class="account-total__h">Total</h3>
+								<h3 class="account-total__h">${{basketSum}}</h3>
+							</div>
+							<button class="account__btn" onclick="document.location='checkout.html'">Checkout</button>
+							<button class="account__btn" onclick="document.location='ShoppingCart.html'">Go to
+								cart</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<input id="switcher" type="checkbox">
+		<label class="open" for="switcher"><i class="fas fa-bars"></i></label>
+		<nav class="nav center">
+			<ul class="menu">
+				<li class="menu__list">
+					<a class="menu__link" href="#">Home</a>
+				</li>
+				<li class="menu__list">
+					<a class="menu__link" href="#">Men</a>
+				</li>
+				<li class="menu__list">
+					<a class="menu__link" href="#">Women</a>
+					<div class="menu__drop drop">
+						<div class="drop__flex">
+							<h3 class="drop__h3">Women</h3>
+							<ul class="drop__ul">
+								<li><a class="drop__a" href="#">Dresses</a></li>
+								<li><a class="drop__a" href="#">Tops</a></li>
+								<li><a class="drop__a" href="#">Sweaters/Knits </a></li>
+								<li><a class="drop__a" href="#">Jackets/Coats</a></li>
+								<li><a class="drop__a" href="#">Blazers</a></li>
+								<li><a class="drop__a" href="#">Denim</a></li>
+								<li><a class="drop__a" href="#">Leggings/Pants </a></li>
+								<li><a class="drop__a" href="#">Skirts/Shorts</a></li>
+								<li><a class="drop__a" href="#">Accessories</a></li>
+							</ul>
+						</div>
+						<div class="drop__flex">
+							<h3 class="drop__h3">Women</h3>
+							<ul class="drop__ul">
+								<li><a class="drop__a" href="#">Dresses</a></li>
+								<li><a class="drop__a" href="#">Tops</a></li>
+								<li><a class="drop__a" href="#">Sweaters/Knits </a></li>
+								<li><a class="drop__a" href="#">Jackets/Coats</a></li>
+							</ul>
+
+							<h3 class="drop__h3">Women</h3>
+							<ul class="drop__ul">
+								<li><a class="drop__a" href="#">Dresses</a></li>
+								<li><a class="drop__a" href="#">Tops</a></li>
+								<li><a class="drop__a" href="#">Sweaters/Knits </a></li>
+						</div>
+						<div class="drop__flex">
+							<h3 class="drop__h3">Women</h3>
+							<ul class="drop__ul">
+								<li><a class="drop__a" href="#">Dresses</a></li>
+								<li><a class="drop__a" href="#">Tops</a></li>
+								<li><a class="drop__a" href="#">Sweaters/Knits </a></li>
+								<li><a class="drop__a" href="#">Jackets/Coats</a></li>
+							</ul>
+							<div class="drop__img">Super <br> sale!</div>
+						</div>
+					</div>
+
+				</li>
+				<li class="menu__list">
+					<a class="menu__link" href="#">Kids</a>
+				</li>
+				<li class="menu__list">
+					<a class="menu__link" href="#">Accoseriese</a>
+				</li>
+				<li class="menu__list">
+					<a class="menu__link" href="#">Featured</a>
+				</li>
+				<li class="menu__list">
+					<a class="menu__link" href="#">Hot Deals</a>
+				</li>
+
+			</ul>
+			<label class="close" for="switcher"><i class="far fa-window-close"></i></label>
+		</nav>
+
+		<main>
+			<div class="blackman">
+				<div class="slide center">
+					<div class="slide__text">
+						<h1 class="slide__h1">THE BRAND</h1>
+						<h2 class="slide__h2">OF LUXERIOUS <span class="slide__span">FASHION</span></h2>
+					</div>
+
+				</div>
+			</div>
+			<div class="offers center">
+
+				<div class="offers__left">
+					<div class="offers__item">
+						<img class="offers__photos"
+							src="https://raw.githubusercontent.com/AnastasyaChe/static/master/offer1.jpg" alt="photo" />
+						<div class="offers__lable">
+							<div class="lable__top">Hot deal</div>
+							<div class="lable__down">For men</div>
+						</div>
+					</div>
+					<div class="offers__item">
+						<img class="offers__photos"
+							src="https://raw.githubusercontent.com/AnastasyaChe/static/master/offer2.jpg" alt="photo" />
+						<div class=" offers__lable">
+							<div class="lable__top">LUXIROUS & trendy</div>
+							<div class="lable__down">ACCESORIES</div>
+						</div>
+					</div>
+				</div>
+				<div class="offers__right">
+					<div class="offers__item">
+						<img class="offers__photos"
+							src="https://raw.githubusercontent.com/AnastasyaChe/static/master/offer3.jpg" alt="photo" />
+						<div class="offers__lable">
+							<div class="lable__top">30% offer</div>
+							<div class="lable__down">women</div>
+						</div>
+					</div>
+
+					<div class="offers__item">
+						<img class="offers__photos"
+							src="https://raw.githubusercontent.com/AnastasyaChe/static/master/offer4.jpg" alt="photo" />
+						<div class="offers__lable">
+							<div class="lable__top">new arrivals</div>
+							<div class="lable__down">FOR kids</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section>
+				<div class="fetured center">
+					<h2 class="fetured__items">Fetured Items</h2>
+					<p class="fetured__text">Shop for items based on what we featured in this week</p>
+
+				</div>
+				<div id="catalog" class="center galery">
+					<article class="galery__product" v-for="item of catalogItems">
+						<img class="product__img" :src="item.img" alt class="prodimage">
+						<div class="product__add" @click="add(item)">
+							<i class="fas fa-shopping-cart"></i> <span class="text_to_cart"> Add to Cart </span>
+						</div>
+						<div class="galery__info">
+							<h2 class="galery__mango">{{item.name}}</h2>
+							<div class="galery__price">${{item.price}}</div>
+						</div>
+					</article>
+
+				</div>
+			</section>
+		</main>
+		<div class="allBrowse">
+			<button class="button allBrowse__button" onclick="document.location='product.html'">Browse All Product <i
+					class="fas fa-arrow-right"></i> </button>
+		</div>
+		<div class="women center">
+			<div class="women__left">
+				<div class="women__banner">
+					<h2 class="banner__offer">30% <span class="banner__span">OFFER</span></h2>
+					<h2 class="banner__for">FOR WOMEN</h2>
+				</div>
+			</div>
+			<div class="women__right">
+				<div class="freeDelivery">
+					<h2 class="freeD">Free Delivery</h2>
+					<p class="worldWide">Worldwide delivery on all. Authorit tively morph next-generation innov tion
+						with
+						extensive models.</p>
+				</div>
+				<div class="freeDelivery">
+					<h2 class="freeD">Free Delivery</h2>
+					<p class="worldWide">Worldwide delivery on all. Authorit tively morph next-generation innov tion
+						with
+						extensive models.</p>
+				</div>
+				<div class="freeDelivery">
+					<h2 class="freeD">Free Delivery</h2>
+					<p class="worldWide">Worldwide delivery on all. Authorit tively morph next-generation innov tion
+						with
+						extensive models.</p>
+				</div>
+			</div>
+		</div>
+		<div class="subscribeBlock">
+			<div class="subscribe center">
+				<div class="subscribe__left">
+					<div>
+						<img class="subscribePhoto" src="../src/assets/img/Layer 40@1X.jpeg" alt="alt">
+					</div>
+					<section class="subscribeText">
+						<div class="subscribeReview">
+							“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a.
+							Aliquam
+							condimentum mattis neque sed pretium”</div>
+						<div class="subscribeData">
+							<div class="subscribeName">Bin Burhan</div>
+							<div class="subscribeCity">Dhaka, Bd</div>
+						</div>
+					</section>
+				</div>
+				<div class="subscribe__right">
+					<div class="subscText">
+						<h2 class="subs1">Subscribe</h2>
+						<p class="subs2">For our NEWLETTER AND PROMOTION</p>
+					</div>
+
+					<form class="search2">
+						<input class="subscribeInput" name="subscribeInput" placeholder="Enter Your Email" type="email">
+						<button class="subscribeBtn">Subscribe</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="company center">
+			<div class="company1">
+				<a href="index.html" class="logo">Bran<span class="logo__span">d</span></a>
+				<div class="objectivelyText">
+					<p>Objectively transition extensive data rather than cross functional solutions. Monotonectally
+						syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an
+						expanded
+						array of processes and cross-unit partnerships. </p> <br>
+					<p>Efficiently plagiarize 24/365 action items and focused infomediaries.Distinctively seize superior
+						initiatives for wireless technologies. Dynamically optimize. </p>
+				</div>
+			</div>
+			<div class="menuBlocks">
+				<div class="companyColumn">
+					<h2 class="heading">COMPANY</h2>
+					<div class="columnMenu">
+						<a href="#">Home</a>
+						<a href="#">Shop</a>
+						<a href="#">About</a>
+						<a href="#">How It Works</a>
+						<a href="#">Contact</a>
+					</div>
+				</div>
+				<div class="companyColumn">
+					<h2 class="heading">INFORMATION</h2>
+					<div class="columnMenu">
+						<a href="#">Tearms & Condition</a>
+						<a href="#">Privacy Policy</a>
+						<a href="#">How to Buy</a>
+						<a href="#">How to Sell</a>
+						<a href="#">Promotion</a>
+					</div>
+				</div>
+				<div class="companyColumn">
+					<h2 class="heading">SHOP CATEGORY</h2>
+					<div class="columnMenu">
+						<a href="#">Men</a>
+						<a href="#">Women</a>
+						<a href="#">Child</a>
+						<a href="#">Apparel</a>
+						<a href="#">Brows All</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footerNoborder">
+			<div class="footer center">
+				<div class="data">&copy; 2017 Brand All Rights Reserved.</div>
+				<div class="socialIcons center">
+					<div class="icon"><i class="fab fa-facebook-f"></i></div>
+					<div class="icon"><i class="fab fa-twitter"></i></div>
+					<div class="icon"><i class="fab fa-invision"></i></div>
+					<div class="icon"><i class="fab fa-pinterest-p"></i></div>
+					<div class="icon"><i class="fab fa-google-plus-g"></i></div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+	<!-- <script src="../src/components/index.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="../src/components/app.js"></script>
+
+</body>
+
+</html>
