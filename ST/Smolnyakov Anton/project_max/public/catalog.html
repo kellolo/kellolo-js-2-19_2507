@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <script src="https://kit.fontawesome.com/5b090da90e.js" crossorigin="anonymous"></script>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <!-- Bootstrap CSS -->
 
     <title>Products</title>
 </head>
 <body>
-
+<div id="appCatalog">
 <!-------------------------------HEADER START----------------------------->
 <header class="container my-4 px-sm-0">
     <div class="d-flex justify-content-between px-0 mx-0 flex-wrap">
@@ -78,20 +77,42 @@
             </div>
 
             <div class="d-flex align-items-center">
-                <div class="headerCart mr-3">
-                    <a href="#"><img src="../src/assets/imgs/cart.png" alt="headerCart" id="headerCart"></a>
-                    <div class="headerCartWrap hidden" id="headerCartWrap">
-                        <div class="headerCartWrapInAll">
 
-                            <div id="cart" class="d-flex flex-column"></div>
+                <div class="headerCart mr-3" @click="cartShown = !cartShown">
+                    <a href="#"><img src="../src/assets/imgs/cart.png" alt="headerCart" id="headerCart" ></a>
+                    <div class="headerCartWrap" id="headerCartWrap" v-if="cartShown">
+
+                        <div class="headerCartWrapInAll">
+                            <div id="cart" class="d-flex flex-column">
+                                <div class="d-flex " v-for="item of cartItems">
+                                    <a href="#" class="d-flex headerCartWrapIn" >
+                                        <div class="cartImg"><img :src="item.img" alt=""></div>
+                                        <div>
+                                            <div>{{ item.name }}</div>
+                                            <span>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                            </span>
+                                            <div class="headerCartWrapPrice">{{item.amount}}
+                                                <span>x</span> ${{item.price}}
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <button @click="remove(item)"><i class="fas fa-times-circle" id="removeProductCart" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
 
                             <div class="headerCartWrapTotalPrice">
                                 <div>total</div>
-                                <div id="totalSum"></div>
+                                <div id="totalSum">{{ renderTotalSum }}</div>
                             </div>
 
                             <button type="button" class="productsButtonIndex">Checkout</button>
                             <button type="button" class="productsButtonIndex">Go to cart</button>
+
                         </div>
                     </div>
                 </div>
@@ -184,7 +205,6 @@
 
     <div class="container my-5 pb-0 pb-lg-5 px-0">
         <div class="row">
-
             <div class="col-10 offset-1
                         col-sm-12 offset-sm-0
                         col-md-12 d-sm-flex justify-sm-content-between
@@ -368,7 +388,28 @@
 
                 <!-------------------------------FETURED ST----------------------------->
 
-                <div class="row row-cols-3" id="catalog"></div>
+                <div class="row row-cols-3" id="catalog">
+
+                    <div class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 feturedItems" v-for="item of catalogItems">
+                        <div class="feturedItem">
+                            <div class="feturedImgWrap">
+                                <div class="feturedBuy">
+                                    <button @click="add(item)">
+                                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                                    </button>
+                                </div>
+                                <img class="feturedProduct" :src="item.img" alt="product1">
+                            </div>
+                            <div class="feturedBuySm d-flex flex-column justify-content-around align-items-center align-items-md-start">
+                                <div class="feturedItemName">{{ item.name }}</div>
+                                <div class="feturedItemPrice">${{ item.price }}</div>
+                                <button class="d-md-none" @click="add(item)">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="d-flex flex-column align-items-center justify-content-around mt-5 flex-sm-row justify-content-sm-between">
                     <nav aria-label="Page navigation example">
@@ -604,7 +645,6 @@
         </div>
     </div>
 </div>
-n
-
+</div>
 </body>
 </html>

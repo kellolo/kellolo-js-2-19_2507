@@ -3,6 +3,9 @@
 2.
 npm i -D webpack webpack-cli //
 
+//
+npm install bootstrap
+
 //установка в сборку
 npm i bootstrap jquery popper.js
 

@@ -5,12 +5,7 @@
     <title>Brand</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
-
-
     <script src="https://kit.fontawesome.com/5b090da90e.js" crossorigin="anonymous"></script>
-
 
 </head>
 <body>
@@ -77,9 +72,9 @@
                                     col-sm-4 offset-sm-4 pt-sm-3 justify-content-sm-end ">
 
 
-           <div class="headerCart pr-4" >
+           <div class="headerCart pr-4" id="cart" >
                 <a href="#" class="basketHidden">
-                    <span class="priceSum">0.00</span> <span class="mr-lg-3">$</span>
+                    <span class="priceSum sum" >0.00</span> <span class="mr-lg-3">$</span>
                     <img src="https://raw.githubusercontent.com/EkaterinaTaltseva/shop-img/master/cart.png" alt="headerCart">
                 </a>
                 <div class="headerCartWrap headerCartWrapHidden">
@@ -93,7 +88,7 @@
 
                         <div class="headerCartWrapTotalPrice">
                             <div>total</div>
-                            <div class="priceSum ml-auto pr-md-2 ">0.00</div><span>$</span>
+                            <div class="priceSum ml-auto pr-md-2 sum " id="sum">0.00</div><span>$</span>
                         </div>
 
                         <button type="button" class="productsButtonIndex">Checkout</button>
@@ -145,6 +140,7 @@
                 <div class="headerCartWrap">
                     <div class="headerCartWrapBlock"></div>
                     <div class="headerCartWrapInAll">
+
                         <div class="d-flex headerCartWrapIn">
                             <a href="#" class="d-flex ">
                                 <img src="https://raw.githubusercontent.com/EkaterinaTaltseva/shop-img/master/myAccount1.jpg" alt="">
@@ -154,25 +150,14 @@
                                     <div class="headerCartWrapPrice">1 <span>x</span> $250</div>
                                 </div>
                             </a>
-                            <a href="#"><i class="fas fa-times-circle"></i></a>
-                        </div>
-
-                        <div class="d-flex">
-                            <a href="#" class="d-flex headerCartWrapIn">
-                                <img src="https://raw.githubusercontent.com/EkaterinaTaltseva/shop-img/master/myAccount2.jpg" alt="">
-                                <div>
-                                    <div>Rebox Zane</div>
-                                    <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
-                                    <div class="headerCartWrapPrice">1 <span>x</span> $250</div>
-                                </div>
+                            <a href="#">
+                                <i class="fas fa-times-circle"></i>
                             </a>
-                            <a href="#"><i class="fas fa-times-circle"></i></a>
                         </div>
 
-                        <div class="headerCartWrapTotalPrice">
-                            <div>total</div>
-                            <div>$500.00</div>
-                        </div>
+
+
+
 
                         <button type="button" class="productsButtonIndex">Checkout</button>
                         <button type="button" class="productsButtonIndex">Go to cart</button>
@@ -571,7 +556,7 @@
             </a>
         </div>
 
-        <div class="row" id="container-product-show2"></div> <!-- товары--->
+        <div class="row" id="catalog"></div> <!-- товары--->
 
         <div class="container px-0 d-flex justify-content-around">
             <a href="Product.html" type="button" class="btn btn-outline-secondary feturedButton">
@@ -805,8 +790,6 @@
         </div>
     </div>
 </div>
-
-
 
 </body>
 </html>

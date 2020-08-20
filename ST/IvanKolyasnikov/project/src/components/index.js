@@ -1,8 +1,6 @@
-import Basket from "./js/basket";
-import Catalog from "./js/catalog";
+import {appBasket, appCatalog} from "./js/app";
 
 export default () => {
-    let cartBasket = new Basket();
-    cartBasket.openCart()
-    let productCatalog = new Catalog('#index_catalog', cartBasket, 0, 8);
+    let basket = appBasket;
+    let catalog = appCatalog;
 }

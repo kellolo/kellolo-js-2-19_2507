@@ -1,5 +1,4 @@
-
-var basket = {
+export default {
     items: [],
     container: null,
     total: 0,
@@ -78,6 +77,3 @@ var basket = {
     }
 }
 
-basket.init();
-
-export default basket;
