@@ -255,14 +255,11 @@
 
 .headerCart {
   position: relative; }
-  /*.headerCart:hover .headerCartWrap {
-    display: block;
-    z-index: 2; } */
   .headerCart .headerCartWrap {
     position: absolute;
     width: 260px;
     left: -40px;
-    display: none; }
+    /*display: none;*/ }
     @media (max-width: 650px) {
       .headerCart .headerCartWrap {
         left: -120px; } }
