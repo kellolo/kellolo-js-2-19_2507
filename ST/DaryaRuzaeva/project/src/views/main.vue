@@ -1,9 +1,6 @@
 <template>
     <div>
         <div class="container">
-
-
-            <!------ HEADER ------>
             <header class="header center">
                 <div class="header__left">
                     <a class="logo" href="#">
@@ -74,10 +71,7 @@
                     </details>
                 </div>
             </header>
-            <!------ HEADER ------>
 
-
-            <!------ NAV ------>
             <nav class="nav center">
                 <ul class="menu">
                     <li class="menu__list"><a href="#" class="menu__link">Home</a>
@@ -181,10 +175,7 @@
                     <li class="menu__list"><a href="#" class="menu__link">Hot Deals</a></li>
                 </ul>
             </nav>
-            <!------ NAV ------>
 
-
-            <!------ MAIN ------>
             <div class="main">
                 <div class="promo center">
                     <div class="promo__content">
@@ -374,10 +365,10 @@
                                     <a href="#" class="company__link">Contact</a>
                                 </li>
                             </ul> 
-                        </div>
-                        <div class="footer__menu">
-                        <ul class="menu_company">
-                            <li class="company__header">INFORMATION</li>
+                       </div>
+                       <div class="footer__menu">
+                         <ul class="menu_company">
+                                <li class="company__header">INFORMATION</li>
                                 <li class="company__list">
                                     <a href="#" class="company__link">Tearms &amp;&nbsp;Condition</a>
                                 </li>
@@ -396,8 +387,8 @@
                             </ul> 
                         </div>
                         <div class="footer__menu-1">
-                        <ul class="menu_company">
-                            <li class="company__header">SHOP CATEGORY</li>
+                           <ul class="menu_company">
+                                <li class="company__header">SHOP CATEGORY</li>
                                 <li class="company__list">
                                     <a href="#" class="company__link">Men</a>
                                 </li>
@@ -417,12 +408,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <!------ MAIN ------>
 
-
-            <!------ FOOTER ------>
-            <footer class="footer center">
+              <footer class="footer center">
                 <div class="brand_rights">
                     <p class="rights">&copy;&nbsp;2017 Brand All Rights Reserved.</p>
                 </div>
@@ -441,10 +428,7 @@
                 <div class="media">
                     <a class="media_icon" href="#"><i class="fab fa-google-plus-g"></i></a>
                 </div>
-            </footer>
-            <!------ FOOTER ------>
-
-
+              </footer>
         </div>  
     </div> 
 </template>
