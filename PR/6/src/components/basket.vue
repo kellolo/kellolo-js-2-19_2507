@@ -31,7 +31,7 @@ export default {
     },
     mounted() {
         this.$parent.parentGet(this.url)
-        .then(d => { this.items = d.content })
+        .then(data => { this.items = data.content })
     }
 }
 </script>

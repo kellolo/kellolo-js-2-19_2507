@@ -25,6 +25,7 @@
   },
   "description": "",
   "dependencies": {
+    "file-loader": "^6.0.0",
     "vue": "^2.6.11"
   }
 }
