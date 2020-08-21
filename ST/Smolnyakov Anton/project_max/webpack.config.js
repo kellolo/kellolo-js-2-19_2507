@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
     // entry: {
@@ -15,6 +16,18 @@ module.exports = {
             {
                 test: /\.css$/i,
                 use: [MiniCssExtractPlugin.loader, 'css-loader'],
+            },
+            {
+                test: /\.vue$/i,
+                loader: 'vue-loader'
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                    },
+                ],
             }
         ]
     },
@@ -24,13 +37,14 @@ module.exports = {
             filename: 'css/[name].css',
             chunkFilename: '[id].css'
         }),
-        new CopyPlugin({
-            patterns: [
-                { from: 'src/assets/imgs', to: 'img' }
-            ]
-        }),
+        // new CopyPlugin({
+        //     patterns: [
+        //         { from: 'src/assets/imgs', to: 'img' }
+        //     ]
+        // }),
         new HtmlWebpackPlugin({
             template: './public/catalog.html'
-        })
+        }),
+        new VueLoaderPlugin()
     ]
 }
