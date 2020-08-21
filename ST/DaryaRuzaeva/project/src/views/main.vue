@@ -55,15 +55,15 @@
                     </div>
                 </div>
                 
-                <!----------- BASKET ------------>
+                <!-- BASKET -->
                 <div class="drop_cart" >
                     <button class="drop_cart__img"  @click="showBasket = !showBasket" >
                         <img src="src/assets/img/cart.png" alt="headerCart">
                     </button>
-                    <!----  BASKETHERE ----->
+                    <!--  BASKETHERE -->
                     <basket v-show="showBasket"/>
                 </div>
-                <!----------- BASKET ------------>
+                <!-- BASKET -->
                 
                 <div class="button_browse">
                     <details class="my_account">
@@ -235,7 +235,7 @@
                     <p class="product__h3">Fetured Items</p>
                     <p class="product__h4">Shop for items based on&nbsp;what we&nbsp;featured in&nbsp;this week</p>
                     
-                    <!---------------- CATALOGHERE -------------->
+                    <!-- CATALOGHERE -->
                     <catalog />
                     <div class="button_browse">
                         <a  href="../public/product.html" class="browse_product">Browse All Product
