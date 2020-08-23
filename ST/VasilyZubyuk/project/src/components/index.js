@@ -1,15 +1,29 @@
-import { Catalog, Basket } from './js/lists';
-
 export default () => {
-    let basket = new Basket('/basket.json', '#basket');
-    let catalog = new Catalog('/catalog.json', '#catalog', basket);
+    let app = new Vue({
+        el: '#app',
+        data: {
+            catalogItems: [],
+            basketItems: [],
+            catalogUrl: 'https://raw.githubusercontent.com/O2xy/stattic/master/img/JS1_shop/JSON/catalog.json',
+            basketUrl: 'https://raw.githubusercontent.com/O2xy/stattic/master/img/JS1_shop/JSON/basket.json',
+            basketShown: false
+        },
+        methods: {
+            get(url) {
+                return fetch(url)
+                        .then(data => data.json());
+            },
+            add(item) {
+                console.log('added ' + item.productName)
+            },
+            remove(item) {
+                console.log('removed ' + item.productName)
+            },
+        },
+        mounted() {
+            this.get(this.catalogUrl).then(data => this.catalogItems = data);
+            this.get(this.basketUrl).then(data => this.basketItems = data.content);
+        }
+    })
 }
 
-
-// import basket from './js/basket';
-// import catalog from './js/catalog';
-
-// export default () => {
-//     basket.init();
-//     catalog.init(9);
-// }
