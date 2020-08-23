@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" cols="30" rows="10" id="text"></textarea>
+    <br><br>
+    <input type="text" placeholder="Name..." id="u-name">
+    <br><br>
+    <button onclick="send()">Send</button>
+
+    <script>
+        let textArea = document.querySelector('#text');
+        let uName = document.querySelector('#u-name');
+        function send() {
+            fetch('/message', {
+                method: 'POST',
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ user: uName.value, text: textArea.value })
+            })
+            .then(res => { document.body.innerHTML = res })
+        }
+    </script>
+</body>
+</html>
