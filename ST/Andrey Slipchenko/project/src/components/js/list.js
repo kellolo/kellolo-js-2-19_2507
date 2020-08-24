@@ -1,4 +1,7 @@
-import { BasketItem, CatalogItem } from './items';
+import {
+    BasketItem,
+    CatalogItem
+} from './items';
 
 let classes = {
     'Catalog': CatalogItem,
@@ -15,17 +18,17 @@ export default class List {
     _init(basket = false) {
         let url = 'https://raw.githubusercontent.com/kellolo/static/master/JSON' + this.url;
         this._get(url)
-        .then(data => {
-            this.items = basket ? data : data.content;
-        })
-        .then(() => {
-            this._render();
-        });
+            .then(data => {
+                this.items = basket ? data : data.content;
+            })
+            .then(() => {
+                this._render();
+            });
     }
 
     _get(url) {
         return fetch(url)
-                .then(data => data.json());
+            .then(data => data.json());
     }
 
     _render() {
