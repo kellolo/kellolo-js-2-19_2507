@@ -8,6 +8,7 @@
                     type="basket"
                     :item="item"
                     :key="item.id"
+                    @remove="remove"
                 />
                 <div class="headerCartWrapTotalPrice">
                     <div>total&nbsp;</div>
@@ -32,9 +33,8 @@ export default {
     },
     data() {
         return {
-            url: "https://raw.githubusercontent.com/Cerzon/assets/master/JSON/basket.json",
+            url: "/api/basket",
             items: [],
-            // total: 0,
         }
     },
     computed: {
@@ -44,8 +44,36 @@ export default {
             return result.toFixed(2);
         }
     },
+    methods: {
+        add(item) {
+            let find = this.items.find(el => el.id == item.id);
+
+            if (!find) {
+                this.items.push(Object.assign({}, item, {amount: 1}));
+            } else {
+                find.amount++;
+            }
+        },
+        remove(item) {
+            let find = this.items.find(el => el.id == item.id);
+
+            if (find.amount > 1) {
+                find.amount--;
+            } else {
+                this.items.splice(this.items.indexOf(find), 1);
+            }
+        },
+    },
     mounted() {
-        get(this.url).then(data => { this.items = data.contents });
+        get(this.url).then(data => { this.items = data });
+    },
+    updated() {
+        fetch(this.url, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(this.items)
+        })
+        .then(res => { console.log(res.status) });
     },
 }
 </script>
