@@ -564,8 +564,50 @@
                 <div class="feturedHeadBottom">Shop for items based on what we featured in this week</div>
             </a>
         </div>
-        <div class="row" id="catalog"></div>
-        
+        <div class="row" id="catalog">
+            <div class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 feturedItems">
+                <div class="feturedItem" v-for="item in catalogItems">
+                    <div class="feturedImgWrap">
+                        <div class="feturedBuy">
+                            <button 
+                                class="add" 
+                                data-name = "item.productName" 
+                                data-price = "item.productPrice" 
+                                data-img = "item.productImg" 
+                                data-id = "item.productId"
+                            >
+                                <div 
+                                    class="add" 
+                                    data-name = "item.productName" 
+                                    data-price = "item.productPrice" 
+                                    data-img = "item.productImg" 
+                                    data-id = "item.productId"
+                                >
+                                <i 
+                                    class="add fas fa-shopping-cart" 
+                                    data-name = "item.productName" 
+                                    data-price = "item.productPrice" 
+                                    data-img = "item.productImg" 
+                                    data-id = "item.productId"
+                                ></i>Add to Cart</div>
+                            </button>
+                        </div>
+                        <img 
+                            class="feturedProduct" 
+                            :src= "item.productImg"
+                            alt="product1"
+                        >
+                    </div>
+                    <div 
+                        class="feturedBuySm d-flex flex-column justify-content-around align-items-center align-items-md-start"
+                    >
+                        <div class="feturedItemName">{{ item.productName }}</div>
+                        <div class="feturedItemPrice">{{ item.productPrice }}</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container px-0 d-flex justify-content-around">
             <button type="button" class="btn btn-outline-secondary feturedButton">
                 Browse All Product<i class="fas fa-long-arrow-alt-right"></i>
@@ -798,5 +840,7 @@
         </div>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="../src/components/js/vue.js"></script>
 </body>
 </html>

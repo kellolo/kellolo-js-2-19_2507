@@ -68,7 +68,8 @@ export let appCatalog = new Vue({
         }
     },
     mounted() {
-        this.get(this.catalogUrl).then(items => {
+        this.get(this.catalogUrl)
+            .then(items => {
             items.map(item => item.quantity = 1)
             this.catalogItems = items;
             this.catalogItemsFiltered = items;
