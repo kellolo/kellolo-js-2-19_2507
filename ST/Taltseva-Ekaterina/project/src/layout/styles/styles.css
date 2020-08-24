@@ -1,11 +1,11 @@
-/*@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-@import url(styles/footer.css);*/
-/*@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"); */
 @media (max-width: 575.98px) {
   .logo {
     margin: auto; } }
@@ -29,6 +29,7 @@
 @media (max-width: 350.98px) {
   .headerAccountAndCart {
     flex: none; } }
+
 
 .dropdown .btn-lg {
   position: relative;
@@ -230,17 +231,37 @@
       border-bottom: 3px solid #f16d7f;
       padding-bottom: calc(20px - 3px); }
 
+
+.label_cart_checkbox {
+    /*outline: 1px solid red;*/
+    width: 39px;
+    height: 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#cart_checkbox {
+    position: absolute;
+    visibility: hidden;
+    left: -99999999px;
+}
+
+#cart_checkbox:checked ~ div {
+    display: block;
+    z-index: 2;
+}
+
+
 .headerCart {
   position: relative; }
-  .headerCart a {
-    color: #222222; }
-    .headerCart a:hover {
-      text-decoration: none; }
+  /*.headerCart:hover .headerCartWrap {
+    display: block;
+    z-index: 2; } */
   .headerCart .headerCartWrap {
     position: absolute;
     width: 260px;
-    left: -40px;
-    z-index: 10; }
+    left: -40px; }
     @media (max-width: 650px) {
       .headerCart .headerCartWrap {
         left: -120px; } }
@@ -251,25 +272,8 @@
       padding: 1rem 1rem;
       border: 1px solid rgba(0, 0, 0, 0.15);
       border-radius: 5px; }
-      .headerCart .headerCartWrap .headerCartWrapInAll .mini-prod-remove {
-        border: none;
-        border-radius: 20px;
-        color: #fff;
-        font-weight: 700;
-        padding: 0px 7px 1px 7px; }
       .headerCart .headerCartWrap .headerCartWrapInAll .headerCartWrapIn {
         margin-bottom: 1rem; }
-        .headerCart .headerCartWrap .headerCartWrapInAll .headerCartWrapIn .mini-prod-img {
-          width: 70px;
-          height: 85px;
-          overflow: hidden;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-right: 10px; }
-          .headerCart .headerCartWrap .headerCartWrapInAll .headerCartWrapIn .mini-prod-img img {
-            height: 100%;
-            width: auto; }
       .headerCart .headerCartWrap .headerCartWrapInAll div {
         justify-content: space-between;
         align-items: center; }
@@ -316,8 +320,6 @@
         font-size: 16px;
         font-weight: 700;
         text-transform: uppercase; }
-  .headerCart .headerCartWrapHidden {
-    display: none; }
 
 .productsButtonIndex {
   width: -webkit-fill-available;
@@ -332,7 +334,7 @@
 
 /*-------------------------------SUBSCRIBE ST-----------------------------*/
 .subscribeBg {
-  /*background: url("https://github.com/EkaterinaTaltseva/shop-img/blob/master/SubscribbeBG.jpg?raw=true") no-repeat center center, #ccc;*/
+  /* background: url(../../assets/imgs/SubscribbeBG.jpg) no-repeat center center, #ccc; */
   background-blend-mode: overlay;
   background-size: cover;
   margin-top: 3rem; }
@@ -441,6 +443,77 @@
     border-left: none !important; } }
 
 /*-------------------------------SUBSCRIBE END-----------------------------*/
+/*-------------------------------FOOTER ST-----------------------------*/
+.footerBrandText {
+  color: #898989;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px; }
+  @media (max-width: 768px) {
+    .footerBrandText {
+      font-size: 16px; } }
+
+@media (max-width: 575px) {
+  .footerColumn {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; } }
+.footerColumn h2 {
+  margin-bottom: 2rem;
+  font-size: 18px;
+  font-weight: 700;
+  color: #f16d7f; }
+.footerColumn a {
+  display: block;
+  color: #898989;
+  font-size: 16px;
+  text-decoration: none; }
+  .footerColumn a:first-child {
+    padding-top: 1rem; }
+  @media (max-width: 768px) {
+    .footerColumn a {
+      font-size: 18px; } }
+  @media (max-width: 470px) {
+    .footerColumn a:first-child {
+      padding-top: 1rem; } }
+  .footerColumn a:not(:last-child) {
+    margin-bottom: 1.2rem; }
+  .footerColumn a:hover {
+    color: #f16d7f; }
+
+.bottomNavXS h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #f16d7f; }
+
+/*-------------------------------FOOTER END-----------------------------*/
+.BgCopyrights {
+  background-color: #e6e6e6; }
+
+.copyrights div {
+  color: #7a7a7a;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 42px; }
+.copyrights a {
+  margin-left: 0.5rem;
+  padding: 8px 12px;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+  color: #b2b2b2;
+  cursor: pointer; }
+  @media (max-width: 575px) {
+    .copyrights a {
+      font-size: 25px;
+      justify-content: space-between; } }
+  .copyrights a:first-child {
+    margin-left: 0; }
+  .copyrights a:hover {
+    background-color: #f16d7f;
+    color: #ffffff; }
+
 .topBanner {
   height: 610px;
   background: #e8e8e8; }
@@ -451,7 +524,7 @@
 .topBannerContent {
   display: flex;
   height: 610px;
- /* background: url("https://github.com/EkaterinaTaltseva/shop-img/blob/master/topHeaderBack.png?raw=true") no-repeat;*/
+  /* background: url("../../assets/imgs/topHeaderBack.png") no-repeat; */
   background-size: 550px;
   background-position: 93% 0%;
   align-items: center; }
@@ -614,7 +687,7 @@
 /*-------------------------------FETURED END-----------------------------*/
 /*-------------------------------OFFER FOR WOMEN ST-----------------------------*/
 .offerWomenLeft {
-/*  background: url("https://github.com/EkaterinaTaltseva/shop-img/blob/master/offerForWomen.jpg?raw=true");*/
+  /* background: url("../../assets/imgs/offerForWomen.jpg"); */
   flex-shrink: 0;
   background-size: cover; }
   @media (max-width: 992px) {
@@ -694,9 +767,6 @@
         padding: 3rem 0 0 0; } }
 
 /*-------------------------------OFFER FOR WOMEN END-----------------------------*/
-main {
-  z-index: 1; }
-
 details div a {
   text-decoration: none;
   color: #6f6e6e;
@@ -793,7 +863,7 @@ details[open] summary .fa-caret-up {
       outline: none;
       border: 1px solid #ebebeb;
       -webkit-appearance: none;
-      /*background: url("../../assets/imgs/caret.jpg") no-repeat;*/
+      /* background: url("../../assets/imgs/caret.jpg") no-repeat; */
       background-position: 90% 50%;
       padding-left: 0.8rem;
       padding-right: 2rem;
@@ -1046,7 +1116,9 @@ details[open] summary .fa-caret-up {
   height: 30px;
   border: 1px solid #eaeaea;
   outline: none;
-  text-indent: 25px; }
+  text-indent: 25px;
+}
+
 
 .productDetailsShipping {
   color: #656565;
@@ -1105,7 +1177,7 @@ details[open] summary .fa-caret-up {
     outline: none;
     border: 1px solid #eaeaea;
     -webkit-appearance: none;
-    /*background: url("../../assets/imgs/caret.jpg") no-repeat;*/
+    /* background: url("../../assets/imgs/caret.jpg") no-repeat; */
     background-position: 97% 50%;
     width: 355px;
     height: 45px;
@@ -1366,9 +1438,6 @@ details[open] summary .fa-caret-up {
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase; }
-
-.kartProdBtn2Hidden {
-  display: none !important; }
 
 body {
   margin: 0;
