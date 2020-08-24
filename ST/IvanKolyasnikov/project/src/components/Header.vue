@@ -35,11 +35,13 @@
                 <button><i class="fas fa-search"></i></button>
             </div>
             <div class="rTop d-none d-sm-flex col-lg-3 ml-lg-auto justify-content-center justify-content-lg-end p-0 align-items-center">
-                <div class="basket__block" id="basket" >
+                <div class="basket__block" id="basket">
                     <i class="fa fa-shopping-cart my__cart" aria-hidden="true" @click="showBasket = !showBasket"></i>
 
                     <!-- BASKET -->
-                    <basket v-show="showBasket"/>
+                    <transition name="basket-show">
+                        <basket v-show="showBasket" ref="bask"/>
+                    </transition>
 
                 </div>
                 <div class="btn-group">
@@ -61,7 +63,7 @@
 
     export default {
         name: "Header",
-        components:{
+        components: {
             Basket,
         },
         data() {
@@ -69,12 +71,24 @@
                 showBasket: false,
             }
         },
-        mounted() {
-
-        }
     }
 </script>
 
-<style scoped>
+<style>
+    .basket-show{
+        position: absolute;
+        top: 63px;
+    }
+    .basket-show-enter-active {
+        transition: all .3s ease;
+    }
 
+    .basket-show-leave-active {
+        transition: all .3s cubic-bezier(0.7, 0.5, 0.8, 1.0);
+    }
+
+    .basket-show-enter, .basket-show-leave-to {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
 </style>

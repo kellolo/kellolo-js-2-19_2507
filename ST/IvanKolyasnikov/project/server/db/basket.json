@@ -1,0 +1,20 @@
+{
+  "amount": 122,
+  "countGoods": 2,
+  "contents": [
+    {
+      "id": 1,
+      "name": "blouse PEOPLE",
+      "price": 77,
+      "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man001.jpeg",
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "name": "bat man",
+      "price": 45,
+      "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man002.jpeg",
+      "quantity": 1
+    }
+  ]
+}
