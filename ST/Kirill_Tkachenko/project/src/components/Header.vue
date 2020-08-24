@@ -60,7 +60,7 @@
                                             col-sm-4 offset-sm-4 pt-sm-3 justify-content-sm-end ">
 
                     <div class="headerCart pr-4">
-                        <button @click="basketShown = !basketShown">Cart</button>
+                        <a href="#" @click.stop.prevent="basketShown = !basketShown"><img src="../assets/imgs/cart.png" alt="headerCart"></a>
                         <basket v-show="basketShown"/>
                     </div>
 

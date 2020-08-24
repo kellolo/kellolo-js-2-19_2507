@@ -25,9 +25,12 @@ module.exports = {
             {
                 test: /\.(png|jpe?g|gif)$/i,
                 use: [
-                  {
-                    loader: 'file-loader',
-                  },
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            esModule: false,
+                        }
+                    },
                 ],
             }
         ]
@@ -46,5 +49,17 @@ module.exports = {
             ]
         }),
         new VueLoaderPlugin()
-    ]
+    ],
+    devServer: {
+        port: 8080,
+        open: false,
+        proxy: {
+            '/api': {
+                target: 'http://localhost:3000',
+                pathRewrite: { '^/api': '' },
+                secure: false,
+                changeOrigin: true
+            }
+        }
+    }
 }

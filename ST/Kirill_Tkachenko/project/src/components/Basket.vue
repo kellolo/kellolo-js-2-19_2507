@@ -11,7 +11,7 @@
                 />
                 <div class="headerCartWrapTotalPrice">
                     <div>total&nbsp;</div>
-                    <div>${{ decimal(total) }}</div>
+                    <div>${{ total }}</div>
                 </div>
 
                 <button type="button" class="productsButtonIndex">Checkout</button>
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { get, decimal } from "../utils/index.js";
+import { get } from "../utils/index.js";
 import Item from "./Item.vue";
 
 export default {
@@ -34,17 +34,18 @@ export default {
         return {
             url: "https://raw.githubusercontent.com/Cerzon/assets/master/JSON/basket.json",
             items: [],
-            total: 0,
+            // total: 0,
         }
     },
-    methods: {
-        decimal,
+    computed: {
+        total() {
+            let result = 0;
+            this.items.forEach(item => { result += item.price * item.amount });
+            return result.toFixed(2);
+        }
     },
     mounted() {
-        get(this.url).then(data => {
-            this.items = data.contents;
-            this.total = data.total;
-        });
+        get(this.url).then(data => { this.items = data.contents });
     },
 }
 </script>
