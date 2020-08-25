@@ -1,0 +1,16 @@
+[
+    {
+        "id":1,
+        "name":"BANANA PEOPLE T-SHIRT",
+        "price":21.00,
+        "img":"https://raw.githubusercontent.com/Cerzon/assets/master/imgs/Product2.jpg",
+        "amount":2
+    },
+    {
+        "id":8,
+        "name":"PAPAYA PEOPLE T-SHIRT",
+        "price":19.00,
+        "img":"https://raw.githubusercontent.com/Cerzon/assets/master/imgs/Product9.jpg",
+        "amount":1
+    }
+]
