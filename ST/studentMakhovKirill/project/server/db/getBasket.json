@@ -1,0 +1,20 @@
+{
+	"totalAmount": 2,
+	"sum": 37,
+	"content": [
+		{
+			"name": "MANGO PEOPLE T-SHIRT",
+			"price": 12.00,
+			"img": "https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product1.jpg",
+			"id": 1,
+			"amount": 1
+		},
+		{
+			"name": "WATERMELON COOL BLOUSE",
+			"price": 25.00,
+			"img": "https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product2.jpg",
+			"id": 2,
+			"amount": 1
+		}
+	]
+}
