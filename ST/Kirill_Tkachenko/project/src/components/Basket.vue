@@ -49,31 +49,56 @@ export default {
             let find = this.items.find(el => el.id == item.id);
 
             if (!find) {
-                this.items.push(Object.assign({}, item, {amount: 1}));
+                find = Object.assign({}, item, {amount: 1});
+                fetch(this.url, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(find)
+                }).then(res => {
+                    if (res.status == 200) {
+                        this.items.push(find);
+                    }
+                });
             } else {
-                find.amount++;
+                fetch(this.url, {
+                    method: "PUT",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(Object.assign({}, find, {amount: find.amount + 1}))
+                }).then(res => {
+                    if (res.status == 200) {
+                        find.amount++;
+                    }
+                });
             }
         },
         remove(item) {
             let find = this.items.find(el => el.id == item.id);
 
             if (find.amount > 1) {
-                find.amount--;
+                fetch(this.url, {
+                    method: "PUT",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(Object.assign({}, find, {amount: find.amount - 1}))
+                }).then(res => {
+                    if (res.status == 200) {
+                        find.amount--;
+                    }
+                });
             } else {
-                this.items.splice(this.items.indexOf(find), 1);
+                fetch(this.url, {
+                    method: "DELETE",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(find)
+                }).then(res => {
+                    if (res.status == 200) {
+                        this.items.splice(this.items.indexOf(find), 1);
+                    }
+                });
             }
         },
     },
     mounted() {
         get(this.url).then(data => { this.items = data });
-    },
-    updated() {
-        fetch(this.url, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(this.items)
-        })
-        .then(res => { console.log(res.status) });
     },
 }
 </script>
