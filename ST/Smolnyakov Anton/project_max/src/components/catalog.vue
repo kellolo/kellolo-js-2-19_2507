@@ -16,9 +16,10 @@
         data() {
             return {
                 url: "https://raw.githubusercontent.com/Smolnyakov/static/master/online-store-api/JSON/catalog.json",
-                items: []
+                items: [],
             }
         },
+
         mounted() {
             get(this.url)
                 .then(data => { this.items = data});
