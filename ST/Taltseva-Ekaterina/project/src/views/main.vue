@@ -122,11 +122,11 @@ export default {
     },
     methods: {
         addItem(item) {
-            this.$refs.head.$refs.bask.add(item);
+           this.$refs.head.$refs.bask.add(item);
         }
     },
     mounted() {
-       // console.log(this.$refs.head.$refs.bask )
+
     }
 }
 </script>
