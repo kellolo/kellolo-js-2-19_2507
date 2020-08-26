@@ -2,10 +2,8 @@
     <div>
         <div class="container">
 
-
             <!-- HEADER -->
             <header class="header center">
-
             <headerLeft/>
                 
                 <!-- BASKET -->
