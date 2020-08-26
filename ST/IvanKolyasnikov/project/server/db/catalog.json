@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "blouse PEOPLE",
+    "price": 77,
+    "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man001.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "bat man",
+    "price": 45,
+    "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man002.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "black crocodile",
+    "price": 33,
+    "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man003.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "blood monkey",
+    "price": 299,
+    "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man004.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "tiger's high",
+    "price": 23,
+    "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man009.jpeg"
+  },
+  {
+    "id": 6,
+    "name": "monkey with a grenade",
+    "price": 88,
+    "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/woman005.png"
+  },
+  {
+    "id": 7,
+    "name": "green Panda",
+    "price": 125,
+    "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/woman006.jpeg"
+  },
+  {
+    "id": 8,
+    "name": "white swan",
+    "price": 164,
+    "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/woman007.jpeg"
+  },
+  {
+    "id": 9,
+    "name": "blouse",
+    "price": 120,
+    "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/woman008.jpeg"
+  }
+]

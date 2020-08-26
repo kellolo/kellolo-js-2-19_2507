@@ -3,16 +3,20 @@
         <template v-if="type === 'catalog'">
             <div class="prodCard card col-12 col-md-6 col-lg-4 border-0 mx-0 px-0 mb-5">
                 <div class="psevProdCard mx-0 px-0">
-                    <button class="d-flex justify-content-around" @click="add(item)">
+                    <button class="d-flex justify-content-around"
+                            @click="$parent.$emit('add', item)">
                         <i class="fas fa-cart-plus"></i>Add to Cart
                     </button>
                 </div>
                 <img :src="item.img" class="card-img-top" :alt="item.name">
                 <div class="psevProdCardBody card-body d-flex flex-column align-content-start pb-0 px-0">
+                    <router-link :to="{name: 'SinglePage'}">
                     <a href="#" class="card-text px-3">{{ item.name }}</a>
+                    </router-link>
                     <div class="d-flex justify-content-between align-items-center">
                         <p class="d-flex justify-content-between px-3">${{ item.price }}</p>
-                        <button class="d-flex d-md-none justify-content-around" @click="add(item)">
+                        <button class="d-flex d-md-none justify-content-around"
+                                @click="$parent.$emit('add', item)">
                             Add to Cart
                             <i class="fas fa-cart-plus pl-2"></i>
                         </button>
@@ -24,7 +28,9 @@
         <template v-if="type === 'basket'">
             <div>
                 <div class="d-flex px-3 justify-content-between align-items-center py-1">
-                    <a href="#"><img :src="item.img" :alt="item.name"></a>
+                    <router-link :to="{name: 'SinglePage'}">
+                        <a href="#"><img :src="item.img" :alt="item.name"></a>
+                    </router-link>
                     <div class="d-flex flex-column justify-content-center align-items-center product__text">
                         <h3 class="mb-0">{{item.name}}</h3>
                         <div class="stars py-0">
@@ -50,12 +56,7 @@
 </template>
 
 <script>
-
     export default {
-        components: {
-
-        },
-        // props: ['type'],
         props: {
             type: {
                 type: String,

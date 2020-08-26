@@ -13,7 +13,8 @@ header {
   line-height: 4rem;
   text-decoration: none;
   color: $mainTextColor;
-  &:hover{
+
+  &:hover {
     color: $mainTextColor;
     text-decoration: none;
   }
@@ -70,12 +71,14 @@ header {
   color: #c0c0c0;
   transition-duration: .5s;
   border: none;
-  background-color: #FFFFFF!important;
+  background-color: #FFFFFF !important;
+
   &:hover {
     color: $mainTextColor !important;
     transform: scale(1.2, 1.2);
     cursor: pointer;
   }
+
   &:focus {
     outline: none;
   }
@@ -103,8 +106,9 @@ header {
 
 
 .rTop {
-  .basket__block{
+  .basket__block {
     position: relative;
+
     .my__cart {
       color: $mainThemeColor;
       font-size: 1.7rem;
@@ -118,80 +122,97 @@ header {
     }
 
     .basket__Product {
+      a {
+        text-decoration: none;
+      }
       position: absolute;
       width: 262px !important;
       background-color: #FFFFFF;
       border: 1px solid $mainTextColorP;
-      z-index: 2;
+      z-index: 50;
       left: -66px;
       top: 63px;
-    }
+      max-height: 400px;
+      overflow: auto;
 
-    .basket-enter, .basket-leave-to {
-      top: 63px;
-      transform: perspective(500px) rotateX(-90deg);
-      opacity: 0;
-      transition: .5s ;
-    }
+      &::-webkit-scrollbar {
+        width: 8px;
+        background-color: #F5F5F5;
+      }
 
+      &::-webkit-scrollbar-thumb {
+        background-color: #6D6027;
+        background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%,
+                transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+                transparent 75%, transparent)
+      }
 
-    .basket-enter-to, .basket-leave {
-        top: 63px;
-        transform: rotate3d(0, 0,0, 0deg);
-        opacity: 1;
-      transition: .3s ;
+      &::-webkit-scrollbar-thumb:active {
+        background: $mainThemeColor;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: $mainTextColorP;
+      }
+
+      &::-webkit-scrollbar-corner {
+        background: transparent;
+      }
     }
 
     img {
-        width: 72px;
-        height: 85px;
-        object-position: center center;
-        object-fit: cover;
+      width: 72px;
+      height: 85px;
+      object-position: center center;
+      object-fit: cover;
+    }
+
+    .product__text {
+
+      h3 {
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $mainTextColor;
       }
-      .product__text {
 
-        h3 {
-          text-align: center;
-          font-size: 12px;
-          line-height: 1.2;
-          font-weight: 700;
-          text-transform: uppercase;
-          color: $mainTextColor;
-        }
-
-        .stars {
-          i {
-            font-size: 12px;
-            line-height: 1.2;
-            font-weight: 400;
-            text-transform: uppercase;
-            color: #e4af48;
-          }
-        }
-
-        p {
+      .stars {
+        i {
           font-size: 12px;
           line-height: 1.2;
           font-weight: 400;
           text-transform: uppercase;
-          color: $mainThemeColor;
-          span{
-            font-size: inherit;
-            line-height: inherit;
-            font-weight: inherit;
-            text-transform: inherit;
-            color: inherit;
-          }
+          color: #e4af48;
+        }
+      }
+
+      p {
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $mainThemeColor;
+
+        span {
+          font-size: inherit;
+          line-height: inherit;
+          font-weight: inherit;
+          text-transform: inherit;
+          color: inherit;
         }
       }
     }
+  }
 
   .btn-group {
     button {
       background-color: #ef6375;
     }
-    .dropdown-menu{
-      top:35%!important;
+
+    .dropdown-menu {
+      top: 35% !important;
     }
   }
 }
@@ -203,12 +224,12 @@ header {
 
 .topNav {
 
-  .topMenu > li {
+  .topMenu li {
     display: inline-block;
     position: relative;
   }
 
-  .menu__top__link{
+  .menu__top__link {
     display: flex;
     align-items: center;
     height: 2.5rem;
@@ -228,7 +249,8 @@ header {
       border-bottom: 4px solid $mainThemeColor;
     }
   }
-  .submenu{
+
+  .submenu {
     width: 846px;
     height: 310px;
     background-color: #ffffff;
@@ -243,7 +265,7 @@ header {
     transform-origin: 0 0;
     transition: .2s ease-in-out;
 
-    h3{
+    h3 {
       font-size: 14px;
       font-weight: 700;
       text-transform: uppercase;
@@ -251,7 +273,8 @@ header {
       color: #232323;
 
     }
-    .subMenuLink{
+
+    .subMenuLink {
       text-transform: none;
       text-decoration: none;
       font-size: 14px;
@@ -260,7 +283,8 @@ header {
       letter-spacing: 0.025em;
       color: #646464;
       transition-duration: .7s;
-      &:hover{
+
+      &:hover {
         text-decoration: none;
         color: $mainThemeColor;
         text-shadow: 2px 4px 6px rgba(150, 150, 150, 1);
@@ -268,10 +292,7 @@ header {
     }
 
   }
-
   .topMenu li a:hover { color: #E6855F; }
-
-
 
 }
 
