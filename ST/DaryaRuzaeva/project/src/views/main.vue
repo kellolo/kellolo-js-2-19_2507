@@ -3,20 +3,20 @@
         <div class="container">
 
 
-            <!------ HEADER ------>
+            <!-- HEADER -->
             <header class="header center">
 
             <headerLeft/>
                 
-                <!--- BASKET --->
+                <!-- BASKET -->
                 <div class="drop_cart" >
                     <button class="drop_cart__img"  @click="showBasket = !showBasket" >
                         <img src="src/assets/img/cart.png" alt="headerCart">
                     </button>
-                    <!---  BASKETHERE --->
+                    <!--  BASKETHERE -->
                     <basket v-show="showBasket" ref="bask"/>
                 </div>
-                <!--- BASKET --->
+                <!-- BASKET -->
                 
                 <div class="button_browse">
                     <details class="my_account">
@@ -24,15 +24,15 @@
                     </details>
                 </div>
             </header>
-            <!------ HEADER ------>
+            <!-- HEADER -->
 
 
-            <!------ NAV ------>
+            <!-- NAV -->
             <navigation/>
-            <!------ NAV ------>
+            <!-- NAV -->
 
 
-            <!------ MAIN ------>
+            <!-- MAIN -->
             <div class="main">
                 <div class="promo center">
                     <div class="promo__content">
@@ -92,7 +92,7 @@
                     <p class="product__h3">Fetured Items</p>
                     <p class="product__h4">Shop for items based on&nbsp;what we&nbsp;featured in&nbsp;this week</p>
                     
-                    <!---------------- CATALOGHERE -------------->
+                    <!-- CATALOGHERE -->
                     <catalog @add="addItem"/>
                     <div class="button_browse">
                         <a  href="../public/product.html" class="browse_product">Browse All Product
@@ -181,16 +181,12 @@
                 </div> 
 
             </div>
-            <!------ MAIN ------>
+            <!-- MAIN -->
 
-
-            <!------ FOOTER ------>
+            <!-- FOOTER -->
+            <footerDown/> 
+            <!-- FOOTER -->
             
-            <footerDown/>
-            
-            <!------ FOOTER ------>
-
-
         </div>  
     </div> 
 </template>
