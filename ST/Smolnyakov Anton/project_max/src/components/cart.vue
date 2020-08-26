@@ -27,7 +27,8 @@
         components: {item},
         data() {
             return {
-                url: "https://raw.githubusercontent.com/Smolnyakov/static/master/online-store-api/JSON/cart.json",
+                // url: "https://raw.githubusercontent.com/Smolnyakov/static/master/online-store-api/JSON/cart.json",
+                url: "/api/cart",
                 items: [],
                 totalSum: null,
             }

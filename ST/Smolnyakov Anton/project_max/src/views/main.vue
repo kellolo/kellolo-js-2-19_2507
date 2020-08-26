@@ -24,7 +24,7 @@
                         <catalog @add="addItem"/>
 
                         <!--CATALOG PAGINATION HERE-->
-                        <catalogPagination />
+<!--                        <catalogPagination />-->
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
             'details_': details,
             'catalogFeaturesTop': catalogFeaturesTop,
             'catalog': catalog,
-            'catalogPagination': catalogPagination,
+            // 'catalogPagination': catalogPagination,
             'productsFeatures': productsFeatures,
             'subscribe': subscribe,
             'footerB': footer,
