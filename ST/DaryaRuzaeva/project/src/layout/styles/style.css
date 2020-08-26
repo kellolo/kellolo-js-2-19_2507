@@ -87,7 +87,7 @@ header {
   float: right;
   margin-top: 10px;
 }
-footer {
+.footer {
   height: 79px;
   background-color: #e6e6e6;
   display: flex;
@@ -1966,21 +1966,10 @@ td {
 .social {
   margin-left: 690px;
   margin-top: 24px;
-  display: block;
+  display: flex;
   transition: transform 0.5s;
 }
-.social:hover {
-  transform: scale(1.07);
-}
-.media {
-  margin-top: 24px;
-  display: block;
-  margin-left: 8px;
-  transition: transform 0.5s;
-}
-.media:hover {
-  transform: scale(1.07);
-}
+
 .media_icon {
   height: 32px;
   width: 32px;
@@ -1989,13 +1978,14 @@ td {
   color: #b2b2b2;
   text-align: center;
   letter-spacing: 0.03em;
-  display: block;
-  padding-top: 8px;
+  margin-right: 5px;
+  padding-top: 5px;
 }
 .media_icon:hover {
   background-color: #f16d7f;
   color: #f7f7f8;
 }
+
 .quote_line {
   height: 4px;
   width: 38px;
