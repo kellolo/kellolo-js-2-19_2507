@@ -1,0 +1,56 @@
+[
+  {
+    "id":0,
+    "name":"Kyle T-SHIRT",
+    "price":"50.00",
+    "img":"https://raw.githubusercontent.com/Smolnyakov/static/master/online-store-api/imgs/Html-css-js%20online%20shop/Product1.jpg"
+  },
+  {
+    "id":1,
+    "name":"Sten T-SHIRT",
+    "price":"60.00",
+    "img":"https://raw.githubusercontent.com/Smolnyakov/static/master/online-store-api/imgs/Html-css-js%20online%20shop/Product2.jpg"
+  },
+  {
+    "id":2,
+    "name":"Eric T-SHIRT",
+    "price":"70.00",
+    "img":"https://raw.githubusercontent.com/Smolnyakov/static/master/online-store-api/imgs/Html-css-js%20online%20shop/Product3.jpg"
+  },
+  {
+    "id":3,
+    "name":"Kenny T-SHIRT",
+    "price":"01.00",
+    "img":"https://raw.githubusercontent.com/Smolnyakov/static/master/online-store-api/imgs/Html-css-js%20online%20shop/Product4.jpg"
+  },
+  {
+    "id":4,
+    "name":"Butters T-SHIRT",
+    "price":"50.00",
+    "img":"https://raw.githubusercontent.com/Smolnyakov/static/master/online-store-api/imgs/Html-css-js%20online%20shop/Product5.jpg"
+  },
+  {
+    "id":5,
+    "name":"Craig T-SHIRT",
+    "price":"60.00",
+    "img":"https://raw.githubusercontent.com/Smolnyakov/static/master/online-store-api/imgs/Html-css-js%20online%20shop/Product6.jpg"
+  },
+  {
+    "id":6,
+    "name":"Tweek T-SHIRT",
+    "price":"70.00",
+    "img":"https://raw.githubusercontent.com/Smolnyakov/static/master/online-store-api/imgs/Html-css-js%20online%20shop/Product7.jpg"
+  },
+  {
+    "id":7,
+    "name":"Mister Slave T-SHIRT",
+    "price":"80.00",
+    "img":"https://raw.githubusercontent.com/Smolnyakov/static/master/online-store-api/imgs/Html-css-js%20online%20shop/Product8.jpg"
+  },
+  {
+    "id":8,
+    "name":"Towelie T-SHIRT",
+    "price":"70.00",
+    "img":"https://raw.githubusercontent.com/Smolnyakov/static/master/online-store-api/imgs/Html-css-js%20online%20shop/Product9.jpg"
+  }
+]
