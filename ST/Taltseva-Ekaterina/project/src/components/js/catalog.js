@@ -8,26 +8,29 @@ function initCatalog(qty) {
     let imgs = [];
     let prices = [];
 
-    for (let i = 0; i <= qty - 1; i++) {
+    for (let i = 1; i <= qty - 1; i++) {
         ids.push(i);
         names.push("MANGO PEOPLE T-SHIRT");
-        prices.push(`1${i}.00`);
-        imgs.push(`https://raw.githubusercontent.com/Cerzon/assets/master/imgs/Product${i + 1}.jpg`);
+        prices.push("1" + String(i) + ".00");
+        // imgs.push("https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem1.jpg" + String(i) + ".jpg");
+        imgs.push(`https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem${i}.jpg`);
     } 
 
     return names.map((names, index) => createItem(ids[index], names, prices[index], imgs[index]));
 };
 
-export default class Catalog {
+export default {
+    items: [],
+    container: null,
+    basket: basket,
 
-    constructor(qty, basket) {
-        this.container = document.querySelector("#catalog");
+
+    init(qty) {
         this.items = initCatalog(qty);
-        this.basket = basket;
-        this._render();
+        this.container = document.querySelector("#catalog");
+        this._render(qty);
         this._handleActions();
-    }
-
+    },
     _handleActions() {
         this.container.addEventListener('click', evt => {
             if (evt.target.classList.contains("add")) {
@@ -41,9 +44,9 @@ export default class Catalog {
                 this.basket.add(item);
             }
         })
-    }
-
+    },
     _render() {
+
         let str = "";
         this.items.forEach(item => {
             str += `

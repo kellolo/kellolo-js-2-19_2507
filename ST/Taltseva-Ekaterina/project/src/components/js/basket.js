@@ -1,21 +1,20 @@
-export default class Basket {
+export default {
+    items: [],
+    container: null,
+    total: 0,
 
-    constructor() {
-        this.container = document.getElementById("basket");
-        this.items = [];
-        this.total = 0;
+    init() {
+        this.container = document.querySelector("#basket");
         this._render();
         this._handleActions();
-    }
-
+    },
     _handleActions() {
         this.container.addEventListener('click', evt => {
             if (evt.target.classList.contains('remove')) {
                 this.remove(evt.target.dataset.id);
             }
         })
-    }
-
+    },
     _render() {
         let str = "";
         this.items.forEach(item => {
@@ -50,8 +49,7 @@ export default class Basket {
                         <button type="button" class="productsButtonIndex">Checkout</button>
                         <button type="button" class="productsButtonIndex">Go to cart</button>`;
 
-    }
-
+    },
     add(item) {
         let find = this.items.find(el => el.id == item.id);
 
@@ -63,8 +61,7 @@ export default class Basket {
             this.total = this.total + Number(find.price);            
         }
         this._render();
-    }
-
+    },
     remove(itemId) {
 
         let find = this.items.find(el => el.id == itemId);
@@ -79,3 +76,5 @@ export default class Basket {
         this._render();
     }
 }
+
+// basket.init();
