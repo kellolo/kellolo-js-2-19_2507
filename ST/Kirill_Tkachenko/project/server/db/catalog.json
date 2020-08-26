@@ -1,0 +1,56 @@
+[
+    {
+        "id":0,
+        "name":"MANGO PEOPLE T-SHIRT",
+        "price":16.00,
+        "img":"https://raw.githubusercontent.com/Cerzon/assets/master/imgs/Product1.jpg"
+    },
+    {
+        "id":1,
+        "name":"BANANA PEOPLE T-SHIRT",
+        "price":21.00,
+        "img":"https://raw.githubusercontent.com/Cerzon/assets/master/imgs/Product2.jpg"
+    },
+    {
+        "id":2,
+        "name":"PINEAPPLE PEOPLE T-SHIRT",
+        "price":32.00,
+        "img":"https://raw.githubusercontent.com/Cerzon/assets/master/imgs/Product3.jpg"
+    },
+    {
+        "id":3,
+        "name":"MELLON PEOPLE T-SHIRT",
+        "price":13.00,
+        "img":"https://raw.githubusercontent.com/Cerzon/assets/master/imgs/Product4.jpg"
+    },
+    {
+        "id":4,
+        "name":"PUMPKIN PEOPLE T-SHIRT",
+        "price":17.00,
+        "img":"https://raw.githubusercontent.com/Cerzon/assets/master/imgs/Product5.jpg"
+    },
+    {
+        "id":5,
+        "name":"STRAWBERRY PEOPLE T-SHIRT",
+        "price":25.00,
+        "img":"https://raw.githubusercontent.com/Cerzon/assets/master/imgs/Product6.jpg"
+    },
+    {
+        "id":6,
+        "name":"CUCUMBER PEOPLE T-SHIRT",
+        "price":20.00,
+        "img":"https://raw.githubusercontent.com/Cerzon/assets/master/imgs/Product7.jpg"
+    },
+    {
+        "id":7,
+        "name":"GRAPE PEOPLE T-SHIRT",
+        "price":23.00,
+        "img":"https://raw.githubusercontent.com/Cerzon/assets/master/imgs/Product8.jpg"
+    },
+    {
+        "id":8,
+        "name":"PAPAYA PEOPLE T-SHIRT",
+        "price":19.00,
+        "img":"https://raw.githubusercontent.com/Cerzon/assets/master/imgs/Product9.jpg"
+    }
+]

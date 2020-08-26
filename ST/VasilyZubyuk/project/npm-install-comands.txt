@@ -16,3 +16,10 @@ npm i bootstrap jquery popper.js
 //for liveserver
 npm i -D webpack-dev-server 
 в "package.json" в раздел "scripts" добавить скрипт: ""dev": "webpack-dev-server""
+
+//for Vue
+npm i vue
+npm i vue-loader vue-template-compiler -D
+
+//file-loader
+npm i file-loader
