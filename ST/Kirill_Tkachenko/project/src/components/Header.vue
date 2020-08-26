@@ -61,7 +61,7 @@
 
                     <div class="headerCart pr-4">
                         <a href="#" @click.stop.prevent="basketShown = !basketShown"><img src="../assets/imgs/cart.png" alt="headerCart"></a>
-                        <basket v-show="basketShown"/>
+                        <basket v-show="basketShown" ref="basket" />
                     </div>
 
                     <div class="dropdown">

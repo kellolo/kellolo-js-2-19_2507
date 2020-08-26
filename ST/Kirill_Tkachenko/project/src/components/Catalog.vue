@@ -19,7 +19,7 @@ export default {
     },
     data() {
         return {
-            url: "https://raw.githubusercontent.com/Cerzon/assets/master/JSON/catalog.json",
+            url: "/api/catalog",
             items: [],
         }
     },

@@ -4,7 +4,7 @@
             <div class="feturedItem">
                 <div class="feturedImgWrap">
                     <div class="feturedBuy">
-                        <button class="add">
+                        <button class="add" @click="$parent.$emit('add', item)">
                             <div class="add">
                                 <i class="add fas fa-shopping-cart"></i>
                                 Add to Cart
@@ -37,7 +37,7 @@
                     </div>
                 </div>
             </a>
-            <a href="#" class="remove">
+            <a href="#" class="remove" @click.stop.prevent="$emit('remove', item)">
                 <i class="fas fa-times-circle remove"></i>
             </a>
         </template>
