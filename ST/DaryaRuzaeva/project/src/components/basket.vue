@@ -8,6 +8,7 @@
                     type="basket"
                     :item="item"
                     :key="item.id"
+                    @remove="remove"
                 />
             </div>
             <div class="total_price">
@@ -30,13 +31,32 @@ export default {
     components: { item },
     data() {
         return {
-            url: 'https://raw.githubusercontent.com/RDarya/static/master/JSON/basket.json',
+            //url: 'https://raw.githubusercontent.com/RDarya/static/master/JSON/basket.json',
+            url: 'api/basket',
             items: []
         }
     },
     mounted() {
         this.$parent.parentGet(this.url)
         .then(d => { this.items = d.content })
+    },
+    methods: {
+        add(item) {
+            let find = this.items.find(el => el.id == item.id);
+            if (!find) {
+                this.items.push(Object.assign({}, item, {amount: 1}))
+            } else {
+                find.amount++
+            }
+        },
+        remove(item) {
+            let find = this.items.find(el => el.id == item.id);
+            if (find.amount > 1) {
+                find.amount--
+            } else {
+                this.items.splice(this.items.indexOf(find), 1);
+            }
+        }
     }
 }
 </script>
