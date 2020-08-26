@@ -1,74 +1,6 @@
 <template>
     <div>
-		<header class="header center">
-      <div class="header__left">
-        <a href="index.html" class="logo">
-          Bran
-          <span class="logo__span">d</span>
-        </a>
-        <form class="search">
-          <div class="searchBrowse">
-            Browse
-            <i class="fas fa-caret-down"></i>
-            <div class="searchBrowse__drop drop">
-              <div class="drop__flex">
-                <h3 class="drop__h3">Women</h3>
-                <ul class="drop__ul">
-                  <li>
-                    <a class="drop__a" href="#">Dresses</a>
-                  </li>
-                  <li>
-                    <a class="drop__a" href="#">Tops</a>
-                  </li>
-                  <li>
-                    <a class="drop__a" href="#">Sweaters/Knits</a>
-                  </li>
-                  <li>
-                    <a class="drop__a" href="#">Jackets/Coats</a>
-                  </li>
-                  <li>
-                    <a class="drop__a" href="#">Blazers</a>
-                  </li>
-                  <li>
-                    <a class="drop__a" href="#">Denim</a>
-                  </li>
-                  <li>
-                    <a class="drop__a" href="#">Leggings/Pants</a>
-                  </li>
-                  <li>
-                    <a class="drop__a" href="#">Skirts/Shorts</a>
-                  </li>
-                  <li>
-                    <a class="drop__a" href="#">Accessories</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <input name="search" type="text" placeholder="Search for Item..." />
-          <button>
-            <i class="fas fa-search"></i>
-          </button>
-        </form>
-      </div>
-      <div class="header__right">
-        <img
-          id="cart"
-          class="header__cart"
-          src="https://raw.githubusercontent.com/AnastasyaChe/static/master/cart.png"
-          alt="headerCart"
-          @click="showBasket = !showBasket"
-        />
-        
-        <div class="button">
-          My Account
-          <i class="fas fa-caret-down"></i>
-		  <div class="button__drop button__drop_drop">
-		  <basket v-show="showBasket" />
-		  </div>
-        </div>
-      </div>
-    </header>
+		<heading ref= "hd" />
     <input id="switcher" type="checkbox" />
     <label class="open" for="switcher">
       <i class="fas fa-bars"></i>
@@ -255,7 +187,7 @@
           <h2 class="fetured__items">Fetured Items</h2>
           <p class="fetured__text">Shop for items based on what we featured in this week</p>
         </div>
-        <catalog />
+        <catalog @add="addItem"/>
       </section>
     </main>
     <div class="allBrowse">
@@ -371,24 +303,20 @@
 <script>
 import catalog from "../components/catalog.vue";
 import basket from "../components/basket.vue";
+import heading from "../components/heading.vue";
 import company from "../components/company.vue";
 export default {
   components: {
-    basket,
-	catalog, 
+  basket,
+  catalog,
+  heading, 
 	company
   },
-
-  data() {
-    return {
-      showBasket: false,
+  methods: { 
+  addItem(item) {
+    this.$refs.hd.$refs.bask.add(item);
     }
-  },
-  methods: {
-	  parentGet(url) {
-		  return fetch(url).then(d => d.json())
-    }
-
   }
+
 }
 </script>

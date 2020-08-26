@@ -5,15 +5,20 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode development",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "api": "nodemon server"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^4.2.1",
+    "express": "^4.17.1",
+    "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
     "mini-css-extract-plugin": "^0.10.0",
+    "nodemon": "^2.0.4",
     "vue-loader": "^15.9.3",
     "vue-template-compiler": "^2.6.12",
     "webpack": "^4.44.1",
@@ -22,5 +27,10 @@
   },
   "dependencies": {
     "vue": "^2.6.12"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "*.json"
+    ]
   }
 }

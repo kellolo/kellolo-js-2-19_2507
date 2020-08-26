@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap);
 @-webkit-keyframes text-focus-in {
   0% {
     -webkit-filter: blur(12px);
@@ -205,7 +205,7 @@ body {
   font-size: 27px;
   color: #222222;
   font-weight: 300;
-  
+  padding-left: 67px;
   margin-right: 20px;
   padding-bottom: 17px;
   padding-top: 16px;
@@ -1493,4 +1493,3 @@ h2 {
     width: 560px;
   }
 }
-/*# sourceMappingURL=styles.css.map */
