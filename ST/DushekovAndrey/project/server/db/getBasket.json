@@ -1,0 +1,27 @@
+	{
+		"amount" : "160.00",
+		"countGoods" : 5,
+		"contents" : [
+			{
+				"productId" : "prod_1",
+				"productName" : "Mango People T-shirt",
+				"productPrice" : "52.00",
+				"productImg" : "https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/Featured1.jpg?raw=true",
+				"quantity" : 2
+			},
+			{
+				"productId" : "prod_2",
+				"productName" : "Orange People T-shirt",
+				"productPrice" : "32.00",
+				"productImg" : "https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/Featured2.jpg?raw=true",
+				"quantity": 1
+			},
+			{
+				"productId" : "prod_7",
+				"productName" : "Grape People T-shirt",
+				"productPrice" : "12.00",
+				"productImg" : "https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/Featured7.jpg?raw=true",
+				"quantity": 2
+			}
+		]
+	}

@@ -7,6 +7,7 @@
                 type="basket" 
                 :item="item"
                 :key="item.productId"
+                @remove="remove"
             />
 		</div>
 		<div class="cartMenu-price d-flex mx-3 mt-3 justify-content-between align-items-center">
@@ -27,16 +28,36 @@
 	    components: { item },
 	    data() {
 	        return {
-	            url: 'https://raw.githubusercontent.com/MoffAndrey/Static/master/JSON/GeekBrains/getBasket.json',
+	            url: '/api/basket',
 	            items: [],
 	            basketTotal: 0
 	        }
 	    },
 
 	    methods: {
-	    	
+	    	add(item) {
+	    		let find = this.items.find(el => el.productId == item.productId);
+                if (!find) {
+                    this.items.push(Object.assign(item, {quantity: 1}))
+
+                } else {
+                    find.quantity++;
+                }
+               this.basketTotal += +item.productPrice;
+	    	},
+
+	    	remove(item) {
+	            let find = this.items.find(el => el.productId == item.productId);
+
+	            if (find.quantity > 1) {
+	                find.quantity--;
+	            } else {
+	                this.items.splice(this.items.indexOf(find), 1);
+	            }
+	            this.basketTotal -= find.productPrice;
+            }
 	    },
-	    
+
 	    mounted() {
 	        this.$parent.parentGet(this.url).then(d => { 
 	        	this.items = d.contents;

@@ -14,7 +14,7 @@
 	    components: { item },
 	    data() {
 	        return {
-	            url: 'https://raw.githubusercontent.com/MoffAndrey/Static/master/JSON/GeekBrains/catalogData.json',
+	            url: '/api/catalog',
 	            items: []
 	        }
 	    },

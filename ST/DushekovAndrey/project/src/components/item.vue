@@ -4,7 +4,7 @@
         <div class="feturedBlock">
             <div class="featuredImgWrap">
                 <div class="featuredBuy justify-content-center align-items-center">
-                    <button @click="$parent.$parent.add(item)">
+                    <button @click="$parent.$emit('add', item)">
                     <img src="https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/addToCart.png?raw=true" alt="">
                     Add to Cart
                     </button>
@@ -27,7 +27,7 @@
             </div>
             <button class="cartMenu-h4-f4">
             <i class="fas fa-times-circle"
-            @click="$parent.$parent.remove(item.productId)"></i>
+            @click="$emit('remove', item)"></i>
             </button>
         </div>
     </template>

@@ -42,7 +42,7 @@
 		<div class="d-none d-md-block d-md-flex col-md-4 col-sm-12 justify-content-md-end justify-content-center align-items-center my-2 my-md-0">
 			<a href="#" @click="showBasket = !showBasket"><img class="cartButton" src="https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/cart.png?raw=true" alt="Cart"></a>
 			<!-- BASKETHERE -->
-	        	<basket v-show="showBasket"/>
+	        	<basket v-show="showBasket" ref="bask"/>
 			<button class="myaccountBtn ml-4">My Account <i class="fas fa-caret-down"></i></button>
 		</div>
 	</header>
@@ -189,7 +189,7 @@
 		<h4 class="fetured-h4 mb-5">Shop for items based on what we featured in this week</h4>
 		
 		<!-- CATALOGHERE -->
-	    <catalog />
+	    <catalog @add="addItem"/>
 		
 		<div class="fetured-btn mt-5 mx-auto d-flex align-items-center justify-content-center"><a href="product.html">Browse All Product <i class="fas fa-long-arrow-alt-right"></i></a></div>
 	</div>
@@ -312,8 +312,10 @@
 	        parentGet(url) {
 	            return fetch(url).then(d => d.json())
 	        },
-
-	        add(item) {
+	        addItem(item) {
+	        	this.$refs.bask.add(item);
+	        }
+	       /* add(item) {
 
                 let find = this.$children[0].items.find(el => el.productId == item.productId);
                 if (!find) {
@@ -335,7 +337,7 @@
 	                this.$children[0].items.splice(this.$children[0].items.indexOf(find), 1);
 	            }
 	            this.$children[0].basketTotal -= find.productPrice;
-            }
+            }*/
 	    }
 	} 
 </script>
