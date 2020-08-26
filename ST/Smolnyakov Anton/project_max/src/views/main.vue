@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- HEADER HERE-->
-        <header_ />
+        <header_  ref="header"/>
         <div class="headerLine"></div>
 
         <!--NAVIGATION TOP HERE-->
@@ -21,10 +21,10 @@
                         <catalogFeaturesTop />
 
                         <!--CATALOG HERE-->
-                        <catalog />
+                        <catalog @add="addItem"/>
 
                         <!--CATALOG PAGINATION HERE-->
-                        <catalogPagination />
+<!--                        <catalogPagination />-->
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
             'details_': details,
             'catalogFeaturesTop': catalogFeaturesTop,
             'catalog': catalog,
-            'catalogPagination': catalogPagination,
+            // 'catalogPagination': catalogPagination,
             'productsFeatures': productsFeatures,
             'subscribe': subscribe,
             'footerB': footer,
@@ -77,7 +77,15 @@
             parentGet(url) {
                 return fetch(url)
                     .then(data => data.json());
+            },
+
+            addItem(item) {
+                this.$refs.header.$refs.cart.add(item)
             }
+        },
+
+        mounted() {
+            console.log(this.$refs.header.$refs)
         }
     }
 </script>

@@ -8,6 +8,9 @@ npm i copy-webpack-plugin --save-dev bootstrap jquery popper.js vue
 // (step 3) for vue
 npm i vue-loader vue-template-compiler -D
 
+// (step 4?) for server
+npm i -D express nodemon
+
 //for webpack
 npm i -D webpack webpack-cli
 

@@ -66,7 +66,7 @@
                     <div class="headerCart mr-3" @click="cartShown = !cartShown">
                         <a href="#"><img src="https://raw.githubusercontent.com/Smolnyakov/static/master/online-store-api/imgs/Html-css-js%20online%20shop/cart.png" alt="headerCart" id="headerCart" ></a>
                         <!--BASKET/CART HERE-->
-                        <cart v-show="cartShown"/>
+                        <cart v-show="cartShown" ref="cart"/>
                     </div>
 
                     <div class="dropdown">
@@ -106,7 +106,8 @@
                 return fetch(url)
                     .then(data => data.json());
             }
-        }
+        },
+
     }
 </script>
 
