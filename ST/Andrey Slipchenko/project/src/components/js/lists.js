@@ -20,7 +20,7 @@ export class Basket extends List {
             this.total = this.total + Number(item.price);
         } else {
             find.amount++;
-            this.total = this.total + Number(find.price);            
+            this.total = this.total + Number(find.price);
         }
         this._render();
     }
