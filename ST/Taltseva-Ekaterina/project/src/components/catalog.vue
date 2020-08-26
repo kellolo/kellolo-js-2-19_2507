@@ -16,7 +16,8 @@ export default {
     components: { item },
     data() {
         return {
-            url: 'https://raw.githubusercontent.com/kellolo/static/master/JSON/catalog.json',
+            //url: 'https://raw.githubusercontent.com/kellolo/static/master/JSON/catalog.json',
+            url: '/api/catalog',
             items: []
         }
     },

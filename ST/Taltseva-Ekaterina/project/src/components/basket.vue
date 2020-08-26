@@ -27,26 +27,35 @@ export default {
     components: { item },
     data() {
         return {
-            url: 'https://raw.githubusercontent.com/kellolo/static/master/JSON/basket.json',
+            //url: 'https://raw.githubusercontent.com/kellolo/static/master/JSON/basket.json',
+            url: '/api/basket',
             items: []
         }
     },
     mounted() {
         get(this.url)
-        .then(d => { this.items = d.content });
-        //console.log(this )
+        .then(d => { this.items = d });
     },
     methods: {
-        add(item) {
+
+         add(item) {
             let find = this.items.find(el => el.productId == item.productId);
             if (!find) {
-                this.items.push(Object.assign(item, {amount: 1}))
-            } else {
-                find.amount++
-            }
 
+                fetch(this.url, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(Object.assign({}, item, {amount: 1}))
+
+                })
+                  .then(res => { this.items.push(Object.assign({}, item, {amount: 1}))});
+
+            } else {
+                 find.amount++;
+            }
         },
-        remove(item) {
+
+       remove(item) {
             let find = this.items.find(el => el.productId == item.productId);
             if (find.amount > 1) {
                 find.amount--
