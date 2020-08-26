@@ -26,3 +26,12 @@ npm i -D html-webpack-plugin
     //Vue
     npm i vue
     npm i vue-loaner vue-template-compiler -D
+
+
+/server
+npm i -D express nodemon
+
+
+///////  "build": "webpack --mode development",
+           "dev": "webpack-dev-server",
+           "api": "nodemon server"

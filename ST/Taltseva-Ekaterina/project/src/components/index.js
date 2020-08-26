@@ -1,7 +1,16 @@
-import { Catalog, Basket } from './js/lists';
-
 export default () => {
-    let basket = new Basket('/basket.json', '#basket');
-    let catalog = new Catalog('/catalog.json', '#catalog', basket);
+    let app = new Vue({
+        el: '#app',
+        data: {
+            catalogItems: [],
+            basketItems: [],
+            catalogUrl: 'https://raw.githubusercontent.com/kellolo/static/master/JSON/catalog.json',
+            basketUrl: 'https://raw.githubusercontent.com/kellolo/static/master/JSON/basket.json',
+            basketShown: false
+        }
+
+
+    })
 }
+
 

@@ -7,7 +7,7 @@
                 <img :src="item.img" class="product__img" alt="">
                 <div class="product__name">{{ item.name }}</div>
                 <div class="product__price">${{ item.price }}</div>
-                <button @click="add(item)" class="product__add">
+                <button class="product__add" @click="$parent.$emit('add', item)">
                     <i class="fas fa-shopping-cart"></i>Add to Cart
                 </button>
             </div>
@@ -33,7 +33,7 @@
                     </div>
                     <button 
                         class="fas fa-times-circle"  
-                        @click="remove(item)">
+                        @click="$emit('remove', item)">
                     </button>
                 </div>
             </a>    

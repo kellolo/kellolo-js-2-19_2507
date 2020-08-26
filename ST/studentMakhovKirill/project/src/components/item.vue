@@ -3,7 +3,7 @@
     <template v-if="type == 'catalog'">
       <div class="products__wrap-img">
         <div class="products__buy">
-          <button @click="add(item)">
+          <button @click="$parent.$parent.$parent.$emit('add', item)">
             <img
               src="https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/addToCart.png"
               alt
@@ -31,7 +31,7 @@
             </div>
           </div>
         </div>
-        <button name="remove" :data-id="item.id" @click="remove(item)">x</button>
+        <button @click="$emit('remove', item)">x</button>
       </div>
     </template>
   </div>

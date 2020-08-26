@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Mango People T-shirt",
+        "price": 53,
+        "img": "https://raw.githubusercontent.com/AnastasyaChe/static/master/Fetured1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Bananas People T-shirt",
+        "price": 153,
+        "img": "https://raw.githubusercontent.com/AnastasyaChe/static/master/Fetured2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Malon People T-shirt",
+        "price": 54,
+        "img": "https://raw.githubusercontent.com/AnastasyaChe/static/master/Fetured3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Super People T-shirt",
+        "price": 253,
+        "img": "https://raw.githubusercontent.com/AnastasyaChe/static/master/Fetured4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Peach People T-shirt",
+        "price": 53,
+        "img": "https://raw.githubusercontent.com/AnastasyaChe/static/master/Fetured5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Ice-cream People T-shirt",
+        "price": 153,
+        "img": "https://raw.githubusercontent.com/AnastasyaChe/static/master/Fetured6.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Lune People T-shirt",
+        "price": 54,
+        "img": "https://raw.githubusercontent.com/AnastasyaChe/static/master/Fetured7.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Sun People T-shirt",
+        "price": 253,
+        "img": "https://raw.githubusercontent.com/AnastasyaChe/static/master/Fetured8.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Potato People T-shirt",
+        "price": 54,
+        "img": "https://raw.githubusercontent.com/AnastasyaChe/static/master/Product1.jpg"
+    }
+]
