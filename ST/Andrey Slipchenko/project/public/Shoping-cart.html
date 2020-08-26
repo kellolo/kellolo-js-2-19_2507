@@ -209,67 +209,92 @@
         <a href="product.html"><h4 class="arrivals__h4 choosed">New Arrivals</h4></a>
     </div>
 </section>
-<section class="checkout checkout_first center">
-    <div class="checkout__border">
-        <h3>01. Shipping Adress</h3>
-        <div class="checkout__titles">
-            <article class="checkout__left">
-                <h4 class="checkout__title">Check as a guest or register</h4>
-                <h5 class="checkout__subtitle">Register with us for future convenience</h5>
-                <form class="checkout__form">
-                    <input type="radio" name="checkout" class="radio" id="radio">
-                    <label for="radio" class="checkout__label">checkout as guest</label>
-                    <br>
-                    <input type="radio" name="checkout" class="radio" id="radio1">
-                    <label for="radio1" class="checkout__label">register</label>
-                </form>
-                <h4 class="checkout__title">register and save time!</h4>
-                <h5 class="checkout__subtitle">Register with us for future convenience</h5>
-                <h4 class="checkout__text"><i class="fas fa-angle-double-right"></i>Fast and easy checkout</h4>
-                <h4 class="checkout__text"><i class="fas fa-angle-double-right"></i>Easy access to your order history and status</h4>
-                <a href="#" class="checkout__button">Continue</a>
-            </article>
-            <article class="checkout__right">
-                <h4 class="checkout__title">Already registed?</h4>
-                <h5 class="checkout__subtitle">Please log in below</h5>
-                <h4 class="checkout__label checkout__label_input">EMAIL ADDRESS <span>*</span></h4>
-                <input class="checkout__input" type="email" placeholder="example@gmail.com" required>
-                <h4 class="checkout__label checkout__label_input">PASSWORD <span>*</span></h4>
-                <input class="checkout__input" type="password" placeholder="*******" required>
-                <h4 class="checkout__subtitle_required">* Required Fileds</h4>
-                <div class="checkout__links">
-                    <a href="#" class="checkout__button">Log in</a>
-                    <a href="#" class="checkout__link">Forgot Password ?</a>
-                </div>
-            </article>
+<section class="shopping center">
+    <div class="shopping__product__titles">
+        <h4 class="shopping__product__title">Product Details</h4>
+        <h4 class="shopping__product__title">unite Price</h4>
+        <h4 class="shopping__product__title">Quantity</h4>
+        <h4 class="shopping__product__title">shipping</h4>
+        <h4 class="shopping__product__title">Subtotal</h4>
+        <h4 class="shopping__product__title">ACTION</h4>
+    </div>
+    <div class="shopping__item">
+            <div class="shopping__product">
+                <a href="single%20page.html"><img class="shopping__product__img" src="img/shopping1.png"></a>
+                <a href="single%20page.html"><h3 class="shopping__product__name">Mango People T-shirt</h3></a>
+                <h5 class="shopping__product__stat">Color:<span> Red</span></h5>
+                <h5 class="shopping__product__stat">Size:<span> Xll</span></h5>
+            </div>
+            <div class="shopping__descriptions">
+                <h3 class="shopping__description">&#x24;150</h3>
+                <input type="number" class="shopping__input" min="1" max="5">
+                <h3 class="shopping__description">FREE</h3>
+                <h3 class="shopping__description">$300</h3>
+                <h3 class="shopping__description"><img src="img/christ.png"></h3>
+            </div>
+    </div>
+    <div class="shopping__item">
+        <div class="shopping__product">
+            <a href="single%20page.html"><img class="shopping__product__img" src="img/shopping2.png"></a>
+            <a href="single%20page.html"><h3 class="shopping__product__name">Mango People T-shirt</h3></a>
+            <h5 class="shopping__product__stat">Color:<span> Red</span></h5>
+            <h5 class="shopping__product__stat">Size:<span> Xll</span></h5>
+        </div>
+        <div class="shopping__descriptions">
+            <h3 class="shopping__description">&#x24;150</h3>
+            <input type="number" class="shopping__input" min="1" max="5">
+            <h3 class="shopping__description">FREE</h3>
+            <h3 class="shopping__description">$300</h3>
+            <h3 class="shopping__description"><img src="img/christ.png"></h3>
         </div>
     </div>
-</section>
-<section class="checkout center">
-    <div class="checkout__border">
-        <h3>02. BILLING INFORMATION</h3>
+    <div class="shopping__item">
+        <div class="shopping__product">
+            <a href="single%20page.html"><img class="shopping__product__img" src="img/shopping3.png"></a>
+            <a href="single%20page.html"><h3 class="shopping__product__name">Mango People T-shirt</h3></a>
+            <h5 class="shopping__product__stat">Color:<span> Red</span></h5>
+            <h5 class="shopping__product__stat">Size:<span> Xll</span></h5>
+        </div>
+        <div class="shopping__descriptions">
+            <h3 class="shopping__description">&#x24;150</h3>
+            <input type="number" class="shopping__input" min="1" max="5">
+            <h3 class="shopping__description">FREE</h3>
+            <h3 class="shopping__description">$300</h3>
+            <h3 class="shopping__description"><img src="img/christ.png"></h3>
+        </div>
     </div>
+    <article class="shopping__buttons">
+        <a href="#" class="shopping__button"><h2>cLEAR SHOPPING CART</h2></a>
+        <a href="#" class="shopping__button"><h2>cONTINUE sHOPPING</h2></a>
+    </article>
 </section>
-<section class="checkout center">
-    <div class="checkout__border">
-        <h3>03. SHIPPING INFORMATION</h3>
-    </div>
+<section class="formalization center">
+    <article class="formalization__item">
+        <h3 class="formalization__title">Shipping adress</h3>
+        <form class="formalization__form">
+            <input class="formalization__input" type="text" name="country" placeholder="Bangladesh">
+            <input class="formalization__input" type="text" name="state" placeholder="State">
+            <input class="formalization__input" type="text" name="postcode" placeholder="Postcode/Zip">
+            <a href="#" class="formalization__button">get a quote</a>
+        </form>
+    </article>
+    <article class="formalization__item">
+        <h3 class="formalization__title">coupon discount</h3>
+        <p class="formalization__text">Enter your coupon code if you have one</p>
+        <form class="formalization__form">
+            <input class="formalization__input" type="text" name="state" placeholder="State">
+            <a href="#" class="formalization__button">Apply coupon</a>
+        </form>
+    </article>
+    <article class="formalization__item">
+        <h4 class="formalization__suptitle">Sub total &#x24;900</h4>
+        <h3 class="formalization__title__price">GRAND TOTAL <span>&#x24;900</span></h3>
+        <a href="#" class="button formalization__button__two">proceed to checkout</a>
+
+    </article>
 </section>
-<section class="checkout center">
-    <div class="checkout__border">
-        <h3>04. SHIPPING METHOD</h3>
-    </div>
-</section>
-<section class="checkout center">
-    <div class="checkout__border">
-        <h3>05. PAYMENT METHOD</h3>
-    </div>
-</section>
-<section class="checkout center">
-    <div class="checkout__border">
-        <h3>06. ORDER REVIEW</h3>
-    </div>
-</section>
+
+
 <footer>
     <section class="subscribe__box">
         <div class="background">
