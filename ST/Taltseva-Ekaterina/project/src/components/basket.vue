@@ -1,30 +1,28 @@
 <template>
-    <div class="headerCartWrap">
-        <div class="headerCartWrapBlock"></div>
-        <div class="headerCartWrapInAll">
-            <div id="basket" class="d-flex flex-column">
-                <!--BASKET ITEMS-->
-                <item 
-                    v-for="item of items" 
-                    type="basket" 
-                    :item="item"
-                    :key="item.productId"
-                    @remove="remove"
-                />
-            </div>
-            <div class="headerCartWrapTotalPrice">
-                <div>total</div>
-                <div>$500.00</div>
-            </div>
+<div class="headerCartWrap">
+    <div class="headerCartWrapBlock"></div>
+    <div class="headerCartWrapInAll">
+        <div id="basket" class="d-flex flex-column">
+            <!--BASKET ITEMS-->
+            <item v-for="item of items" type="basket" :item="item" :key="item.productId" @remove="remove" />
+        </div>
+        <div class="headerCartWrapTotalPrice">
+            <div>total</div>
+            <div>$500.00</div>
         </div>
     </div>
+</div>
 </template>
 
 <script>
 import item from './item.vue';
-import { get } from '../utils/reqs.js';
+import {
+    get
+} from '../utils/reqs.js';
 export default {
-    components: { item },
+    components: {
+        item
+    },
     data() {
         return {
             //url: 'https://raw.githubusercontent.com/kellolo/static/master/JSON/basket.json',
@@ -34,28 +32,39 @@ export default {
     },
     mounted() {
         get(this.url)
-        .then(d => { this.items = d });
+            .then(d => {
+                this.items = d.content
+            });
+        //console.log(this )
     },
     methods: {
 
-         add(item) {
+        add(item) {
             let find = this.items.find(el => el.productId == item.productId);
             if (!find) {
 
                 fetch(this.url, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(Object.assign({}, item, {amount: 1}))
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(Object.assign({}, item, {
+                            amount: 1
+                        }))
 
-                })
-                  .then(res => { this.items.push(Object.assign({}, item, {amount: 1}))});
+                    })
+                    .then(res => {
+                        this.items.push(Object.assign({}, item, {
+                            amount: 1
+                        }))
+                    });
 
             } else {
-                 find.amount++;
+                find.amount++;
             }
         },
 
-       remove(item) {
+        remove(item) {
             let find = this.items.find(el => el.productId == item.productId);
             if (find.amount > 1) {
                 find.amount--
@@ -71,12 +80,13 @@ export default {
 </script>
 
 <style>
-    .headerCartWrapInAll {
-        height: 300px;
-        z-index: 50;
-        overflow-y: auto;
-    }
-    .headerCartWrapInAll img {
-        max-height: 50px;
-    }
+.headerCartWrapInAll {
+    height: 300px;
+    z-index: 50;
+    overflow-y: auto;
+}
+
+.headerCartWrapInAll img {
+    max-height: 50px;
+}
 </style>
