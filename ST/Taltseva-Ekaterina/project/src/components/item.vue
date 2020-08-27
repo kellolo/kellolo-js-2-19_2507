@@ -51,7 +51,6 @@
 
 export default {
     // props: ['type']
-
     props: {
         type: {
             type: String,
@@ -59,7 +58,6 @@ export default {
         },
         item: { type: Object }
     }
-
 }
 </script>
 

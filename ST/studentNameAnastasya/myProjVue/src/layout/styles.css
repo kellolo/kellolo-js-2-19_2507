@@ -201,12 +201,11 @@ body {
 
 .logo {
   max-width: 165px;
-  /* background: url("../assets/img/logo.png") no-repeat; */
   text-transform: uppercase;
   font-size: 27px;
   color: #222222;
   font-weight: 300;
-  padding-left: 67px;
+  
   margin-right: 20px;
   padding-bottom: 17px;
   padding-top: 16px;

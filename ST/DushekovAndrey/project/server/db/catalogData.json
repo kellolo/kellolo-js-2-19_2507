@@ -1,0 +1,50 @@
+[
+	{
+		"productId":"prod_1",
+		"productName":"Mango People T-shirt",
+		"productPrice":"52.00",
+		"productImg":"https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/Featured1.jpg?raw=true"
+	},
+	{
+		"productId":"prod_2",
+		"productName":"Orange People T-shirt",
+		"productPrice":"32.00",
+		"productImg":"https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/Featured2.jpg?raw=true"
+	},
+	{
+		"productId":"prod_3",
+		"productName":"Apple People T-shirt",
+		"productPrice":"12.00",
+		"productImg":"https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/Featured3.jpg?raw=true"
+	},
+	{
+		"productId":"prod_4",
+		"productName":"Mango Men Jacket",
+		"productPrice":"48.00",
+		"productImg":"https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/Featured4.jpg?raw=true"
+	},
+	{
+		"productId":"prod_5",
+		"productName":"Mango Women Jacket",
+		"productPrice":"34.00",
+		"productImg":"https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/Featured5.jpg?raw=true"
+	},
+	{
+		"productId":"prod_6",
+		"productName":"Mango People Coat",
+		"productPrice":"27.00",
+		"productImg":"https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/Featured6.jpg?raw=true"
+	},
+	{
+		"productId":"prod_7",
+		"productName":"Grape People T-shirt",
+		"productPrice":"12.00",
+		"productImg":"https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/Featured7.jpg?raw=true"
+	},
+	{
+		"productId":"prod_8",
+		"productName":"Mango People Jeans",
+		"productPrice":"14.00",
+		"productImg":"https://github.com/MoffAndrey/Static/blob/master/img/GeekBrains/BrandShop/Featured8.jpg?raw=true"
+	}
+]

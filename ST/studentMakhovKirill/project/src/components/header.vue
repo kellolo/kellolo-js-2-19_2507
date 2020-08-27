@@ -64,7 +64,7 @@
           />
         </a>
         <!--BASKETHERE-->
-        <basket v-show="showBasket" />
+        <basket v-show="showBasket" ref="bask" />
       </div>
       <div class="header__account">
         <button class="header__btn">
@@ -128,6 +128,11 @@ export default {
       showBasket: false,
     };
   },
+  methods: {
+		add(item) {
+			this.$refs.bask.add(item)
+		}
+	}
 };
 </script>
 

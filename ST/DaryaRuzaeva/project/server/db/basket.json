@@ -1,0 +1,21 @@
+  
+{
+    "totalAmount": 2,
+    "totalPrice": 203,
+    "content": [
+      {
+        "id": 0,
+        "name": "MANGO T-SHIRT",
+        "price": "52.00",
+        "img": "https://raw.githubusercontent.com/RDarya/static/master/img/item_1.png",
+        "amount": 1
+      },
+      {
+        "id": 1,
+        "name": "PEOPLE BLOUSE",
+        "price": "71.00",
+        "img": "https://raw.githubusercontent.com/RDarya/static/master/img/item_2.png",
+        "amount": 1
+      }
+    ]
+  }

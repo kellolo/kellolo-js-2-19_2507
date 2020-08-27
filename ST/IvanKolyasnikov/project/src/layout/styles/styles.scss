@@ -197,20 +197,18 @@
 
 }
 .bBa__container{
-  .butBrowseAllProd {
+
+  a {
     width: 212px;
     height: 48px;
     background-color: $mainThemeColor;
     color: #FFFFFF;
-    &:hover{
-      text-decoration: none;
-      color: #FFFFFF;
-    }
+    text-decoration: none;
   }
-  &:hover .butBrowseAllProd{
+  &:hover {
     transform: rotateX(360deg);
     box-shadow: 2px 4px 6px rgba(150, 150, 150, 1);
-    transition: transform .8s cubic-bezier(0, 0.55, 0.45, 1)
+    transition: transform .8s cubic-bezier(0, 0.55, 0.45, 1);
   }
 }
 
@@ -455,6 +453,7 @@
 
 .productListContainer {
   position: relative;
+  margin-bottom: 735px;
 }
 
 .productList {
@@ -614,8 +613,23 @@
   font-family: Arial, sans-serif;
   font-size: 8px;
 
-  .range-slider {
+  .range_slider {
     position: relative;
+    svg, input[type=range] {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    input {
+      width: 100%;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      z-index: 1;
+      position: relative;
+      top: 2px;
+      margin-top: -7px;
+
+    }
   }
 
   .irs--round {
@@ -628,30 +642,15 @@
       border: none;
     }
   }
-
-  .irs-bar {
-    background-color: $mainThemeColor !important;
-  }
-
-  .irs-min, .irs-max, .irs-single, .irs-from, .irs-to {
-    display: none;
-  }
-
-  .irs-handle {
-    top: 31px !important;
-    width: 14px !important;
-    height: 14px !important;
-    border: none !important;
-    background-color: $mainThemeColor !important;
-  }
-  .js-input-from, .js-input-to{
-    width: 40px!important;
+  p {
+    font-size: 1rem;
+    color: $mainTextColorP;
   }
 }
 
 
 .rightProduct {
-  label {
+  h4 {
     font-size: 14px;
     line-height: 20px;
     font-weight: 700;

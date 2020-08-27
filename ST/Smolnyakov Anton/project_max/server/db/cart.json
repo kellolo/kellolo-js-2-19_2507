@@ -1,0 +1,20 @@
+{
+  "amount": 150,
+  "countGoods": 2,
+  "contents": [
+    {
+      "id":7,
+      "name":"Mister Slave T-SHIRT",
+      "price":"80.00",
+      "img":"https://raw.githubusercontent.com/Smolnyakov/static/master/online-store-api/imgs/Html-css-js%20online%20shop/Product8.jpg",
+      "amount": 1
+    },
+    {
+      "id":8,
+      "name":"Towelie T-SHIRT",
+      "price":"70.00",
+      "img":"https://raw.githubusercontent.com/Smolnyakov/static/master/online-store-api/imgs/Html-css-js%20online%20shop/Product9.jpg",
+      "amount": 1
+    }
+  ]
+}

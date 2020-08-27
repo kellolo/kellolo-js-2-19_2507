@@ -1,6 +1,6 @@
 <template>
 <div>
-    <header-block />
+    <header-block ref="header" />
 
     <div class="topBanner">
         <div class="container topBannerContent px-sm-0">
@@ -69,8 +69,8 @@
                     <div class="feturedHeadBottom">Shop for items based on what we featured in this week</div>
                 </a>
             </div>
-            
-            <catalog />
+
+            <catalog @add="addItem" />
             
             <div class="container px-0 d-flex justify-content-around">
                 <button type="button" class="btn btn-outline-secondary feturedButton">
@@ -154,6 +154,11 @@ export default {
         Catalog,
         FooterBlock,
     },
+    methods: {
+        addItem(item) {
+            this.$refs.header.$refs.basket.add(item);
+        }
+    }
 }
 </script>
 

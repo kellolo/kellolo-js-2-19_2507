@@ -166,11 +166,11 @@ export default {
     },
     data() {
         return {
-            showBasket: false
+            showBasket: false,
         }
     },
     mounted() {
-       // console.log(this.$refs.bask )
+
     }
 }
 </script>

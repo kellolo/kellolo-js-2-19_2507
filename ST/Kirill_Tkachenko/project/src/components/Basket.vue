@@ -8,6 +8,7 @@
                     type="basket"
                     :item="item"
                     :key="item.id"
+                    @remove="remove"
                 />
                 <div class="headerCartWrapTotalPrice">
                     <div>total&nbsp;</div>
@@ -32,9 +33,8 @@ export default {
     },
     data() {
         return {
-            url: "https://raw.githubusercontent.com/Cerzon/assets/master/JSON/basket.json",
+            url: "/api/basket",
             items: [],
-            // total: 0,
         }
     },
     computed: {
@@ -44,8 +44,61 @@ export default {
             return result.toFixed(2);
         }
     },
+    methods: {
+        add(item) {
+            let find = this.items.find(el => el.id == item.id);
+
+            if (!find) {
+                find = Object.assign({}, item, {amount: 1});
+                fetch(this.url, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(find)
+                }).then(res => {
+                    if (res.status == 200) {
+                        this.items.push(find);
+                    }
+                });
+            } else {
+                fetch(this.url, {
+                    method: "PUT",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(Object.assign({}, find, {amount: find.amount + 1}))
+                }).then(res => {
+                    if (res.status == 200) {
+                        find.amount++;
+                    }
+                });
+            }
+        },
+        remove(item) {
+            let find = this.items.find(el => el.id == item.id);
+
+            if (find.amount > 1) {
+                fetch(this.url, {
+                    method: "PUT",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(Object.assign({}, find, {amount: find.amount - 1}))
+                }).then(res => {
+                    if (res.status == 200) {
+                        find.amount--;
+                    }
+                });
+            } else {
+                fetch(this.url, {
+                    method: "DELETE",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(find)
+                }).then(res => {
+                    if (res.status == 200) {
+                        this.items.splice(this.items.indexOf(find), 1);
+                    }
+                });
+            }
+        },
+    },
     mounted() {
-        get(this.url).then(data => { this.items = data.contents });
+        get(this.url).then(data => { this.items = data });
     },
 }
 </script>
