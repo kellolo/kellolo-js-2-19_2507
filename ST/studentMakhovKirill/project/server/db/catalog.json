@@ -1,0 +1,51 @@
+[
+	{
+		"id": 1,
+		"name": "MANGO PEOPLE T-SHIRT",
+		"price": "12.00",
+		"img": "https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product1.jpg"
+	},
+	{
+		"id": 2,
+		"name": "WATERMELON COOL BLOUSE",
+		"price": "25.00",
+		"img": "https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product2.jpg"
+	},
+	{
+		"id": 3,
+		"name": "BLUEBERRY LIGHT JACKET",
+		"price": "32.00",
+		"img": "https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product3.jpg"
+	},
+	{
+		"id": 4,
+		"name": "STRAWBERRY COLORED DRESS",
+		"price": "100.00",
+		"img": "https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product4.jpg"
+	},
+	{
+		"id": 5,
+		"name": "DRAGON FRUIT STRIPED DRESS",
+		"price": "10500.00",
+		"img": "https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product5.jpg"
+	},
+	{
+		"id": 6,
+		"name": "EGGPLANT GRAY BLAZER",
+		"price": "666.00",
+		"img": "https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product6.jpg"
+	},
+	{
+		"id": 7,
+		"name": "MELON SHORT PANTS",
+		"price": "69.00",
+		"img": "https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product7.jpg"
+	},
+	{
+		"id": 88,
+		"name": "PLUM SQUARE PONCHO",
+		"price": "11111.00",
+		"img": "https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product8.jpg"
+	}
+]
+

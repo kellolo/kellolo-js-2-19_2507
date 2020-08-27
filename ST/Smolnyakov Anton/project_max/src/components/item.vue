@@ -5,7 +5,7 @@
                 <div class="feturedItem">
                     <div class="feturedImgWrap">
                         <div class="feturedBuy">
-                            <button @click="add(item)">
+                            <button @click="$parent.$emit('add', item)">
                                 <i class="fas fa-shopping-cart"></i> Add to Cart
                             </button>
                         </div>
@@ -14,7 +14,7 @@
                     <div class="feturedBuySm d-flex flex-column justify-content-around align-items-center align-items-md-start">
                         <div class="feturedItemName">{{ item.name }}</div>
                         <div class="feturedItemPrice">${{ item.price }}</div>
-                        <button class="d-md-none" @click="add(item)">
+                        <button class="d-md-none" @click="$parent.$emit('add', item)">
                             <i class="fas fa-shopping-cart"></i> Add to Cart
                         </button>
                     </div>
@@ -38,13 +38,13 @@
                         <i class="fas fa-star-half-alt"></i>
                     </span>
                         <div class="headerCartWrapPrice">
-                            {{item.amount}}
+                            {{ item.amount }}
                             <span>x</span>
-                            ${{item.price}}
+                            ${{ item.price }}
                         </div>
                     </div>
                 </div>
-                <button @click="remove(item)"><i class="fas fa-times-circle" id="removeProductCart" aria-hidden="true"></i></button>
+                <button @click="$emit('remove', item)"><i class="fas fa-times-circle" id="removeProductCart" aria-hidden="true"></i></button>
             </a>
         </template>
     </div>

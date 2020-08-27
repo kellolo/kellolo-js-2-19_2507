@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
     // entry: {
@@ -15,6 +16,21 @@ module.exports = {
             {
                 test: /\.css$/i,
                 use: [MiniCssExtractPlugin.loader, 'css-loader'],
+            },
+            {
+                test: /\.vue$/i,
+                loader: 'vue-loader'
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                  {
+                    loader: 'file-loader',
+                      options: {
+                        esModule: false,
+                      }
+                  },
+                ],
             }
         ]
     },
@@ -31,6 +47,19 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: './public/index.html'
-        })
-    ]
+        }),
+        new VueLoaderPlugin()
+    ],
+    devServer: {
+        port: 8080,
+        open: false,
+        proxy: {
+            '/api': {
+                target: 'http://localhost:3000',
+                pathRewrite: {'^/api': '' },
+                secure: false,
+                changeOrigin: true
+            }
+        }
+    }
 }

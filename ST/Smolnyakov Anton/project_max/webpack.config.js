@@ -26,6 +26,9 @@ module.exports = {
                 use: [
                     {
                         loader: 'file-loader',
+                        options: {
+                            esModule: false,
+                        }
                     },
                 ],
             }
@@ -46,5 +49,17 @@ module.exports = {
             template: './public/catalog.html'
         }),
         new VueLoaderPlugin()
-    ]
+    ],
+    devServer: {
+        port: 8080,
+        open: false,
+        proxy: {
+            '/api': {
+                target: 'http://localhost:3000',
+                pathRewrite: { '^/api': '' },
+                secure: false,
+                changeOrigin: true
+            }
+        }
+    }
 }

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <header_ />
-    <content_ />
+    <header_ ref="head" />
+    <content_ @add="addItem"/>
     <foot />
     <copyright />
   </div>
@@ -24,6 +24,9 @@ export default {
 	methods: {
 		parentGet(url) {
 			return fetch(url).then(d => d.json())
+		},
+		addItem(item) {
+			this.$refs.head.add(item);
 		}
 	}
 };
