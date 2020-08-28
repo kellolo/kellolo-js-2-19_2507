@@ -1,6 +1,6 @@
 <template>
     <div>
-		<header8 />
+		<header8 ref="header"/>
 		<topNav />
 			<section class="promo">
 				<div class="center promo__content">
@@ -75,7 +75,7 @@ import offer from '../components/offer.vue';
 import footer8 from '../components/footer8.vue';
 export default {
     components: {
-		'catalog': catalog,
+		catalog,
 		'header8': header8,
 		'topNav': topNav,
 		'offer': offer,
@@ -86,7 +86,7 @@ export default {
             return fetch(url).then(d => d.json())
 		},
 		addItem(item) {
-			this.$refs.bask.add(item);
+			this.$refs.header.$refs.bask.add(item);
 		}
     }
 }
