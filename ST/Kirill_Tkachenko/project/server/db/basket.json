@@ -4,20 +4,34 @@
         "name": "MELLON PEOPLE T-SHIRT",
         "price": 13,
         "img": "https://raw.githubusercontent.com/Cerzon/assets/master/imgs/Product4.jpg",
-        "amount": "1"
+        "amount": "2"
     },
     {
         "id": 5,
         "name": "STRAWBERRY PEOPLE T-SHIRT",
         "price": 25,
         "img": "https://raw.githubusercontent.com/Cerzon/assets/master/imgs/Product6.jpg",
-        "amount": "1"
+        "amount": "2"
     },
     {
         "id": 8,
         "name": "PAPAYA PEOPLE T-SHIRT",
         "price": 19,
         "img": "https://raw.githubusercontent.com/Cerzon/assets/master/imgs/Product9.jpg",
+        "amount": 1
+    },
+    {
+        "id": 4,
+        "name": "PUMPKIN PEOPLE T-SHIRT",
+        "price": 17,
+        "img": "https://raw.githubusercontent.com/Cerzon/assets/master/imgs/Product5.jpg",
+        "amount": "3"
+    },
+    {
+        "id": 2,
+        "name": "PINEAPPLE PEOPLE T-SHIRT",
+        "price": 32,
+        "img": "https://raw.githubusercontent.com/Cerzon/assets/master/imgs/Product3.jpg",
         "amount": 1
     }
 ]

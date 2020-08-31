@@ -1,8 +1,11 @@
 <template>
   <div id="app">
     <header-block ref="header">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Main</router-link>
+      <router-link to="/single_page">Single Page</router-link>
+      <router-link to="/product">Product</router-link>
+      <router-link to="/shopping_cart">Shopping Cart</router-link>
+      <router-link to="/checkout">Checkout</router-link>
     </header-block>
 
     <router-view/>

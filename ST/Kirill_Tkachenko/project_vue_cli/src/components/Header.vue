@@ -59,7 +59,7 @@
                                             col-md-3 offset-md-2 mt-md-0 mr-md-0 d-md-flex
                                             col-sm-4 offset-sm-4 pt-sm-3 justify-content-sm-end ">
 
-                    <div class="headerCart pr-4">
+                    <div class="headerCart pr-4" v-if="renderBasket">
                         <a href="#" @click.stop.prevent="basketShown = !basketShown"><img src="../assets/imgs/cart.png" alt="headerCart"></a>
                         <basket v-show="basketShown" ref="basket" />
                     </div>
@@ -188,6 +188,11 @@ export default {
             basketShown: false,
         }
     },
+    computed: {
+        renderBasket() {
+            return this.$route.name != "ShoppingCart";
+        }
+    }
 }
 </script>
 
