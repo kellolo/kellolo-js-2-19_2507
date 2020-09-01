@@ -1,11 +1,21 @@
 <template>
   <div id="app">
     <header-block ref="header">
-      <router-link to="/">Main</router-link>
-      <router-link to="/single_page">Single Page</router-link>
-      <router-link to="/product">Product</router-link>
-      <router-link to="/shopping_cart">Shopping Cart</router-link>
-      <router-link to="/checkout">Checkout</router-link>
+      <div class="navAll">
+        <router-link to="/" class="nav-link">Main</router-link>
+      </div>
+      <div class="navAll">
+        <router-link to="/single_page" class="nav-link">Single Page</router-link>
+      </div>
+      <div class="navAll">
+        <router-link to="/product" class="nav-link">Product</router-link>
+      </div>
+      <div class="navAll">
+        <router-link to="/shopping_cart" class="nav-link">Shopping Cart</router-link>
+      </div>
+      <div class="navAll">
+        <router-link to="/checkout" class="nav-link">Checkout</router-link>
+      </div>
     </header-block>
 
     <router-view/>

@@ -158,7 +158,9 @@
 
         <div class="headerLine"></div>
 
-        <navigation />
+        <nav class="nav container d-none d-md-flex justify-content-center mt-3">
+            <slot></slot>
+        </nav>
 
         <div class="newArrivalsBg pb-5 pt-5">
             <div class="px-md-0 container d-flex flex-column flex-sm-row justify-content-between align-items-center ">
@@ -175,13 +177,11 @@
 
 <script>
 import Basket from "./Basket.vue";
-import Navigation from "./Navigation.vue";
 
 export default {
     name: "HeaderBlock",
     components: {
         Basket,
-        Navigation,
     },
     data() {
         return {
