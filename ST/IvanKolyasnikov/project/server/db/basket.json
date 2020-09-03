@@ -1,20 +1,21 @@
 {
-  "amount": 122,
-  "countGoods": 2,
-  "contents": [
-    {
-      "id": 1,
-      "name": "blouse PEOPLE",
-      "price": 77,
-      "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man001.jpeg",
-      "quantity": 1
-    },
-    {
-      "id": 2,
-      "name": "bat man",
-      "price": 45,
-      "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man002.jpeg",
-      "quantity": 1
-    }
-  ]
+ "amount": 122,
+ "countGoods": 2,
+ "contents": [
+  {
+   "id": 2,
+   "name": "bat man",
+   "price": 45,
+   "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man002.jpeg",
+   "images": [
+    "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man002.jpeg"
+   ],
+   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat sed cras ornare arcu dui vivamus arcu felis bibendum. Tellus mauris a diam maecenas sed enim ut sem. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. ",
+   "rating": null,
+   "material": "cotton",
+   "color": "red",
+   "size": "XL",
+   "quantity": 1
+  }
+ ]
 }

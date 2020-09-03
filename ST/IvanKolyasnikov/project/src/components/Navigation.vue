@@ -69,17 +69,13 @@
         <div class="topNavMobile fixed-top d-block d-sm-none">
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="bg-light p-4 d-flex flex-column justify-content-center">
-                    <router-link :to="{name: 'Products'}">
-                        <a href="#">Home</a>
-                    </router-link>
+                    <router-link :to="{name: 'Index'}"><a href="#">Home</a></router-link>
                     <router-link :to="{name: 'Products'}">
                         <a href="#">Man</a>
                     </router-link>
-
                     <router-link :to="{name: 'Products'}">
                         <a href="#">Women</a>
                     </router-link>
-
                     <router-link :to="{name: 'Products'}">
                         <a href="#">Kids</a>
                     </router-link>
@@ -103,13 +99,13 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="rTop d-flex justify-content-center align-items-center justify-content-lg-start">
-                    <a href="#" class="fa fa-shopping-cart my__cart px-2" aria-hidden="true"></a>
-                    <div class="btn-group btnNonSSM">
-                        <button type="button" class="btn btn-danger">My Account</button>
-                        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
+                    <router-link :to="{name: 'ShoppingCart'}">     
+                        <a href="#" class="fa fa-shopping-cart my__cart px-2" aria-hidden="true"></a>
+                    </router-link>
+                    <div class="btn-group btnNonSSM ">
+                        <router-link class="p-0" :to="{name: 'CheckOut'}">              
+                            <button type="button" class="btn btn-danger">  My Account</button>
+                        </router-link>
                     </div>
                 </div>
             </nav>

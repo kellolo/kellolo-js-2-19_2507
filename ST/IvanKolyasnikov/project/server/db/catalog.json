@@ -1,56 +1,126 @@
 [
-  {
-    "id": 1,
-    "name": "blouse PEOPLE",
-    "price": 77,
-    "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man001.jpeg"
-  },
-  {
-    "id": 2,
-    "name": "bat man",
-    "price": 45,
-    "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man002.jpeg"
-  },
-  {
-    "id": 3,
-    "name": "black crocodile",
-    "price": 33,
-    "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man003.jpeg"
-  },
-  {
-    "id": 4,
-    "name": "blood monkey",
-    "price": 299,
-    "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man004.jpeg"
-  },
-  {
-    "id": 5,
-    "name": "tiger's high",
-    "price": 23,
-    "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man009.jpeg"
-  },
-  {
-    "id": 6,
-    "name": "monkey with a grenade",
-    "price": 88,
-    "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/woman005.png"
-  },
-  {
-    "id": 7,
-    "name": "green Panda",
-    "price": 125,
-    "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/woman006.jpeg"
-  },
-  {
-    "id": 8,
-    "name": "white swan",
-    "price": 164,
-    "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/woman007.jpeg"
-  },
-  {
-    "id": 9,
-    "name": "blouse",
-    "price": 120,
-    "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/woman008.jpeg"
-  }
-]
+    {
+      "id": 1,
+      "name": "blouse PEOPLE",
+      "price": 77,
+      "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man001.jpeg",
+      "images": ["https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man001.jpeg"],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat sed cras ornare arcu dui vivamus arcu felis bibendum. Tellus mauris a diam maecenas sed enim ut sem. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. ",
+      "rating": null,
+      "material": "cotton",
+      "color": ["green", "blue"],
+      "size": ["L", "M"]
+    },
+    {
+      "id": 2,
+      "name": "bat man",
+      "price": 45,
+      "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man002.jpeg",
+      "images": ["https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man002.jpeg"],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat sed cras ornare arcu dui vivamus arcu felis bibendum. Tellus mauris a diam maecenas sed enim ut sem. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. ",
+      "rating": null,
+      "material": "cotton",
+      "color": ["red", "green", "blue"],
+      "size": ["XL", "L", "XXL", "M"]
+    },
+    {
+      "id": 10,
+      "name": "Ветровка",
+      "price": 175,
+      "img": "https://a.lmcdn.ru/img600x866/M/P/MP002XG0172V_11672485_1_v1.jpg",
+      "images": [ "https://a.lmcdn.ru/img600x866/M/P/MP002XG0172V_11672486_2_v1.jpg",
+                  "https://a.lmcdn.ru/img600x866/M/P/MP002XG0172V_11672487_3_v1.jpg",
+                  "https://a.lmcdn.ru/product/M/P/MP002XG0172V_11672486_2_v1.jpg"
+                ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat sed cras ornare arcu dui vivamus arcu felis bibendum. Tellus mauris a diam maecenas sed enim ut sem. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. ",
+      "rating": null,
+      "material": "cotton",
+      "color": ["red", "green", "blue"],
+      "size": ["XL", "L", "XXL", "M"]
+    },
+    {
+      "id": 3,
+      "name": "black crocodile",
+      "price": 33,
+      "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man003.jpeg",
+      "images": ["https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man003.jpeg"],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat sed cras ornare arcu dui vivamus arcu felis bibendum. Tellus mauris a diam maecenas sed enim ut sem. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. ",
+      "rating": null,
+      "material": "cotton",
+      "color": ["darkgreen", "green", "blue"],
+      "size": ["XL", "L", "M"]
+    },
+    {
+      "id": 4,
+      "name": "blood monkey",
+      "price": 299,
+      "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man004.jpeg",
+      "images": ["https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man004.jpeg"],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat sed cras ornare arcu dui vivamus arcu felis bibendum. Tellus mauris a diam maecenas sed enim ut sem. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. ",
+      "rating": null,
+      "material": "cotton",
+      "color": ["darkgreen", "green", "blue"],
+      "size": ["XL", "L", "M"]
+    },
+    {
+      "id": 5,
+      "name": "tiger's high",
+      "price": 23,
+      "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man009.jpeg",
+      "imges": ["https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/man009.jpeg"],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat sed cras ornare arcu dui vivamus arcu felis bibendum. Tellus mauris a diam maecenas sed enim ut sem. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. ",
+      "rating": null,
+      "material": "cotton",
+      "color": ["darkgreen", "green", "blue"],
+      "size": ["XL", "L", "M"]
+    },
+    {
+      "id": 6,
+      "name": "monkey with a grenade",
+      "price": 88,
+      "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/woman005.png",
+      "images": ["https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/woman005.png"],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat sed cras ornare arcu dui vivamus arcu felis bibendum. Tellus mauris a diam maecenas sed enim ut sem. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. ",
+      "rating": null,
+      "material": "cotton",
+      "color": ["darkgreen", "green", "blue"],
+      "size": ["XL", "L", "M"]
+    },
+    {
+      "id": 7,
+      "name": "green Panda",
+      "price": 125,
+      "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/woman006.jpeg",
+      "images": ["https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/woman006.jpeg"],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat sed cras ornare arcu dui vivamus arcu felis bibendum. Tellus mauris a diam maecenas sed enim ut sem. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. ",
+      "rating": null,
+      "material": "cotton",
+      "color": ["darkgreen", "green", "blue"],
+      "size": ["XL", "L", "M"]
+    },
+    {
+      "id": 8,
+      "name": "white swan",
+      "price": 164,
+      "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/woman007.jpeg",
+      "images": ["https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/woman007.jpeg"],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat sed cras ornare arcu dui vivamus arcu felis bibendum. Tellus mauris a diam maecenas sed enim ut sem. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. ",
+      "rating": null,
+      "material": "cotton",
+      "color": ["darkgreen", "green", "blue"],
+      "size": ["XL", "L", "M"]
+    },
+    {
+      "id": 9,
+      "name": "blouse",
+      "price": 120,
+      "img": "https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/woman008.jpeg",
+      "images": ["https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/catalog/woman008.jpeg"],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat sed cras ornare arcu dui vivamus arcu felis bibendum. Tellus mauris a diam maecenas sed enim ut sem. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. ",
+      "rating": null,
+      "material": "cotton",
+      "color": ["darkgreen", "green", "blue"],
+      "size": ["XL", "L", "M"]
+    }
+  ]
+  

@@ -65,15 +65,17 @@
         <div class="container">
 
             <!-- CATALOG -->
-            <Catalog @add="addItem"/>
+            <Catalog  type="index"/>
 
         </div>
         <div class="container d-flex justify-content-center align-items-center mb-5">
-            <router-link :to="{name: 'Products'}">
-                <div class="bBa__container">
-                    <a class="d-flex justify-content-center align-items-center"
-                       href="#">Browse All Product
-                        <i class="pl-2 fa fa-long-arrow-right" aria-hidden="true"></i>
+            <router-link class="bBa__container" :to="{name: 'Products'}">
+                <div>
+                    <a 
+                    class="d-flex justify-content-center align-items-center"
+                    href="#">
+                    Browse All Product
+                    <i class="pl-2 fa fa-long-arrow-right" aria-hidden="true"></i>
                     </a>
                 </div>
             </router-link>
@@ -108,10 +110,13 @@
                                 src="https://raw.githubusercontent.com/IKolyas/static/master/GBProject/img/procent.png"
                                 alt="..."
                                 class="col-lg-3 pb-2 mx-2">
-                            <div class="col-lg-9 p-0"><h4>Quality assurance</h4>
+                            <div class="col-lg-9 p-0">
+                                <h4>Quality assurance</h4>
                                 <p>Worldwide delivery on all. Authorit tively morp next-generation innovation with
                                     extensive
-                                    models</p></div>
+                                    models
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -121,16 +126,11 @@
 </template>
 <script>
 
-    import Catalog from "./Catalog.vue";
+    const Catalog = () =>  import("../components/Catalog.vue");
 
     export default {
         components: {
             Catalog,
-        },
-        methods: {
-            addItem(item) {
-                this.$parent.$refs.head.$refs.bask.add(item)
-            },
         },
     }
 </script>
