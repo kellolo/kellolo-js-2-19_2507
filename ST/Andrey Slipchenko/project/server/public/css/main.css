@@ -593,6 +593,8 @@ a {
           box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16);
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  -webkit-animation: vibrate-1 0.5s linear infinite both;
+  animation: vibrate-1 0.5s linear infinite both;
 }
 
 .product__item:hover .product__image {
@@ -1948,7 +1950,7 @@ i.fas.fa-long-arrow-alt-right {
 }
 
 .product__offer {
-  background-image: url("../../assets/imgs/black.png");
+  background-image: url(9bdbf4d7bd5d06d9dbb557c64ded3c1c.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -2195,4 +2197,3 @@ details[open] > summary::after {
 .cart__button {
   outline: none;
 }
-/*# sourceMappingURL=style.css.map */
