@@ -1,7 +1,12 @@
 <template>
     <header class="container">
         <div class="row d-flex align-items-center justify-content-center mb-3 mt-5 mt-sm-0 pt-2">
-            <a href="#" class="logo col-7 col-sm-4 col-lg-2 d-flex justify-content-center pl-5">Bran<span>d</span></a>
+            <router-link 
+                :to="{name: 'Index'}" 
+                class="logo col-7 col-sm-4 col-lg-2 d-flex justify-content-center pl-5">
+                Bran
+                <span>d</span>
+            </router-link >
             <div class="input-group searchBrowse col-sm-8 col-lg-5 pr-sm-5 mb-1">
                 <div class="input-group-prepend">
                     <button class="btn btn-outline-secondary dropdown-toggle d-flex align-items-center justify-content-center"
@@ -44,13 +49,21 @@
                     </transition>
 
                 </div>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-danger ml-4">My Account</button>
+                <div class="btn-group ml-4">
+                    <router-link :to="{name: 'CheckOut'}" tag="button" type="button" class="btn btn-danger"> 
+                        My Account
+                    </router-link>
                     <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="sr-only">Toggle Dropdown</span>
                     </button>
-
+                    <div class="dropdown-menu">
+                        <router-link :to="{name: 'CheckOut'}"> 
+                            <a class="dropdown-item" href="#">You profile</a>
+                        </router-link>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Sign out</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -59,8 +72,7 @@
 
 <script>
 
-    import Basket from "./Basket.vue";
-
+    const Basket = () => import('./Basket.vue');
     export default {
         name: "Header",
         components: {

@@ -1,17 +1,7 @@
 <template>
     <div>
         <div class="newsProd">
-            <div class="container">
-                <div class="news row flex-column flex-sm-row container justify-content-between  align-items-center pt-5 pb-5">
-                    <div class="newsAr">
-                        <h2>news arrivals</h2></div>
-                    <nav class="newsNav">
-                        <a class="newsNavlink" href="#">Home</a> /
-                        <a class="newsNavlink" href="#">Men</a> /
-                        <a class="newsNavlink newsNavLinkActive" href="#">news arrivals</a>
-                    </nav>
-                </div>
-            </div>
+            <Breadcrubm />
         </div>
         <main class="container my-5">
             <div class="row">
@@ -140,7 +130,7 @@
                         </nav>
                         <div class="checkSize row col-12 col-lg-4 d-flex justify-content-center justify-content-lg-start align-items-center align-items-lg-start m-0 p-0">
                             <div class="m-0 p-0 col-12 d-flex justify-content-center justify-content-lg-start">
-                                <h4>Size</h4></div>
+                                <h4 class="m-0">Size</h4></div>
                             <div class="row d-flex flex-column m-0 p-0 col-3">
                                 <div class="form-check form-check-inline checkFormProd">
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
@@ -213,61 +203,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="sortProd row d-flex align-items-center my-5 px-3">
-                        <div class="input-group col-6 col-lg-3 p-0 m-0">
-                            <div class="input-group-prepend">
-                                <button class="btn btn-outline-secondary py-0" type="button">Sort By</button>
-                            </div>
-                            <select class="custom-select px-1 py-0" id="inputGroupSelect03"
-                                    aria-label="Example select with button addon">
-                                <option selected>Name</option>
-                                <option value="1">Name</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                        <div class="input-group col-6 col-lg-3 p-0 ml-lg-2">
-                            <div class="input-group-prepend">
-                                <button class="btn btn-outline-secondary py-0" type="button">Show</button>
-                            </div>
-                            <select class="custom-select px-1 py-0"
-                                    aria-label="Example select with button addon">
-                                <option selected>02</option>
-                                <option value="1">01</option>
-                                <option value="2">03</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                    </div>
 
-                    <Catalog @add="addItem" ref="catalogProducts"/>
+                    <Catalog type="products" ref='catalogProducts'/>
 
-                    <div class="row paginationProduct d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-between">
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a class="page-link page-linkActive" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                <li class="page-item"><a class="page-link" href="#">6</a></li>
-                                <li class="page-item"><a class="page-link" href="#">7</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <button type="button">
-                            View All
-                        </button>
-                    </div>
+                    
                 </div>
             </div>
         </main>
@@ -301,7 +240,9 @@
 </template>
 
 <script>
-    import Catalog from "./Catalog.vue";
+    const Catalog = () => import('../components/Catalog.vue');
+    const Breadcrubm = () => import('../components/Breadcrumb.vue');
+
 
     export default {
         data() {
@@ -309,25 +250,29 @@
                 priceFilter: {
                     min: 0,
                     max: 1000,
-                }
+                },
+              
             }
         },
-
         components: {
             Catalog,
+            Breadcrubm,
         },
+
         methods: {
-            addItem(item) {
-                this.$parent.$refs.head.$refs.bask.add(item)
-            },
+           
             setRangeSlider() {
                 if (this.priceFilter.min > this.priceFilter.max) {
                     [this.priceFilter.max, this.priceFilter.min] = [this.priceFilter.min, this.priceFilter.max]
-                }
-                this.$refs.catalogProducts.filterItem(this.priceFilter)
-
+                };
+                this.$store.state.priceFilter = this.priceFilter
             },
         },
+        mounted() {
+            this.$store.commit('getCatalog');
+            this.$store.commit('filterItem');
+        }
+
     }
 </script>
 

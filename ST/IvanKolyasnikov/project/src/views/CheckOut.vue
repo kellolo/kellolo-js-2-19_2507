@@ -1,17 +1,9 @@
 <template>
     <div>
         <div class="newsProd">
-            <main class="container">
-                <div class="news row flex-column flex-sm-row container justify-content-between  align-items-center pt-5 pb-5 mx-0">
-                    <div class="newsAr">
-                        <h2>news arrivals</h2></div>
-                    <nav class="newsNav">
-                        <a class="newsNavlink" href="#">Home</a> /
-                        <a class="newsNavlink" href="#">Men</a> /
-                        <a class="newsNavlink newsNavLinkActive" href="#">news arrivals</a>
-                    </nav>
-                </div>
-            </main>
+            
+            <Breadcrubm />
+
         </div>
         <main class="container mt-5 pt-4">
             <div class="accordion" id="accordionExample">
@@ -186,8 +178,13 @@
 </template>
 
 <script>
+    const Breadcrubm = () => import('../components/Breadcrumb.vue');
+    
     export default {
-        name: "CheckOut"
+        name: "CheckOut",
+        components: {
+            Breadcrubm,
+        },
     }
 </script>
 
