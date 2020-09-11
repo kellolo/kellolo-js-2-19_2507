@@ -1068,7 +1068,7 @@ i.fas.fa-long-arrow-alt-right {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 20px;
+  margin: 40px 0;
 }
 
 /* CLOTHES */
@@ -1087,7 +1087,8 @@ i.fas.fa-long-arrow-alt-right {
 }
 
 .clothes__content {
-  width: 650px;
+  width: 750px;
+  
 }
 
 .clothes__title {
@@ -1305,6 +1306,7 @@ i.fas.fa-long-arrow-alt-right {
 .shopping__product__img {
   position: absolute;
   left: 0;
+  width: 9%;
 }
 
 .shopping__product__name {
@@ -1338,6 +1340,12 @@ i.fas.fa-long-arrow-alt-right {
           align-items: center;
 }
 
+.shopping__descriptions button {
+  background-color: #fff ;
+  border: none;
+  outline: none;
+}
+
 .shopping__description {
   font-size: 13px;
   color: #656565;
@@ -1345,6 +1353,25 @@ i.fas.fa-long-arrow-alt-right {
   text-align: center;
   width: 150px;
 }
+
+.shopping__description_price {
+  margin-right: 40px;
+}
+
+.shopping__description .fas {
+  font-size: 15px;
+}
+
+.shopping__description_buttons {
+  display: flex;
+  justify-content: center;
+  margin-right: 40px;
+}
+
+.shopping__description_buttons button .fas {
+  font-size: 15px;
+}
+
 
 .shopping__buttons {
   display: -webkit-box;
@@ -1370,14 +1397,14 @@ i.fas.fa-long-arrow-alt-right {
 }
 
 .shopping__input {
-  width: 65px;
-  margin-left: 42px;
+  width: 30px;
+  margin-left: 10px;
   height: 36px;
   text-align: center;
   background-color: #ffffff;
   border: 1px solid #eaeaea;
   padding: -49px;
-  margin-right: 42px;
+  margin-right: 10px;
 }
 
 /*  FORMALIZATION BLOCK  */

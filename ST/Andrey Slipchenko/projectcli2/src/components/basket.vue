@@ -24,7 +24,7 @@
 
 <script>
 import item from './item.vue';
-import { get, post, put, del } from '../utils/regs';
+import { get, post, put, del } from '../utils/regs.js';
 
 export default {
     components: { item },
@@ -36,12 +36,13 @@ export default {
         }
     },
     mounted() {
-        get(this.url)
+        setInterval(() => {
+            get(this.url)
             .then(basket => {
                 this.totalPrice = basket.totalPrice
                 this.items = basket.content
-                
             })
+        }, 500)
     },
     methods: {
         add(item) {
