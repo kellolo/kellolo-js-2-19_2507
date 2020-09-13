@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import "variables";
+
+.topBanner {
+  height: 610px;
+  background: #e8e8e8;
+
+  @media (max-width: 991.98px) {
+    height: auto;
+  }
+}
+
+.topBannerContent {
+  display: flex;
+  height: 610px;
+  background: url("../imgs/topHeaderBack.png") no-repeat;
+  background-size: 550px;
+  background-position: 93% 0%;
+  align-items: center;
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    background-position: 100% 0%;
+  }
+
+  @media (max-width: 991.98px) {
+    background: none;
+    height: auto;
+    padding: 5rem 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: 767.98px) {
+    padding: 2rem 0;
+  }
+}
+
+.topBannerText1 {
+  color: $colorText;
+  font-weight: 900;
+  font-size: 60px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  @media (max-width: 767.98px) {
+    font-size: 40px;
+  }
+}
+
+.topBannerText2 {
+  letter-spacing: 1px;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 40px;
+  color: $colorText;
+  padding-top: 1rem;
+
+  @media (max-width: 767.98px) {
+    font-size: 30px;
+    padding-top: 0;
+  }
+
+  @media (max-width: 400px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  span {
+    color: $mainColor;
+  }
+}
+
+.bgText {
+  padding-left: 24px;
+  border-left: 12px solid $mainColor;
+  line-height: 3rem;
+
+  @media (max-width: 991.98px) {
+    padding: 0;
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+
+/*-------------------------------OFFER ST-----------------------------*/
+.offers {
+
+  .col-6 {
+    @media (max-width: 767.98px) {
+      padding: 0 10px 0 10px;
+    }
+  }
+}
+
+.offer {
+  position: relative;
+  width: inherit;
+
+  a:first-child {
+    background: $btnIconsTextAndBgColor;
+    position: absolute;
+    margin-top: 1.5rem;
+    padding: 1rem 1.2rem 1rem 1.2rem;
+    text-decoration: none;
+
+    @media (max-width: 991.98px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0;
+      position: inherit;
+      outline: 1px solid #cccccc;
+      padding: 0.5rem 0 0.5rem 0;
+    }
+
+    @media (max-width: 767.98px) {
+      flex-direction: column;
+    }
+
+    @media (max-width: 575.98px) {
+      flex-direction: row;
+    }
+
+    div {
+      color: $colorText;
+      font-size: 18px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.45px;
+
+      @media (max-width: 767.98px) {
+        font-size: $mainFontSize;
+      }
+    }
+
+    div:last-child {
+      color: $mainColor;
+      font-size: 30px;
+      letter-spacing: 0.75px;
+
+      @media (max-width: 991.98px) {
+        font-size: 18px;
+        padding-left: 0.5rem;
+      }
+
+      @media (max-width: 767.98px) {
+        flex-direction: column;
+        padding-left: 0;
+        font-size: $mainFontSize;
+      }
+
+      @media (max-width: 575.98px) {
+        padding-left: 0.5rem;
+      }
+    }
+  }
+
+  a:hover + a:last-child {
+
+    @media (min-width: 992px) {
+      outline: 1px solid $mainColor;
+    }
+  }
+
+  a:last-child {
+    width: inherit;
+
+    @media (max-width: 991.98px) {
+      outline: 1px solid #cccccc;
+    }
+
+    &:hover {
+      @media (min-width: 992px) {
+        outline: 1px solid $mainColor;
+      }
+    }
+
+    img {
+      width: inherit;
+    }
+  }
+}
+/*-------------------------------OFFER End-----------------------------*/
+/*-------------------------------FETURED ST-----------------------------*/
+.feturedHeadTop {
+  color: #222222;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 54px;
+}
+
+.feturedHeadBottom {
+  color: #9f9f9f;
+  font-size: $mainFontSize;
+  font-weight: 400;
+
+  @media (max-width: 400px) {
+    padding: 0 2rem 0 2rem;
+  }
+}
+
+.feturedButton {
+  @include button($mainColor, $btnIconsTextAndBgColor);
+  margin-top: 3rem;
+  padding: 1rem 1.5rem;
+  border-left: 1px solid $mainColor;
+
+  i {
+    padding-left: 0.5rem;
+  }
+
+  &:hover {
+    @include button($btnIconsTextAndBgColor, $mainColor);
+  }
+}
+/*-------------------------------FETURED END-----------------------------*/
+
+/*-------------------------------OFFER FOR WOMEN ST-----------------------------*/
+.offerWomenLeft {
+  background: url("../imgs/offerForWomen.jpg");
+  flex-shrink: 0;
+  background-size: cover;
+
+  @media (max-width: 992px) {
+    background: none;
+    background-color: #222224;
+  }
+
+  .offerWomenBannerText {
+    padding-top: 9rem;
+    padding-left: 2.5rem;
+
+    @media (max-width: 992px) {
+      padding-top: 1rem;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+
+    div {
+      color: $btnIconsTextAndBgColor;
+      font-size: 54px;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      @media (max-width: 450px) {
+        font-size: 34px;
+      }
+
+      &:last-child {
+        font-size: 32px;
+        letter-spacing: 0.9px;
+
+        @media (max-width: 450px) {
+          font-size: 24px;
+        }
+      }
+
+
+
+      span {
+        color: $mainColor;
+        letter-spacing: 1.5px;
+      }
+    }
+  }
+}
+
+.offerWomenRight {
+  background-color: #222224;
+  padding-bottom: 3rem;
+
+  .offerWomenDetail {
+
+    @media (max-width: 992px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .offerWomenDetailUp {
+      color: #fbfbfb;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding-top: 3rem;
+
+      @media (max-width: 992px) {
+        padding-top: 1rem;
+      }
+    }
+
+    .offerWomenDetailBottom {
+      margin-top: 10px;
+      color: #fbfbfb;
+      font-size: $mainFontSize;
+      font-weight: 300;
+      line-height: 24px;
+      letter-spacing: 0.35px;
+      padding-right: 2rem;
+
+      @media (max-width: 992px) {
+        padding: 0 11.5rem;
+      }
+
+      @media (max-width: 767.98px) {
+        padding: 0 3rem;
+      }
+
+      @media (max-width: 575.98px) {
+        padding: 0 4rem;
+      }
+
+      @media (max-width: 450px) {
+        padding: 0 3rem;
+      }
+    }
+  }
+
+  img {
+    padding: 3rem 2rem;
+
+    @media (max-width: 992px) {
+      padding: 3rem 0 0 0;
+    }
+  }
+}
+
+
+/*-------------------------------OFFER FOR WOMEN END-----------------------------*/

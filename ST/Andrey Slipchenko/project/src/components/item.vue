@@ -7,7 +7,7 @@
                     <a class="product__name" href="single page.html">{{item.productName}}</a>
                     <div class="product__price">&#36; {{item.productPrice}}</div>
                 </div>
-                <a class="product__add" href="#">Add to Cart</a>
+                <button class="product__add" @click="$parent.$emit('add', item)"> Add to Cart</button>
             </div>
         </template>
 
@@ -23,11 +23,11 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                     <div class="calc">
-                        <h5 class="amount"> {{ item.amount }} x</h5>
+                        <h5 class="amount">{{ item.amount }} x</h5>
                         <h5 class="price">&nbsp;&#36; {{ item.productPrice }}</h5>
                     </div>
                 </div>
-                <button class="basket__item_icon" id="remove">
+                <button class="basket__item_icon" id="remove" @click="$emit('remove', item)">
                     <i class="fas fa-times-circle"></i>
                 </button>
             </div>

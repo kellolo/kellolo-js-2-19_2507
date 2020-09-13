@@ -1,5 +1,6 @@
 const express = require("express");
 const fs = require("fs");
+const basket = require("./services/basket.js");
 
 const server = express();
 server.use(express.json());
@@ -15,68 +16,48 @@ server.get("/catalog", (req, res) => {
 server.get("/basket", (req, res) => {
     fs.readFile("./server/db/basket.json", "utf-8", (err, data) => {
         if (!err) {
-            res.json(JSON.parse(data));
+            res.status(200).json(JSON.parse(data));
         }
     })
 });
 
 server.post("/basket", (req, res) => {
-    fs.readFile("./server/db/basket.json", "utf-8", (err, data) => {
-        if (!err) {
-            let items = JSON.parse(data);
-            items.push(req.body);
-            fs.writeFile("./server/db/basket.json", JSON.stringify(items, null, "    "), err => {
-                if (!err) {
-                    res.status(200).send("OK");
-                } else {
-                    res.status(500).send("basket update failed");
-                }
-            });
-        } else {
-            res.status(500).send("basket db read failed");
-        }
-    })
+    _basketUpdate(basket.add, "basket item add failed", req.body)
+        .then(success => res.status(200).json(success))
+        .catch(failure => res.status(500).json(failure));
 });
 
-server.put("/basket", (req, res) => {
-    fs.readFile("./server/db/basket.json", "utf-8", (err, data) => {
-        if (!err) {
-            let items = JSON.parse(data);
-            let item = req.body;
-            let find = items.find(el => el.id == item.id);
-            find.amount = item.amount;
-            fs.writeFile("./server/db/basket.json", JSON.stringify(items, null, "    "), err => {
-                if (!err) {
-                    res.status(200).send("OK");
-                } else {
-                    res.status(500).send("basket item update failed");
-                }
-            });
-        } else {
-            res.status(500).send("basket db read failed");
-        }
-    })
+server.put("/basket/:id/:amnt", (req, res) => {
+    _basketUpdate(basket.change, "basket item update failed", req.params.id, req.params.amnt)
+        .then(success => res.status(200).json(success))
+        .catch(failure => res.status(500).json(failure));
 });
 
-server.delete("/basket", (req, res) => {
-    fs.readFile("./server/db/basket.json", "utf-8", (err, data) => {
-        if (!err) {
-            let items = JSON.parse(data);
-            let item = req.body;
-            let find = items.find(el => el.id == item.id);
-            items.splice(items.indexOf(find), 1);
-            fs.writeFile("./server/db/basket.json", JSON.stringify(items, null, "    "), err => {
-                if (!err) {
-                    res.status(200).send("OK");
-                } else {
-                    res.status(500).send("basket item delete failed");
-                }
-            });
-        } else {
-            res.status(500).send("basket db read failed");
-        }
-    })
+server.delete("/basket/:id", (req, res) => {
+    _basketUpdate(basket.delete, "basket item delete failed", req.params.id)
+        .then(success => res.status(200).json(success))
+        .catch(failure => res.status(500).json(failure));
 });
+
+
+function _basketUpdate(method, errMsg, ...methodParams) {
+    return new Promise((resolve, reject) => {
+        fs.readFile("./server/db/basket.json", "utf-8", (err, data) => {
+            if (!err) {
+                const updated = method(JSON.parse(data), ...methodParams);
+                fs.writeFile("./server/db/basket.json", JSON.stringify(updated, null, "    "), err => {
+                    if (!err) {
+                        resolve({success: true});
+                    } else {
+                        reject({error: errMsg});
+                    }
+                });
+            } else {
+                reject({error: "basket db read failed"});
+            }
+        });
+    });
+}
 
 
 server.listen(3000);

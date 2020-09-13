@@ -1,0 +1,12 @@
+{
+ "totalPrice": 110,
+ "content": [
+  {
+   "productName": "STRAWBERRY PEOPLE T-SHIRT",
+   "productPrice": 55,
+   "productImg": "https://raw.githubusercontent.com/Rutard-Hash/static/master/Fetured3.jpg",
+   "productId": "prod_2",
+   "amount": 2
+  }
+ ]
+}
