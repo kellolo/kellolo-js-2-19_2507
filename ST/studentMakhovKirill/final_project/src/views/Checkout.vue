@@ -1,120 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://kit.fontawesome.com/1bbbc1ee96.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	<link rel="stylesheet" href="../src/layout/styles/style.css">
-	<title>Checkout</title>
-</head>
-
-<body>
-	<div class="wrapper">
-		<header class="header">
-			<div class="header__header container">
-				<div class="logo">Bran<span>d</span></div>
-				<div class="header__search">
-					<form class="header__searchform">
-						<button type="button" class="header__search-browse btn dropdown-toggle" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false">
-							Browse
-						</button>
-						<div class="dropdown-menu">
-							<a class="dropdown-item disabled text-uppercase" href="#">women</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Dresses</a>
-							<a class="dropdown-item" href="#">Tops</a>
-							<a class="dropdown-item" href="#">Sweaters/Knits</a>
-							<a class="dropdown-item" href="#">Jackets/Coats</a>
-							<a class="dropdown-item" href="#">Blazers</a>
-							<a class="dropdown-item" href="#">Denim</a>
-							<a class="dropdown-item" href="#">Skirts/Shorts</a>
-							<a class="dropdown-item" href="#">Accessories </a>
-							<a class="dropdown-item disabled text-uppercase" href="#">men</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Tees/Tank tops</a>
-							<a class="dropdown-item" href="#">Shirts/Polos</a>
-							<a class="dropdown-item" href="#">Sweaters</a>
-							<a class="dropdown-item" href="#">Sweatshirts/Hoodies</a>
-							<a class="dropdown-item" href="#">Blazers</a>
-							<a class="dropdown-item" href="#">Jackets/vests</a>
-							<input class="header__search-input" name="search" type="text" placeholder="Search for Item...">
-							<button class="header__search-buton"><i class="fas fa-search"></i></button>
-						</div>
-						<input class="header__search-input" name="search" type="text" placeholder="Search for Item...">
-						<button class="header__search-buton"><i class="fas fa-search"></i></button>
-					</form>
-				</div>
-				<div class="header__cart">
-					<a href="#" class="header__cart-a"><img id="hide" class="header__cart-img"
-							src="../src/assets/imgs/headerCart.png" alt="headerCart"></a>
-					<div class="headerCart" id="cart">
-						<div id="basket" class="headerCart__main">
-							<div class="headerCart__item">
-								<div class="headerCart__product">
-									<img src="https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product1.jpg" alt="">
-									<div class="headerCart__description">
-										<div class="headerCart__name">
-											Rebox Zane
-										</div>
-										<div class="headerCart__price">
-											1 <span>x</span> $250
-										</div>
-									</div>
-								</div>
-								<button name="remove" data-id="${item.id}"><i class="fas fa-times-circle"></i></button>
-							</div>
-						</div>
-						<div class="headerCart__totalPrice">
-							<div>total</div>
-							<div>
-								$<div id="sum">500.00</div>
-							</div>
-						</div>
-						<button class="headerCart__button"><a href="checkout.html">Checkout</a></button>
-						<button class="headerCart__button"><a href="cart.html">Go to cart</a></button>
-					</div>
-				</div>
-				<div class="header__account">
-					<button class="header__btn">My Account <i class="fas fa-caret-down"></i></button>
-				</div>
-			</div>
-			<div class="header__line"></div>
-			<div class="header__footer">
-				<nav class="header__burger navbar navbar-expand-lg navbar-light bg-light text-uppercase">
-					<div class="container">
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-							aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-							<div class="navbar-nav">
-								<a class="nav-item nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
-								<a class="nav-item nav-link" href="#">Man</a>
-								<a class="nav-item nav-link" href="#">Women</a>
-								<a class="nav-item nav-link" href="#">Kids</a>
-								<a class="nav-item nav-link" href="#">Accoseriese</a>
-								<a class="nav-item nav-link" href="#">Featured</a>
-								<a class="nav-item nav-link" href="#">Hot Deals</a>
-							</div>
-						</div>
-					</div>
-				</nav>
-				<nav class="header__nav">
-					<a href="#">Home</a>
-					<a href="#">Man</a>
-					<a href="#">Women</a>
-					<a href="#">Kids</a>
-					<a href="#">Accoseriese</a>
-					<a href="#">Featured</a>
-					<a href="#">Hot Deals</a>
-				</nav>
-			</div>
-		</header>
-		<div class="content">
+<template>
+  		<div class="content">
 			<div class="new-arrivals-wrapper">
 				<div class="new-arrivals container">
 					<h1>New Arrivals</h1>
@@ -301,65 +186,14 @@
 				</div>
 			</div>
 		</div>
-		<footer class="footer container">
-			<div class="footer__brand">
-				<div class="logo">Bran<span>d</span></div>
-				<div class="footer__text-1">Objectively transition extensive data rather than cross functional solutions.
-					Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an
-					expanded array of processes and cross-unit partnerships.</div>
-				<div class="footer__text-2">Efficiently plagiarize 24/365 action items and focused infomediaries.
-					Distinctively seize superior initiatives for wireless technologies. Dynamically optimize</div>
-			</div>
-			<div class="footer__column">
-				<h2>COMPANY</h2>
-				<a href="#">Home</a>
-				<a href="#">Shop</a>
-				<a href="#">About</a>
-				<a href="#">How It Works</a>
-				<a href="#">Contact</a>
-			</div>
-			<div class="footer__column">
-				<h2>INFORMATION</h2>
-				<a href="#">Tearms & Condition</a>
-				<a href="#">Privacy Policy</a>
-				<a href="#">How to Buy</a>
-				<a href="#">How to Sell</a>
-				<a href="#">Promotion</a>
-			</div>
-			<div class="footer__column">
-				<h2>SHOP CATEGORY</h2>
-				<a href="#">Men</a>
-				<a href="#">Women</a>
-				<a href="#">Child</a>
-				<a href="#">Apparel</a>
-				<a href="#">Brows All</a>
-			</div>
-		</footer>
-		<div class="copyright">
-			<div class="copyright__wrap container">
-				<div class="copyright__copyright">
-					&copy; 2017 Brand All Rights Reserved.
-				</div>
-				<div class="copyright__link">
-					<a href="#"><i class="fab fa-facebook-f"></i></a>
-					<a href="#"><i class="fab fa-twitter"></i></a>
-					<a href="#"><i class="fab fa-linkedin-in"></i></a>
-					<a href="#"><i class="fab fa-pinterest-p"></i></a>
-					<a href="#"><i class="fab fa-google-plus-g"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-		crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-		crossorigin="anonymous"></script>
-	<script src="../src/components/js/basket.js"></script>	
-</body>
+</template>
 
-</html>
+<script>
+export default {
+
+}
+</script>
+
+<style>
+
+</style>
