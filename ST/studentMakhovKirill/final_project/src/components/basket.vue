@@ -2,7 +2,7 @@
   <div class="headerCart">
     <div id="basket" class="headerCart__main">
       <!--BASKET ITEM-->
-      <item v-for="item of items" type="basket" :key="item.id" :item="item" @remove="remove" />
+      <item v-for="item of this.$store.state.itemsBasket" type="basket" :key="item.id" :item="item" @remove="remove" />
     </div>
     <div class="headerCart__totalPrice">
       <div>total</div>
@@ -35,7 +35,7 @@ export default {
   computed: {
     getSum: function () {
       let a = 0;
-      this.items.forEach((item) => {
+     this.$store.state.itemsBasket.forEach((item) => {
         a += item.price * item.amount;
       });
       return a;
@@ -43,7 +43,7 @@ export default {
   },
   mounted() {
     get(this.url).then((basket) => {
-      this.items = basket.content;
+      this.$store.state.itemsBasket = basket.content;
     });
     //  this.$parent.$parent.parentGet(this.url).then((d) => {
     //    this.items = d.content;
@@ -51,43 +51,40 @@ export default {
   },
   methods: {
     add(item) {
-      let find = this.items.find(el => el.id == item.id);
+      let find = this.$store.state.itemsBasket.find((el) => el.id == item.id);
       if (!find) {
         let newItem = Object.assign({}, item, { amount: 1 });
-        post(this.url, newItem).then(res => {
+        post(this.url, newItem).then((res) => {
           if (res.status) {
-            this.items.push(newItem);
+            this.$store.state.itemsBasket.push(newItem);
           } else {
             console.log("Server err");
           }
         });
       } else {
-		  put(`${this.url}/${item.id}`, 1)
-		  .then(res => {
+        put(`${this.url}/${item.id}`, 1).then((res) => {
           if (res.status) {
-            find.amount++
+            find.amount++;
           } else {
-            console.log("Server err")
+            console.log("Server err");
           }
-        })
+        });
       }
     },
     remove(item) {
-      let find = this.items.find(el => el.id == item.id);
+      let find = this.$store.state.itemsBasket.find((el) => el.id == item.id);
       if (find.amount > 1) {
-		  put(`${this.url}/${item.id}`, -1)
-		  .then(res => {
+        put(`${this.url}/${item.id}`, -1).then((res) => {
           if (res.status) {
-            find.amount--
+            find.amount--;
           } else {
-            console.log("Server err")
+            console.log("Server err");
           }
-        })
+        });
       } else {
-		  del(`${this.url}/${item.id}`)
-		  .then(res => {
+        del(`${this.url}/${item.id}`).then((res) => {
           if (res.status) {
-            this.items.splice(this.items.indexOf(find), 1);
+            this.$store.state.itemsBasket.splice(this.$store.state.itemsBasket.indexOf(find), 1);
           } else {
             console.log("Server err");
           }

@@ -42,10 +42,34 @@
 		"img": "https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product7.jpg"
 	},
 	{
-		"id": 88,
+		"id": 8,
 		"name": "PLUM SQUARE PONCHO",
 		"price": "11111.00",
 		"img": "https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product8.jpg"
+	},
+	{
+		"id": 9,
+		"name": "TROLOLO",
+		"price": "1.00",
+		"img": "https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product9.jpg"
+	},
+	{
+		"id": 10,
+		"name": "PLUMONCHO",
+		"price": "111.00",
+		"img": "https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product10.jpg"
+	},
+	{
+		"id": 11,
+		"name": "SQUARONCHO",
+		"price": "12.00",
+		"img": "https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product14.jpg"
+	},
+	{
+		"id": 12,
+		"name": "PLONCHO",
+		"price": "44411.00",
+		"img": "https://raw.githubusercontent.com/K-Real-Mh/Static/master/imgs/product12.jpg"
 	}
 ]
 
