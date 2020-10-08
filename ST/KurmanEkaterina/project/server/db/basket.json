@@ -1,0 +1,69 @@
+{
+ "totalAmount": 3,
+ "totalPrice": 203,
+ "content": [
+  {
+   "productName": "ORANGE PEOPLE T-SHIRT",
+   "productPrice": 67,
+   "productImg": "https://raw.githubusercontent.com/solaft/static/master/JS2shop/Fetured1.jpg",
+   "productId": "prod_3",
+   "amount": 2
+  },
+  {
+   "productName": "PUMKIN PEOPLE T-SHIRT",
+   "productPrice": 69,
+   "productImg": "https://raw.githubusercontent.com/solaft/static/master/JS2shop/Product3.jpg",
+   "productId": "prod_4",
+   "amount": 1
+  },
+  {
+   "productId": 7,
+   "productName": "ROUGE PEOPLE T-SHIRT",
+   "productPrice": "17.00",
+   "productImg": "https://raw.githubusercontent.com/solaft/static/master/JS2shop/Product8.jpg",
+   "amount": 1
+  },
+  {
+   "productId": 5,
+   "productName": "BLUE PEOPLE T-SHIRT",
+   "productPrice": "15.00",
+   "productImg": "https://raw.githubusercontent.com/solaft/static/master/JS2shop/Product6.jpg",
+   "amount": 1
+  },
+  {
+   "productId": 4,
+   "productName": "DARTH PEOPLE T-SHIRT",
+   "productPrice": "14.00",
+   "productImg": "https://raw.githubusercontent.com/solaft/static/master/JS2shop/Product5.jpg",
+   "amount": 1
+  },
+  {
+   "productId": 2,
+   "productName": "AMAZING PEOPLE T-SHIRT",
+   "productPrice": "12.00",
+   "productImg": "https://raw.githubusercontent.com/solaft/static/master/JS2shop/Product3.jpg",
+   "amount": 1
+  },
+  {
+   "productId": 6,
+   "productName": "YELLOW PEOPLE T-SHIRT",
+   "productPrice": "16.00",
+   "productImg": "https://raw.githubusercontent.com/solaft/static/master/JS2shop/Product7.jpg",
+   "amount": 1
+  },
+  {
+   "productId": 2,
+   "productName": "AMAZING PEOPLE T-SHIRT",
+   "productPrice": "12.00",
+   "productImg": "https://raw.githubusercontent.com/solaft/static/master/JS2shop/Product3.jpg",
+   "amount": 1
+  },
+  {
+   "productId": 8,
+   "productName": "BRITNEY PEOPLE T-SHIRT",
+   "productPrice": "18.00",
+   "productImg": "https://raw.githubusercontent.com/solaft/static/master/JS2shop/Product9.jpg",
+   "amount": 1
+  }
+ ]
+}

@@ -1,7 +1,7 @@
 <template>
 <!--div>
   <header>
-  // с использованием slot
+   с использованием slot
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -10,7 +10,7 @@
 
   <router-view/>
 
-  <footer />
+  <footer/>
 </div-->
 <div id="app">
     <div id="nav">

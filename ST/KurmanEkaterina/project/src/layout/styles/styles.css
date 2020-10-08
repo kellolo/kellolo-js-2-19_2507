@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
 @media (max-width: 575.98px) {
   .logo {
     margin: auto; } }
@@ -261,8 +255,7 @@
   .headerCart .headerCartWrap {
     position: absolute;
     width: 260px;
-    left: -40px;
-    display: none; }
+    left: -40px; }
     @media (max-width: 650px) {
       .headerCart .headerCartWrap {
         left: -120px; } }
@@ -335,7 +328,7 @@
 
 /*-------------------------------SUBSCRIBE ST-----------------------------*/
 .subscribeBg {
-  background: url(../../assets/imgs/SubscribbeBG.jpg) no-repeat center center, #ccc;
+  /* background: url(../../assets/imgs/SubscribbeBG.jpg) no-repeat center center, #ccc; */
   background-blend-mode: overlay;
   background-size: cover;
   margin-top: 3rem; }
@@ -525,7 +518,7 @@
 .topBannerContent {
   display: flex;
   height: 610px;
-  background: url("../../assets/imgs/topHeaderBack.png") no-repeat;
+  /* background: url("../../assets/imgs/topHeaderBack.png") no-repeat; */
   background-size: 550px;
   background-position: 93% 0%;
   align-items: center; }
@@ -688,7 +681,7 @@
 /*-------------------------------FETURED END-----------------------------*/
 /*-------------------------------OFFER FOR WOMEN ST-----------------------------*/
 .offerWomenLeft {
-  background: url("../../assets/imgs/offerForWomen.jpg");
+  /* background: url("../../assets/imgs/offerForWomen.jpg"); */
   flex-shrink: 0;
   background-size: cover; }
   @media (max-width: 992px) {
@@ -864,7 +857,7 @@ details[open] summary .fa-caret-up {
       outline: none;
       border: 1px solid #ebebeb;
       -webkit-appearance: none;
-      background: url("../../assets/imgs/caret.jpg") no-repeat;
+      /* background: url("../../assets/imgs/caret.jpg") no-repeat; */
       background-position: 90% 50%;
       padding-left: 0.8rem;
       padding-right: 2rem;
@@ -1178,7 +1171,7 @@ details[open] summary .fa-caret-up {
     outline: none;
     border: 1px solid #eaeaea;
     -webkit-appearance: none;
-    background: url("../../assets/imgs/caret.jpg") no-repeat;
+    /* background: url("../../assets/imgs/caret.jpg") no-repeat; */
     background-position: 97% 50%;
     width: 355px;
     height: 45px;
