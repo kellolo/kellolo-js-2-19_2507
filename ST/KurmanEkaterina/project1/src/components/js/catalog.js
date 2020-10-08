@@ -12,8 +12,8 @@ function initCatalog(qty) {
         ids.push(i);
         names.push("MANGO PEOPLE T-SHIRT");
         prices.push("1" + String(i) + ".00");
-        // imgs.push("https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem1.jpg" + String(i) + ".jpg");
-        imgs.push(`https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/FeaturedItem${i}.jpg`);
+        // imgs.push("https://raw.githubusercontent.com/solaft/static/master/img/JS1_shop/featuredItem1.jpg" + String(i) + ".jpg");
+        imgs.push(`https://raw.githubusercontent.com/solaft/static/master/img/JS1_shop/featuredItem${i}.jpg`);
     } 
 
     return names.map((names, index) => createItem(ids[index], names, prices[index], imgs[index]));

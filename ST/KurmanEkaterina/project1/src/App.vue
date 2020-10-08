@@ -1,25 +1,23 @@
 <template>
-<!--div>
+<div>
   <header>
-   с использованием slot
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <div id="app">
+      <router-link to="/header">header</router-link>
+      </div>
   </header>
-
-  <router-view/>
-
-  <footer/>
-</div-->
-<div id="app">
-    <div id="nav">
+  checkout
+  <router-view />
+   <router-link to="/footer">footer</router-link>
+  <footer />
+</div>
+<!--div id="app">
+    <div id="app">
         <router-link to="/">Home</router-link> |
         <router-link to="/about">About</router-link> |
         <router-link to="/basket">Basket</router-link>
     </div>
     <router-view />
-</div>
+</div-->
 </template>
 
 <style lang="scss">
