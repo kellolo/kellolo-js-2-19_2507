@@ -444,17 +444,17 @@
                     </div>
                 </div>
             </div>
-            <div class="navAll">
-                <a class="nav-link" href="singlePage.html" style="color: blue">Single Page</a>
+            <div class="navAll router">
+                <router-link to="/shoppingcart" class="nav-link">Shopping Cart</router-link>
             </div>
-            <div class="navAll">
-                <a class="nav-link" href="shoppingCart.html" style="color: blue">Shopping Cart</a>
+            <div class="navAll router">
+                <router-link to="/singlepage" class="nav-link">Single page</router-link>
             </div>
-            <div class="navAll">
-                <a class="nav-link" href="checkout.html" style="color: blue">Checkout</a>
+            <div class="navAll router">
+                <router-link to="/checkout" class="nav-link">Chekout</router-link>
             </div>
-            <div class="navAll">
-                <a class="nav-link" href="Product.html" style="color: blue">Product</a>
+            <div class="navAll router">
+                <router-link to="/product" class="nav-link">Product</router-link>
             </div>      
                 
         </nav>

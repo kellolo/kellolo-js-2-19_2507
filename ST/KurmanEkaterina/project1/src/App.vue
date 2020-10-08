@@ -1,14 +1,14 @@
 <template>
 <div>
-  <header>
     <div id="app">
-      <router-link to="/header">header</router-link>
-      </div>
+  <header>
+      
   </header>
-  checkout
+</div>
   <router-view />
-   <router-link to="/footer">footer</router-link>
-  <footer />
+  <footer>
+   
+  </footer>
 </div>
 <!--div id="app">
     <div id="app">

@@ -38,20 +38,6 @@
    "amount": 1
   },
   {
-   "productId": 8,
-   "productName": "BRITNEY PEOPLE T-SHIRT",
-   "productPrice": "18.00",
-   "productImg": "https://raw.githubusercontent.com/solaft/static/master/JS2shop/Product9.jpg",
-   "amount": 1
-  },
-  {
-   "productId": 2,
-   "productName": "AMAZING PEOPLE T-SHIRT",
-   "productPrice": "12.00",
-   "productImg": "https://raw.githubusercontent.com/solaft/static/master/JS2shop/Product3.jpg",
-   "amount": 1
-  },
-  {
    "productId": 2,
    "productName": "AMAZING PEOPLE T-SHIRT",
    "productPrice": "12.00",
@@ -63,6 +49,20 @@
    "productName": "YELLOW PEOPLE T-SHIRT",
    "productPrice": "16.00",
    "productImg": "https://raw.githubusercontent.com/solaft/static/master/JS2shop/Product7.jpg",
+   "amount": 1
+  },
+  {
+   "productId": 2,
+   "productName": "AMAZING PEOPLE T-SHIRT",
+   "productPrice": "12.00",
+   "productImg": "https://raw.githubusercontent.com/solaft/static/master/JS2shop/Product3.jpg",
+   "amount": 1
+  },
+  {
+   "productId": 8,
+   "productName": "BRITNEY PEOPLE T-SHIRT",
+   "productPrice": "18.00",
+   "productImg": "https://raw.githubusercontent.com/solaft/static/master/JS2shop/Product9.jpg",
    "amount": 1
   }
  ]

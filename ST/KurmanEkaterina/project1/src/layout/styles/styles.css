@@ -230,6 +230,23 @@
       color: #f16d7f;
       border-bottom: 3px solid #f16d7f;
       padding-bottom: calc(20px - 3px); }
+  .nav router {
+    color: #222222;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    display: block;
+    padding: .5rem 1rem; }
+    .nav router:hover {
+      color: #222222;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    }
 
 
 .label_cart_checkbox {

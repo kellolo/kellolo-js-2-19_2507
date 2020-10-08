@@ -286,20 +286,7 @@
                         </a>
                     </div>
                 </div>
-            </div>
-            <div class="navAll">
-                <a class="nav-link" href="singlePage.html" style="color: blue">Single Page</a>
-            </div>
-            <div class="navAll">
-                <a class="nav-link" href="shoppingCart.html" style="color: blue">Shopping Cart</a>
-            </div>
-            <div class="navAll">
-                <a class="nav-link" href="checkout.html" style="color: blue">Checkout</a>
-            </div>
-            <div class="navAll">
-                <a class="nav-link" href="Product.html" style="color: blue">Product</a>
-            </div>      
-                
+            </div>       
         </nav>
         </div>
 </template>
