@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Интернет-магазин</title>
+    <script src="https://kit.fontawesome.com/21138946d3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../src/assets/css/css.css">
+</head>
+
+<body>
+    <!--   По кнопке Details заменяем картинку на "описание" товара
+   по кнопке Buy - добавляем товар в корзину или увеличиваем его количество в корзине-->
+    <header class="header center">
+       <div class="header__left">
+           <h3 class="totalSum"></h3>
+       </div>
+        <div class="header__right">
+
+            <div class="myAccountDrop">
+                <a href="#" class="button myAccount" id='MyAccount'>My Account <img src="img/sort_down_solid_white.png" alt="" class="button_awesome" width="25"></a>
+                <div class="dropCart">
+                    <div class="triangle" style="top:-7px;"></div>
+                    <table class="dropCart__table">
+                        <tr class="dropCart__row">
+                            <td class="dropCart__td1 dropCart__w1">
+                                <a href="singlePage.html" class="dropCart__photo"><img src="../src/assets/img/feat_item_11.jpg" style="height:  85px;" alt="photo" class="dropCart__img"></a>
+                                <div class="dropCart__desc">
+                                    <a href="singlePage.html" class="dropCart__name">Rebox Zane</a><br><br>
+
+                                    <p class="dropCart__price"><span>1</span>&nbsp;x&nbsp;<span>$250</span></p>
+
+                                </div>
+                            </td>
+                            <td class="dropCart__no1">
+                                <button name="delFromCart" onclick="" class="dropCart__del"><i class="fas fa-times-circle"></i> </button>
+
+                            </td>
+                        </tr>
+                    </table>
+                    <p class="dropCart__total mt20"><span>total </span><span id='total'>$500,00</span></p>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <div class="products"></div>
+    </main>
+<!--
+     <script src="../src/js/main.js"></script>
+     <script src="../src/js/busket.js"></script>
+-->
+   <script src="../dist/main.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+                    let buttons = document.querySelectorAll('.products__button');
+                    console.log(buttons);
+                    buttons.forEach(button => {
+
+                        button.addEventListener('click', function() {
+                            if (button.textContent == 'Details') {
+                                button.textContent = 'Отмена';
+                                let card = button.parentElement.parentElement;
+                                let photo = card.querySelector('.products__photo');
+                                photo.style.display = 'none';
+                            } else if (button.textContent == 'Отмена') {
+                                button.textContent = 'Details';
+                                let card = button.parentElement.parentElement;
+                                let photo = card.querySelector('.products__photo');
+                                photo.setAttribute('display', 'block'); //Не срабатывает. Почему?
+                                photo.style.display = 'block';
+                            }
+                        })
+
+                    });
+                })
+
+    </script>
+   
+</body>
+
+</html>

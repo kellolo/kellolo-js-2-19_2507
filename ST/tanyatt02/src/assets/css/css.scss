@@ -1,0 +1,266 @@
+$widthCard:261px;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    font-family: 'Lato', sans-serif;
+    color: #222;
+}
+
+
+.center {
+    padding: 0 calc(50% - 570px);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: #ffffff;
+    border: 1px solid #ececec;
+    box-shadow: 0px 0px 10px 0px #0000002b;
+
+    &__left{}
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+.triangle {
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #e8e8e8;
+    border-left: 2px solid #e8e8e8;
+    background-color: red;
+    position: absolute;
+    top: -7;
+    left: 10;
+    transform: rotate(45deg);
+    background-color: #fff;
+
+    &_last {
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid #e8e8e8;
+        border-left: 2px solid #e8e8e8;
+        position: absolute;
+        top: -5px;
+        right: 30px;
+        //        margin-top: -7px;
+        //        margin-right: 10px;835px;
+        transform: rotate(45deg);
+        background-color: #fff;
+    }
+
+}
+
+.dropCart {
+    width: 262px;
+    padding: 0px 16px 20px 16px;
+    border: 2px solid #e8e8e8;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: absolute;
+    display: none;
+
+    &__table {
+
+        vertical-align: middle;
+        width: 230px;
+        margin-top: 20px;
+        font-size: 13px;
+        border-collapse: collapse;
+    }
+
+
+    &__row {
+        height: 118px; //88
+        box-sizing: border-box;
+
+    }
+
+    &__w1 {
+        width: 205px;
+    }
+
+    &__td1 {
+        border-bottom: 2px solid #ddd;
+
+        display: flex;
+        height: 118px; //92
+        box-sizing: border-box;
+        align-items: center;
+
+
+    }
+
+    &__photo {
+        ;
+
+        &:hover .dropCart__img {
+            transition: ease-in-out 0.4s;
+            transform: rotate(15deg);
+
+
+        }
+
+
+    }
+
+    &__desc {
+        margin-left: 14px;
+        font-size: 12px;
+    }
+
+    &__name {
+
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+            color: #f16d76;
+        }
+    }
+
+
+
+    &__no1 {
+        //            font-size: 13px;
+        color: #656565;
+        text-align: center;
+        //        border-top: 1px solid #ddd;
+        border-bottom: 2px solid #ddd;
+        height: 118px; //90px;
+
+    }
+
+    &__price {
+        font-weight: 300;
+        color: #f16d76;
+    }
+
+    &__del {
+        background-color: #fff;
+        border-color: transparent;
+    }
+
+
+    &__control {
+
+        display: block;
+        width: 225px;
+        height: 50px;
+        font-size: 14px;
+        line-height: 50px;
+        font-weight: bold;
+        border: solid 1px #eaeaea;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #222;
+        text-align: center;
+
+        &:hover {
+            color: #f16d76;
+            border-color: #f16d76;
+        }
+    }
+
+    &__total {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+.myAccountDrop {
+    position: relative;
+    height: 55px;
+}
+
+.myAccountDrop:hover .dropCart {
+    display: block;
+    z-index: 1;
+    top: 55px;
+    left: -72px;
+
+}
+
+
+.products {
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    &__title {
+        color: #4d4d4d;
+        font-size: 24px;
+        font-weight: 900;
+        margin-top: 119px;
+        margin-bottom: 72px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__item {
+        width: $widthCard;
+        margin-bottom: 50px;
+        transition: ease-in-out 0.2s;
+        position: relative;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+
+    }
+
+    &__h3 {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    &__photo {
+        position: absolute;
+    }
+
+    &__desc {
+        position: absolute;
+        
+        z-index: -1;
+    }
+
+    &__caption {
+        margin-top: 300px;
+    }
+
+    &__button,
+    &__buy {
+        margin-left: 49px;
+        margin-right: 50px;
+        margin-top: 20px;
+        width: 150px;
+        height: 35px;
+        line-height: 35px;
+//        position: relative;
+
+    }
+
+
+}
